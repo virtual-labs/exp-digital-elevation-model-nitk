@@ -1,82 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>SOLVE</title>
-<link rel="stylesheet" href="./css/cart.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS lab DEm experiment</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-<script>
-let simsubscreennum=1;
-let temp=0;
-
-
-</script>
-</head>  
+    <script>
+        var simsubscreennum=0;
+        var temp=0;
+        var snd = document.getElementById("sound");
+    </script>
 
 <body style="margin:0; font-family:verdana;">
-<div id="simscreen">
-    <div class="parentPopup" id="parentPopup" onclick="closeModal(event)">
-        <div class="popup" id="popUpContent">      
-        </div>
+    <div id="simscreen">
+    <div id="title"><h3>RS lab DEm experiment </h3></div>
+    <div class="simsubscreen" id="canvas0" >
+    <h4 class="incanvas">Objective:</h4>
+    <p class="incanvas" style="font-size:14px;">Objective of the RS lab Dem Experiment.</p><br/>
+    <img style="position:absolute; left:208px; top:119px;max-width:37%; width:100%;height: 369px;"; src="images/dem1.jpg"/>
+    <br >&nbsp;<span id="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify">Description
+            <span class="tooltiptext">
+            <p><strong style="color:red">Text</strong>: </p>
+            </span></span></div>
+    
+</div>
+
+    <div class="simsubscreen" id="canvas1" style="visibility:hidden;">
+        <div class="tools">
+            <div class="item">
+              <button  id="myBtn" onclick="map1()" class="button">Choose Map</button>
+            </div>
+            <div class="item">
+                <button id="type" class="button" >color Ramp</button> 
+                <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
+                <!-- <div class="info">content</div> -->
+
+                <!-- <button style="font-size:24px">Button <i class="fa fa-info-circle"></i></button> -->
+
+            </div>
+            <div class="item">
+              <button id="type" class="button" >Symbology</button>
+              <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
+            </div>
+            <div class="item">
+              <div class="color-pallet">
+                <div class="color-div" style="background-color: #1428dcb3; max-width: 11px;height: 11px;margin-left: 2px;"></div>
+                <div class="color-div" style="background-color: #06a8baad;max-width: 11px;height: 11px;margin-left: 2px;"></div>
+                <div class="color-div" style="background-color: #0a8c0a;max-width: 11px;height: 11px;margin-left: 2px;"></div>
+                <div class="color-div" style="background-color: #10a449;max-width: 11px;height: 11px;margin-left: 2px;"></div>
+                <div class="color-div" style="background-color: #e0e00f;max-width: 11px;height: 11px;margin-left: 2px;"></div>
+                
+              </div>
+            </div>
+            <div class="item">
+              <button id="op1" class="button ">Option 3</button>
+              <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
+            </div>
+            <div class="item">
+              <button id="op2"class="button">Option 4</button>
+              <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
+            </div>
+            <div class="item">
+              <button id="op3" class="button">Option 5</button>
+              <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
+            </div>
+            <div class="item">
+                <button id="op4" class="button">Option 6</button>
+                <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
+              </div>
+              <div class="item">
+                <button id="op5" class="button">Option 7</button>
+                <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
+              </div>
+            <div class="item">
+              <button id="Description" class="button" style="position: absolute;width:80%;height: 56px;">Description</button>
+            </div></div> 
+            <!-- <button id="myBtn" onclick="map1()">Open Modal</button> -->
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal"style="visibility: hidden;">
+            
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2>Choose Map</h2>
+                  <span class="close" id="myClose" onclick="mclose()">&times;</span>
+                  
+                </div>
+                <div class="modal-body">
+                  <img id="1-1" style="position:absolute; left:22px; top:65px;max-width:37%; width:100%;height: 369px;"; src="images/dem1.jpg"/>
+                  <p>Mangalore</p>
+                  </div>
+                  <div class="modal-body1">
+                    <img style="position:absolute; left:296px; top:62px;max-width:38%; width:100%;height: 381px;"; src="images/dem2.jpg"/>
+                    <p>Bangalore</p>
+                    </div>
+                <!-- <div class="modal-footer"> -->
+                  
+                </div>
+              </div>
+            
+            </div></div>
+          
+          
+          
+          
+          
+          
+          </div> 
+            
+            <!-- <div class="container" style="position: absolute;visibility: visible;"> -->
+            
+
+ <div id="nav">
+    <img id="nextButton" onclick="navNext()" src="images/Next.png"/>
+    <img class ="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png"/>
+    <div id="copyright"> <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
     </div>
-<div id="title"><h3>Digital Elevation Model</h3></div>
-<div class="simsubscreen" id="canvas0" >
-<h4 class="incanvas">Objective:</h4>
-<p class="incanvas" style="font-size:14px;"> To perform the cartography of the given Digital Elevation Model (DEM) map and to ensure the desired amount of knowledge in its spatial relationship.</p><br/>
-<img style="position:absolute; left: 200px;top:100px;" src="./images/cartography.png" width="300" height="400" title="Cartography" alt=""/>
-&nbsp;<span class="desc" style="border-bottom:1px dotted ; color:red;text-align:justify">Description
-<span class="desctext">
-<p><strong style="color:red;">Essential elements of a Map</strong>: Different elements of a map play an important role in describing map details. These essential features of a map are found on almost every map around us. They are- title, legend(symbols), north arrows, distance(scale), labels, grids and index– which make it easier for users to understand the basic components of maps.</p>
-</span>
-</span>
-</div>
+            
+</head>
 
-
-<div class="simsubscreen" id="canvas1" style="visibility:hidden;">
-   
-    <div class="divSettings">
-        <p class="settings" id="map" onclick="showPopup(this);">Choose Map</p>
-        <p class="settings lockSettings" id="clrRamp">Color Ramp<span class="info" onmouseover="showInfo(this)" onmouseout="hideInfo(this)"><img src="./images/information-button.png" alt=""/></span></p>
-        <p class="settings lockSettings" id="symbology">Symbology<span class="info" onmouseover="showInfo(this)" onmouseout="hideInfo(this)"><img src="./images/information-button.png" alt=""/></span></p>
-        <p class="settings lockSettings" id="mapTitle" onclick="if(viewSet && blink==0){showPopup(this);}">Option 3<span class="info" onmouseover="showInfo(this)" onmouseout="hideInfo(this)"><img src="./images/information-button.png" alt=""/></span></p>
-        <p class="settings lockSettings" id="northArrow" onclick="if(viewSet && blink==0){showPopup(this);}">Option 4 <span class="info" onmouseover="showInfo(this)" onmouseout="hideInfo(this)"><img src="./images/information-button.png" alt=""/></span></p>
-        <p class="settings lockSettings" id="newGrid" onclick="if(viewSet){showPopup(this);}">Option 5<span class="info" onmouseover="showInfo(this)" onmouseout="hideInfo(this)"><img src="./images/information-button.png" alt=""/></span></p>
-        <p class="settings lockSettings" id="legend" onclick="if(viewSet && blink==0){showPopup(this);}">Option 6<span class="info" onmouseover="showInfo(this)" onmouseout="hideInfo(this)"><img src="./images/information-button.png" alt=""/></span></p>
-        <p class="settings lockSettings" id="scaleBar" onclick="if(viewSet && blink==0){showPopup(this);}">Option 7<span class="info" onmouseover="showInfo(this)" onmouseout="hideInfo(this)"><img src="./images/information-button.png" alt=""/></span></p>
-        <div class="details">
-            <p><strong>Description</strong></p>
-            <p id="mapName"></p>
-            <p  id="viewName"></p>
-        </div>
-    </div>
-
-    <div class="mapScreen" style="text-align:center">
-        <img id="outsideBorder" src="./images/2.png" alt=""/>
-        <!-- <img id="mapImage" src="./images/clsm11.png" style="position:absolute;left: 76px;top:22px" alt=""/> -->
-        <img id="mapImage" src="" style="position:absolute;left: 76px;top:22px" alt=""/>
-        <!-- <img id="coordImage" src="./images/c2020.png" style="position:absolute;left: 76px;top:10px; visibility: hidden" alt=""/> -->
-        <div id="boxAll" class="setFont" draggable="true" ondragstart="return dragStart(event)"></div>
-        <div id="boxTitle" class="setFont" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Title</div>
-        <div id="boxNorthArrow" class="setFont" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">North Arrow</div>
-        <div id="boxScaleBar" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Scale Bar</div>
-        <div id="boxLegend" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">Legend</div>
-    </div>
-   
-</div>
-</div>
-
-<div id="tooltiptext"></div>
-<div id="info" style="position: absolute;top:40px;left:200px;font-size: 12px;font-family: verdana; color: rgb(117, 114, 114);"></div>
-
-<!-- nextButton -->
-<div id="nav">
-    <img id="nextButton" onclick="goToMainPage();" src="images/Next.png" alt="" />
-</div> 
-
-<div id="copyright"> &copy; 2020 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering </div>
-</div>
-<script type="text/javascript" src="./js/cart.js"></script>
-
-</body> 
+    
+</body>
 </html>
