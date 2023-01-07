@@ -188,10 +188,23 @@ function ShowPicture(id,show, img) {
 function ShowPicture1(){
 	document.getElementById('slope1').style.visibility="visible";
 }
-function ShowPicture1(){
+function ShowPicture1a(){
 	document.getElementById('slope1').style.visibility="hidden";
 }
 
+function ShowPicture2(){
+	document.getElementById('slope2').style.visibility="visible";
+}
+function ShowPicture2a(){
+	document.getElementById('slope2').style.visibility="hidden";
+}
+
+function ShowPicture3(){
+	document.getElementById('slope3').style.visibility="visible";
+}
+function ShowPicture3a(){
+	document.getElementById('slope3').style.visibility="hidden";
+}
 // function ShowPicture1(id,show, img) {
 // 	// document.getElementById("mangalore_dem_elevation").style.visibility="visible";
 //   if (show=="2"){
@@ -306,83 +319,90 @@ function symbology_streched(){
 
 
 function elevation_select(){
-	// if(temp==0){
-		// document.getElementById("mangalore_elevation_streched").style.visibility="visible";
-		// document.getElementById('legend').style.visibility="visible";
-	// }
-	// else if(temp==1){
+	    document.getElementById("symbology").disabled = true;
+		document.getElementById("colorSelection").disabled = true;
+		// document.getElementById("watershed Delination").disabled = true;
+		
+		document.getElementById("Hgrid").style.visibility="hidden";
+		document.getElementById("Agrid").style.visibility="hidden";
+		document.getElementById("Sgrid").style.visibility="hidden";
 		document.getElementById("steched").disabled = true;
 		document.getElementById("classified").disabled = true;
+
 		document.getElementById("mangalore_streched_elevation1").style.visibility="visible";
-		document.getElementById("mangalore_aspect_streched").style.visibility="hidden";
 		document.getElementById('legend').style.visibility="visible";
-		// document.getElementById("streched1").style.visibility="hidden";
-		// document.getElementById('legend1').style.visibility="hidden";
+		document.getElementById("mangalore_aspect_streched").style.visibility="hidden";
+		document.getElementById("mangalore_curvature_streched").style.visibility="hidden";
 		document.getElementById("mangalore_slope_streched").style.visibility="hidden";
-		document.getElementById('legend3').style.visibility="hidden";
-		document.getElementById("slope3").style.visibility="hidden";
+
 		document.getElementById('legend1').style.visibility="hidden";
+		document.getElementById('legend2').style.visibility="hidden";
+		document.getElementById('legend3').style.visibility="hidden";
 		document.getElementById("slope1").style.visibility="hidden";
-		document.getElementById("Sgrid").style.visibility="hidden";
-		// document.getElementById("mangalore_slope_streched").style.visibility="hidden";
-		
-	}	
+		document.getElementById("slope2").style.visibility="hidden";
+		document.getElementById("slope3").style.visibility="hidden";
+		}	
 
 
 	function slope_select(){
-		document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
 		document.getElementById("mangalore_slope_streched").style.visibility="visible";
-		document.getElementById("mangalore_curvature_streched").style.visibility="hidden";
 		document.getElementById('legend1').style.visibility="visible";
 		document.getElementById("slope1").style.visibility="visible";
 		document.getElementById("Sgrid").style.visibility="visible";
+
+		document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
+		document.getElementById("mangalore_curvature_streched").style.visibility="hidden";
+		document.getElementById("mangalore_aspect_streched").style.visibility="hidden";
+
+		document.getElementById("slope2").style.visibility="hidden";
+		document.getElementById('legend2').style.visibility="hidden";
 		document.getElementById('legend3').style.visibility="hidden";
 		document.getElementById("slope3").style.visibility="hidden";
-		document.getElementById('legend2').style.visibility="hidden";
-		document.getElementById("slope2").style.visibility="hidden";
+		
+		document.getElementById("Agrid").style.visibility="hidden";
 		document.getElementById("Hgrid").style.visibility="hidden";
-		// document.getElementById('slopehover').style.visibility="visible";
-		// document.getElementById("demo").style.visibility="visible";
-		// document.getElementById("myText").style.visibility="visible";
-		// document.getElementById('legend').style.visibility="hidden";
-		document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
 	}
 
 	function hillShade_select(){
 		document.getElementById("mangalore_curvature_streched").style.visibility="visible";
-		document.getElementById("mangalore_aspect_streched").style.visibility="hidden";
 		document.getElementById('legend2').style.visibility="visible";
 		document.getElementById("slope2").style.visibility="visible";
 		document.getElementById("Hgrid").style.visibility="visible";
+
+		document.getElementById("mangalore_slope_streched").style.visibility="hidden";
+		document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
+		document.getElementById("mangalore_aspect_streched").style.visibility="hidden";
+		
 		document.getElementById('legend1').style.visibility="hidden";
-		document.getElementById("slope1").style.visibility="hidden";
-		document.getElementById("Agrid").style.visibility="hidden";
 		document.getElementById('legend3').style.visibility="hidden";
+
+		document.getElementById("slope1").style.visibility="hidden";
 		document.getElementById("slope3").style.visibility="hidden";
-		// document.getElementById("streched1").style.visibility="visible";
-		// document.getElementById('legend1').style.visibility="visible";
-		// document.getElementById("demo").style.visibility="visible";
-		// document.getElementById("myText").style.visibility="visible";
-		// document.getElementById('legend').style.visibility="hidden";
-		// document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
+		document.getElementById("Agrid").style.visibility="hidden";
+		document.getElementById("Sgrid").style.visibility="hidden";
 	}
 
 	function Aspect_select(){
 		document.getElementById("mangalore_aspect_streched").style.visibility="visible";
-		document.getElementById("mangalore_curvature_streched").style.visibility="hidden";
-		document.getElementById("mangalore_slope_streched").style.visibility="hidden";
 		document.getElementById("Agrid").style.visibility="visible";
 		document.getElementById('legend3').style.visibility="visible";
 		document.getElementById("slope3").style.visibility="visible";
+
+		document.getElementById("mangalore_curvature_streched").style.visibility="hidden";
+		document.getElementById("mangalore_slope_streched").style.visibility="hidden";
+		document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
+
+		document.getElementById('legend1').style.visibility="hidden";
 		document.getElementById('legend2').style.visibility="hidden";
+
+		document.getElementById("Hgrid").style.visibility="hidden";
+		document.getElementById("Sgrid").style.visibility="hidden";
+		
+		document.getElementById("slope1").style.visibility="hidden";
 		document.getElementById("slope2").style.visibility="hidden";
-		// document.getElementById("streched1").style.visibility="visible";
-		// document.getElementById('legend1').style.visibility="visible";
-		// document.getElementById("demo").style.visibility="visible";
-		// document.getElementById("myText").style.visibility="visible";
-		// document.getElementById('legend').style.visibility="hidden";
-		// document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
 	}
+
+	
 // function elevation_classified(){
 // 	if(colorRampSelected==0){
 // 			// document.getElementById('colorSelection').style.visibility="visible";
@@ -438,9 +458,9 @@ function elevation_select(){
 // // }
 
 
-// function myFunction() {
-// 	var x = document.getElementById("myText").value;
-// 	document.getElementById("demo").innerHTML = x;
-//   }
+function myFunction() {
+	var x = document.getElementById("myText").value;
+	document.getElementById("demo").innerHTML = x;
+  }
 
 
