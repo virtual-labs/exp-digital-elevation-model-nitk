@@ -73,7 +73,7 @@
 
 
 
-    <img id="Mgrid2" onclick="mangaloreMap2()" style="position:absolute;margin-left: 20px;max-width: 31px;height: 107px;" src="images/Mangalore_grid2.png"/>
+    <img id="Mgrid2" onclick="mangaloreMap2()" style="position:absolute;margin-left: 20px;max-width: 31px;height: 107px;" src="images/mangalore_grid2.png"/>
 
     <img id="Mangmap2" onclick="grid2_map()" style="position:absolute; left:343px; top:18px; width:174%;height: 420px;visibility: hidden;"title="finalise the image to proceed" src="images/Mangalore_streched_map2.png"/>
 
@@ -81,7 +81,7 @@
 
 
 
-    <img id="Mgrid3"onclick="mangaloreMap3()" style="position:absolute;margin-left: 16px;max-width: 31px;height: 107px;"  src="images/Mangalore_grid3.png"/>
+    <img id="Mgrid3"onclick="mangaloreMap3()" style="position:absolute;margin-left: 16px;max-width: 31px;height: 107px;"  src="images/mangalore_grid3.png"/>
 
     <img id="Mangmap3" onclick="grid3_map()" style="position:absolute; left:343px; top:18px; width:174%;height: 420px;visibility: hidden;"title="finalise the image to proceed" src="images/Mangalore_streched_map3.png"/>
 
@@ -132,7 +132,7 @@
 
 
     
-<button class="accordion"  >Watershed Delination</button>
+<button id="watershed Delination"class="accordion"  >Watershed Delination</button>
 <div class="panel">
   <button class="accordions">Fill</button><br>
   <button class="accordions">Flow Direction</button><br>
@@ -151,14 +151,15 @@
  </div> -->
 <!-- // mangalore and bangalore dem elevation streched 1 -->
 
-  <img id="mangalore_streched_elevation1" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_streched1_withoutgrid.png"/>
+  <img id="mangalore_streched_elevation1" style="position:absolute; left:296px; top:64px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_streched1_withoutgrid.png"/>
+  <p id="Egrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>Elevation</b></p>
 
-  <img id="bangalore_streched_elevation1" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/bangalore_streched1_withoutgrid.png"/>
+  <!-- <img id="bangalore_streched_elevation1" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/bangalore_streched1_withoutgrid.png"/> -->
 
 
-  <a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_1.png')" onMouseOut="ShowPicture('Style',0)"><button id="legend" style="position: absolute;margin-left: 559px;margin-top: 123px;visibility: hidden;">Legend</button></a>
+  <a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_1.png')" onMouseOut="ShowPicture('Style',0)"><button id="legend" style="position: absolute;margin-left: 556px;margin-top: 174px;visibility: hidden;">Legend</button></a>
 <div class="imageBox" id="Style">
-    <img style="position: absolute;margin-top: 130px;margin-left: 313px;width:101px;" src="images/Mangalore_streched_1.png"/>
+    <img style="position: absolute;margin-top: 171px;margin-left: 313px;width:101px;" src="images/Mangalore_streched_1.png"/>
 </div> 
 
 <!-- mangalore and bangalore dem elevation streched 2 -->
@@ -222,14 +223,22 @@
 
 
     <button onclick="slope_select()" class="accordions">Slope</button><br>
-    <img id="mangalore_slope_streched" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_slopewithoutgrid_streched1.png"/>
-    <p id="Sgrid" style="position: absolute;margin-top: -19px;visibility: hidden;margin-left: 322px;font-size: 12px;width: 100%;"><b>Slope Degrees</b></p>
 
+    <select id="myText" value="Elevation data" type="text" placeholder="Enter the text" style="position:absolute; margin-left:404px; margin-top:-289px;visibility: visible;" >
+      <option value="" disabled selected>Select your option</option>
+        <option value="Elevation data">Elevation data</option>
+    </select>
+    <p id="demo" style="position: absolute;margin-top: -270px;margin-left: 412px;width: 100%;max-width: 116px;"></p>
+    <button style="position: absolute;margin-top: -291px;margin-left: 545px;"onclick="myFunction()">enter</button>
+
+
+  <img id="mangalore_slope_streched" style="position:absolute; left:296px; top:64px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_slopewithoutgrid_streched1.png"/>
+    <p id="Sgrid" style="position: absolute;margin-top: 24px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>Slope Degrees</b></p>
 
     <!-- <a href="#" > -->
-    <button id="legend1" style="position: absolute;margin-left: 556px;margin-top: 85px;visibility: hidden;" onMouseOver="ShowPicture1()" onMouseOut="ShowPicture1()">Legend</button></a>
+    <button id="legend1" style="position: absolute;margin-left: 556px;margin-top: 129px;visibility: hidden;" onMouseOver="ShowPicture1()" onMouseOut="ShowPicture1a()">Legend</button></a>
 <div class="imageBox" id="Style1">
-    <img id="slope1"style="position: absolute;margin-top: 93px;margin-left: 312px;width:101px;visibility:hidden;" src="images/mangalore_slopewithoutgrid_streched1.png"/>
+    <img id="slope1"style="position: absolute;margin-top: 145px;margin-left: 312px; width:77px; height:105px; visibility:hidden;" src="images/mangalore_slopegrid_streched1.png"/>
 </div> 
     <!-- <div class="image">
   
@@ -237,12 +246,7 @@
       <img class="overlay" src="images/Mangalore_streched_1.png"/>
    </div>  -->
 
-    <!-- <select id="myText" value="elevation data" type="text" placeholder="Enter the text" style="position:absolute; margin-left:378px; margin-top:20px;visibility: visible;" >
-      <option value="" disabled selected>Select your option</option>
-        <option value="elevation data">Elevation data</option>
-    </select>
-    <p id="demo"></p>
-    <button style="position: absolute;"onclick="myFunction()">enter</button> -->
+    
         
         
 
@@ -269,12 +273,13 @@
   <img id="mangalore_Streched1" style="position:absolute; left:296px; top:-7px; width:71%;height: 399px;visibility: hidden;" src="images/mangalore_streched_slope3.png"/>  -->
 
   <button onclick="hillShade_select()" class="accordions">HillShade</button><br>
-  <img id="mangalore_curvature_streched" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_curvature1_withoutgrid.png"/>
-  <p id="Hgrid" style="position: absolute;margin-top: -69px;visibility: hidden;margin-left: 322px;font-size: 12px;width: 100%;"><b>Hill Shade</b></p>
+  <img id="mangalore_curvature_streched" style="position:absolute; left:296px; top:64px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_curvature1_withoutgrid.png"/>
+  <p id="Hgrid" style="position: absolute;margin-top: -14px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>Hill Shade</b></p>
 
-  <a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_1.png')" onMouseOut="ShowPicture('Style',0)"><button id="legend2" style="position: absolute;margin-left: 556px;margin-top: 41px;visibility: hidden;">Legend</button></a>
+  <a href="#" onMouseOver="ShowPicture2()" onMouseOut="ShowPicture2a()">
+  <button id="legend2" style="position: absolute;margin-left: 556px;margin-top: 87px;visibility: hidden;">Legend</button></a>
   <div class="imageBox" id="Style1">
-      <img id="slope2"style="position: absolute;margin-top: 46px;margin-left: 312px;width:101px;" src="images/mangalore_curvature1_grid.png"/>
+      <img id="slope2"style="position: absolute;margin-top: 106px;margin-left: 312px;width:91px; height:105px;" src="images/mangalore_curvature1_grid.png"/>
   </div> 
 
   <!-- <a href="#" onMouseOver="ShowPicture2('Style',1,'./images/mangalore_curvature1_grid.png)" onMouseOut="ShowPicture2('Style',0)"><button id="legend1" style="position: absolute;margin-left: 561px;margin-top: 116px;visibility: hidden;">Legend</button></a>
@@ -284,12 +289,13 @@
   
 
   <button onclick="Aspect_select()"class="accordions">Aspect</button><br>
-  <img id="mangalore_aspect_streched" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_aspect1_strechedwithoutgrid.png"/>
-  <p id="Agrid" style="position: absolute;margin-top: -98px;visibility: hidden;margin-left: 322px;font-size: 12px;width: 100%;"><b>Aspect</b></p>
+  <img id="mangalore_aspect_streched" style="position:absolute; left:296px; top:64px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_aspect1_strechedwithoutgrid.png"/>
+  <p id="Agrid" style="position: absolute;margin-top: -50px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>Aspect</b></p>
 
-  <a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_1.png')" onMouseOut="ShowPicture('Style',0)"><button id="legend3" style="position: absolute;margin-left: 556px;margin-top: 13px;visibility: hidden;">Legend</button></a>
+  <a href="#" onMouseOver="ShowPicture3()" onMouseOut="ShowPicture3a()">
+  <button id="legend3" style="position: absolute;margin-left: 556px;margin-top: 62px;visibility: hidden;">Legend</button></a>
   <div class="imageBox" id="Style1">
-      <img id="slope3"style="position: absolute;margin-top: 29px;margin-left: 312px;width:101px;" src="images/mangalore_aspect1_strechedgrid.png"/>
+      <img id="slope3"style="position: absolute;margin-top: 78px;margin-left: 312px;width:91px;" src="images/mangalore_aspect1_strechedgrid.png"/>
   </div> 
 
   <!-- <a href="#" onMouseOver="ShowPicture('Style',1,'./images/mangalore_aspect1_strechedgrid.png)" onMouseOut="ShowPicture1('Style',0)"><button id="legend1" style="position: absolute;margin-left: 561px;margin-top: 116px;visibility: hidden;">Legend</button></a>
