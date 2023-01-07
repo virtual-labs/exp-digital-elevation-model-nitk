@@ -63,20 +63,7 @@ html
 	top: 580px;
 	font-size:12px
 }
-/* #mySlider{
-	overflow: hidden;
-    position: absolute;
-    width: 562px;
-    height: 357px;
-    left: 148px;
-    top: 120px;
-    border: 5px lightgrey solid;
-   	border-style: ridge;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }  */
- #tooltip {
+#tooltip {
     position: relative;
     display: inline-block;
     /* border-bottom: 1px dotted black; */
@@ -101,9 +88,26 @@ html
 #tooltip:hover .tooltiptext{
 	visibility: visible;
 }
+body{
+  background: #fff;
+}
+.box {
+  transition: box-shadow .3s;
+  width: 300px;
+  height: 500px;
+  margin: 50px;
+  /* border-radius:10px; */
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+  
+}
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
 .item * {
     position: relative;
-   width: 151px;
+   width: 166px;
    text-align: center;
    border: 1px solid rgb(189, 186, 186);
    /* background-color: #ffffff; */
@@ -117,175 +121,201 @@ html
    margin-left: 31px;
    margin-top: 5px;
  }
- /* button{
- appearance: auto;
- writing-mode: horizontal-tb !important;
- text-rendering: auto;
- color: rgb(23, 23, 21);
- letter-spacing: normal;
- word-spacing: normal;
- line-height: normal;
- text-transform: none;
- text-indent: 0px;
- text-shadow: none;
- display: inline-block;
- text-align: center;
- align-items: flex-start;
- cursor: default;
- box-sizing: border-box; */
- /* background-color: buttonface; */
- /* margin: 0em;
- padding: 1px 6px;
- border-width: 2px;
- border-style: none;
- border-color: buttonborder;
- border-image: initial;
-} */
-
-.button {
- background-color: white; 
- color: black; 
- border: 2px solid #949994;
- color:black;
- /* border: none; */
-}
-
-.button:hover {
-    border: 4px solid #666766;
+ .button {
+  background-color: rgb(217, 217, 217);
+    color: black; 
+    border: 2px solid #949994;
     color:black;
-
- background-color: #f4fdf4;
- 
-}
-
-
- /* .button:hover {background-color: #e7e7e7;} */
-
+ }
  .tools{
    position: absolute;
    left: -61px;
-   top: 53px;
+   top: 6px;
    display: flex;
    flex-direction: column;
    gap: 6px;
    box-sizing: border-box;
  }
- 
-.color-pallet{
- position: relative;
- display: flex;
- top: 0px;
- /* z-index: 10; */
- flex: 1;
- flex-wrap: wrap;
- width: 131px;
-}
- 
-[data-title]:hover:after {
-    opacity: 1;
-    transition: all 0.1s ease 0.5s;
-    visibility: visible;
-}
-[data-title]:after {
-    content: attr(data-title);
-    background-color: black;
-    color: white;
-    position: absolute;
-    padding: 1px 5px 2px 5px;
-    bottom: -1.6em;
-    left: 100%;
-    white-space: nowrap;
-    border: 1px solid #111111;
-    z-index: 99999;
-    visibility: hidden;
-    top: 26px;
-    height: 29px;
-}
-[data-title] {
+.modal {
+  
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: -18px; /* Location of the box */
+    left: 186px;
+    top: 6px;
+    width:287%; /* Full width */
+    height: 91%; /* Full height */
+    /* Enable scroll if needed */
+    
+  }
+  
+  /* Modal Content */
+  .modal-content {
     position: relative;
-}
-/* .container{
-    position: relative;
-    background-color: white;
-    text-align: center;
+    background-color: #fefefe;
     margin: auto;
-    width: 100%;
-    padding: 16px;
-    border-radius: 5px;
-    max-height: 80%;
-    max-width: 74%;
-    overflow-y: auto;
-    margin-top: -437px;
-    margin-left: 135px;
-    height: 404px;
-    width: 528px;
-    top: 491px;
-    left: 18px;
-    border: 1px solid;
- } */
- 
- .modal {
+    padding: 0;
+    border: 1px solid #888;
+    width: 103%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    top: -5px;
+    left: 28px;
+    height: 455px;
+  }
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -44px;
+    margin-left: 36px;
+    left:85px;
+  }
   
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: -18px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
   
-}
+  .modal-header {
+    padding: -6px 10px;
+    background-color: rgb(238, 210, 210);
+    color: black;
+    top: 20px;
+    margin-top: -17px;
+    font-size: 13px;
+    height: 29px;
+    width:100%;
+    left:32px;
+  }
+  .modal-body {padding: 0px 70px;}
+  .modal-body1 {padding: 0px 70px;
+  margin-left: 300px;
+  margin-top: -36px;}
+  .desc-btn {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .desc {
+    display: none;
+  }
+  
+  .desc.show {
+    display: block;
+  }
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  #grad1 {
+    height: 20px;
+    rotate: 90deg;
+  top: 34px;
+  margin-left: -41px;
+    background-image: linear-gradient(to right, rgb(173, 173, 205),rgb(103, 57, 13), rgb(239, 232, 20),rgb(29, 185, 21), rgb(148, 198, 211));
+    }
+  #grad2 {
+    height: 20px;
+    rotate: 90deg;
+    top:34px;
+    margin-left: 13px;
+    background-image: linear-gradient(to right, rgb(6, 70, 182),rgb(29, 190, 218), rgb(8, 160, 43),rgb(194, 210, 19), rgb(153, 78, 16));
+      }
+  #grad3 {
+    height: 20px;
+    rotate: 90deg;
+    top: 34px;
+    margin-left: 73px;   
+    background-image: linear-gradient(to right, rgb(19, 108, 191),rgb(24, 189, 198), rgb(0, 255, 68),rgb(12, 157, 65), rgb(237, 237, 14));
+  }
+  .panel {
+  
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    margin-left: 12px;
+  }
 
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-  top: 55px;
-  left: 58px;
-  height: 455px;
-}
-.close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  margin-top: -46px;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
-  padding: -6px 10px;
-  background-color: rgb(238, 210, 210);
-  color: black;
-  top: 20px;
-margin-top: -20px;
-font-size: 13px;
-}
-
-.modal-body {padding: 0px 70px;}
-.modal-body1 {padding: 0px 70px;
-margin-left: 300px;
-margin-top: -31px;}
-
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
+  .accordion {
+  padding: 10px;
+    width: 86%;
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    margin-top: 6px;
+    margin-left: 31px;
+    height: 31px;
+    border: 1px solid rgb(189, 186, 186);
+    font-size: 14px;
+   font-family: verdana;
+   padding: 5px 5px;
+   border-radius: 4px;
+   cursor: pointer;
+   /* background-color: white;  */
+    color: black; 
+    border: 2px solid #949994;
+    color:black;
+  }
+  .accordions {
+    padding: 10px;
+      width: 80%;
+      background-color: white;
+      text-align: center;
+      outline: none;
+      font-size: 15px;
+      margin-top: 6px;
+      margin-left: 31px;
+      height: 36px;
+      border: 1px solid rgb(189, 186, 186);
+      font-size: 14px;
+     font-family: verdana;
+     padding: 5px 5px;
+     border-radius: 4px;
+     cursor: pointer;
+     /* background-color: white;  */
+      color: black; 
+      border: 2px solid #949994;
+      color:black;
+    }
+    .imageBox {
+      position: absolute;
+      visibility: hidden;
+      border: solid 1px #CCC;
+      padding: 5px;
+      margin-top: -105px;
+    }
+    .image {
+      position:relative;
+      display:inline-block;
+   }
+   .overlay {
+      display:none;
+   }
+   .image:hover .overlay {
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,.5);
+      position:absolute;
+      top:0;
+      left:0;
+      display:inline-block;
+      -webkit-box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      box-sizing:border-box;
+   
+      /* All other styling - see example */
+      /* img {
+         vertical-align:top;
+      } */
+   }
+   

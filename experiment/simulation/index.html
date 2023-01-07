@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RS lab DEm experiment</title>
+    <title>DEM simulation</title>   
     <link rel="stylesheet" href="css/style.css"/>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,116 +14,297 @@
         var temp=0;
         var snd = document.getElementById("sound");
     </script>
-
-<body style="margin:0; font-family:verdana;">
-    <div id="simscreen">
+</head>
+<body id="simscreen" style="margin:0; font-family:verdana">
     <div id="title"><h3>RS lab DEm experiment </h3></div>
     <div class="simsubscreen" id="canvas0" >
     <h4 class="incanvas">Objective:</h4>
     <p class="incanvas" style="font-size:14px;">Objective of the RS lab Dem Experiment.</p><br/>
-    <img style="position:absolute; left:208px; top:119px;max-width:37%; width:100%;height: 369px;"; src="images/dem1.jpg"/>
+    <img style="position:absolute; left:208px; top:119px;height: 369px;"; src="images/canvas_image.png"/>
     <br >&nbsp;<span id="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify">Description
-            <span class="tooltiptext">
-            <p><strong style="color:red">Text</strong>: </p>
-            </span></span></div>
-    
-</div>
+    <span class="tooltiptext">
+    <p><strong style="color:red">Text</strong>: </p>
+    </span></span></div>
 
     <div class="simsubscreen" id="canvas1" style="visibility:hidden;">
-        <div class="tools">
-            <div class="item">
-              <button  id="myBtn" onclick="map1()" class="button">Choose Map</button>
-            </div>
-            <div class="item">
-                <button id="type" class="button" >color Ramp</button> 
-                <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
-                <!-- <div class="info">content</div> -->
+  <div class="tools" style="position:absolute;">
+    
+    <button id="mapSelection" class="accordion" onclick="map1()" >Choose Map</button>
+    <div class="panel">
+      <div class="item" ></div>
+    
+  <div id="myModal"  class="modal"style="visibility: hidden;">
+      <div class="modal-content">
+      <div class="modal-header">
 
-                <!-- <button style="font-size:24px">Button <i class="fa fa-info-circle"></i></button> -->
-
-            </div>
-            <div class="item">
-              <button id="type" class="button" >Symbology</button>
-              <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
-            </div>
-            <div class="item">
-              <div class="color-pallet">
-                <div class="color-div" style="background-color: #1428dcb3; max-width: 11px;height: 11px;margin-left: 2px;"></div>
-                <div class="color-div" style="background-color: #06a8baad;max-width: 11px;height: 11px;margin-left: 2px;"></div>
-                <div class="color-div" style="background-color: #0a8c0a;max-width: 11px;height: 11px;margin-left: 2px;"></div>
-                <div class="color-div" style="background-color: #10a449;max-width: 11px;height: 11px;margin-left: 2px;"></div>
-                <div class="color-div" style="background-color: #e0e00f;max-width: 11px;height: 11px;margin-left: 2px;"></div>
-                
-              </div>
-            </div>
-            <div class="item">
-              <button id="op1" class="button ">Option 3</button>
-              <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
-            </div>
-            <div class="item">
-              <button id="op2"class="button">Option 4</button>
-              <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
-            </div>
-            <div class="item">
-              <button id="op3" class="button">Option 5</button>
-              <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
-            </div>
-            <div class="item">
-                <button id="op4" class="button">Option 6</button>
-                <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
-              </div>
-              <div class="item">
-                <button id="op5" class="button">Option 7</button>
-                <i style="font-size:24px;width: 7%; margin-top: -16px;height: 20px; margin-left: -30px;border: none;top: 4px;left: -10px;" Data-title="content"style="background-color:black;color:white;"class="fa">&#xf05a;</i>
-              </div>
-            <div class="item">
-              <button id="Description" class="button" style="position: absolute;width:80%;height: 56px;">Description</button>
-            </div></div> 
-            <!-- <button id="myBtn" onclick="map1()">Open Modal</button> -->
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal"style="visibility: hidden;">
-            
-              <!-- Modal content -->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h2>Choose Map</h2>
-                  <span class="close" id="myClose" onclick="mclose()">&times;</span>
+      <h2>Choose Map</h2>
+      <span class="close" id="myClose" onclick="mclose()">&times;</span>
                   
-                </div>
-                <div class="modal-body">
-                  <img id="1-1" style="position:absolute; left:22px; top:65px;max-width:37%; width:100%;height: 369px;"; src="images/dem1.jpg"/>
-                  <p>Mangalore</p>
-                  </div>
-                  <div class="modal-body1">
-                    <img style="position:absolute; left:296px; top:62px;max-width:38%; width:100%;height: 381px;"; src="images/dem2.jpg"/>
-                    <p>Bangalore</p>
-                    </div>
-                <!-- <div class="modal-footer"> -->
-                  
-                </div>
-              </div>
-            
-            </div></div>
-          
-          
-          
-          
-          
-          
-          </div> 
-            
-            <!-- <div class="container" style="position: absolute;visibility: visible;"> -->
-            
+      <div class="modal-body">
+          <img id="choose1" class="box" onclick="chooseMap1()" style="position:absolute; left:-38px; top:17px;max-width:47%; width:100%;height: 379px;"; src="images/Mangalore_choosemap1.png"/>
+          <h2>Mangalore<h2>
+</div>
 
- <div id="nav">
-    <img id="nextButton" onclick="navNext()" src="images/Next.png"/>
-    <img class ="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png"/>
-    <div id="copyright"> <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+      <div class="modal-body1">
+          <img id="choose2" class="box" onclick="chooseMap2()" style="position:absolute; left:253px; top:19px;max-width:45%; width:100%;height: 376px;"; src="images/Bangalore_choosemap2.png"/>
+          <h2>Bangalore</h2>
+      </div></div>
+
+      <h2 id="mangalore" style="position: absolute;margin-top: -46px;margin-left: 234px;visibility: hidden;">Mangalore</h2>
+      <img id="mm1" style="position:absolute; left:112px; top:23px;max-width:62%; width:100%;height: 421px;visibility: hidden;"; src="images/Mangalore_choosemap1.png"/>
+
+      <h2 id="bangalore" style="position: absolute;margin-top: -46px;margin-left: 234px;visibility: hidden;">Bangalore</h2>
+      <img id="bm1" style="position:absolute; left:112px; top:23px;max-width:62%; width:100%;height: 421px;visibility: hidden;"; src="images/Bangalore_choosemap2.png"/>
+          
+      </div>
+      </div>
+       </div> 
+
+    <button id="colorSelection" disabled class="accordion ">Color Ramp</button>
+    <div class="panel" >
+      
+    <img id="Mgrid1" onclick="mangaloreMap1()" style="position:absolute;margin-left: 33px;max-width: 31px;height: 107px;" src="images/Mangalore_grid1.png"/>
+    
+    <!-- <div class="container"></div> -->
+    <img id="Mangmap1" disabled onclick="grid1_map()" style="position:absolute;visibility: hidden;left:343px; top:18px; width:174%;height: 420px;" title="finalise the image to proceed" src="images/Mangalore_streched_map1.png"/>
+    <!-- <div class="overlay">finalise the image to proceed</div> -->
+        
+    <img id="Bangmap1" disabled onclick="grid1_map()" data-title="My site" style="position:relative;margin-left: 37px;max-width: 31px;height: 107px;visibility: hidden;" title="finalise the image to proceed" src="images/Bangalore_streched_map1.png"/> 
+
+
+
+    <img id="Mgrid2" onclick="mangaloreMap2()" style="position:absolute;margin-left: 20px;max-width: 31px;height: 107px;" src="images/Mangalore_grid2.png"/>
+
+    <img id="Mangmap2" onclick="grid2_map()" style="position:absolute; left:343px; top:18px; width:174%;height: 420px;visibility: hidden;"title="finalise the image to proceed" src="images/Mangalore_streched_map2.png"/>
+
+    <img id="Bangmap2" onclick="grid2_map()"style="position:relative;margin-left: 27px;max-width: 31px;height: 107px;visibility: hidden;" title="finalise the image to proceed" src="images/Bangalore_streched_map2.png"/>
+
+
+
+    <img id="Mgrid3"onclick="mangaloreMap3()" style="position:absolute;margin-left: 16px;max-width: 31px;height: 107px;"  src="images/Mangalore_grid3.png"/>
+
+    <img id="Mangmap3" onclick="grid3_map()" style="position:absolute; left:343px; top:18px; width:174%;height: 420px;visibility: hidden;"title="finalise the image to proceed" src="images/Mangalore_streched_map3.png"/>
+
+    <img id="Bangmap3" onclick="grid3_map()" style="position:absolute;left: 343px;width: 174%px;top:18px;height: 420px;visibility: hidden;" title="finalise the image to proceed" src="images/Bangalore_streched_map3.png"/>
+  </div>
+
+
+    <button id="symbology" disabled class="accordion">Symbology</button>
+    <div class="panel">
+      <button id="classified"  onclick="symbology_classified()" class="accordions" > Classfied</button>
+
+      <!-- //mangalore classified images// -->
+
+      <img id="mangalore_Classified1" style="position:absolute; left:346px; top:16px; height: 481px;width:165%; visibility: hidden;" src="images/Mangalore_classified_map1.png"/> 
+
+      <img id="mangalore_Classified2" style="position:absolute; left:346px; top:16px; height: 481px;width:165%;visibility: hidden;" src="images/Mangalore_classified_map2.png"/> 
+
+      <img id="mangalore_Classified3" style="position:absolute; left:346px; top:16px; height: 481px;width:165%;visibility: hidden;" src="images/Mangalore_classified_map3.png"/>  
+
+<!-- //bangalore classified images// -->
+
+      <img id="bangalore_Classified1" style="position:absolute; left:346px; top:16px; width:165%;height: 481px;visibility: hidden;" src="images/Bangalore_classified_map1.png"/>
+
+      <img id="bangalore_Classified2" style="position:absolute; left:346px; top:16px; width:165%;height: 481px;visibility: hidden;" src="images/Bangalore_classified_map2.png"/> 
+
+      <img id="bangalore_Classified3" style="position:absolute; left:346px; top:16px; width:165%;height: 481px;visibility: hidden;" src="images/Bangalore_classified_map3.png"/>  
+
+
+ 
+      <button id="steched" disabled onclick="symbology_streched()" class="accordions">Streched</button>
+
+      <!-- mangalore streched images -->
+
+      <img id="mangalore_Streched1" style="position:absolute; left:345px; top:24px; width:163%;height: 399px;visibility: hidden;" src="images/Mangalore_streched_map1.png"/>
+
+      <img id="mangalore_Streched2" style="position:absolute; left:345px; top:24px; width:163%;height: 399px;visibility: hidden;" src="images/Mangalore_streched_map2.png"/>
+
+      <img id="mangalore_Streched3" style="position:absolute; left:345px; top:24px; width:163%;height: 399px;visibility: hidden;" src="images/Mangalore_streched_map3.png"/>
+
+<!-- bangalore streched images -->
+
+      <img id="bangalore_Streched1" style="position:absolute; left:345px; top:24px; width:163%;height: 399px;visibility: hidden;" src="images/Bangalore_streched_map1.png"/> 
+
+      <img id="bangalore_Streched2" style="position:absolute; left:345px; top:24px; width:163%;height: 399px;visibility: hidden;" src="images/Bangalore_streched_map2.png"/> 
+
+      <img id="bangalore_Streched3" style="position:absolute; left:345px; top:24px; width:163%;height: 399px;visibility: hidden;" src="images/Bangalore_streched_map3.png"/> 
     </div>
-            
-</head>
 
+
+    
+<button class="accordion"  >Watershed Delination</button>
+<div class="panel">
+  <button class="accordions">Fill</button><br>
+  <button class="accordions">Flow Direction</button><br>
+  <button class="accordions">Flow Accumulation</button><br>
+  <button class="accordions">Stream network</button><br>
+  <button class="accordions">Watershed</button>
+</div>
+
+<button class="accordion">DEM Derivatives</button>
+<div class="panel">
+  <button onclick="elevation_select()" class="accordions"> Elevation</button><br>
+  <!-- <div class="image">
+  
+    <button >legend</button>
+    <img class="overlay" src="images/Mangalore_streched_1.png"/>
+ </div> -->
+<!-- // mangalore and bangalore dem elevation streched 1 -->
+
+  <img id="mangalore_streched_elevation1" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_streched1_withoutgrid.png"/>
+
+  <img id="bangalore_streched_elevation1" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/bangalore_streched1_withoutgrid.png"/>
+
+
+  <a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_1.png')" onMouseOut="ShowPicture('Style',0)"><button id="legend" style="position: absolute;margin-left: 559px;margin-top: 123px;visibility: hidden;">Legend</button></a>
+<div class="imageBox" id="Style">
+    <img style="position: absolute;margin-top: 130px;margin-left: 313px;width:101px;" src="images/Mangalore_streched_1.png"/>
+</div> 
+
+<!-- mangalore and bangalore dem elevation streched 2 -->
+
+<!-- <img id="mangalore_streched_elevation2" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_streched2_withoutgrid.png"/>
+
+<img id="bangalore_streched_elevation2" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/bangalore_streched2_withoutgrid.png"/>
+
+<a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_2.png')" onMouseOut="ShowPicture('Style',0)"><button style="position: absolute;margin-left: 562px;margin-top: 119px;visibility: hidden;">Legend</button></a>
+<div class="imageBox" id="Style">
+    <img style="position: absolute;margin-top: 17px;margin-left: 312px;width:101px;" src="images/Mangalore_streched_2.png"/>
+</div> -->
+
+
+<!-- mangalore and bangalore dem elevation streched 3 -->
+
+<!-- <img id="mangalore_streched_elevation3" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_streched3_withoutgrid.png"/>
+
+<img id="bangalore_streched_elevation3" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/bangalore_streched3_withoutgrid.png"/>
+
+<a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_3.png')" onMouseOut="ShowPicture('Style',0)"><button style="position: absolute;margin-left: 562px;margin-top: 119px;visibility: hidden;">Legend</button></a>
+<div class="imageBox" id="Style">
+    <img style="position: absolute;margin-top: 17px;margin-left: 312px;width:101px;" src="images/Mangalore_streched_3.png"/> -->
+
+
+
+<!-- // mangalore and bangalore dem elevation classified 1-->
+
+<!-- <img id="mangalore_classified_elevation1" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_classified1_withoutgrid.png"/>
+
+<img id="bangalore_classified_elevation1" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/bangalore_classified1_withoutgrid.png"/>
+
+  <a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_1.png')" onMouseOut="ShowPicture('Style',0)"><button style="position: absolute;margin-left: 562px;margin-top: 119px;visibility: hidden;">Legend</button></a>
+<div class="imageBox" id="Style">
+  <img style="position: absolute;margin-top: 17px;margin-left: 312px;width:101px;" src="images/Mangalore_streched_1.png"/> -->
+
+
+<!-- // mangalore and bangalore dem elevation classified 2-->
+
+<!-- <img id="mangalore_classified_elevation2" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_classified2_withoutgrid.png"/>
+
+<img id="bangalore_classified_elevation2" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/bangalore_classified2_withoutgrid.png"/>
+
+<a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_2.png')" onMouseOut="ShowPicture('Style',0)"><button style="position: absolute;margin-left: 562px;margin-top: 119px;visibility: hidden;">Legend</button></a>
+<div class="imageBox" id="Style">
+    <img style="position: absolute;margin-top: 17px;margin-left: 312px;width:101px;" src="images/Mangalore_streched_2.png"/>
+</div> -->
+
+<!-- // mangalore and bangalore dem elevation classified 3-->
+
+
+<!-- <img id="mangalore_classified_elevation3" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_classified3_withoutgrid.png"/>
+
+<img id="mangalore_classified_elevation3" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/bangalore_classified3_withoutgrid.png"/>
+
+<a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_3.png')" onMouseOut="ShowPicture('Style',0)"><button style="position: absolute;margin-left: 562px;margin-top: 119px;visibility: hidden;">Legend</button></a>
+<div class="imageBox" id="Style">
+    <img style="position: absolute;margin-top: 17px;margin-left: 312px;width:101px;" src="images/Mangalore_streched_3.png"/> -->
+
+  <!-- </div> -->
+
+
+    <button onclick="slope_select()" class="accordions">Slope</button><br>
+    <img id="mangalore_slope_streched" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_slopewithoutgrid_streched1.png"/>
+    <p id="Sgrid" style="position: absolute;margin-top: -19px;visibility: hidden;margin-left: 322px;font-size: 12px;width: 100%;"><b>Slope Degrees</b></p>
+
+
+    <!-- <a href="#" > -->
+    <button id="legend1" style="position: absolute;margin-left: 556px;margin-top: 85px;visibility: hidden;" onMouseOver="ShowPicture1()" onMouseOut="ShowPicture1()">Legend</button></a>
+<div class="imageBox" id="Style1">
+    <img id="slope1"style="position: absolute;margin-top: 93px;margin-left: 312px;width:101px;visibility:hidden;" src="images/mangalore_slopewithoutgrid_streched1.png"/>
+</div> 
+    <!-- <div class="image">
+  
+      <button id="slopehover" style="position: absolute; margin-left: 20px;" >legend</button>
+      <img class="overlay" src="images/Mangalore_streched_1.png"/>
+   </div>  -->
+
+    <!-- <select id="myText" value="elevation data" type="text" placeholder="Enter the text" style="position:absolute; margin-left:378px; margin-top:20px;visibility: visible;" >
+      <option value="" disabled selected>Select your option</option>
+        <option value="elevation data">Elevation data</option>
+    </select>
+    <p id="demo"></p>
+    <button style="position: absolute;"onclick="myFunction()">enter</button> -->
+        
+        
+
+        <!-- <a href="#" onMouseOver="ShowPicture1('Style',1,'./images/Mangalore_streched_1.png')" onMouseOut="ShowPicture1('Style',0)"><button id="legend1" style="position: absolute;margin-left: 561px;margin-top: 116px;visibility: hidden;">Legend</button></a>
+      <div class="imageBox" id="Style1">
+        <img id="streched1" style="position: absolute;margin-top: 162px;width:62px;margin-left:312px; visibility: hidden;" src="images/Mangalore_streched_1.png"/>
+      </div> --> 
+
+        <!-- <a href="#" onMouseOver="ShowPicture('Style',1,'images/mangalore_slopegrid_streched1.png')" onMouseOut="ShowPicture('Style',0)">
+          <button id="legend1" style="position: absolute;margin-left: 563px;margin-top: 44px;visibility: hidden;">Legend</button></a>
+      <div class="imageBox" id="Style1">
+          <img style="position: absolute;margin-top: 6px;width:62px;margin-left:312px;visibility: hidden;" src="images/mangalore_slopegrid_streched1.png"/>
+      </div> -->
+
+<!-- // mangalore and bangalore dem slope streched 1-->
+
+  <!-- <img id="mangalore_slope" style="position:absolute; left:296px; top:-7px; width:71%;height: 399px;visibility: hidden;" src="images/mangalore_slopewithoutgrid_streched1.png"/>
+
+  <img id="mangalore_slope" style="position:absolute; left:296px; top:-7px; width:71%;height: 399px;visibility: hidden;" src="images/bangalore_streched_slope1.png"/>
+
+
+  <img id="mangalore_Streched1" style="position:absolute; left:296px; top:-7px; width:71%;height: 399px;visibility: hidden;" src="images/mangalore_streched_slope2.png"/>
+
+  <img id="mangalore_Streched1" style="position:absolute; left:296px; top:-7px; width:71%;height: 399px;visibility: hidden;" src="images/mangalore_streched_slope3.png"/>  -->
+
+  <button onclick="hillShade_select()" class="accordions">HillShade</button><br>
+  <img id="mangalore_curvature_streched" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_curvature1_withoutgrid.png"/>
+  <p id="Hgrid" style="position: absolute;margin-top: -69px;visibility: hidden;margin-left: 322px;font-size: 12px;width: 100%;"><b>Hill Shade</b></p>
+
+  <a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_1.png')" onMouseOut="ShowPicture('Style',0)"><button id="legend2" style="position: absolute;margin-left: 556px;margin-top: 41px;visibility: hidden;">Legend</button></a>
+  <div class="imageBox" id="Style1">
+      <img id="slope2"style="position: absolute;margin-top: 46px;margin-left: 312px;width:101px;" src="images/mangalore_curvature1_grid.png"/>
+  </div> 
+
+  <!-- <a href="#" onMouseOver="ShowPicture2('Style',1,'./images/mangalore_curvature1_grid.png)" onMouseOut="ShowPicture2('Style',0)"><button id="legend1" style="position: absolute;margin-left: 561px;margin-top: 116px;visibility: hidden;">Legend</button></a>
+      <div class="imageBox" id="Style2">
+        <img id="streched1" style="position: absolute;margin-top: 162px;width:62px;margin-left:312px; visibility: hidden;" src="images/mangalore_curvature1_grid.png"/>
+      </div> -->
+  
+
+  <button onclick="Aspect_select()"class="accordions">Aspect</button><br>
+  <img id="mangalore_aspect_streched" style="position:absolute; left:296px; top:25px; width:188%;height: 435px;visibility: hidden;" src="images/mangalore_aspect1_strechedwithoutgrid.png"/>
+  <p id="Agrid" style="position: absolute;margin-top: -98px;visibility: hidden;margin-left: 322px;font-size: 12px;width: 100%;"><b>Aspect</b></p>
+
+  <a href="#" onMouseOver="ShowPicture('Style',1,'./images/Mangalore_streched_1.png')" onMouseOut="ShowPicture('Style',0)"><button id="legend3" style="position: absolute;margin-left: 556px;margin-top: 13px;visibility: hidden;">Legend</button></a>
+  <div class="imageBox" id="Style1">
+      <img id="slope3"style="position: absolute;margin-top: 29px;margin-left: 312px;width:101px;" src="images/mangalore_aspect1_strechedgrid.png"/>
+  </div> 
+
+  <!-- <a href="#" onMouseOver="ShowPicture('Style',1,'./images/mangalore_aspect1_strechedgrid.png)" onMouseOut="ShowPicture1('Style',0)"><button id="legend1" style="position: absolute;margin-left: 561px;margin-top: 116px;visibility: hidden;">Legend</button></a>
+      <div class="imageBox" id="Style1">
+        <img id="streched1" style="position: absolute;margin-top: 162px;width:62px;margin-left:312px; visibility: hidden;" src="images/mangalore_aspect1_strechedgrid.png"/>
+      </div> -->
+</div></div></div> 
+
+        <div id="nav">
+            <img id="nextButton" onclick="navNext()" src="images/Next.png"/>
+            <img class ="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png"/>
+            <div id="copyright"> <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+            </div>
+</head>
+<body>
     
 </body>
 </html>
