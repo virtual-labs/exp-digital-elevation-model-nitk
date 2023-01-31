@@ -21,8 +21,8 @@ html
 	position:relative;
 	left: 0px;
 	top: 0px;
-	height:40px;
-	font-size: 24px;
+	height:62px;
+	font-size: 20px;
 	text-align:center;
 	background-color: black;
 	font-family: verdana;
@@ -49,6 +49,7 @@ html
 {
 	margin:5px 0 0 5px;
 	padding:0;
+  margin-top: 22px;
 }
 #nextButton
 {
@@ -102,28 +103,69 @@ body{
   float: left;
   
 }
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
+/* .h2{
+  font-size: 15px;
+  font-family: serif;
+  color: #008000;
   text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
+  animation: animateText 1.5s linear infinite;
 }
+@keyframes animateText{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.7;
+  }
+  100%{
+    opacity: 0;
+  }
+} */
 
+.blink {
+  animation: blinker 1s linear infinite;
+  color: rgba(222 28 28 / 84%);
+  font-family: sans-serif;
+  margin-top: 374px;
+  font-size: 20px;
+  margin-left: 14px;
+  position: relative;
+  /* visibility: hidden; */
+}
+@keyframes blinker {
+  50% {
+      opacity: 0;
+  }
+}
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.1s;
+  visibility: visible;
+}
+[data-title]:after {
+  content: attr(data-title);
+  background-color:black;
+  color:white;
+  font-size: 15px;
+  position: absolute;
+  padding: 1px 5px 2px 5px;
+  bottom: -1.6em;
+  left: 100%;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px #222222;
+  opacity: 0;
+  border: 1px solid #111111;
+  z-index: 99999;
+  visibility: hidden;
+}
+[data-title] {
+  position: relative;
+}
+/* data-title{
+  position: absolute;
+  background-color: black;
+  color: white;
+} */
 /* Popup arrow */
 .popup .popuptext::after {
   content: "";
@@ -181,7 +223,7 @@ body{
  .tools{
    position: absolute;
    left: -61px;
-   top: 6px;
+   top: 27px;
    display: flex;
    flex-direction: column;
    gap: 6px;
