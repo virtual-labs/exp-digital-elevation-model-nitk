@@ -20,24 +20,21 @@
     <div id="title"><h3>Extraction of Topographical features using Digital Elevation Model </h3></div>
     <div class="simsubscreen" id="canvas0" >
     <h4 class="incanvas">Objective:</h4>
-    <p class="incanvas" style="font-size:14px;">Objective of the RS lab Dem Experiment.</p><br/>
-    <img style="position:absolute; left:208px; top:152px;height: 369px;"; src="images/canvas_image.png"/>
+    <p class="incanvas" style="font-size:14px;">To extract the topographical features and delineate watershed from the Shuttile Radar Topographic Mission (SRTM) Digital Elevation Model.</p><br/>
+    <img style="position:absolute; left:208px; top:152px;height: 369px;" src="images/canvas_image.png"/>
     <br >&nbsp;<span id="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify">Description
     <span class="tooltiptext">
     <p><strong style="color:rgb(243, 238, 238)">Digital Elevation Models (DEMs) is a digital model of the earth’s surface created from terrain elevation data.</strong></p>
 
     </span></span></div>
 
-    <div class="simsubscreen" id="canvas1" style="visibility:hidden;">
-      
-      
-      <!-- <p class="blink" style="position: absolute;top:368px;font-size: 15px;margin-left: -40px;width: 100%;max-width:38%; visibility: hidden;">Select the sybology and move on</p>	 -->
 
-  <div class="tools" style="position:absolute;">
-    <img id="north" style="position:absolute;margin-top: -2px;width: 11%;margin-left: 760px; "; src="images/north.png"/>
-    <img style="position:absolute; left:171px; top:13px;width: 10%;" title="Choose Map"src="images/information_icon.png"/>
+      
+    <div class="simsubscreen" id="canvas1" style="visibility:hidden;">
+    <div class="tools" style="position:absolute;">
+    <img id="north" style="position:absolute;margin-top: -2px;width: 11%;margin-left: 760px;visibility: hidden; " src="images/north.png"/>
     <button id="mapSelection" class="accordion" onclick="map1()" >Choose Map</button>
-  
+    
     <div class="panel">
       <div class="item" ></div>
     
@@ -71,7 +68,10 @@
       </div></div></div> 
 
       
-      <img style="position:absolute; left:171px; top:57px;width: 10%;" title="Color Ramp"src="images/information_icon.png"/>
+      <!-- <img style="position:absolute; left:177px; top:57px;width: 10%;" onMouseOver=" colorinformation1()" onMouseOut=" colorinformation1a()" src="images/information_icon.png"/>
+      <p id="color" style="position:absolute;visibility:hidden;margin-top: 64px;background-color: black;color: white;width: 99px; border-radius: 5px;
+      padding: 0px 20px 10px 15px;z-index: 100;height: 20px;margin-left: 193px; ">Color Ramp</p> -->
+
       <button id="colorSelection" disabled class="accordion " onclick="selection()" >Color Ramp</button>
      
       <div class="panel" >
@@ -88,21 +88,21 @@
       <img id="Mgrid1" onclick="mangaloreMap1()" disabled style="position:absolute;margin-left: 32px;max-width: 31px;height: 107px;" src="images/Mangalore_grid1.png"/>
       <p id="select1" style="position:absolute; visibility:hidden;color: grey; font-size: 23px; text-align: center;margin-top: 364px;width:270%;max-width: 527px;margin-left: 257px;"> You have selected the image.</p>
    
-      <img id="Mangmap1" onclick="grid1_map()" style="position:absolute;visibility: hidden;left:329px; top:52px; width:183%;height: 381px;" title="Click on the image to proceed." src="images/Elevation_Mangalore_Streched_withoutgrid1_map1.png"/>
+      <img id="Mangmap1" onclick="grid1_map()" style="position:absolute;visibility: hidden;left:339px; top:52px; width:168%;height: 381px;" title="Click on the image to proceed." src="images/Elevation_Mangalore_Streched_withoutgrid1_map1.png"/>
  
       <img id="Bangmap1" onclick="grid1_map()" style="position:relative;margin-left: 37px;max-width: 31px;height: 107px;visibility: hidden;" title="Click on the image to proceed." src="images/Elevation_bangalore_Streched_withoutgrid1_map1.png"/>
 
 
     <img id="Mgrid2" onclick="mangaloreMap2()" style="position:absolute;margin-left: 21px;max-width: 31px;height: 107px;" src="images/mangalore_grid2.png"/>
     
-    <img id="Mangmap2" onclick="grid2_map()" style="position:absolute; left:343px; top:18px; width:174%;height: 420px;visibility: hidden;"title="finalise the image to proceed" src="images/Elevation_Mangalore_Streched_withoutgrid2_map2.png"/>
+    <img id="Mangmap2" onclick="grid2_map()" style="position:absolute; left:339px; top:18px; width:168%;height: 420px;visibility: hidden;"title="finalise the image to proceed" src="images/Elevation_Mangalore_Streched_withoutgrid2_map2.png"/>
 
     <img id="Bangmap2" onclick="grid2_map()"style="position:relative;margin-left: 37px;max-width: 31px;height: 107px;visibility: hidden;" title="finalise the image to proceed" src="images/Elevation_bangalore_Streched_withoutgrid2_map2.png"/>
 
 
     <img id="Mgrid3"onclick="mangaloreMap3()" style="position:absolute;margin-left: 16px;max-width: 31px;height: 107px;"  src="images/mangalore_grid3.png"/>
     
-    <img id="Mangmap3" onclick="grid3_map()" style="position:absolute; left:339px; top:37px; width:174%;height: 388px;visibility: hidden;"title="finalise the image to proceed" src="images/Elevation_Mangalore_Streched_withoutgrid3_map3.png"/>
+    <img id="Mangmap3" onclick="grid3_map()" style="position:absolute; left:339px; top:37px; width:168%;height: 388px;visibility: hidden;"title="finalise the image to proceed" src="images/Elevation_Mangalore_Streched_withoutgrid3_map3.png"/>
 
     <img id="Bangmap3" onclick="grid3_map()" style="position:absolute;left: 339px;width: 174%px;top:18px;height: 417px;visibility: hidden;" title="finalise the image to proceed" src="images/Elevation_bangalore_Streched_withoutgrid3_map3.png"/>
   </div>
@@ -120,34 +120,34 @@
 
   <img id="mangalore_Classified1" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/Mangalore_classified_map1.png"/> 
 
-  <img id="bangalore_Classified1" style="position:absolute; left:329px; top:52px; width:183%;height: 381px;visibility: hidden;" src="images/Bangalore_classified_map1.png"/>
+  <img id="bangalore_Classified1" style="position:absolute; left:338px; top:52px; width:169%;height: 381px;visibility: hidden;" src="images/Bangalore_classified_map1.png"/>
 
 
   <img id="mangalore_Classified2" style="position:absolute; left:329px; top:52px; height: 381px;width:183%;visibility: hidden;" src="images/Mangalore_classified_map2.png"/> 
 
-  <img id="bangalore_Classified2" style="position:absolute; left:329px; top:52px; width:183%;height: 381px;visibility: hidden;" src="images/Bangalore_classified_map2.png"/> 
+  <img id="bangalore_Classified2" style="position:absolute; left:338px; top:52px; width:169%;height: 381px;visibility: hidden;" src="images/Bangalore_classified_map2.png"/> 
 
   
   <img id="mangalore_Classified3" style="position:absolute; left:329px; top:52px; height: 381px;width:183%;visibility: hidden;" src="images/Mangalore_classified_map3.png"/> 
       
-  <img id="bangalore_Classified3" style="position:absolute; left:329px; top:52px; width:183%;height: 381px;visibility: hidden;" src="images/Bangalore_classified_map3.png"/> 
+  <img id="bangalore_Classified3" style="position:absolute; left:338px; top:52px; width:169%;height: 381px;visibility: hidden;" src="images/Bangalore_classified_map3.png"/> 
 
   <!-- symbology streched -->
   <label onchange="symbology_streched()"id="Rstreched"style="position: absolute;margin-top: 453px;margin-left: 162px;visibility:hidden;width:100%;"> <input type="radio" name="programming" id="angular" value= "angular"> Streched</label>
 
   <img id="mangalore_Streched1" style="position:absolute; left:329px; top:52px; width:183%;height: 381px;visibility: hidden;" src="images/Elevation_Mangalore_Streched_withoutgrid1_map1.png"/>
 
-  <img id="bangalore_Streched1" style="position:absolute; left:329px; top:52px; width:183%;height: 381px;visibility: hidden;" src="images/Elevation_bangalore_Streched_withoutgrid1_map1.png"/>
+  <img id="bangalore_Streched1" style="position:absolute; left:338px; top:52px; width:169%;height: 381px;visibility: hidden;" src="images/Elevation_bangalore_Streched_withoutgrid1_map1.png"/>
 
 
   <img id="mangalore_Streched2" style="position:absolute; left:329px; top:52px; width:183%;height: 381px;visibility: hidden;" src="images/Elevation_Mangalore_Streched_withoutgrid2_map2.png"/>
 
-  <img id="bangalore_Streched2" style="position:absolute; left:329px; top:52px; width:183%;height: 381px;visibility: hidden;" src="images/Elevation_bangalore_Streched_withoutgrid2_map2.png"/>
+  <img id="bangalore_Streched2" style="position:absolute; left:338px; top:52px; width:169%;height: 381px;visibility: hidden;" src="images/Elevation_bangalore_Streched_withoutgrid2_map2.png"/>
 
 
   <img id="mangalore_Streched3" style="position:absolute; left:329px; top:52px; width:183%;height: 381px;visibility: hidden;" src="images/Elevation_Mangalore_Streched_withoutgrid3_map3.png"/>
 
-  <img id="bangalore_Streched3" style="position:absolute; left:329px; top:52px; width:183%;height: 381px;visibility: hidden;" src="images/Elevation_bangalore_Streched_withoutgrid3_map3.png"/>
+  <img id="bangalore_Streched3" style="position:absolute; left:338px; top:52px; width:169%;height: 381px;visibility: hidden;" src="images/Elevation_bangalore_Streched_withoutgrid3_map3.png"/>
 
   
 <!-- DEM Derivatives -->
@@ -156,8 +156,10 @@
 <!-- <img id="dem_icon"style="position:absolute; left:175px; top:231px;width: 10%; visibility: hidden;" title="Some Text"src="images/information_icon.png"/> -->
 <div class="panel">
 <button onclick="elevation_Select()" class="accordions">Elevation</button>
-<img style="position:absolute; left:171px; top:144px;width: 10%;" title="Represents the height from the Mean Sea level for each raster cell"src="images/information_icon.png"/>
-  
+<img style="position:absolute; left:171px; top:144px;width: 10%;" onMouseOver=" elevationinformation1()" onMouseOut=" elevationinformation1a()"src="images/information_icon.png"/>
+<p id="elevationText" style="position:absolute;visibility:hidden;margin-top: -32px;background-color: black;color: white;width: 115%; border-radius: 5px;
+padding: 0px 20px 10px 15px;z-index: 100;height: 63px;margin-left: 193px; ">Represents the height from the Mean Sea level for each raster cell</p>
+
   <img id="mangalore_classified_elevation1"  style="position:absolute; left:329px; top:52px; width:183%; height:381px;visibility: hidden;" src="images/Elevation_Mangalore_Classified_withoutgrid1_map1.png"/>
 
   <button id="elevation_MClegend1" style="position: absolute;margin-left: 410px;margin-top: 251px;visibility: hidden;" onMouseOver="elevationMC1()" onMouseOut="elevationMC1a()">Legend</button></a>
@@ -264,23 +266,30 @@
   <img id="elevation_SBgrid3"style="position: absolute;margin-top: 224px;margin-left: 343px; width:98px; height:105px; visibility:hidden;" src="images/Elevation_bangalore_Streched_grid3_map3.png"/>
 </div> 
 
-<img style="position:absolute; left:171px; top:187px;width: 10%;" title="The degree of incline of a terrain surface. It represents the rate of change of elevation"src="images/information_icon.png"/>
+
+
+
+
+<img style="position:absolute; left:171px; top:187px;width: 10%;" onMouseOver=" slopeinformation1()" onMouseOut=" slopeinformation1a()"src="images/information_icon.png"/>
 <button  onclick="selectData()" class="accordions">Slope</button><br>
 
+<p id="slope" style="position:absolute;visibility:hidden;margin-top: -23px;background-color: black;color: white;width: 308px; border-radius: 5px;
+padding: 0px 20px 10px 15px;z-index: 100;height: 68px;margin-left: 193px; ">The degree of incline of a terrain surface. It represents the rate of change of elevation</p>
+<!-- <img style="position:absolute; left:171px; top:13px;width: 10%;"onMouseOver=" slopeinformation1()" onMouseOut=" slopeinformation1a()" src="images/information_icon.png"/> -->
 
   <select id="myText" value="Elevation data" type="text" placeholder="Enter the text" style="position:absolute; margin-left:404px; margin-top:-214px;visibility: hidden;" >
     <option value="" disabled selected>Select your option</option>
       <option value="Elevation data">Elevation data</option>
   </select>
   <p id="demo" style="position: absolute;margin-top: -214px;margin-left: 444px;width: 100%;max-width: 144px;font-size: 19px;visibility: hidden;"></p>
-  <button id="enter" onclick="slope_Select()" style="position: absolute;margin-top: -216px;margin-left: 545px;visibility: hidden;">enter</button>
+  <button id="enter" onclick="slope_Select()" style="position: absolute;margin-top: -216px;margin-left: 545px;visibility: hidden;">Ok</button>
 
   
    <img id="mangalore_classified_slope1"  style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/slope_classified_mangalore_map1_withoutgrid1.png"/>
 
   <p id="ECgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>slope</b></p>
 
-  <button id="slope_MClegend1" style="position: absolute;margin-left:609px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMC1()" onMouseOut="slopeMC1a()">Legend</button></a>
+  <button id="slope_MClegend1" style="position: absolute;margin-left:596px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMC1()" onMouseOut="slopeMC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_CMgrid1"style="position: absolute;margin-top: 175px;margin-left: 348px; width:104px; height:105px; visibility:hidden;" src="images/slope_classified_mangalore_map1_grid1.png"/>
 </div> 
@@ -288,7 +297,7 @@
 
 <img id="mangalore_classified_slope2"  style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;"  src="images/slope_classified_mangalore_map2_withoutgrid2.png"/>
 
-  <button id="slope_MClegend2" style="position: absolute;margin-left:609px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMC2()" onMouseOut="slopeMC2a()">Legend</button></a>
+  <button id="slope_MClegend2" style="position: absolute;margin-left:599px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMC2()" onMouseOut="slopeMC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_CMgrid2"style="position: absolute;margin-top: 175px;margin-left: 348px; width:104px; height:105px; visibility:hidden;" src="images/slope_classified_mangalore_map2_grid2.png"/>
 </div> 
@@ -296,7 +305,7 @@
 
   <img id="mangalore_classified_slope3"  style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;"  src="images/slope_classified_mangalore_map3_withoutgrid3.png"/>
 
-  <button id="slope_MClegend3" style="position: absolute;margin-left:609px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMC3()" onMouseOut="slopeMC3a()">Legend</button></a>
+  <button id="slope_MClegend3" style="position: absolute;margin-left:593px;margin-top: 162px;visibility: hidden;" onMouseOver="slopeMC3()" onMouseOut="slopeMC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_CMgrid3"style="position: absolute;margin-top: 175px;margin-left: 348px; width:104px; height:105px; visibility:hidden;" src="images/slope_classified_mangalore_map3_grid3.png"/>
 </div> 
@@ -309,7 +318,7 @@
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>slope</b></p>
 
-  <button id="slope_MSlegend1" style="position: absolute;margin-left: 609px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMS1()" onMouseOut="slopeMS1a()">Legend</button></a>
+  <button id="slope_MSlegend1" style="position: absolute;margin-left: 596px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMS1()" onMouseOut="slopeMS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_SMgrid1"style="position: absolute;margin-top: 175px;margin-left: 348px; width:104px; height:105px; visibility:hidden;" src="images/slope_streched_mangalore_map1_grid1.png"/>
 </div> 
@@ -319,7 +328,7 @@
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>slope</b></p>
 
-  <button id="slope_MSlegend2" style="position: absolute;margin-left: 609px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMS2()" onMouseOut="slopeMS2a()">Legend</button></a>
+  <button id="slope_MSlegend2" style="position: absolute;margin-left: 599px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMS2()" onMouseOut="slopeMS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_SMgrid2"style="position: absolute;margin-top: 175px;margin-left: 348px; width:104px; height:105px; visibility:hidden;" src="images/slope_streched_mangalore_map2_grid2.png"/>
 </div> 
@@ -329,7 +338,7 @@
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>slope</b></p>
 
-  <button id="slope_MSlegend3" style="position: absolute;margin-left: 609px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMS3()" onMouseOut="slopeMS3a()">Legend</button></a>
+  <button id="slope_MSlegend3" style="position: absolute;margin-left: 599px;margin-top: 158px;visibility: hidden;" onMouseOver="slopeMS3()" onMouseOut="slopeMS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_SMgrid3"style="position: absolute;margin-top: 175px;margin-left: 348px; width:104px; height:105px; visibility:hidden;" src="images/slope_streched_mangalore_map3_grid3.png"/>
 </div> 
@@ -339,7 +348,7 @@
 <!-- bangalore classified images -->
   <img id="bangalore_classified_slope1" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/slope_classified_bangalore_map1_withoutgrid1.png"/>
 
-  <button id="slope_BClegend1" style="position: absolute;margin-left: 609px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBC1()" onMouseOut="slopeBC1a()">Legend</button></a>
+  <button id="slope_BClegend1" style="position: absolute;margin-left: 599px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBC1()" onMouseOut="slopeBC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_CBgrid1"style="position: absolute;margin-top: 189px;margin-left: 337px; width:92px; height:105px; visibility:hidden;" src="images/slope_classified_bangalore_map1_grid1.png"/>
 </div> 
@@ -347,7 +356,7 @@
 
 <img id="bangalore_classified_slope2" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/slope_classified_bangalore_map2_withoutgrid2.png"/>
 
-<button id="slope_BClegend2" style="position: absolute;margin-left: 609px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBC2()" onMouseOut="slopeBC2a()">Legend</button></a>
+<button id="slope_BClegend2" style="position: absolute;margin-left: 599px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBC2()" onMouseOut="slopeBC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_CBgrid2"style="position: absolute;margin-top: 189px;margin-left: 348px; width:92px; height:105px; visibility:hidden;" src="images/slope_classified_bangalore_map2_grid2.png"/>
 </div> 
@@ -356,7 +365,7 @@
 <img id="bangalore_classified_slope3" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/slope_classified_bangalore_map3_withoutgrid3.png"/>
 
 
-<button id="slope_BClegend3" style="position: absolute;margin-left: 609px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBC3()" onMouseOut="slopeBC3a()">Legend</button></a>
+<button id="slope_BClegend3" style="position: absolute;margin-left: 599px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBC3()" onMouseOut="slopeBC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_CBgrid3"style="position: absolute;margin-top: 181px;margin-left: 338px; width:92px; height:105px; visibility:hidden;" src="images/slope_classified_bangalore_map3_grid3.png"/>
 </div> 
@@ -367,7 +376,7 @@
  <img id="bangalore_streched_slope1" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/slope_streched_bangalore_map1_withoutgrid1.png"/>
   <p id="Egrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>slope</b></p>
 
-  <button id="slope_BSlegend1" style="position: absolute;margin-left: 609px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBS1()" onMouseOut="slopeBS1a()">Legend</button></a>
+  <button id="slope_BSlegend1" style="position: absolute;margin-left: 599px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBS1()" onMouseOut="slopeBS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_SBgrid1"style="position: absolute;margin-top: 183px;margin-left: 337px; width:100px; height:105px; visibility:hidden;" src="images/slope_streched_bangalore_map1_grid1.png"/>
 </div> 
@@ -376,7 +385,7 @@
 
   <img id="bangalore_streched_slope2" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/slope_streched_bangalore_map2_withoutgrid2.png"/>
 
-  <button id="slope_BSlegend2" style="position: absolute;margin-left: 609px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBS2()" onMouseOut="slopeBS2a()">Legend</button></a>
+  <button id="slope_BSlegend2" style="position: absolute;margin-left: 599px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBS2()" onMouseOut="slopeBS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_SBgrid2"style="position: absolute;margin-top: 183px;margin-left: 337px; width:100px; height:105px; visibility:hidden;" src="images/slope_streched_bangalore_map2_grid2.png"/>
 </div> 
@@ -385,29 +394,32 @@
   <img id="bangalore_streched_slope3" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/slope_streched_bangalore_map3_withoutgrid3.png"/>
   
 
-  <button id="slope_BSlegend3" style="position: absolute;margin-left: 609px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBS3()" onMouseOut="slopeBS3a()">Legend</button></a>
+  <button id="slope_BSlegend3" style="position: absolute;margin-left: 599px;margin-top: 169px;visibility: hidden;" onMouseOver="slopeBS3()" onMouseOut="slopeBS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="slope_SBgrid3"style="position: absolute;margin-top: 183px;margin-left: 337px; width:100px; height:105px; visibility:hidden;" src="images/slope_streched_bangalore_map3_grid3.png"/>
 </div> 
 
 
-<img style="position:absolute; left:171px; top:228px;width: 10%;" title="A technique used to visualize terrain as shaded relief."src="images/information_icon.png"/>
+
+<img style="position:absolute; left:171px; top:228px;width: 10%;" onMouseOver=" hillshadeinformation1()" onMouseOut=" hillshadeinformation1a()" src="images/information_icon.png"/>
   <button onclick="selectData1()" class="accordions">HillShade</button><br>
 
-  
+  <p id="hillshade" style="position:absolute;visibility:hidden;margin-top: -23px;background-color: black;color: white;width: 308px; border-radius: 5px;
+padding: 0px 20px 10px 15px;z-index: 100;height: 45px;margin-left: 193px; ">A technique used to visualize terrain as shaded relief.</p>
+
   <select id="myText1" value="Elevation data" type="text" placeholder="Enter the text" style="position:absolute; margin-left:404px; margin-top:-256px;visibility: hidden;" >
     <option value="" disabled selected>Select your option</option>
       <option value="Elevation data">Elevation data</option>
   </select> 
 
   <p id="demo1" style="position: absolute;margin-top: -260px;margin-left: 444px;width: 100%;max-width: 144px;font-size: 19px;visibility: hidden;"></p>
-  <button id="enter1" onclick="HillShade_Select()" style="position: absolute;margin-top: -258px;margin-left: 545px;visibility: hidden;">enter</button>
+  <button id="enter1" onclick="HillShade_Select()" style="position: absolute;margin-top: -258px;margin-left: 545px;visibility: hidden;">Ok</button>
 
 
   <img id="mangalore_classified_HillShade1"  style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/curvature_mangalore_classifiedwithoutgrid1_map1.png"/>
   <p id="ECgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>HillShade</b></p>
 
-  <button id="HillShade_MClegend1" style="position: absolute;margin-left: 609px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMC1()" onMouseOut="HillShadeMC1a()">Legend</button></a>
+  <button id="HillShade_MClegend1" style="position: absolute;margin-left: 598px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMC1()" onMouseOut="HillShadeMC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_CMgrid1"style="position: absolute;margin-top: 138px;margin-left: 348px; width:100px; height:105px; visibility:hidden;" src="images/curvature_mangalore_classifiedgrid1_map1.png"/>
 </div> 
@@ -416,15 +428,15 @@
 
   <img id="mangalore_classified_HillShade2"  style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;"  src="images/curvature_mangalore_classifiedwithoutgrid2_map2.png"/>
 
-  <button id="HillShade_MClegend2" style="position: absolute;margin-left: 609px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMC2()" onMouseOut="HillShadeMC2a()">Legend</button></a>
+  <button id="HillShade_MClegend2" style="position: absolute;margin-left: 598px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMC2()" onMouseOut="HillShadeMC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_CMgrid2"style="position: absolute;margin-top: 138px;margin-left: 348px; width:77px; height:105px; visibility:hidden;" src="images/curvature_mangalore_classifiedgrid2_map2.png"/>
 </div> 
 
 
-  <img id="mangalore_classified_HillShade3"  style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/curvature_mangalore_classifiedwithoutgrid2_map2.png"/>
+  <img id="mangalore_classified_HillShade3"  style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/curvature_mangalore_classifiedwithoutgrid3_map3.png"/>
 
-  <button id="HillShade_MClegend3" style="position: absolute;margin-left: 609px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMC3()" onMouseOut="HillShadeMC3a()">Legend</button></a>
+  <button id="HillShade_MClegend3" style="position: absolute;margin-left: 598px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMC3()" onMouseOut="HillShadeMC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_CMgrid3"style="position: absolute;margin-top: 138px;margin-left: 348px; width:77px; height:105px; visibility:hidden;" src="images/curvature_mangalore_classifiedgrid3_map3.png"/>
 </div> 
@@ -437,7 +449,7 @@
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>HillShade</b></p>
 
-  <button id="HillShade_MSlegend1" style="position: absolute;margin-left: 609px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMS1()" onMouseOut="HillShadeMS1a()">Legend</button></a>
+  <button id="HillShade_MSlegend1" style="position: absolute;margin-left: 598px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMS1()" onMouseOut="HillShadeMS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_SMgrid1"style="position: absolute;margin-top: 138px;margin-left: 348px; width:96px; height:105px; visibility:hidden;" src="images/curvature_mangalore_strechedgrid1_map1.png"/>
 </div> 
@@ -447,18 +459,18 @@
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>HillShade</b></p>
 
-  <button id="HillShade_MSlegend2" style="position: absolute;margin-left: 609px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMS2()" onMouseOut="HillShadeMS2a()">Legend</button></a>
+  <button id="HillShade_MSlegend2" style="position: absolute;margin-left: 598px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMS2()" onMouseOut="HillShadeMS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_SMgrid2"style="position: absolute;margin-top: 138px;margin-left: 348px; width:96px; height:105px; visibility:hidden;" src="images/curvature_mangalore_strechedgrid2_map2.png"/>
 </div> 
 
 
 
-  <img id="mangalore_streched_HillShade3" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;"  src="images/curvature_bangalore_strechedwithoutgrid3_map3.png"/>
+  <img id="mangalore_streched_HillShade3" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;"  src="images/curvature_mangalore_strechedwithoutgrid3_map3.png"/>
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>HillShade</b></p>
 
-  <button id="HillShade_MSlegend3" style="position: absolute;margin-left: 609px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMS3()" onMouseOut="HillShadeMS3a()">Legend</button></a>
+  <button id="HillShade_MSlegend3" style="position: absolute;margin-left: 598px;margin-top: 120px;visibility: hidden;" onMouseOver="HillShadeMS3()" onMouseOut="HillShadeMS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_SMgrid3"style="position: absolute;margin-top: 138px;margin-left: 348px; width:96px; height:105px; visibility:hidden;" src="images/curvature_mangalore_strechedgrid3_map3.png"/>
 </div> 
@@ -468,7 +480,7 @@
 <!-- bangalore classified images -->
   <img id="bangalore_classified_HillShade1" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/curvature_bangalore_classifiedwithoutgrid1_map1.png"/>
 
-  <button id="HillShade_BClegend1" style="position: absolute;margin-left: 609px;margin-top:132px;visibility: hidden;" onMouseOver="HillShadeBC1()" onMouseOut="HillShadeBC1a()">Legend</button></a>
+  <button id="HillShade_BClegend1" style="position: absolute;margin-left: 598px;margin-top:132px;visibility: hidden;" onMouseOver="HillShadeBC1()" onMouseOut="HillShadeBC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_CBgrid1"style="position: absolute;margin-top:150px;margin-left: 347px; width:96px; height:105px; visibility:hidden;" src="images/curvature_bangalore_classifiedgrid1_map1.png"/>
 </div> 
@@ -476,7 +488,7 @@
 
 <img id="bangalore_classified_HillShade2" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/curvature_bangalore_classifiedwithoutgrid2_map2.png"/>
 
-<button id="HillShade_BClegend2" style="position: absolute;margin-left: 609px;margin-top:132px;visibility: hidden;" onMouseOver="HillShadeBC2()" onMouseOut="HillShadeBC2a()">Legend</button></a>
+<button id="HillShade_BClegend2" style="position: absolute;margin-left: 598px;margin-top:132px;visibility: hidden;" onMouseOver="HillShadeBC2()" onMouseOut="HillShadeBC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_CBgrid2"style="position: absolute;margin-top: 150px;margin-left: 347px; width:96px; height:105px; visibility:hidden;" src="images/curvature_bangalore_classifiedgrid2_map2.png"/>
 </div> 
@@ -485,7 +497,7 @@
 <img id="bangalore_classified_HillShade3" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/curvature_bangalore_classifiedwithoutgrid3_map3.png"/>
 
 
-<button id="HillShade_BClegend3" style="position: absolute;margin-left: 609px;margin-top:132px;visibility: hidden;" onMouseOver="HillShadeBC3()" onMouseOut="HillShadeBC3a()">Legend</button></a>
+<button id="HillShade_BClegend3" style="position: absolute;margin-left: 598px;margin-top:132px;visibility: hidden;" onMouseOver="HillShadeBC3()" onMouseOut="HillShadeBC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_CBgrid3"style="position: absolute;margin-top: 150px;margin-left: 347px; width:96px; height:105px; visibility:hidden;" src="images/curvature_bangalore_classifiedgrid3_map3.png"/>
 </div> 
@@ -496,16 +508,16 @@
  <img id="bangalore_streched_HillShade1" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/curvature_bangalore_strechedwithoutgrid1_map1.png"/>
   <p id="Egrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>HillShade</b></p>
 
-  <button id="HillShade_BSlegend1" style="position: absolute;margin-left: 609px;margin-top: 124px;visibility: hidden;" onMouseOver="HillShadeBS1()" onMouseOut="HillShadeBS1a()">Legend</button></a>
+  <button id="HillShade_BSlegend1" style="position: absolute;margin-left: 598px;margin-top: 124px;visibility: hidden;" onMouseOver="HillShadeBS1()" onMouseOut="HillShadeBS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="HillShade_SBgrid1"style="position: absolute;margin-top: 143px;margin-left: 342px; width:96px; height:105px; visibility:hidden;" src="images/curvature_bangalore_strechedgrid1_map1.png"/>
+  <img id="HillShade_SBgrid1"style="position: absolute;margin-top: 143px;margin-left: 342px; width:87px; height:105px; visibility:hidden;" src="images/curvature_bangalore_strechedgrid1_map1.png"/>
 </div> 
 
 
 
   <img id="bangalore_streched_HillShade2" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/curvature_bangalore_strechedwithoutgrid2_map2.png"/>
 
-  <button id="HillShade_BSlegend2" style="position: absolute;margin-left: 609px;margin-top: 124px;visibility: hidden;" onMouseOver="HillShadeBS2()" onMouseOut="HillShadeBS2a()">Legend</button></a>
+  <button id="HillShade_BSlegend2" style="position: absolute;margin-left: 598px;margin-top: 124px;visibility: hidden;" onMouseOver="HillShadeBS2()" onMouseOut="HillShadeBS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_SBgrid2"style="position: absolute;margin-top: 136px;margin-left: 342px; width:96px; height:105px; visibility:hidden;" src="images/curvature_bangalore_strechedgrid2_map2.png"/>
 </div> 
@@ -514,16 +526,19 @@
   <img id="bangalore_streched_HillShade3" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/curvature_bangalore_strechedwithoutgrid3_map3.png"/>
   
 
-  <button id="HillShade_BSlegend3" style="position: absolute;margin-left: 609px;margin-top: 124px;visibility: hidden;" onMouseOver="HillShadeBS3()" onMouseOut="HillShadeBS3a()">Legend</button></a>
+  <button id="HillShade_BSlegend3" style="position: absolute;margin-left: 598px;margin-top: 124px;visibility: hidden;" onMouseOver="HillShadeBS3()" onMouseOut="HillShadeBS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="HillShade_SBgrid3"style="position: absolute;margin-top: 143px;margin-left: 342px; width:96px; height:105px; visibility:hidden;" src="images/curvature_bangalore_strechedgrid3_map3.png"/>
 </div> 
 
 
 
-<img style="position:absolute; left:171px; top:271px;width: 10%;" title="The downslope direction of the maximum rate of change in value from each pixel to
-its neighbours, measured clockwise in degrees from 0 to 360."src="images/information_icon.png"/> 
+<img style="position:absolute; left:171px; top:271px;width: 10%;" onMouseOver=" aspectinformation1()" onMouseOut=" aspectinformation1a()" src="images/information_icon.png"/> 
 <button onclick="selectData2()"class="accordions">Aspect</button><br>
+
+<p id="aspect" style="position:absolute;visibility:hidden;margin-top: -23px;background-color: black;color: white;width: 345px; border-radius: 5px;
+padding: 0px 20px 10px 15px;z-index: 100;height: 87px;margin-left: 193px; ">The downslope direction of the maximum rate of change in value from each pixel to
+its neighbours, measured clockwise in degrees from 0 to 360.</p>
 
 
 <select id="myText2" value="Elevation data" type="text" placeholder="Enter the text" style="position:absolute; margin-left:404px; margin-top:-298px;visibility: hidden;" >
@@ -532,13 +547,13 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 </select> 
 
 <p id="demo2" style="position: absolute;margin-top: -304px;margin-left: 444px;width: 100%;max-width: 144px;font-size: 19px;visibility: hidden;"></p>
-<button id="enter2" onclick="aspect_Select()" style="position: absolute;margin-top: -299px;margin-left: 539px;visibility: hidden;">enter</button>
+<button id="enter2" onclick="aspect_Select()" style="position: absolute;margin-top: -299px;margin-left: 539px;visibility: hidden;">Ok</button>
   
-<img id="mangalore_classified_aspect1"  style="position:absolute; left:307px; top:37px; height: 404px;width:203%; visibility: hidden;" src="images/aspect_mangalore_classifiedwithoutgrid1_map1.png"/>
+<img id="mangalore_classified_aspect1"  style="position:absolute; left:307px; top:35px; height: 404px;width:203%; visibility: hidden;" src="images/aspect_mangalore_classifiedwithoutgrid1_map1.png"/>
 
   <p id="ECgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>Aspect</b></p>
 
-  <button id="aspect_MClegend1" style="position: absolute;margin-left: 609px;margin-top: 87px;visibility: hidden;" onMouseOver="aspectMC1()" onMouseOut="aspectMC1a()">Legend</button></a>
+  <button id="aspect_MClegend1" style="position: absolute;margin-left: 598px;margin-top: 87px;visibility: hidden;" onMouseOver="aspectMC1()" onMouseOut="aspectMC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_CMgrid1"style="position: absolute;margin-top: 59px;margin-left: 340px; width:114px; height:162px; visibility:hidden;" src="images/aspect_map1_MBclassified.png"/>
 </div> 
@@ -547,7 +562,7 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 
   <img id="mangalore_classified_aspect2"  style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;"  src="images/aspect_mangalore_classifiedwithoutgrid2_map2.png"/>
 
-  <button id="aspect_MClegend2" style="position: absolute;margin-left: 609px;margin-top: 82px;visibility: hidden;" onMouseOver="aspectMC2()" onMouseOut="aspectMC2a()">Legend</button></a>
+  <button id="aspect_MClegend2" style="position: absolute;margin-left: 598px;margin-top: 82px;visibility: hidden;" onMouseOver="aspectMC2()" onMouseOut="aspectMC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_CMgrid2"style="position: absolute;margin-top: 59px;margin-left: 340px; width:114px; height:146px; visibility:hidden;" src="images/aspect_map2_MBclassified.png"/>
 </div> 
@@ -555,7 +570,7 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 
   <img id="mangalore_classified_aspect3"  style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;"  src="images/aspect_mangalore_classifiedwithoutgrid3_map3.png"/>
 
-  <button id="aspect_MClegend3" style="position: absolute;margin-left: 609px;margin-top: 74px;visibility: hidden;" onMouseOver="aspectMC3()" onMouseOut="aspectMC3a()">Legend</button></a>
+  <button id="aspect_MClegend3" style="position: absolute;margin-left: 598px;margin-top: 74px;visibility: hidden;" onMouseOver="aspectMC3()" onMouseOut="aspectMC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_CMgrid3"style="position: absolute;margin-top: 47px;margin-left: 340px; width:114px; height:162px; visibility:hidden;" src="images/aspect_map3_MBclassified.png"/>
 </div> 
@@ -563,10 +578,10 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 
 <!-- Mangalore streched aspect -->
 
-  <img id="mangalore_streched_aspect1" style="position:absolute; left: 305px; top:37px; height: 408px;width:203%; visibility: hidden;" src="images/aspect_mangalore_strechedwithoutgrid1_map1.png"/>
+  <img id="mangalore_streched_aspect1" style="position:absolute; left: 307px; top:37px; height: 404px;width:203%; visibility: hidden;" src="images/aspect_mangalore_strechedwithoutgrid1_map1.png"/>
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>aspect</b></p>
 
-  <button id="aspect_MSlegend1" style="position: absolute;margin-left: 609px;margin-top: 87px;visibility: hidden;" onMouseOver="aspectMS1()" onMouseOut="aspectMS1a()">Legend</button></a>
+  <button id="aspect_MSlegend1" style="position: absolute;margin-left: 598px;margin-top: 87px;visibility: hidden;" onMouseOver="aspectMS1()" onMouseOut="aspectMS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_SMgrid1"style="position: absolute;margin-top: 103px;margin-left: 346px; width:96px; height:105px; visibility:hidden;" src="images/aspect_mangalore_strechedgrid1_map1.png"/>
 </div> 
@@ -576,7 +591,7 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>aspect</b></p>
 
-  <button id="aspect_MSlegend2" style="position: absolute;margin-left: 609px;margin-top: 87px;visibility: hidden;" onMouseOver="aspectMS2()" onMouseOut="aspectMS2a()">Legend</button></a>
+  <button id="aspect_MSlegend2" style="position: absolute;margin-left: 598px;margin-top: 87px;visibility: hidden;" onMouseOver="aspectMS2()" onMouseOut="aspectMS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_SMgrid2"style="position: absolute;margin-top: 103px;margin-left: 346px; width:96px; height:105px; visibility:hidden;" src="images/aspect_mangalore_strechedgrid2_map2.png"/>
 </div> 
@@ -587,7 +602,7 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>aspect</b></p>
 
-  <button id="aspect_MSlegend3" style="position: absolute;margin-left: 609px;margin-top: 87px;visibility: hidden;" onMouseOver="aspectMS3()" onMouseOut="aspectMS3a()">Legend</button></a>
+  <button id="aspect_MSlegend3" style="position: absolute;margin-left: 598px;margin-top: 87px;visibility: hidden;" onMouseOver="aspectMS3()" onMouseOut="aspectMS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_SMgrid3"style="position: absolute;margin-top: 103px;margin-left: 346px; width:96px; height:105px; visibility:hidden;" src="images/aspect_mangalore_strechedgrid3_map3.png"/>
 </div> 
@@ -597,23 +612,23 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 <!-- bangalore classified images -->
   <img id="bangalore_classified_aspect1" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/aspect_bangalore_classifiedwithoutgrid1_map1.png"/>
 
-  <button id="aspect_BClegend1" style="position: absolute;margin-left: 609px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBC1()" onMouseOut="aspectBC1a()">Legend</button></a>
+  <button id="aspect_BClegend1" style="position: absolute;margin-left: 598px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBC1()" onMouseOut="aspectBC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_CBgrid1"style="position: absolute;margin-top: 65px;margin-left: 338px; width:104px; height:150px; visibility:hidden;" src="images/aspect_map1_MBclassified.png"/>
 </div> 
 
 <img id="bangalore_classified_aspect2" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/aspect_bangalore_classifiedwithoutgrid2_map2.png"/>
 
-<button id="aspect_BClegend2" style="position: absolute;margin-left: 609px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBC2()" onMouseOut="aspectBC2a()">Legend</button></a>
+<button id="aspect_BClegend2" style="position: absolute;margin-left: 598px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBC2()" onMouseOut="aspectBC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_CBgrid2"style="position: absolute;margin-top: 76px;margin-left: 338px; width:109px; height:128px; visibility:hidden;" src="images/aspect_map2_MBclassified.png"/>
 </div> 
 
 
-<img id="bangalore_classified_aspect3" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/aspect_bangalore_classifiedwithoutgrid3_map3.png"/>
+<img id="bangalore_classified_aspect3" style="position:absolute; left:318px; top:35px; height: 412px;width:190%; visibility: hidden;" src="images/aspect_bangalore_classifiedwithoutgrid3_map3.png"/>
 
 
-<button id="aspect_BClegend3" style="position: absolute;margin-left: 609px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBC3()" onMouseOut="aspectBC3a()">Legend</button></a>
+<button id="aspect_BClegend3" style="position: absolute;margin-left: 598px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBC3()" onMouseOut="aspectBC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_CBgrid3"style="position: absolute;margin-top: 65px;margin-left: 343px; width:115px; height:151px; visibility:hidden;" src="images/aspect_map3_MBclassified.png"/>
 </div> 
@@ -625,7 +640,7 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 
   <p id="Egrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>aspect</b></p>
 
-  <button id="aspect_BSlegend1" style="position: absolute;margin-left: 609px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBS1()" onMouseOut="aspectBS1a()">Legend</button></a>
+  <button id="aspect_BSlegend1" style="position: absolute;margin-left: 598px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBS1()" onMouseOut="aspectBS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_SBgrid1"style="position: absolute;margin-top: 103px;margin-left: 343px; width:101px; height:105px; visibility:hidden;" src="images/aspect_bangalore_strechedgrid1_map1.png"/>
 </div> 
@@ -634,7 +649,7 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
   <img id="bangalore_streched_aspect2" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/aspect_bangalore_strechedwithoutgrid2_map2.png"/>
 
 
-  <button id="aspect_BSlegend2" style="position: absolute;margin-left: 609px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBS2()" onMouseOut="aspectBS2a()">Legend</button></a>
+  <button id="aspect_BSlegend2" style="position: absolute;margin-left: 598px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBS2()" onMouseOut="aspectBS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_SBgrid2"style="position: absolute;margin-top: 103px;margin-left: 343px; width:101px; height:105px; visibility:hidden;" src="images/aspect_bangalore_strechedgrid2_map2.png"/>
 </div> 
@@ -643,7 +658,7 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
   <img id="bangalore_streched_aspect3" style="position:absolute; left:329px; top:52px; height: 381px;width:183%; visibility: hidden;" src="images/aspect_bangalore_strechedwithoutgrid3_map3.png"/>
   
 
-  <button id="aspect_BSlegend3" style="position: absolute;margin-left: 609px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBS3()" onMouseOut="aspectBS3a()">Legend</button></a>
+  <button id="aspect_BSlegend3" style="position: absolute;margin-left: 598px;margin-top: 85px;visibility: hidden;" onMouseOver="aspectBS3()" onMouseOut="aspectBS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="aspect_SBgrid3"style="position: absolute;margin-top: 103px;margin-left: 343px; width:101px; height:105px; visibility:hidden;" src="images/aspect_bangalore_strechedgrid3_map3.png"/>
 </div> </div>
@@ -653,16 +668,20 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 <button id="watershed Delination" style="position: relative;visibility: hidden;" class="accordion" disabled >Watershed Delination</button>
 <!-- <img style="position:absolute; left:171px; top:13px;width: 10%;" title="Some Text"src="images/information_icon.png"/> -->
 <div class="panel">
-  <button onclick="selectText()"class="accordions" >Fill</button>
-  <img style="position:absolute; left:187px; top:185px;width: 10%;" title="Fills sinks in a surface raster to remove small imperfections in the data."src="images/information_icon.png"/>
+  <button id="filled" onclick="selectText()"class="accordions"  >Fill</button>
+  <img style="position:absolute; left:187px; top:185px;width: 10%;" onMouseOver=" fillinformation1()" onMouseOut=" fillinformation1a()" src="images/information_icon.png"/>
  
+  <p id="fill" style="position:absolute;visibility:hidden;margin-top: -23px;background-color: black;color: white;width: 308px; border-radius: 5px;
+padding: 0px 20px 10px 15px;z-index: 100;height: 68px;margin-left: 193px; ">Fills sinks in a surface raster to remove small imperfections in the data.</p>
+
+
   <select id="WText" value="Elevation data" type="text" placeholder="Enter the text" style="position:absolute; margin-left:202px; margin-top:-167px;visibility: hidden;" >
     <option value="" disabled selected>Select your option</option>
       <option value="Elevation data">Elevation data</option>
   </select> 
   
   <p id="Wdemo" style="position: absolute;margin-top: -220px;margin-left: 444px;width: 100%;max-width: 144px;font-size: 19px;visibility: hidden;"></p>
-  <button id="Wenter" onclick="fill_Select()" style="position: absolute;margin-top: -170px;margin-left: 345px;visibility: hidden;">enter</button>
+  <button id="Wenter" onclick="fill_Select()" style="position: absolute;margin-top: -170px;margin-left: 345px;visibility: hidden;">Ok</button>
 
 
 
@@ -689,9 +708,9 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
   
     <img id="mangalore_classified_fill3"  style="position:absolute; left:334px; top:51px; height: 381px;width:179%; visibility: hidden;"  src="images/Elevation_Mangalore_Classified_withoutgrid3_map3.png"/>
   
-    <button id="fill_MClegend3" style="position: absolute;margin-left: 405px;margin-top: 208px;visibility: hidden;" onMouseOver="fillMC3()" onMouseOut="fillMC3a()">Legend</button></a>
+    <button id="fill_MClegend3" style="position: absolute;margin-left: 415px;margin-top: 210px;visibility: hidden;" onMouseOver="fillMC3()" onMouseOut="fillMC3a()">Legend</button></a>
     <div class="imageBox" id="Style1">
-    <img id="fill_CMgrid3"style="position: absolute;margin-top: 161px;margin-left: 349px; width:97px; height:105px; visibility:hidden;" src="images/Elevation_Mangalore_Classified_grid3_map3.png"/>
+    <img id="fill_CMgrid3"style="position: absolute;margin-top: 185px;margin-left: 349px; width:97px; height:105px; visibility:hidden;" src="images/Elevation_Mangalore_Classified_grid3_map3.png"/>
   </div> 
   
   
@@ -712,9 +731,9 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
   
     <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>Elevation</b></p>
   
-    <button id="fill_MSlegend2" style="position: absolute;margin-left: 415px;margin-top: 229px;visibility: hidden;" onMouseOver="fillMS2()" onMouseOut="fillMS2a()">Legend</button></a>
+    <button id="fill_MSlegend2" style="position: absolute;margin-left: 415px;margin-top: 203px;visibility: hidden;" onMouseOver="fillMS2()" onMouseOut="fillMS2a()">Legend</button></a>
     <div class="imageBox" id="Style1">
-    <img id="fill_SMgrid2"style="position: absolute;margin-top: 203px;margin-left: 372px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_Mangalore_Streched_grid3_map3.png"/>
+    <img id="fill_SMgrid2"style="position: absolute;margin-top: 176px;margin-left: 357px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_Mangalore_Streched_grid3_map3.png"/>
   </div> 
   
   
@@ -723,9 +742,9 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
   
     <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>Elevation</b></p>
   
-    <button id="fill_MSlegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="fillMS3()" onMouseOut="fillMS3a()">Legend</button></a>
+    <button id="fill_MSlegend3" style="position: absolute;margin-left: 415px;margin-top: 205px;visibility: hidden;" onMouseOver="fillMS3()" onMouseOut="fillMS3a()">Legend</button></a>
     <div class="imageBox" id="Style1">
-    <img id="fill_SMgrid3"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_Mangalore_Streched_grid2_map2.png"/>
+    <img id="fill_SMgrid3"style="position: absolute;margin-top: 181px;margin-left: 355px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_Mangalore_Streched_grid2_map2.png"/>
   </div> 
   
   
@@ -733,25 +752,25 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
   <!-- bangalore classified images -->
     <img id="bangalore_classified_fill1" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/Elevation_bangalore_Classified_withoutgrid_map1.png"/>
   
-    <button id="fill_BClegend1" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="fillBC1()" onMouseOut="fillBC1a()">Legend</button></a>
+    <button id="fill_BClegend1" style="position: absolute;margin-left: 423px;margin-top: 210px;visibility: hidden;" onMouseOver="fillBC1()" onMouseOut="fillBC1a()">Legend</button></a>
     <div class="imageBox" id="Style1">
-    <img id="fill_CBgrid1"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_Bangalore_Classified_grid1_map1.png"/>
+    <img id="fill_CBgrid1"style="position: absolute;margin-top: 183px;margin-left: 350px; width:87px; height:105px; visibility:hidden;" src="images/Elevation_Bangalore_Classified_grid1_map1.png"/>
   </div> 
   
   <img id="bangalore_classified_fill2" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/Elevation_bangalore_Classified_withoutgrid2_map2.png"/>
   
-  <button id="fill_BClegend2" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="fillBC2()" onMouseOut="fillBC2a()">Legend</button></a>
+  <button id="fill_BClegend2" style="position: absolute;margin-left: 423px;margin-top: 204px;visibility: hidden;" onMouseOver="fillBC2()" onMouseOut="fillBC2a()">Legend</button></a>
     <div class="imageBox" id="Style1">
-    <img id="fill_CBgrid2"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_Bangalore_Classified_grid2_map2.png"/>
+    <img id="fill_CBgrid2"style="position: absolute;margin-top: 182px;margin-left: 351px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_Bangalore_Classified_grid2_map2.png"/>
   </div> 
   
   
   <img id="bangalore_classified_fill3" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/Elevation_bangalore_Classified_withoutgrid3_map3.png"/>
   
   
-  <button id="fill_BClegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="fillBC3()" onMouseOut="fillBC3a()">Legend</button></a>
+  <button id="fill_BClegend3" style="position: absolute;margin-left: 423px;margin-top: 205px;visibility: hidden;" onMouseOver="fillBC3()" onMouseOut="fillBC3a()">Legend</button></a>
     <div class="imageBox" id="Style1">
-    <img id="fill_CBgrid3"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_Bangalore_Classified_grid3_map3.png"/>
+    <img id="fill_CBgrid3"style="position: absolute;margin-top: 184px;margin-left: 348px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_Bangalore_Classified_grid3_map3.png"/>
   </div> 
    
   
@@ -761,62 +780,69 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
   
     <p id="Egrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>Elevation</b></p>
   
-    <button id="fill_BSlegend1" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="fillBS1()" onMouseOut="fillBS1a()">Legend</button></a>
+    <button id="fill_BSlegend1" style="position: absolute;margin-left: 425px;margin-top: 202px;visibility: hidden;" onMouseOver="fillBS1()" onMouseOut="fillBS1a()">Legend</button></a>
     <div class="imageBox" id="Style1">
-    <img id="fill_SBgrid1"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_bangalore_Streched_grid1_map1.png"/>
+    <img id="fill_SBgrid1"style="position: absolute;margin-top: 179px;margin-left: 350px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_bangalore_Streched_grid1_map1.png"/>
   </div> 
   
   
     <img id="bangalore_streched_fill2" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/Elevation_bangalore_Streched_withoutgrid2_map2.png"/>
   
   
-    <button id="fill_BSlegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="fillBS2()" onMouseOut="fillBS2a()">Legend</button></a>
+    <button id="fill_BSlegend2" style="position: absolute;margin-left: 425px;margin-top: 202px;visibility: hidden;" onMouseOver="fillBS2()" onMouseOut="fillBS2a()">Legend</button></a>
     <div class="imageBox" id="Style1">
-    <img id="fill_SBgrid2"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_bangalore_Streched_grid2_map2.png"/>
+    <img id="fill_SBgrid2"style="position: absolute;margin-top: 180px;margin-left: 348px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_bangalore_Streched_grid2_map2.png"/>
   </div> 
   
     
     <img id="bangalore_streched_fill3" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/Elevation_bangalore_Streched_withoutgrid3_map3.png"/>
     
   
-    <button id="fill_BSlegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="fillBS3()" onMouseOut="fillBS3a()">Legend</button></a>
+    <button id="fill_BSlegend3" style="position: absolute;margin-left: 425px;margin-top: 202px;visibility: hidden;" onMouseOver="fillBS3()" onMouseOut="fillBS3a()">Legend</button></a>
     <div class="imageBox" id="Style1">
-    <img id="fill_SBgrid3"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/Elevation_bangalore_Streched_grid3_map3.png"/>
+    <img id="fill_SBgrid3"style="position: absolute;margin-top: 180px;margin-left: 353px; width:86px; height:105px; visibility:hidden;" src="images/Elevation_bangalore_Streched_grid3_map3.png"/>
   </div> 
-  <img style="position:absolute; left:187px; top:227px;width: 10%;" title="Generates a raster of flow direction from each cell to its downslope neighbour. "src="images/information_icon.png"/>
-  <button onclick="selectFlowDirectionData()"class="accordions">Flow Direction</button><br>
 
 
-  <select id="WText1" value="Filled Dem" type="text" placeholder="Enter the text" style="position:absolute; margin-left:400px; margin-top:-258px;visibility: hidden;" >
+
+  <img style="position:absolute; left:187px; top:227px;width: 10%;" onMouseOver=" flowDirectioninformation1()" onMouseOut=" flowDirectioninformation1a()" src="images/information_icon.png"/>
+  
+  <p id="flowDirection" style="position:absolute;visibility:hidden;margin-top: 11px;background-color: black;color: white;width: 308px; border-radius: 5px;
+padding: 0px 20px 10px 15px;z-index: 100;height: 68px;margin-left: 193px; ">Generates a raster of flow direction from each cell to its downslope neighbour.</p>
+
+  <button id="flow"onclick="selectFlowDirectionData()"class="accordions" >Flow Direction</button><br>
+
+
+  <select id="WText1" value="Filled Dem" type="text" placeholder="Enter the text" style="position:absolute; margin-left:398px; margin-top:-251px;visibility: hidden;" >
     <option value="" disabled selected>Select your option</option>
       <option value="Filled Dem">Filled Dem</option>
   </select> 
   
   <p id="Wdemo1" style="position: absolute;margin-top: -262px;margin-left: 444px;width: 100%;max-width: 144px;font-size: 19px;visibility: hidden;"></p>
-  <button id="Wenter1" onclick="flowDirection_Select()" style="position: absolute;margin-top: -258px;margin-left: 535px;visibility: hidden;">enter</button>
+  <button id="Wenter1" onclick="flowDirection_Select()" style="position: absolute;margin-top: -254px;margin-left: 541px;visibility: hidden;">Ok</button>
 
   <img id="mangalore_classified_flowDirection1"  style="position:absolute; left:334px; top:51px; height: 381px;width:179%; visibility: hidden;" src="images/flowDirection_Mangalore_withoutgrid1_map1.png"/>
 
   <p id="ECgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>Elevation</b></p>
 
-  <button id="flowDirection_MClegend1" style="position: absolute;margin-left: 636px;margin-top: 116px;visibility: hidden;" onMouseOver="flowDirectionMC1()" onMouseOut="flowDirectionMC1a()">Legend</button></a>
+  <button id="flowDirection_MClegend1" style="position: absolute;margin-left: 625px;margin-top: 116px;visibility: hidden;" onMouseOver="flowDirectionMC1()" onMouseOut="flowDirectionMC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="flowDirection_CMgrid1"style="position: absolute;margin-top: 122px;margin-left: 353px; width:89px; height:118px; visibility:hidden;" src="images/flowDirection_Mangalore_grid1_map1.png"/>
 </div> 
 
-  <img id="mangalore_classified_flowDirection2"  style="position:absolute; left:353px; top:62px; height: 399px;width:177%; visibility: hidden;"  src="images/flowDirection_Mangalore_withoutgrid2_map2.png"/>
+  <img id="mangalore_classified_flowDirection2"  style="position:absolute; left:337px; top:57px; height: 399px;width:177%; visibility: hidden;"  src="images/flowDirection_Mangalore_withoutgrid2_map2.png"/>
 
-  <button id="flowDirection_MClegend2" style="position: absolute;margin-left: 620px;margin-top: 177px;visibility: hidden;" onMouseOver="flowDirectionMC2()" onMouseOut="flowDirectionMC2a()">Legend</button></a>
+  <button id="flowDirection_MClegend2" style="position: absolute;margin-left: 622px;margin-top: 145px;visibility: hidden;" onMouseOver="flowDirectionMC2()" onMouseOut="flowDirectionMC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_CMgrid2"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Mangalore_grid2_map2.png"/>
+  <img id="flowDirection_CMgrid2"style="position: absolute;margin-top: 166px;margin-left: 357px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Mangalore_grid2_map2.png"/>
 </div> 
 
 
-  <img id="mangalore_classified_flowDirection3"  style="position:absolute; left:353px; top:62px; height: 399px;width:177%; visibility: hidden;"  src="images/flowDirection_Mangalore_withoutgrid3_map3.png"/>
+  <img id="mangalore_classified_flowDirection3"  style="position:absolute; left:334px; top:51px; height: 381px;width:178%; visibility: hidden;"  src="images/flowDirection_Mangalore_withoutgrid3_map3.png"/>
 
-  <button id="flowDirection_MClegend3" style="position: absolute;margin-left: 616px;margin-top: 150px;visibility: hidden;" onMouseOver="flowDirectionMC3()" onMouseOut="flowDirectionMC3a()">Legend</button></a>
+  <button id="flowDirection_MClegend3" style="position: absolute;margin-left: 619px;margin-top: 124px;visibility: hidden;" onMouseOver="flowDirectionMC3()" onMouseOut="flowDirectionMC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_CMgrid3"style="position: absolute;margin-top: 130px;margin-left: 372px; width:77px; height:141px; visibility:hidden;" src="images/flowDirection_Mangalore_grid3_map3.png"/>
+  <img id="flowDirection_CMgrid3"style="position: absolute;margin-top: 104px;margin-left: 352px; width:77px; height:141px; visibility:hidden;" src="images/flowDirection_Mangalore_grid3_map3.png"/>
 </div> 
 
 <!-- Mangalore streched flowDirection -->
@@ -825,122 +851,125 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>flowDirection</b></p>
 
-  <button id="flowDirection_MSlegend1" style="position: absolute;margin-left: 631px;margin-top: 118px;visibility: hidden;" onMouseOver="flowDirectionMS1()" onMouseOut="flowDirectionMS1a()">Legend</button></a>
+  <button id="flowDirection_MSlegend1" style="position: absolute;margin-left: 620px;margin-top: 118px;visibility: hidden;" onMouseOver="flowDirectionMS1()" onMouseOut="flowDirectionMS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="flowDirection_SMgrid1"style="position: absolute;margin-top: 103px;margin-left: 354px; width:88px; height:137px; visibility:hidden;" src="images/flowDirection_Mangalore_grid1_map1.png"/>
 </div> 
 
 
-  <img id="mangalore_streched_flowDirection2" style="position:absolute; left:354px; top:57px; height: 427px;width:177%; visibility: hidden;"  src="images/flowDirection_Mangalore_withoutgrid2_map2.png"/>
+  <img id="mangalore_streched_flowDirection2" style="position:absolute; left:334px; top:51px; height: 381px;width:178%; visibility: hidden;"  src="images/flowDirection_Mangalore_withoutgrid2_map2.png"/>
 
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>flowDirection</b></p>
 
-  <button id="flowDirection_MSlegend2" style="position: absolute;margin-left: 620px;margin-top: 150px;visibility: hidden;" onMouseOver="flowDirectionMS2()" onMouseOut="flowDirectionMS2a()">Legend</button></a>
+  <button id="flowDirection_MSlegend2" style="position: absolute;margin-left: 620px;margin-top: 118px;visibility: hidden;" onMouseOver="flowDirectionMS2()" onMouseOut="flowDirectionMS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_SMgrid2"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Mangalore_grid2_map2.png"/>
+  <img id="flowDirection_SMgrid2"style="position: absolute;margin-top: 130px;margin-left: 376px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Mangalore_grid2_map2.png"/>
 </div> 
 
 
-<img id="mangalore_streched_flowDirection3" style="position:absolute; left:354px; top:62px; height: 427px;width:177%; visibility: hidden;"  src="images/flowDirection_Mangalore_withoutgrid3_map3.png"/>
+<img id="mangalore_streched_flowDirection3" style="position:absolute; left:334px; top:51px; height: 381px;width:178%; visibility: hidden;"  src="images/flowDirection_Mangalore_withoutgrid3_map3.png"/>
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>flowDirection</b></p>
 
-  <button id="flowDirection_MSlegend3" style="position: absolute;margin-left: 618px;margin-top: 152px;visibility: hidden;" onMouseOver="flowDirectionMS3()" onMouseOut="flowDirectionMS3a()">Legend</button></a>
+  <button id="flowDirection_MSlegend3" style="position: absolute;margin-left: 618px;margin-top: 118px;visibility: hidden;" onMouseOver="flowDirectionMS3()" onMouseOut="flowDirectionMS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_SMgrid3"style="position: absolute;margin-top: 128px;margin-left: 373px; width:77px; height:147px; visibility:hidden;" src="images/flowDirection_Mangalore_grid3_map3.png"/>
+  <img id="flowDirection_SMgrid3"style="position: absolute;margin-top: 101px;margin-left: 351px; width:77px; height:147px; visibility:hidden;" src="images/flowDirection_Mangalore_grid3_map3.png"/>
 </div> 
 
 <!-- bangalore classified images -->
-  <img id="bangalore_classified_flowDirection1" style="position:absolute; left:353px; top:62px; height: 427px;width:177%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid1_map1.png"/>
-  <button id="flowDirection_BClegend1" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowDirectionBC1()" onMouseOut="flowDirectionBC1a()">Legend</button></a>
+  <img id="bangalore_classified_flowDirection1" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid1_map1.png"/>
+  <button id="flowDirection_BClegend1" style="position: absolute;margin-left: 622px;margin-top: 126px;visibility: hidden;" onMouseOver="flowDirectionBC1()" onMouseOut="flowDirectionBC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_CBgrid1"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid1_map1.png"/>
+  <img id="flowDirection_CBgrid1"style="position: absolute;margin-top: 141px;margin-left: 350px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid1_map1.png"/>
 </div> 
 
-<img id="bangalore_classified_flowDirection2" style="position:absolute; left:353px; top:62px; height: 427px;width:177%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid2_map2.png"/>
+<img id="bangalore_classified_flowDirection2" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid2_map2.png"/>
 
-<button id="flowDirection_BClegend2" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowDirectionBC2()" onMouseOut="flowDirectionBC2a()">Legend</button></a>
+<button id="flowDirection_BClegend2" style="position: absolute;margin-left: 622px;margin-top: 126px;visibility: hidden;" onMouseOver="flowDirectionBC2()" onMouseOut="flowDirectionBC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_CBgrid2"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid2_map2.png"/>
+  <img id="flowDirection_CBgrid2"style="position: absolute;margin-top: 141px;margin-left: 350px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid2_map2.png"/>
 </div> 
 
 
-<img id="bangalore_classified_flowDirection3" style="position:absolute; left:353px; top:62px; height: 427px;width:177%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid3_map3.png"/>
+<img id="bangalore_classified_flowDirection3" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid3_map3.png"/>
 
 
-<button id="flowDirection_BClegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowDirectionBC3()" onMouseOut="flowDirectionBC3a()">Legend</button></a>
+<button id="flowDirection_BClegend3" style="position: absolute;margin-left: 622px;margin-top: 126px;visibility: hidden;" onMouseOver="flowDirectionBC3()" onMouseOut="flowDirectionBC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_CBgrid3"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid3_map3.png"/>
+  <img id="flowDirection_CBgrid3"style="position: absolute;margin-top: 141px;margin-left: 350px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid3_map3.png"/>
 </div> 
  
 
   <!-- bangalore streched images -->
 
- <img id="bangalore_streched_flowDirection1" style="position:absolute; left:353px; top:62px; height: 427px;width:177%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid1_map1.png"/>
+ <img id="bangalore_streched_flowDirection1" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid1_map1.png"/>
 
   <p id="Egrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>flowDirection</b></p>
 
-  <button id="flowDirection_BSlegend1" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowDirectionBS1()" onMouseOut="flowDirectionBS1a()">Legend</button></a>
+  <button id="flowDirection_BSlegend1" style="position: absolute;margin-left: 616px;margin-top: 127px;visibility: hidden;" onMouseOver="flowDirectionBS1()" onMouseOut="flowDirectionBS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_SBgrid1"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid1_map1.png"/>
+  <img id="flowDirection_SBgrid1"style="position: absolute;margin-top: 138px;margin-left: 348px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid1_map1.png"/>
 </div> 
 
 
-  <img id="bangalore_streched_flowDirection2" style="position:absolute; left:353px; top:62px; height: 427px;width:177%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid2_map2.png"/>
+  <img id="bangalore_streched_flowDirection2" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid2_map2.png"/>
 
-  <button id="flowDirection_BSlegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowDirectionBS2()" onMouseOut="flowDirectionBS2a()">Legend</button></a>
+  <button id="flowDirection_BSlegend2" style="position: absolute;margin-left: 616px;margin-top: 127px;visibility: hidden;" onMouseOver="flowDirectionBS2()" onMouseOut="flowDirectionBS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_SBgrid2"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid2_map2.png"/>
+  <img id="flowDirection_SBgrid2"style="position: absolute;margin-top: 138px;margin-left: 348px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid2_map2.png"/>
 </div> 
 
   
-  <img id="bangalore_streched_flowDirection3" style="position:absolute; left:353px; top:62px; height: 427px;width:177%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid3_map3.png"/>
+  <img id="bangalore_streched_flowDirection3" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowDirection_Bangalore_withoutgrid3_map3.png"/>
   
-  <button id="flowDirection_BSlegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowDirectionBS3()" onMouseOut="flowDirectionBS3a()">Legend</button></a>
+  <button id="flowDirection_BSlegend3" style="position: absolute;margin-left: 616px;margin-top: 127px;visibility: hidden;" onMouseOver="flowDirectionBS3()" onMouseOut="flowDirectionBS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowDirection_SBgrid3"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid3_map3.png"/>
+  <img id="flowDirection_SBgrid3"style="position: absolute;margin-top: 138px;margin-left: 348px; width:77px; height:105px; visibility:hidden;" src="images/flowDirection_Bangalore_grid3_map3.png"/>
 </div> 
 
 
 
-<img style="position:absolute; left:192px; top:270px;width: 10%;" title="It generates a raster of accumulated flow into each cell."src="images/information_icon.png"/>
+<img style="position:absolute; left:192px; top:270px;width: 10%;" onMouseOver=" flowAccumulationinformation1()" onMouseOut=" flowAccumulationinformation1a()"src="images/information_icon.png"/>
 
-  <button onclick="selectFlowAccumulationData()" class="accordions">Flow Accumulation</button><br>
-  <select id="WText2" value="flow Direction" type="text" placeholder="Enter the text" style="position:absolute; margin-left:400px; margin-top:-301px;visibility: hidden;height:24px;" >
+  <p id="flowAccumulation" style="position:absolute;visibility:hidden;margin-top: 11px;background-color: black;color: white;width: 308px; border-radius: 5px;
+padding: 0px 20px 10px 15px;z-index: 100;height: 68px;margin-left: 193px; ">It generates a raster of accumulated flow into each cell.</p>
+
+  <button id="flowaccumulate"onclick="selectFlowAccumulationData()" class="accordions" >Flow Accumulation</button><br>
+  <select id="WText2" value="flow Direction" type="text" placeholder="Enter the text" style="position:absolute; margin-left:400px; margin-top:-298px;visibility: hidden;height:24px;" >
     <option value="" disabled selected>Select your option</option>
       <option value="flow Direction">flow Direction</option>
   </select> 
   
   <p id="Wdemo2" style="position: absolute;margin-top: -305px;margin-left: 444px;width: 100%;max-width: 144px;font-size: 19px;visibility: hidden;"></p>
-  <button id="Wenter2" onclick="flowAccumulation_Select()" style="position: absolute;margin-top: -300px;margin-left: 534px;visibility: hidden;">enter</button>
+  <button id="Wenter2" onclick="flowAccumulation_Select()" style="position: absolute;margin-top: -296px;margin-left: 541px;visibility: hidden;">Ok</button>
 
   <img id="mangalore_classified_flowAccumulation1"  style="position:absolute; left:334px; top:51px; height: 381px;width:179%; visibility: hidden;" src="images/flowAccumulation_mangalore_classifiedwithoutgrid1_map1.png"/>
 
   <p id="ECgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>flowAccumulation</b></p>
 
-  <button id="flowAccumulation_MClegend1" style="position: absolute;margin-left: 632px;margin-top: 81px;visibility: hidden;" onMouseOver="flowAccumulationMC1()" onMouseOut="flowAccumulationMC1a()">Legend</button></a>
+  <button id="flowAccumulation_MClegend1" style="position: absolute;margin-left: 621px;margin-top: 81px;visibility: hidden;" onMouseOver="flowAccumulationMC1()" onMouseOut="flowAccumulationMC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="flowAccumulation_CMgrid1"style="position: absolute;margin-top: 67px;margin-left: 349px; width:104px; height:140px; visibility:hidden;" src="images/flowAccumulation_mangalore_classifiedgrid1_map1.png"/>
 </div> 
 
 
 
-  <img id="mangalore_classified_flowAccumulation2"  style="position:absolute; left:356px; top:54px; height: 428px;width:183%; visibility: hidden;"  src="images/flowAccumulation_mangalore_classifiedwithoutgrid2_map2.png"/>
+  <img id="mangalore_classified_flowAccumulation2"  style="position:absolute; left:334px; top:51px; height: 381px;width:178%; visibility: hidden;"  src="images/flowAccumulation_mangalore_classifiedwithoutgrid2_map2.png"/>
 
-  <button id="flowAccumulation_MClegend2" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowAccumulationMC2()" onMouseOut="flowAccumulationMC2a()">Legend</button></a>
+  <button id="flowAccumulation_MClegend2" style="position: absolute;margin-left: 621px;margin-top: 81px;visibility: hidden;" onMouseOver="flowAccumulationMC2()" onMouseOut="flowAccumulationMC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_CMgrid2"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowAccumulation_mangalore_classifiedgrid2_map2.png"/>
+  <img id="flowAccumulation_CMgrid2"style="position: absolute;margin-top: 67px;margin-left: 349px; width:104px; height:140px; visibility:hidden;" src="images/flowAccumulation_mangalore_classifiedgrid2_map2.png"/>
 </div> 
 
 
 
 
-  <img id="mangalore_classified_flowAccumulation3"  style="position:absolute; left:356px; top:54px; height: 428px;width:183%; visibility: hidden;"  src="images/flowAccumulation_mangalore_classifiedwithoutgrid3_map3.png"/>
+  <img id="mangalore_classified_flowAccumulation3"  style="position:absolute; left:334px; top:51px; height: 381px;width:178%; visibility: hidden;"  src="images/flowAccumulation_mangalore_classifiedwithoutgrid3_map3.png"/>
 
-  <button id="flowAccumulation_MClegend3" style="position: absolute;margin-left: 618px;margin-top: 115px;visibility: hidden;" onMouseOver="flowAccumulationMC3()" onMouseOut="flowAccumulationMC3a()">Legend</button></a>
+  <button id="flowAccumulation_MClegend3" style="position: absolute;margin-left: 621px;margin-top: 81px;visibility: hidden;" onMouseOver="flowAccumulationMC3()" onMouseOut="flowAccumulationMC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_CMgrid3"style="position: absolute;margin-top: 101px;margin-left: 365px; width:77px; height:133px; visibility:hidden;" src="images/flowAccumulation_mangalore_classifiedgrid3_map3.png"/>
+  <img id="flowAccumulation_CMgrid3"style="position: absolute;margin-top: 67px;margin-left: 349px; width:104px; height:140px; visibility:hidden;" src="images/flowAccumulation_mangalore_classifiedgrid3_map3.png"/>
 </div> 
 
 
@@ -950,9 +979,9 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
   <img id="mangalore_streched_flowAccumulation1" style="position:absolute; left:334px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowAccumulation_mangalore_strechedwithoutgrid1_map1.png"/>
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>flowAccumulation</b></p>
 
-  <button id="flowAccumulation_MSlegend1" style="position: absolute;margin-left: 634px;margin-top: 85px;visibility: hidden;" onMouseOver="flowAccumulationMS1()" onMouseOut="flowAccumulationMS1a()">Legend</button></a>
+  <button id="flowAccumulation_MSlegend1" style="position: absolute;margin-left: 621px;margin-top: 81px;visibility: hidden;" onMouseOver="flowAccumulationMS1()" onMouseOut="flowAccumulationMS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_SMgrid1"style="position: absolute;margin-top: 81px;margin-left: 353px; width:119px; height:128px; visibility:hidden;" src="images/flowAccumulation_mangalore_strechedgrid1_map1.png"/>
+  <img id="flowAccumulation_SMgrid1"style="position: absolute;margin-top: 101px;margin-left: 351px; width:100px; height:105px; visibility:hidden;" src="images/flowAccumulation_mangalore_strechedgrid1_map1.png"/>
 </div> 
 
 
@@ -960,9 +989,9 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>flowAccumulation</b></p>
 
-  <button id="flowAccumulation_MSlegend2" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowAccumulationMS2()" onMouseOut="flowAccumulationMS2a()">Legend</button></a>
+  <button id="flowAccumulation_MSlegend2" style="position: absolute;margin-left: 621px;margin-top: 81px;visibility: hidden;" onMouseOver="flowAccumulationMS2()" onMouseOut="flowAccumulationMS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_SMgrid2"style="position: absolute;margin-top: 133px;margin-left: 370px; width:119px; height:105px; visibility:hidden;" src="images/flowAccumulation_mangalore_strechedgrid2_map2.png"/>
+  <img id="flowAccumulation_SMgrid2"style="position: absolute;margin-top: 101px;margin-left: 351px; width:100px; height:105px; visibility:hidden;" src="images/flowAccumulation_mangalore_strechedgrid2_map2.png"/>
 </div> 
 
 
@@ -971,164 +1000,200 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
 
   <p id="ESgrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>flowAccumulation</b></p>
 
-  <button id="flowAccumulation_MSlegend3" style="position: absolute;margin-left: 593px;margin-top: 117px;visibility: hidden;" onMouseOver="flowAccumulationMS3()" onMouseOut="flowAccumulationMS3a()">Legend</button></a>
+  <button id="flowAccumulation_MSlegend3" style="position: absolute;margin-left: 621px;margin-top: 81px;visibility: hidden;" onMouseOver="flowAccumulationMS3()" onMouseOut="flowAccumulationMS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_SMgrid3"style="position: absolute;margin-top: 133px;margin-left: 370px; width:199px; height:105px; visibility:hidden;" src="images/flowAccumulation_mangalore_strechedgrid3_map3.png"/>
+  <img id="flowAccumulation_SMgrid3"style="position: absolute;margin-top: 101px;margin-left: 351px; width:100px; height:105px; visibility:hidden;" src="images/flowAccumulation_mangalore_strechedgrid3_map3.png"/>
 </div> 
 
 
 
 <!-- bangalore classified images -->
-  <img id="bangalore_classified_flowAccumulation1" style="position:absolute; left:353px; top:62px; height: 399px;width:165%; visibility: hidden;" src="images/flowAccumulation_bangalore_classifiedwithoutgrid1_map1.png"/>
+  <img id="bangalore_classified_flowAccumulation1" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowAccumulation_bangalore_classifiedwithoutgrid1_map1.png"/>
 
-  <button id="flowAccumulation_BClegend1" style="position: absolute;margin-left: 593px;margin-top: 189px;visibility: hidden;" onMouseOver="flowAccumulationBC1()" onMouseOut="flowAccumulationBC1a()">Legend</button></a>
+  <button id="flowAccumulation_BClegend1" style="position: absolute;margin-left: 616px;margin-top: 83px;visibility: hidden;" onMouseOver="flowAccumulationBC1()" onMouseOut="flowAccumulationBC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_CBgrid1"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowAccumulation_bangalore_classifiedgrid1_map1.png"/>
+  <img id="flowAccumulation_CBgrid1"style="position: absolute;margin-top: 97px;margin-left: 350px; width:105px; height:105px; visibility:hidden;" src="images/flowAccumulation_bangalore_classifiedgrid1_map1.png"/>
 </div> 
 
-<img id="bangalore_classified_flowAccumulation2" style="position:absolute; left:353px; top:62px; height: 399px;width:165%; visibility: hidden;" src="images/flowAccumulation_bangalore_classifiedwithoutgrid2_map2.png"/>
+<img id="bangalore_classified_flowAccumulation2" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowAccumulation_bangalore_classifiedwithoutgrid2_map2.png"/>
 
-<button id="flowAccumulation_BClegend2" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowAccumulationBC2()" onMouseOut="flowAccumulationBC2a()">Legend</button></a>
+<button id="flowAccumulation_BClegend2" style="position: absolute;margin-left: 623px;margin-top: 84px;visibility: hidden;" onMouseOver="flowAccumulationBC2()" onMouseOut="flowAccumulationBC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_CBgrid2"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowAccumulation_bangalore_classifiedgrid2_map2.png"/>
+  <img id="flowAccumulation_CBgrid2"style="position: absolute;margin-top: 92px;margin-left: 346px; width:91px; height:116px; visibility:hidden;" src="images/flowAccumulation_bangalore_classifiedgrid2_map2.png"/>
 </div> 
 
 
-<img id="bangalore_classified_flowAccumulation3" style="position:absolute; left:353px; top:62px; height: 399px;width:165%; visibility: hidden;" src="images/flowAccumulation_bangalore_classifiedgrid3_map3.png"/>
+<img id="bangalore_classified_flowAccumulation3" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowAccumulation_bangalore_classifiedwithoutgrid3_map3.png"/>
 
-<button id="flowAccumulation_BClegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowAccumulationBC3()" onMouseOut="flowAccumulationBC3a()">Legend</button></a>
+<button id="flowAccumulation_BClegend3" style="position: absolute;margin-left: 614px;margin-top: 89px;visibility: hidden;" onMouseOver="flowAccumulationBC3()" onMouseOut="flowAccumulationBC3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_CBgrid3"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowAccumulation_bangalore_classifiedgrid3_map3.png"/>
+  <img id="flowAccumulation_CBgrid3"style="position: absolute;margin-top: 96px;margin-left: 347px; width:91px; height:113px; visibility:hidden;" src="images/flowAccumulation_bangalore_classifiedgrid3_map3.png"/>
 </div> 
  
 
   <!-- bangalore streched images -->
 
- <img id="bangalore_streched_flowAccumulation1" style="position:absolute; left:353px; top:62px; height: 399px;width:165%; visibility: hidden;" src="images/flowAccumulation_bangalore_strechedwithoutgrid1_map1.png"/>
+ <img id="bangalore_streched_flowAccumulation1" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowAccumulation_bangalore_strechedwithoutgrid1_map1.png"/>
 
   <p id="Egrid" style="position: absolute;margin-top: 69px;visibility: hidden;margin-left: 318px;font-size: 12px;width: 100%;"><b>flowAccumulation</b></p>
 
-  <button id="flowAccumulation_BSlegend1" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowAccumulationBS1()" onMouseOut="flowAccumulationBS1a()">Legend</button></a>
+  <button id="flowAccumulation_BSlegend1" style="position: absolute;margin-left: 614px;margin-top: 89px;visibility: hidden;" onMouseOver="flowAccumulationBS1()" onMouseOut="flowAccumulationBS1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_SBgrid1"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowAccumulation_bangalore_strechedgrid1_map1.png"/>
+  <img id="flowAccumulation_SBgrid1"style="position: absolute;margin-top: 104px;margin-left: 345px; width:97px; height:105px; visibility:hidden;" src="images/flowAccumulation_bangalore_strechedgrid1_map1.png"/>
 </div> 
 
 
-  <img id="bangalore_streched_flowAccumulation2" style="position:absolute; left:353px; top:62px; height: 399px;width:165%; visibility: hidden;" src="images/flowAccumulation_bangalore_strechedwithoutgrid2_map2.png"/>
+  <img id="bangalore_streched_flowAccumulation2" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowAccumulation_bangalore_strechedwithoutgrid2_map2.png"/>
 
-  <button id="flowAccumulation_BSlegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowAccumulationBS2()" onMouseOut="flowAccumulationBS2a()">Legend</button></a>
+  <button id="flowAccumulation_BSlegend2" style="position: absolute;margin-left: 614px;margin-top: 89px;visibility: hidden;" onMouseOver="flowAccumulationBS2()" onMouseOut="flowAccumulationBS2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_SBgrid2"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowAccumulation_bangalore_strechedgrid2_map2.png"/>
+  <img id="flowAccumulation_SBgrid2"style="position: absolute;margin-top: 104px;margin-left: 345px; width:97px; height:105px; visibility:hidden;" src="images/flowAccumulation_bangalore_strechedgrid2_map2.png"/>
 </div> 
 
   
-  <img id="bangalore_streched_flowAccumulation3" style="position:absolute; left:353px; top:62px; height: 399px;width:165%; visibility: hidden;" src="images/flowAccumulation_bangalore_strechedwithoutgrid3_map3.png"/>
+  <img id="bangalore_streched_flowAccumulation3" style="position:absolute; left:336px; top:51px; height: 381px;width:178%; visibility: hidden;" src="images/flowAccumulation_bangalore_strechedwithoutgrid3_map3.png"/>
   
 
-  <button id="flowAccumulation_BSlegend3" style="position: absolute;margin-left: 407px;margin-top: 189px;visibility: hidden;" onMouseOver="flowAccumulationBS3()" onMouseOut="flowAccumulationBS3a()">Legend</button></a>
+  <button id="flowAccumulation_BSlegend3" style="position: absolute;margin-left: 614px;margin-top: 89px;visibility: hidden;" onMouseOver="flowAccumulationBS3()" onMouseOut="flowAccumulationBS3a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="flowAccumulation_SBgrid3"style="position: absolute;margin-top: 167px;margin-left: 365px; width:77px; height:105px; visibility:hidden;" src="images/flowAccumulation_mangalore_strechedgrid3_map3.png"/>
+  <img id="flowAccumulation_SBgrid3"style="position: absolute;margin-top: 104px;margin-left: 345px; width:103px; height:105px; visibility:hidden;" src="images/flowAccumulation_mangalore_strechedgrid3_map3.png"/>
 </div> 
 
-<img style="position:absolute; left:188px; top:311px;width: 10%;" title="The path of the stream in the watershed derived from the flow accumulation raster."src="images/information_icon.png"/>
-  <button onclick="streamNetwork_Select()" class="accordions">Stream network</button><br>
+
+
+<img style="position:absolute; left:188px; top:311px;width: 10%;" onMouseOver=" Streamnetworkinformation1()" onMouseOut=" Streamnetworkinformation1a()" src="images/information_icon.png"/>
+
+<p id="Streamnetwork" style="position:absolute;visibility:hidden;margin-top: 11px;background-color: black;color: white;width: 308px; border-radius: 5px;
+padding: 0px 20px 10px 15px;z-index: 100;height: 68px;margin-left: 193px; ">The path of the stream in the watershed derived from the flow accumulation raster.</p>
+  <button id="streamN" onclick="streamNetwork_Select()" class="accordions" >Stream network</button><br>
 
   
-  <img id="mangalore_streamNetwork"  style="position:absolute; left:335px; top:38px; height: 428px;width:183%; visibility: hidden;" src="images/Stream_mangalore_network_.png"/>
+  <img id="mangalore_streamNetwork"  style="position:absolute; left:358px; top:122px; height: 239px;width:166%; visibility: hidden;" src="images/Stream_mangalore_network_.png"/>
 
-  <button id="streamNetwork_MClegend1" style="position: absolute;margin-left: 631px;margin-top: 35px;visibility: hidden;" onMouseOver="streamNetworkMC1()" onMouseOut="streamNetworkMC1a()">Legend</button></a>
+  <button id="streamNetwork_MClegend1" style="position: absolute;margin-left: 622px;margin-top: 35px;visibility: hidden;" onMouseOver="streamNetworkMC1()" onMouseOut="streamNetworkMC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="streamNetwork_CMgrid1"style="position: absolute;margin-top: 128px;margin-left: 349px; width:125px; height:30px; visibility:hidden;" src="images/stream_Network_legend.png"/>
 </div> 
 
-<img id="bangalore_streamNetwork"  style="position:absolute; left:345px; top:54px; height: 428px;width:174%; visibility: hidden;" src="images/stream_Bangalore_Network_.png"/>
+<img id="bangalore_streamNetwork"  style="position:absolute; left:345px; top:54px; height: 355px;width:174%; visibility: hidden;" src="images/stream_Bangalore_Network_.png"/>
 
-  <button id="streamNetwork_BClegend1" style="position: absolute;margin-left: 627px;margin-top: 126px;visibility: hidden;" onMouseOver="streamNetworkBC2()" onMouseOut="streamNetworkBC2a()">Legend</button></a>
+  <button id="streamNetwork_BClegend1" style="position: absolute;margin-left: 614px;margin-top: 45px;visibility: hidden;" onMouseOver="streamNetworkBC2()" onMouseOut="streamNetworkBC2a()">Legend</button></a>
   <div class="imageBox" id="Style1">
-  <img id="streamNetwork_CBgrid1"style="position: absolute;margin-top: 120px;margin-left: 360px; width:100px; height:129px; visibility:hidden;" src="images/stream_Network_legend.png"/>
+  <img id="streamNetwork_CBgrid1"style="position: absolute;margin-top: 142px;margin-left: 353px; width:156px; height:21px; visibility:hidden;" src="images/stream_Network_legend.png"/>
 </div> 
 
 
 
 
-<img style="position:absolute; left:187px; top:353px;width: 10%;" title="Determines the water contributing area above a set of cells in a raster."src="images/information_icon.png"/>
-<button  onclick="watershed_Select()"class="accordions">Watershed</button>
+<img style="position:absolute; left:187px; top:353px;width: 10%;" onMouseOver=" Watershedinformation1()" onMouseOut=" Watershedinformation1a()" src="images/information_icon.png"/>
+<!-- <img style="position:absolute; left:188px; top:311px;width: 10%;"  src="images/information_icon.png"/> -->
+
+<p id="Watershed" style="position:absolute;visibility:hidden;margin-top: 11px;background-color: black;color: white;width: 308px; border-radius: 5px;
+padding: 0px 20px 10px 15px;z-index: 100;height: 68px;margin-left: 193px; ">Determines the water contributing area above a set of cells in a raster.</p>
+  
+<button  onclick=" watershed_Select()"class="accordions">Watershed</button>
 
 
 <img id="mangalore_watershed"  style="position:absolute; left:334px; top:51px; height: 381px;width:179%; visibility: hidden;" src="images/watershed_Mangalore.png"/>
 
-<button id="watershed_Mlegend1" style="position: absolute;margin-left: 346px;margin-top: 42px;visibility: hidden;width: 65%;" onMouseOver="watershedM1()" onMouseOut="watershedM1a()">View stream Network</button></a>
+<button id="watershed_Mlegend1" style="position: absolute;margin-left: 346px;margin-top: 35px;visibility: hidden;width: 65%;" onMouseOver="watershedM1()" onMouseOut="watershedM1a()">View stream Network</button></a>
 <div class="imageBox" id="Style1">
-<img id="watershed_Manglore_streamNetwork"style="position: absolute;margin-top: -159px;margin-left: 339px; width:370px; height:226px; visibility:hidden;" src="images/Stream_mangalore_network_.png"/>
+<img id="watershed_Manglore_streamNetwork"style="position: absolute;margin-top: -144px;margin-left: 325px; width:384px; height:197px; visibility:hidden;" src="images/Stream_mangalore_network_.png"/>
 </div>  
   
-<button onclick="basin1()" id="watershed_ButtonBasin1_mangalore" style="position: absolute;margin-left: 163px;margin-top: 29px;visibility: hidden;width:21%;height:4%;background-color: rgb(191 237 188);"></button></a>
-  <p id="watershed_Basin1_mangalore" style="position: absolute;margin-left: 418px;margin-top: -21px;visibility: hidden;">Basin1</p></a>
+<img id="bangalore_watershed"  style="position:absolute; left:334px; top:51px; height: 381px;width:179%; visibility: hidden;" src="images/watershed_Bangalore.png"/>
+
+  <button id="watershed_Blegend1" style="position: absolute;margin-left: 346px;margin-top: 35px;visibility: hidden;width: 65%;" onMouseOver="watershedB1()" onMouseOut="watershedB1a()">View stream Network</button></a>
+<div class="imageBox" id="Style1">
+<img id="watershed_Bangalore_streamNetwork"style="position: absolute;margin-top: -197px;margin-left: 319px; width:390px; height:312px; visibility:hidden;" src="images/stream_Bangalore_Network_.png"/>
+</div> 
 
 
-<img onclick=" subbasin1()" id="watershed_Mbasin1" title="Basin1" style="position: absolute;margin-top: -295px;margin-left: 119px; width:179%; height:381px; visibility:hidden;" src="images/Basin1_Mnagalore_Highlight.png"/>
 
-<img id="watershed_Msubbasin1" title="subBasin1" style="position: absolute;margin-top: -295px;margin-left: 119px; width:179%; height:381px; visibility:hidden;" src="images/subbasin1__mangalore_without river.png"/>
+
+<button onclick="basin1()" id="watershed_ButtonBasin1_mangalore"title="Basin1" style="position: absolute;border:none;margin-left: 195px;margin-top: -138px;visibility: hidden;width:21%;height:4%;background-color: rgb(195 237 188 / 41%);"></button></a>
+<button onclick="basin1()" id="watershed_ButtonBasin1_bangalore"title="Basin1" style="position: absolute;border:none;margin-left: 250px;margin-top: -172px;visibility: hidden;width:29%;height:21%;background-color:  #5cb85c03;"></button></a>
+  
+
+
+<img onclick=" subbasin1()" id="watershed_Mbasin1" title="Basin1" style="position: absolute;margin-top: -287px;margin-left: 133px; width:179%; height:370px; visibility:hidden;" src="images/Basin1_Mnagalore_Highlight.png"/>
+
+<p id="Instruction1" style="position:absolute; visibility:hidden;font-size: 20px; text-align: center;margin-top: 59px;margin-left: 329px;width: 186%;color: gray;">To view the Subbasin of the Basin1 Click on the image to proceed.</p></a>
+ 
+
+<img id="watershed_Msubbasin1" title="subBasin1" style="position: absolute;margin-top: -295px;margin-left: 119px; width:186%; height:381px; visibility:hidden;" src="images/subbasin1__mangalore_without river.png"/>
 
 <button id="watershed_Msubbasinlegend1" style="position: absolute;margin-left: 341px;margin-top: 36px;visibility: hidden;width: 65%;" onMouseOver="subbasinM1()" onMouseOut="subbasinM1a()">View stream Network</button></a>
 <div class="imageBox" id="Style1">
-<img id="watershed_Msubbasin1_withriver"  style="position: absolute;margin-top: -120px;margin-left: 358px; width:301px; height:160px; visibility:hidden;" src="images/subBasin1_mangalore_river1.png"/>
+<img id="watershed_Msubbasin1_withriver"  style="position: absolute;margin-top: -121px;margin-left: 352px; width:305px; height:161px; visibility:hidden;" src="images/subBasin1_mangalore_river1.png"/>
 </div> 
 <!-- <img id="watershed_Msubbasin1_withriver"  style="position: absolute;margin-top: -295px;margin-left: 132px; width:377px; height:428px; visibility:hidden;" src="images/subBasin2_mangalore_river1.png"/> -->
 
 
 
 
-<img  id="watershed_Bbasin1" title="Basin1"style="position: absolute;margin-top: -295px;margin-left: 132px; width:377px; height:428px; visibility:hidden;" src="images/Basin1_bangalore_Highlight.png"/>
+<img onclick=" subbasin1()" id="watershed_Bbasin1" title="Basin1"style="position: absolute;margin-top: -287px;margin-left: 133px; width:179%; height:370px; visibility:hidden;" src="images/Basin1_bangalore_Highlight.png"/>
 
-<img id="watershed_Bsubbasin1" title="subBasin1" style="position: absolute;margin-top: -295px;margin-left: 146px; width:183%; height:428px; visibility:hidden;" src="images/subbasin1__bangalore_without river.png"/>
+<img id="watershed_Bsubbasin1" title="subBasin1" style="position: absolute;margin-top: -295px;margin-left: 119px; width:186%; height:381px; visibility:hidden;" src="images/subbasin1__bangalore_without river.png"/>
 
-<img id="watershed_Bsubbasin1_withriver" title="Basin1" style="position: absolute;margin-top: -295px;margin-left: 146px; width:377px; height:428px; visibility:hidden;" src="images/subBasin1_bangalore_river1.png"/>
-
-
-
-<button onclick="basin2()"id="watershed_ButtonBasin2_mangalore" style="position: absolute;margin-left: 163px;margin-top: 49px;visibility: hidden;width:21%;height:4%;background-color: bisque;"></button></a>
-  <p id="watershed_Basin2_mangalore" style="position: absolute;margin-left: 418px;margin-top: 4px;visibility: hidden;">Basin2</p></a>
-
-  <img onclick=" subbasin2()" id="watershed_Mbasin2" title="Basin2"style="position: absolute;margin-top: -295px;margin-left: 119px; width:179%; height:381px; visibility:hidden;" src="images/Basin2_Mnagalore_Highlight.png"/>
-
-  <img id="watershed_Msubbasin2" title="Basin1" style="position: absolute;margin-top: -295px;margin-left: 119px; width:179%; height:381px; visibility:hidden;" src="images/subbasin2__mangalore_without river.png"/>
-
-<button id="watershed_Msubbasinlegend2" style="position: absolute;margin-left: 344px;margin-top: 32px;visibility: hidden;width: 65%;" onMouseOver="subbasinM2()" onMouseOut="subbasinM2a()">View stream Network</button></a>
+<button id="watershed_Bsubbasinlegend1" style="position: absolute;margin-left: 341px;margin-top: 36px;visibility: hidden;width: 65%;" onMouseOver="subbasinB1()" onMouseOut="subbasinB1a()">View stream Network</button></a>
 <div class="imageBox" id="Style1">
-  <img id="watershed_Msubbasin2_withriver" title="Basin1" style="position: absolute;margin-top: -173px;margin-left: 325px; width:377px; height:224px; visibility:hidden;" src="images/subBasin2_mangalore_river2.png"/>
+<img id="watershed_Bsubbasin1_withriver" title="Basin1" style="position: absolute;margin-top: -172px;margin-left: 369px; width:287px; height:221px; visibility:hidden;" src="images/subBasin1_bangalore_river1.png"/>
+</div>
+
+<p id="SubbasinInstruction1" style="position:absolute; visibility:hidden;font-size: 20px; text-align: center;margin-top: 59px;margin-left: 329px;width: 186%;color: gray;">There is no river network in subbasin1</p></a>
+<p id="SubbasinInstruction2" style="position:absolute; visibility:hidden;font-size: 20px; text-align: center;margin-top: 69px;margin-left: 341px;width: 211%;color: gray;max-width: 393px;">There is a river network in subbasin2</p></a>
+<p id="SubbasinInstruction3" style="position:absolute; visibility:hidden;font-size: 20px; text-align: center;margin-top: 69px;margin-left: 329px;width: 201%;color: gray;max-width: 388px;">There is a river network in subbasin3</p></a>
+
+<p id="SubbasinInstruction1_Bangalore" style="position:absolute; visibility:hidden;font-size: 20px; text-align: center;margin-top: 59px;margin-left: 329px;width: 186%;color: gray;">There is a river network in subbasin1</p></a>
+<button onclick="basin2()"id="watershed_ButtonBasin2_mangalore" title="Basin2" style="position: absolute;margin-left: 337px;margin-top: -152px;visibility: hidden;width:39%;height:18%;background-color: #ffe4c44d;;border: none;"></button></a>
+<button onclick="basin2()"id="watershed_ButtonBasin2_bangalore" title="Basin2" style="position: absolute;margin-left: 361px;margin-top: -160px;visibility: hidden;width:39%;height:28%;background-color: #ffe4c44d;;border: none;"></button></a>
+
+
+  <img onclick=" subbasin2()" id="watershed_Mbasin2" title="Basin2"style="position: absolute;margin-top: -287px;margin-left: 133px; width:179%; height:370px; visibility:hidden;" src="images/Basin2_Mnagalore_Highlight.png"/>
+  <p id="Instruction2" style="position:absolute; visibility:hidden;font-size: 20px; text-align: center;margin-top: 59px;margin-left: 329px;width: 186%;color: gray;">To view the Subbasin of the Basin2 Click on the image to Proceed.</p></a>
+
+
+  <img id="watershed_Msubbasin2" title="Basin1" style="position: absolute;margin-top: -283px;margin-left: 140px; width:179%; height:381px; visibility:hidden;" src="images/subbasin2__mangalore_without river.png"/>
+
+<button id="watershed_Msubbasinlegend2" style="position: absolute;margin-left: 361px;margin-top: 43px;visibility: hidden;width: 65%;" onMouseOver="subbasinM2()" onMouseOut="subbasinM2a()">View stream Network</button></a>
+<div class="imageBox" id="Style1">
+  <img id="watershed_Msubbasin2_withriver" title="Basin1" style="position: absolute;margin-top: -159px;margin-left: 341px; width:366px; height:220px; visibility:hidden;" src="images/subBasin2_mangalore_river2.png"/>
+  <p id="SubbasinInstruction2" style="position:absolute; visibility:hidden;font-size: 20px; text-align: center;margin-top: 59px;margin-left: 329px;width: 186%;color: gray;max-width: 205px;">There is a river network in subbasin2</p></a>
+  
 </div> 
 
 
   
+ <img onclick=" subbasin2()" id="watershed_Bbasin2" title="Basin2" style="position: absolute;margin-top: -287px;margin-left: 133px; width:179%; height:370px; visibility:hidden;" src="images/Basin2_bangalore_Highlight.png"/>
 
+ <img id="watershed_Bsubbasin2" title="Basin2" style="position: absolute;margin-top: -283px;margin-left: 130px; width:179%; height:381px; visibility:hidden;" src="images/subbasin2__bangalore_without river.png"/>
 
- <img id="watershed_Bbasin2" title="Basin2" style="position: absolute;margin-top: -295px;margin-left: 146px; width:183%; height:428px; visibility:hidden;" src="images/Basin2_bangalore_Highlight.png"/>
-
- <img id="watershed_Bsubbasin2" title="Basin2" style="position: absolute;margin-top: -295px;margin-left: 132px; width:377px; height:428px; visibility:hidden;" src="images/subbasin2__bangalore_without river.png"/>
-
- <img id="watershed_Bsubbasin2_withriver" title="Basin2" style="position: absolute;margin-top: -295px;margin-left: 132px; width:377px; height:428px; visibility:hidden;" src="images/subBasin2_bangalore_river2.png"/>
+ <button id="watershed_Bsubbasinlegend2" style="position: absolute;margin-left: 341px;margin-top: 36px;visibility: hidden;width: 65%;" onMouseOver="subbasinB2()" onMouseOut="subbasinB2a()">View stream Network</button></a>
+<div class="imageBox" id="Style1">
+  <img id="watershed_Bsubbasin2_withriver" title="Basin2" style="position: absolute;margin-top: -154px;margin-left: 352px; width:312px; height:243px; visibility:hidden;" src="images/subBasin2_bangalore_river2.png"/>
+ 
+ </div>
  
  
 
- <button onclick="basin3()" id="watershed_ButtonBasin3_mangalore" style="position: absolute;margin-left: 279px;margin-top: 140px;visibility: hidden;width:21%;height:6%;background-color: rgb(115, 180, 233);"></button></a>
-  <p id="watershed_Basin3_mangalore" style="position: absolute;margin-left: 527px;margin-top: 98px;visibility: hidden;">Basin3</p></a>
+ <button onclick="basin3()" title="Basin3" id="watershed_ButtonBasin3_bangalore" style="position: absolute;margin-left: 279px;margin-top: -75px;visibility: hidden;width:21%;height:6%;border: none;background-color:#faebd700;"></button></a>
+  <!-- <p id="watershed_Basin3_mangalore" style="position: absolute;margin-left: 527px;margin-top: 98px;visibility: hidden;">Basin3</p></a> -->
 
+ <img onclick=" subbasin3()" id="watershed_Bbasin3" title="Basin3"style="position: absolute;margin-top: -287px;margin-left: 133px; width:179%; height:370px; visibility:hidden;" src="images/Basin3_bangalore_Highlight.png"/>
+ <p id="Instruction3" style="position:absolute; visibility:hidden;font-size: 20px; text-align: center;margin-top: 59px;margin-left: 329px;width: 186%;color: gray;">To view the Subbasin of the Basin3 Click on the image to proceed.</p></a>
 
- <img onclick=" subbasin3()" id="watershed_Bbasin3" title="Basin3"style="position: absolute;margin-top: -295px;margin-left: 146px; width:183%; height:428px; visibility:hidden;" src="images/Basin3_bangalore_Highlight.png"/>
+ <img id="watershed_Bsubbasin3" title="Basin3" style="position: absolute;margin-top: -283px;margin-left: 129px; width:179%; height:381px; visibility:hidden;" src="images/subbasin3__bangalore_without river.png"/>
 
- <img id="watershed_Bsubbasin3" title="Basin3" style="position: absolute;margin-top: -295px;margin-left: 132px; width:377px; height:428px; visibility:hidden;" src="images/subbasin3__bangalore_without river.png"/>
-
- <img id="watershed_Bsubbasin3_withriver" title="Basin3" style="position: absolute;margin-top: -295px;margin-left: 132px; width:377px; height:428px; visibility:hidden;" src="images/subBasin3_bangalore_river3.png"/>
+ <button id="watershed_Bsubbasinlegend3" style="position: absolute;margin-left: 341px;margin-top: 36px;visibility: hidden;width: 65%;" onMouseOver="subbasinB3()" onMouseOut="subbasinB3a()">View stream Network</button></a>
+<div class="imageBox" id="Style1">
+  <img id="watershed_Bsubbasin3_withriver" title="Basin3" style="position: absolute;margin-top: -179px;margin-left: 359px; width:301px; height:250px; visibility:hidden;" src="images/subBasin3_bangalore_river3.png"/>
  
+ </div>
+
   
 
-  <img id="bangalore_watershed"  style="position:absolute; left:354px; top:44px; height: 428px;width:183%; visibility: hidden;" src="images/watershed_Bangalore.png"/>
-
-  <button id="watershed_Blegend1" style="position: absolute;margin-left: 407px;margin-top: 148px;visibility: hidden;width: 65%;" onMouseOver="watershedB1()" onMouseOut="watershedB1a()">View stream Network</button></a>
-<div class="imageBox" id="Style1">
-<img id="watershed_Bangalore_streamNetwork"style="position: absolute;margin-top: -211px;margin-left: 356px; width:325px; height:372px; visibility:hidden;" src="images/stream_Bangalore_Network_.png"/>
-</div> 
+  
   <!-- <button id="watershed_MClegend1" style="position: absolute;margin-left: 618px;margin-top: 90px;visibility: hidden;" onMouseOver="watershedMC1()" onMouseOut="watershedMC1a()">Legend</button></a>
   <div class="imageBox" id="Style1">
   <img id="watershed_CMgrid1"style="position: absolute;margin-top: 175px;margin-left: 352px; width:125px; height:30px; visibility:hidden;" src="images/stream_Network_legend.png"/>
@@ -1152,12 +1217,18 @@ its neighbours, measured clockwise in degrees from 0 to 360."src="images/informa
         <div id="nav">
             <img id="nextButton" onclick="navNext()" src="images/Next.png"/>
             <h1 class="blink" style="position: absolute;visibility: hidden;">Select the Symbology to proceed</h1>
-            <marquee id="notification" style="position: absolute;visibility: hidden;margin-top: 365px;color: red;width: 41%;height: 20px;"width="100%" margin-left="20px;"direction="right" height="100px">select the symbology and click on the subsections. </marquee> </p>
+            <h1 class="blink1" style="position: absolute;visibility: hidden;">Select the Data</h1>
+            
+            <h1 class="blink2" style="position:absolute; visibility:hidden;color: grey;font-size: 25px; text-align: center;">You have selected Basin1</h1>
+            <h1 class="blink2a" style="position:absolute; visibility:hidden;color: grey;font-size: 25px; text-align: center;">You have selected Basin2</h1>
+            <h1 class="blink3" style="position:absolute; visibility:hidden;color: grey;font-size: 25px; text-align: center;">You have selected Basin3</h1>
+            <!-- <h1 class="blink3" style="position:absolute; visibility:hidden;color: grey;font-size: 25px; text-align: center;">You have selected Basin1</h1> -->
+            <marquee id="notification" style="position: absolute;visibility: hidden;margin-top: 479px;color: red;width: 97%;height: 20px;"width="96%" margin-left="20px;"direction="right" height="100px">Click on Symbology and reselect to view.</marquee> </p>
             <!-- <img class ="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png"/> -->
             <div id="copyright"> &copy; 2020 -  <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
             </div>
 </head>
-<body>
+
     
 </body>
 </html>
