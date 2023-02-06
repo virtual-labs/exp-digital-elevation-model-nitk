@@ -52,11 +52,10 @@ html
 }
 
 
-.incanvas
-{
-	margin:5px 0 0 5px;
-	padding:0;
-  margin-top: 19px;
+.incanvas{
+  margin:9px 0 0 5px;
+padding:0;
+
 }
 #nextButton
 {
@@ -215,6 +214,7 @@ body{
     visibility: hidden;
   }
 }
+
 
 .popup .popuptext::after {
   content: "";
