@@ -40,7 +40,7 @@ html
 .simsubscreen
 {
 	position:absolute;
-	left:50px;
+	left:51px;
 	top:59px;
 	height:530px;
 	width:745px;
@@ -127,13 +127,30 @@ body{
   }
 }
 
+.blinkText {
+  animation: blinkerT 1s linear infinite;
+  color: rgba(222 28 28 / 84%);
+  font-family: sans-serif;
+  margin-top: 394px;
+  font-size: 17px;
+  margin-left: 14px;
+  position: relative;
+  /* visibility: hidden; */
+}
+@keyframes blinkerT {
+  50% {
+      opacity: 0;
+  }
+}
+
+
 .blink1 {
   animation: blinker1 1s linear infinite;
   color: rgba(222 28 28 / 84%);
   font-family: sans-serif;
-  margin-top: 9px;
+  margin-top: 4px;
   font-size: 19px;
-  margin-left: 236px;
+  margin-left: 251px;
   position: relative;
   /* visibility: hidden; */
 }
@@ -300,14 +317,14 @@ body{
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 103%;
+    width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
     top: -5px;
-    left: 28px;
+    left: 25px;
     height: 455px;
   }
   .close {
