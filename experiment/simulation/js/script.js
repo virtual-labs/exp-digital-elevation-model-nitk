@@ -105,20 +105,39 @@ function demselect(){
 }
 
 function  waterselect(){
+	document.getElementById("DEM Derivatives").disabled = true;
+	document.getElementById("watershed Delination").disabled = true;
 	if(mapChoosen==0){
 
 		document.getElementById('border').style.visibility="hidden";
 		document.getElementById('border1').style.visibility="hidden";
 		document.getElementById('text').style.visibility="hidden";
 		document.getElementById('notification').style.visibility="hidden";
+		document.getElementsByClassName("blinkText")[0].style.visibility="hidden";
 
-	}
+		document.getElementById('mangalore_watershed').style.visibility="hidden";
+		document.getElementById('watershed_Mlegend1').style.visibility="hidden";
+		document.getElementById('watershed_Manglore_streamNetwork').style.visibility="hidden";
+		document.getElementById('watershed_Button1_mangalore').style.visibility="hidden";
+		document.getElementById('watershed_Basin1_mangalore').style.visibility="hidden";
+		document.getElementById('watershed_Button2_mangalore').style.visibility="hidden";
+		document.getElementById('watershed_Basin2_mangalore').style.visibility="hidden";
+		document.getElementById('watershed_Msubbasinlegend1').style.visibility="hidden";
+		document.getElementById('watershed_Msubbasin1_withriver').style.visibility="hidden";
+		document.getElementById('watershed_Msubbasinlegend2').style.visibility="hidden";
+		document.getElementById('watershed_Msubbasin2_withriver').style.visibility="hidden";
+		document.getElementById('blink2')[0].style.visibility="hidden";
+		document.getElementById('blink2a')[0].style.visibility="hidden";
+		
+		
+}
 	else if(mapChoosen==1){
 		console.log('hid fgdfg')
 		document.getElementById('border1').style.visibility="hidden";
 		document.getElementById('border').style.visibility="hidden";
 		document.getElementById('text').style.visibility="hidden";
 		document.getElementById('notification').style.visibility="hidden";
+		document.getElementsByClassName("blinkText")[0].style.visibility="hidden";
 	}
 }
 
@@ -201,6 +220,7 @@ function mangaloreMap1(){
 			document.getElementById('border1').style.visibility="hidden";
 			document.getElementById('Mangmap1').src="images/Elevation_Mangalore_Streched_withoutgrid1_map1.png";
 			document.getElementById('note3').style.visibility="visible";
+			document.getElementById('select1').style.visibility="hidden"
 			// document.getElementById('Mangmap1').src="images/Mangalore_streched_map2.png";
 			// document.getElementById('Mangmap1').src="images/Mangalore_streched_map3.png";
 		}
@@ -209,6 +229,7 @@ function mangaloreMap1(){
 			document.getElementById('border').style.visibility="hidden";
 			document.getElementById('Mangmap1').src="images/Elevation_bangalore_Streched_withoutgrid1_map1.png";
 			document.getElementById('note3').style.visibility="visible";
+			document.getElementById('select1').style.visibility="hidden"
 			// document.getElementById('Mangmap1').src="images/Bangalore_streched_map2.png";
 			// document.getElementById('Mangmap1').src="images/Bangalore_streched_map3.png";
 		}
@@ -228,6 +249,7 @@ function mangaloreMap2(){
 		document.getElementById('border1').style.visibility="hidden";
 		document.getElementById('Mangmap1').src="images/Elevation_Mangalore_Streched_withoutgrid2_map2.png";
 		document.getElementById('note3').style.visibility="visible";
+		document.getElementById('select1').style.visibility="hidden"
 	// document.getElementById('Mangmap1').src="images/Mangalore_streched_map2.png";
 		// document.getElementById('Mangmap1').src="images/Mangalore_streched_map3.png";
 	}
@@ -236,6 +258,7 @@ function mangaloreMap2(){
 		document.getElementById('border').style.visibility="hidden";
 		document.getElementById('Mangmap1').src="images/Elevation_bangalore_Streched_withoutgrid2_map2.png";
 		document.getElementById('note3').style.visibility="visible";
+		document.getElementById('select1').style.visibility="hidden"
 		// document.getElementById('Mangmap1').src="images/Bangalore_streched_map2.png";
 		// document.getElementById('Mangmap1').src="images/Bangalore_streched_map3.png";
 	}
@@ -254,6 +277,7 @@ function mangaloreMap3(){
 		document.getElementById('border1').style.visibility="hidden";
 		document.getElementById('Mangmap1').src="images/Elevation_Mangalore_Streched_withoutgrid3_map3.png";
 		document.getElementById('note3').style.visibility="visible";
+		document.getElementById('select1').style.visibility="hidden"
 		
 	}
 	else if(mapChoosen==1){
@@ -261,6 +285,7 @@ function mangaloreMap3(){
 		document.getElementById('border').style.visibility="hidden";
 		document.getElementById('Mangmap1').src="images/Elevation_bangalore_Streched_withoutgrid3_map3.png";
 		document.getElementById('note3').style.visibility="visible";
+		document.getElementById('select1').style.visibility="hidden"
 	}
 	}
 
@@ -525,6 +550,7 @@ function elevation_Select(){
 	
 	document.getElementById('elevation_classified').style.visibility="visible";
 	document.getElementById('elevation_streched').style.visibility="visible";
+	document.getElementsByClassName("blinkText")[0].style.visibility="visible";
 	document.getElementById('Rstreched').style.visibility="hidden";
 	document.getElementById('Rclassified').style.visibility="hidden";
 
@@ -546,38 +572,8 @@ function elevation_Select(){
 	document.getElementById('flowaccumulation_classified').style.visibility="hidden";
 	document.getElementById('flowaccumulation_streched').style.visibility="hidden";
 
-	// document.getElementById("Elavation_button").style.backgroundColor="grey";
-	// console.log('hi')
-	// document.getElementById("slope_button").style.backgroundColor="white";
-	// document.getElementById("aspect_button").style.backgroundColor="white";
-	// document.getElementById("hillshade_button").style.backgroundColor="white";
-	// document.getElementById("fill_button").style.backgroundColor="white";
-	// document.getElementById("flowaccumulation_button").style.backgroundColor="white";
-	// document.getElementById("flowdirection_button").style.backgroundColor="white";
-	// document.getElementById("stream_button").style.backgroundColor="white";
-	// document.getElementById("watershed_button").style.backgroundColor="white";
-// }
 
-}
-function elevation_classified(){
-	if(colorRampSelected==0)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore elevation 1")
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				document.getElementById("mangalore_classified_elevation1").style.visibility="visible";
-				document.getElementById("mangalore_Streched1").style.visibility="hidden";
-				document.getElementById('mangalore_Classified1').style.visibility="hidden";
-				document.getElementById("elevation_MClegend1").style.visibility="visible";
-				document.getElementById("elevation_MSlegend1").style.visibility="hidden";
-				document.getElementById("elevation_SMgrid1").style.visibility="hidden"
-				document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
-				
-				document.getElementById("mangalore_classified_slope1").style.visibility="hidden";
+	document.getElementById("mangalore_classified_slope1").style.visibility="hidden";
 				document.getElementById("slope_MClegend1").style.visibility="hidden";
 				document.getElementById("slope_CMgrid1").style.visibility="hidden";
 	
@@ -636,465 +632,58 @@ function elevation_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			
-			}
-		else if(mapChoosen==1)
-			{
-				
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore elevation 1")
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("elevation_BClegend1").style.visibility="visible";
-				// document.getElementById("elevation_CBgrid1").style.visibility="visible";
-				document.getElementById("elevation_BSlegend1").style.visibility="hidden";
-				document.getElementById("elevation_SBgrid1").style.visibility="hidden";
-				document.getElementById("bangalore_classified_elevation1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_streched_elevation1").style.visibility="hidden";
 
-			document.getElementById("bangalore_classified_slope1").style.visibility="hidden";
-			document.getElementById("slope_BClegend1").style.visibility="hidden";
-			document.getElementById("slope_CBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_slope1").style.visibility="hidden";
-			document.getElementById("slope_BSlegend1").style.visibility="hidden";
-			document.getElementById("slope_SBgrid1").style.visibility="hidden";
-
-			
-			document.getElementById("bangalore_classified_HillShade1").style.visibility="hidden";
-			document.getElementById("HillShade_BClegend1").style.visibility="hidden";
-			document.getElementById("HillShade_CBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_HillShade1").style.visibility="hidden";
-			document.getElementById("HillShade_BSlegend1").style.visibility="hidden";
-			document.getElementById("HillShade_SBgrid1").style.visibility="hidden";
-		
-
-			document.getElementById("bangalore_classified_aspect1").style.visibility="hidden";
-			document.getElementById("aspect_BClegend1").style.visibility="hidden";
-			document.getElementById("aspect_CBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_aspect1").style.visibility="hidden";
-			document.getElementById("aspect_BSlegend1").style.visibility="hidden";
-			document.getElementById("aspect_SBgrid1").style.visibility="hidden";
-		
-
-			document.getElementById("bangalore_classified_fill1").style.visibility="hidden";
-			document.getElementById("fill_BClegend1").style.visibility="hidden";
-			document.getElementById("aspect_CBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_fill1").style.visibility="hidden";
-			document.getElementById("fill_BSlegend1").style.visibility="hidden";
-			document.getElementById("fill_SBgrid1").style.visibility="hidden";
-			
-			
-			document.getElementById("bangalore_classified_flowDirection1").style.visibility="hidden";
-			document.getElementById("flowDirection_BClegend1").style.visibility="hidden";
-			document.getElementById("flowDirection_CBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_flowDirection1").style.visibility="hidden";
-			document.getElementById("flowDirection_BSlegend1").style.visibility="hidden";
-			document.getElementById("flowDirection_SBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_classified_flowAccumulation1").style.visibility="hidden";
-			document.getElementById("flowAccumulation_BClegend1").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_flowAccumulation1").style.visibility="hidden";
-			document.getElementById("flowAccumulation_BSlegend1").style.visibility="hidden";
-			document.getElementById("flowAccumulation_SBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_streamNetwork").style.visibility="hidden";
-			document.getElementById("streamNetwork_BClegend1").style.visibility="hidden";
-			document.getElementById("streamNetwork_CBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_watershed").style.visibility="hidden";
-			document.getElementById("watershed_Blegend1").style.visibility="hidden";
-			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==1)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore elevation 2")
-			document.getElementById("elevation_MClegend2").style.visibility="visible";
-			// document.getElementById("elevation_CMgrid2").style.visibility="visible";
-			document.getElementById("elevation_MSlegend2").style.visibility="hidden";
-			document.getElementById("elevation_SMgrid2").style.visibility="hidden";
-			document.getElementById("mangalore_classified_elevation2").style.visibility="visible";
-			document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			document.getElementById('mangalore_Classified2').style.visibility="hidden";
-			document.getElementById("mangalore_streched_elevation2").style.visibility="hidden";
-
-			document.getElementById("mangalore_classified_slope2").style.visibility="hidden";
-			document.getElementById("slope_MClegend2").style.visibility="hidden";
-			document.getElementById("slope_CMgrid2").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_slope2").style.visibility="hidden";
-			document.getElementById("slope_MSlegend2").style.visibility="hidden";
-			document.getElementById("slope_SMgrid2").style.visibility="hidden";
-
-			
-			document.getElementById("mangalore_classified_HillShade2").style.visibility="hidden";
-			document.getElementById("HillShade_MClegend2").style.visibility="hidden";
-			document.getElementById("HillShade_CMgrid2").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_HillShade2").style.visibility="hidden";
-			document.getElementById("HillShade_MSlegend2").style.visibility="hidden";
-			document.getElementById("HillShade_SMgrid2").style.visibility="hidden";
-		
-
-			document.getElementById("mangalore_classified_aspect2").style.visibility="hidden";
-			document.getElementById("aspect_MClegend2").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid2").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_aspect2").style.visibility="hidden";
-			document.getElementById("aspect_MSlegend2").style.visibility="hidden";
-			document.getElementById("aspect_SMgrid2").style.visibility="hidden";
-		
-
-			document.getElementById("mangalore_classified_fill2").style.visibility="hidden";
-			document.getElementById("fill_MClegend2").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid2").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_fill2").style.visibility="hidden";
-			document.getElementById("fill_MSlegend2").style.visibility="hidden";
-			document.getElementById("fill_SMgrid2").style.visibility="hidden";
-			
-			
-			document.getElementById("mangalore_classified_flowDirection2").style.visibility="hidden";
-			document.getElementById("flowDirection_MClegend2").style.visibility="hidden";
-			document.getElementById("flowDirection_CMgrid2").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_flowDirection2").style.visibility="hidden";
-			document.getElementById("flowDirection_MSlegend2").style.visibility="hidden";
-			document.getElementById("flowDirection_SMgrid2").style.visibility="hidden";
-
-			document.getElementById("mangalore_classified_flowAccumulation2").style.visibility="hidden";
-			document.getElementById("flowAccumulation_MClegend2").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CMgrid2").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_flowAccumulation2").style.visibility="hidden";
-			document.getElementById("flowAccumulation_MSlegend2").style.visibility="hidden";
-			document.getElementById("flowAccumulation_SMgrid2").style.visibility="hidden";
-
-			document.getElementById("mangalore_streamNetwork").style.visibility="hidden";
-			document.getElementById("streamNetwork_MClegend1").style.visibility="hidden";
-			document.getElementById("streamNetwork_CMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_watershed").style.visibility="hidden";
-			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
-			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore elevation 2")
-				document.getElementById("elevation_BClegend2").style.visibility="visible";
-				// document.getElementById("elevation_CBgrid2").style.visibility="visible";
-				document.getElementById("elevation_BSlegend3").style.visibility="hidden";
-				document.getElementById("elevation_SBgrid2").style.visibility="hidden";
-				document.getElementById("bangalore_classified_elevation2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_streched_elevation2").style.visibility="hidden";
-
-
-				document.getElementById("bangalore_classified_slope2").style.visibility="hidden";
-			document.getElementById("slope_BClegend2").style.visibility="hidden";
-			document.getElementById("slope_CBgrid2").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_slope2").style.visibility="hidden";
-			document.getElementById("slope_BSlegend2").style.visibility="hidden";
-			document.getElementById("slope_SBgrid2").style.visibility="hidden";
-
-			
-			document.getElementById("bangalore_classified_HillShade2").style.visibility="hidden";
-			document.getElementById("HillShade_BClegend2").style.visibility="hidden";
-			document.getElementById("HillShade_CBgrid2").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_HillShade2").style.visibility="hidden";
-			document.getElementById("HillShade_BSlegend2").style.visibility="hidden";
-			document.getElementById("HillShade_SBgrid2").style.visibility="hidden";
-		
-
-			document.getElementById("bangalore_classified_aspect2").style.visibility="hidden";
-			document.getElementById("aspect_BClegend2").style.visibility="hidden";
-			document.getElementById("aspect_CBgrid2").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_aspect2").style.visibility="hidden";
-			document.getElementById("aspect_BSlegend2").style.visibility="hidden";
-			document.getElementById("aspect_SBgrid2").style.visibility="hidden";
-		
-
-			document.getElementById("bangalore_classified_fill2").style.visibility="hidden";
-			document.getElementById("fill_BClegend2").style.visibility="hidden";
-			document.getElementById("aspect_CBgrid2").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_fill2").style.visibility="hidden";
-			document.getElementById("fill_BSlegend2").style.visibility="hidden";
-			document.getElementById("fill_SBgrid2").style.visibility="hidden";
-			
-			
-			document.getElementById("bangalore_classified_flowDirection2").style.visibility="hidden";
-			document.getElementById("flowDirection_BClegend2").style.visibility="hidden";
-			document.getElementById("flowDirection_CBgrid2").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_flowDirection2").style.visibility="hidden";
-			document.getElementById("flowDirection_BSlegend2").style.visibility="hidden";
-			document.getElementById("flowDirection_SBgrid2").style.visibility="hidden";
-
-			document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="hidden";
-			document.getElementById("flowAccumulation_BClegend2").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CBgrid2").style.visibility="hidden";
-
-			document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="hidden";
-			document.getElementById("flowAccumulation_BSlegend2").style.visibility="hidden";
-			document.getElementById("flowAccumulation_SBgrid2").style.visibility="hidden";
-
-			document.getElementById("bangalore_streamNetwork").style.visibility="hidden";
-			document.getElementById("streamNetwork_BClegend1").style.visibility="hidden";
-			document.getElementById("streamNetwork_CBgrid1").style.visibility="hidden";
-
-			document.getElementById("bangalore_watershed").style.visibility="hidden";
-			document.getElementById("watershed_Blegend1").style.visibility="hidden";
-			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==2)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				document.getElementById("mangalore_Streched3").style.visibility="hidden";
-			console.log("hi mangalore elevation 3")
-			document.getElementById("elevation_MClegend3").style.visibility="visible";
-			// document.getElementById("elevation_CMgrid3").style.visibility="visible";
-			document.getElementById("elevation_MSlegend3").style.visibility="hidden";
-			document.getElementById("elevation_SMgrid3").style.visibility="hidden"
-			document.getElementById("mangalore_classified_elevation3").style.visibility="visible";
-			document.getElementById("mangalore_Streched3").style.visibility="hidden";
-			document.getElementById('mangalore_Classified3').style.visibility="hidden";
-
-			document.getElementById("mangalore_classified_slope3").style.visibility="hidden";
-			document.getElementById("slope_MClegend3").style.visibility="hidden";
-			document.getElementById("slope_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_slope3").style.visibility="hidden";
-			document.getElementById("slope_MSlegend3").style.visibility="hidden";
-			document.getElementById("slope_SMgrid3").style.visibility="hidden";
-
-			
-			document.getElementById("mangalore_classified_HillShade3").style.visibility="hidden";
-			document.getElementById("HillShade_MClegend3").style.visibility="hidden";
-			document.getElementById("HillShade_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_HillShade3").style.visibility="hidden";
-			document.getElementById("HillShade_MSlegend3").style.visibility="hidden";
-			document.getElementById("HillShade_SMgrid3").style.visibility="hidden";
-		
-
-			document.getElementById("mangalore_classified_aspect3").style.visibility="hidden";
-			document.getElementById("aspect_MClegend3").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_aspect3").style.visibility="hidden";
-			document.getElementById("aspect_MSlegend3").style.visibility="hidden";
-			document.getElementById("aspect_SMgrid3").style.visibility="hidden";
-		
-
-			document.getElementById("mangalore_classified_fill3").style.visibility="hidden";
-			document.getElementById("fill_MClegend3").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_fill3").style.visibility="hidden";
-			document.getElementById("fill_MSlegend3").style.visibility="hidden";
-			document.getElementById("fill_SMgrid3").style.visibility="hidden";
-			
-			
-			document.getElementById("mangalore_classified_flowDirection3").style.visibility="hidden";
-			document.getElementById("flowDirection_MClegend3").style.visibility="hidden";
-			document.getElementById("flowDirection_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_flowDirection3").style.visibility="hidden";
-			document.getElementById("flowDirection_MSlegend3").style.visibility="hidden";
-			document.getElementById("flowDirection_SMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_MClegend3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_MSlegend3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_SMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streamNetwork").style.visibility="hidden";
-			document.getElementById("streamNetwork_MClegend1").style.visibility="hidden";
-			document.getElementById("streamNetwork_CMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_watershed").style.visibility="hidden";
-			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
-			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-
-			
-			document.getElementById("mangalore_streched_elevation3").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore elevation 3")
-				document.getElementById("elevation_BClegend3").style.visibility="visible";
-				// document.getElementById("elevation_CBgrid3").style.visibility="visible";
-				document.getElementById("elevation_BSlegend3").style.visibility="hidden";
-				document.getElementById("elevation_SBgrid3").style.visibility="hidden";
-				document.getElementById("bangalore_classified_elevation3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_streched_elevation3").style.visibility="hidden";
-
-				document.getElementById("bangalore_classified_slope3").style.visibility="hidden";
-				document.getElementById("slope_BClegend3").style.visibility="hidden";
-				document.getElementById("slope_CBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_classified_slope2").style.visibility="hidden";
+				document.getElementById("slope_MClegend2").style.visibility="hidden";
+				document.getElementById("slope_CMgrid2").style.visibility="hidden";
 	
-				document.getElementById("bangalore_streched_slope3").style.visibility="hidden";
-				document.getElementById("slope_BSlegend3").style.visibility="hidden";
-				document.getElementById("slope_SBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_streched_slope2").style.visibility="hidden";
+				document.getElementById("slope_MSlegend2").style.visibility="hidden";
+				document.getElementById("slope_SMgrid2").style.visibility="hidden";
 	
 				
-				document.getElementById("bangalore_classified_HillShade3").style.visibility="hidden";
-				document.getElementById("HillShade_BClegend3").style.visibility="hidden";
-				document.getElementById("HillShade_CBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_classified_HillShade2").style.visibility="hidden";
+				document.getElementById("HillShade_MClegend2").style.visibility="hidden";
+				document.getElementById("HillShade_CMgrid2").style.visibility="hidden";
 	
-				document.getElementById("bangalore_streched_HillShade3").style.visibility="hidden";
-				document.getElementById("HillShade_BSlegend3").style.visibility="hidden";
-				document.getElementById("HillShade_SBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_streched_HillShade2").style.visibility="hidden";
+				document.getElementById("HillShade_MSlegend2").style.visibility="hidden";
+				document.getElementById("HillShade_SMgrid2").style.visibility="hidden";
 			
 	
-				document.getElementById("bangalore_classified_aspect3").style.visibility="hidden";
-				document.getElementById("aspect_BClegend3").style.visibility="hidden";
-				document.getElementById("aspect_CBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_classified_aspect2").style.visibility="hidden";
+				document.getElementById("aspect_MClegend2").style.visibility="hidden";
+				document.getElementById("aspect_CMgrid2").style.visibility="hidden";
 	
-				document.getElementById("bangalore_streched_aspect3").style.visibility="hidden";
-				document.getElementById("aspect_BSlegend3").style.visibility="hidden";
-				document.getElementById("aspect_SBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_streched_aspect2").style.visibility="hidden";
+				document.getElementById("aspect_MSlegend2").style.visibility="hidden";
+				document.getElementById("aspect_SMgrid2").style.visibility="hidden";
 			
 	
-				document.getElementById("bangalore_classified_fill3").style.visibility="hidden";
-				document.getElementById("fill_BClegend3").style.visibility="hidden";
-				document.getElementById("aspect_CBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_classified_fill2").style.visibility="hidden";
+				document.getElementById("fill_MClegend2").style.visibility="hidden";
+				document.getElementById("aspect_CMgrid2").style.visibility="hidden";
 	
-				document.getElementById("bangalore_streched_fill3").style.visibility="hidden";
-				document.getElementById("fill_BSlegend3").style.visibility="hidden";
-				document.getElementById("fill_SBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_streched_fill2").style.visibility="hidden";
+				document.getElementById("fill_MSlegend2").style.visibility="hidden";
+				document.getElementById("fill_SMgrid2").style.visibility="hidden";
 				
 				
-				document.getElementById("bangalore_classified_flowDirection3").style.visibility="hidden";
-				document.getElementById("flowDirection_BClegend3").style.visibility="hidden";
-				document.getElementById("flowDirection_CBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_classified_flowDirection2").style.visibility="hidden";
+				document.getElementById("flowDirection_MClegend2").style.visibility="hidden";
+				document.getElementById("flowDirection_CMgrid2").style.visibility="hidden";
 	
-				document.getElementById("bangalore_streched_flowDirection3").style.visibility="hidden";
-				document.getElementById("flowDirection_BSlegend3").style.visibility="hidden";
-				document.getElementById("flowDirection_SBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_streched_flowDirection2").style.visibility="hidden";
+				document.getElementById("flowDirection_MSlegend2").style.visibility="hidden";
+				document.getElementById("flowDirection_SMgrid2").style.visibility="hidden";
 	
-				document.getElementById("bangalore_classified_flowAccumulation3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_BClegend3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_CBgrid3").style.visibility="hidden";
+				document.getElementById("mangalore_classified_flowAccumulation2").style.visibility="hidden";
+				document.getElementById("flowAccumulation_MClegend2").style.visibility="hidden";
+				document.getElementById("flowAccumulation_CMgrid2").style.visibility="hidden";
 	
-				document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_BSlegend3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_SBgrid3").style.visibility="hidden";
-	
-				document.getElementById("bangalore_streamNetwork").style.visibility="hidden";
-				document.getElementById("streamNetwork_BClegend1").style.visibility="hidden";
-				document.getElementById("streamNetwork_CBgrid1").style.visibility="hidden";
-	
-				document.getElementById("bangalore_watershed").style.visibility="hidden";
-				document.getElementById("watershed_Blegend1").style.visibility="hidden";
-				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-}}
-
-
-function elevation_streched(){
-	if(colorRampSelected==0)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("helllo mangalore elevation 1")
-				// document.getElementById("mangalore_Streched1").style.visibility="hidden";
-				document.getElementById("elevation_MSlegend1").style.visibility="visible";
-				// document.getElementById("elevation_SMgrid1").style.visibility="visible";
-				document.getElementById("mangalore_streched_elevation1").style.visibility="visible";
-			
-				document.getElementById("mangalore_Streched1").style.visibility="hidden";
-				document.getElementById('mangalore_Classified1').style.visibility="hidden";
-				
-				document.getElementById("elevation_MClegend1").style.visibility="hidden";
-				document.getElementById("elevation_CMgrid1").style.visibility="hidden";
-	
-				
-				document.getElementById("mangalore_classified_slope1").style.visibility="hidden";
-				document.getElementById("slope_MClegend1").style.visibility="hidden";
-				document.getElementById("slope_CMgrid1").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_slope1").style.visibility="hidden";
-				document.getElementById("slope_MSlegend1").style.visibility="hidden";
-				document.getElementById("slope_SMgrid1").style.visibility="hidden";
-	
-				
-				document.getElementById("mangalore_classified_HillShade1").style.visibility="hidden";
-				document.getElementById("HillShade_MClegend1").style.visibility="hidden";
-				document.getElementById("HillShade_CMgrid1").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_HillShade1").style.visibility="hidden";
-				document.getElementById("HillShade_MSlegend1").style.visibility="hidden";
-				document.getElementById("HillShade_SMgrid1").style.visibility="hidden";
-			
-	
-				document.getElementById("mangalore_classified_aspect1").style.visibility="hidden";
-				document.getElementById("aspect_MClegend1").style.visibility="hidden";
-				document.getElementById("aspect_CMgrid1").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_aspect1").style.visibility="hidden";
-				document.getElementById("aspect_MSlegend1").style.visibility="hidden";
-				document.getElementById("aspect_SMgrid1").style.visibility="hidden";
-			
-	
-				document.getElementById("mangalore_classified_fill1").style.visibility="hidden";
-				document.getElementById("fill_MClegend1").style.visibility="hidden";
-				document.getElementById("aspect_CMgrid1").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_fill1").style.visibility="hidden";
-				document.getElementById("fill_MSlegend1").style.visibility="hidden";
-				document.getElementById("fill_SMgrid1").style.visibility="hidden";
-				
-				
-				document.getElementById("mangalore_classified_flowDirection1").style.visibility="hidden";
-				document.getElementById("flowDirection_MClegend1").style.visibility="hidden";
-				document.getElementById("flowDirection_CMgrid1").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_flowDirection1").style.visibility="hidden";
-				document.getElementById("flowDirection_MSlegend1").style.visibility="hidden";
-				document.getElementById("flowDirection_SMgrid1").style.visibility="hidden";
-	
-				document.getElementById("mangalore_classified_flowAccumulation1").style.visibility="hidden";
-				document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
-				document.getElementById("flowAccumulation_CMgrid1").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="hidden";
-				document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
-				document.getElementById("flowAccumulation_SMgrid1").style.visibility="hidden";
+				document.getElementById("mangalore_streched_flowAccumulation2").style.visibility="hidden";
+				document.getElementById("flowAccumulation_MSlegend2").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SMgrid2").style.visibility="hidden";
 	
 				document.getElementById("mangalore_streamNetwork").style.visibility="hidden";
 				document.getElementById("streamNetwork_MClegend1").style.visibility="hidden";
@@ -1103,24 +692,7 @@ function elevation_streched(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-				
-				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
-			
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hello bangalore elevation 1")
-			    document.getElementById("elevation_MSlegend1").style.visibility="hidden";
-				document.getElementById("elevation_BSlegend1").style.visibility="visible";
-				// document.getElementById("elevation_SBgrid1").style.visibility="visible";
-				document.getElementById("elevation_BClegend1").style.visibility="hidden";
-				document.getElementById("elevation_CBgrid1").style.visibility="hidden"
-				document.getElementById("bangalore_streched_elevation1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
+	
 
 				document.getElementById("bangalore_classified_slope1").style.visibility="hidden";
 			document.getElementById("slope_BClegend1").style.visibility="hidden";
@@ -1181,26 +753,315 @@ function elevation_streched(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==1)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("helllo mangalore elevation 2")
-			document.getElementById("elevation_MSlegend2").style.visibility="visible";
-			// document.getElementById("elevation_SMgrid2").style.visibility="visible";
-			document.getElementById("elevation_MClegend2").style.visibility="hidden";
-			document.getElementById("elevation_CMgrid2").style.visibility="hidden"
-			document.getElementById("mangalore_streched_elevation2").style.visibility="visible";
-			document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			document.getElementById('mangalore_Classified2').style.visibility="hidden";
-			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+
+
+			document.getElementById("bangalore_classified_slope2").style.visibility="hidden";
+			document.getElementById("slope_BClegend2").style.visibility="hidden";
+			document.getElementById("slope_CBgrid2").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_slope2").style.visibility="hidden";
+			document.getElementById("slope_BSlegend2").style.visibility="hidden";
+			document.getElementById("slope_SBgrid2").style.visibility="hidden";
 
 			
-			document.getElementById("mangalore_classified_slope2").style.visibility="hidden";
+			document.getElementById("bangalore_classified_HillShade2").style.visibility="hidden";
+			document.getElementById("HillShade_BClegend2").style.visibility="hidden";
+			document.getElementById("HillShade_CBgrid2").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_HillShade2").style.visibility="hidden";
+			document.getElementById("HillShade_BSlegend2").style.visibility="hidden";
+			document.getElementById("HillShade_SBgrid2").style.visibility="hidden";
+		
+
+			document.getElementById("bangalore_classified_aspect2").style.visibility="hidden";
+			document.getElementById("aspect_BClegend2").style.visibility="hidden";
+			document.getElementById("aspect_CBgrid2").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_aspect2").style.visibility="hidden";
+			document.getElementById("aspect_BSlegend2").style.visibility="hidden";
+			document.getElementById("aspect_SBgrid2").style.visibility="hidden";
+		
+
+			document.getElementById("bangalore_classified_fill2").style.visibility="hidden";
+			document.getElementById("fill_BClegend2").style.visibility="hidden";
+			document.getElementById("aspect_CBgrid2").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_fill2").style.visibility="hidden";
+			document.getElementById("fill_BSlegend2").style.visibility="hidden";
+			document.getElementById("fill_SBgrid2").style.visibility="hidden";
+			
+			
+			document.getElementById("bangalore_classified_flowDirection2").style.visibility="hidden";
+			document.getElementById("flowDirection_BClegend2").style.visibility="hidden";
+			document.getElementById("flowDirection_CBgrid2").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_flowDirection2").style.visibility="hidden";
+			document.getElementById("flowDirection_BSlegend2").style.visibility="hidden";
+			document.getElementById("flowDirection_SBgrid2").style.visibility="hidden";
+
+			document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="hidden";
+			document.getElementById("flowAccumulation_BClegend2").style.visibility="hidden";
+			document.getElementById("flowAccumulation_CBgrid2").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="hidden";
+			document.getElementById("flowAccumulation_BSlegend2").style.visibility="hidden";
+			document.getElementById("flowAccumulation_SBgrid2").style.visibility="hidden";
+
+			document.getElementById("bangalore_streamNetwork").style.visibility="hidden";
+			document.getElementById("streamNetwork_BClegend1").style.visibility="hidden";
+			document.getElementById("streamNetwork_CBgrid1").style.visibility="hidden";
+
+			document.getElementById("bangalore_watershed").style.visibility="hidden";
+			document.getElementById("watershed_Blegend1").style.visibility="hidden";
+			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
+
+
+			document.getElementById("mangalore_classified_slope3").style.visibility="hidden";
+			document.getElementById("slope_MClegend3").style.visibility="hidden";
+			document.getElementById("slope_CMgrid3").style.visibility="hidden";
+
+			document.getElementById("mangalore_streched_slope3").style.visibility="hidden";
+			document.getElementById("slope_MSlegend3").style.visibility="hidden";
+			document.getElementById("slope_SMgrid3").style.visibility="hidden";
+
+			
+			document.getElementById("mangalore_classified_HillShade3").style.visibility="hidden";
+			document.getElementById("HillShade_MClegend3").style.visibility="hidden";
+			document.getElementById("HillShade_CMgrid3").style.visibility="hidden";
+
+			document.getElementById("mangalore_streched_HillShade3").style.visibility="hidden";
+			document.getElementById("HillShade_MSlegend3").style.visibility="hidden";
+			document.getElementById("HillShade_SMgrid3").style.visibility="hidden";
+		
+
+			document.getElementById("mangalore_classified_aspect3").style.visibility="hidden";
+			document.getElementById("aspect_MClegend3").style.visibility="hidden";
+			document.getElementById("aspect_CMgrid3").style.visibility="hidden";
+
+			document.getElementById("mangalore_streched_aspect3").style.visibility="hidden";
+			document.getElementById("aspect_MSlegend3").style.visibility="hidden";
+			document.getElementById("aspect_SMgrid3").style.visibility="hidden";
+		
+
+			document.getElementById("mangalore_classified_fill3").style.visibility="hidden";
+			document.getElementById("fill_MClegend3").style.visibility="hidden";
+			document.getElementById("aspect_CMgrid3").style.visibility="hidden";
+
+			document.getElementById("mangalore_streched_fill3").style.visibility="hidden";
+			document.getElementById("fill_MSlegend3").style.visibility="hidden";
+			document.getElementById("fill_SMgrid3").style.visibility="hidden";
+			
+			
+			document.getElementById("mangalore_classified_flowDirection3").style.visibility="hidden";
+			document.getElementById("flowDirection_MClegend3").style.visibility="hidden";
+			document.getElementById("flowDirection_CMgrid3").style.visibility="hidden";
+
+			document.getElementById("mangalore_streched_flowDirection3").style.visibility="hidden";
+			document.getElementById("flowDirection_MSlegend3").style.visibility="hidden";
+			document.getElementById("flowDirection_SMgrid3").style.visibility="hidden";
+
+			document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="hidden";
+			document.getElementById("flowAccumulation_MClegend3").style.visibility="hidden";
+			document.getElementById("flowAccumulation_CMgrid3").style.visibility="hidden";
+
+			document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="hidden";
+			document.getElementById("flowAccumulation_MSlegend3").style.visibility="hidden";
+			document.getElementById("flowAccumulation_SMgrid3").style.visibility="hidden";
+
+			document.getElementById("mangalore_streamNetwork").style.visibility="hidden";
+			document.getElementById("streamNetwork_MClegend1").style.visibility="hidden";
+			document.getElementById("streamNetwork_CMgrid1").style.visibility="hidden";
+
+			document.getElementById("mangalore_watershed").style.visibility="hidden";
+			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
+			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
+			document.getElementById("mangalore_streched_elevation3").style.visibility="hidden";
+
+
+			document.getElementById("bangalore_classified_slope3").style.visibility="hidden";
+			document.getElementById("slope_BClegend3").style.visibility="hidden";
+			document.getElementById("slope_CBgrid3").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_slope3").style.visibility="hidden";
+			document.getElementById("slope_BSlegend3").style.visibility="hidden";
+			document.getElementById("slope_SBgrid3").style.visibility="hidden";
+
+			
+			document.getElementById("bangalore_classified_HillShade3").style.visibility="hidden";
+			document.getElementById("HillShade_BClegend3").style.visibility="hidden";
+			document.getElementById("HillShade_CBgrid3").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_HillShade3").style.visibility="hidden";
+			document.getElementById("HillShade_BSlegend3").style.visibility="hidden";
+			document.getElementById("HillShade_SBgrid3").style.visibility="hidden";
+		
+
+			document.getElementById("bangalore_classified_aspect3").style.visibility="hidden";
+			document.getElementById("aspect_BClegend3").style.visibility="hidden";
+			document.getElementById("aspect_CBgrid3").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_aspect3").style.visibility="hidden";
+			document.getElementById("aspect_BSlegend3").style.visibility="hidden";
+			document.getElementById("aspect_SBgrid3").style.visibility="hidden";
+		
+
+			document.getElementById("bangalore_classified_fill3").style.visibility="hidden";
+			document.getElementById("fill_BClegend3").style.visibility="hidden";
+			document.getElementById("aspect_CBgrid3").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_fill3").style.visibility="hidden";
+			document.getElementById("fill_BSlegend3").style.visibility="hidden";
+			document.getElementById("fill_SBgrid3").style.visibility="hidden";
+			
+			
+			document.getElementById("bangalore_classified_flowDirection3").style.visibility="hidden";
+			document.getElementById("flowDirection_BClegend3").style.visibility="hidden";
+			document.getElementById("flowDirection_CBgrid3").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_flowDirection3").style.visibility="hidden";
+			document.getElementById("flowDirection_BSlegend3").style.visibility="hidden";
+			document.getElementById("flowDirection_SBgrid3").style.visibility="hidden";
+
+			document.getElementById("bangalore_classified_flowAccumulation3").style.visibility="hidden";
+			document.getElementById("flowAccumulation_BClegend3").style.visibility="hidden";
+			document.getElementById("flowAccumulation_CBgrid3").style.visibility="hidden";
+
+			document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="hidden";
+			document.getElementById("flowAccumulation_BSlegend3").style.visibility="hidden";
+			document.getElementById("flowAccumulation_SBgrid3").style.visibility="hidden";
+
+			document.getElementById("bangalore_streamNetwork").style.visibility="hidden";
+			document.getElementById("streamNetwork_BClegend1").style.visibility="hidden";
+			document.getElementById("streamNetwork_CBgrid1").style.visibility="hidden";
+
+			document.getElementById("bangalore_watershed").style.visibility="hidden";
+			document.getElementById("watershed_Blegend1").style.visibility="hidden";
+			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
+
+
+			document.getElementById("mangalore_classified_slope1").style.visibility="hidden";
+				document.getElementById("slope_MClegend1").style.visibility="hidden";
+				document.getElementById("slope_CMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_slope1").style.visibility="hidden";
+				document.getElementById("slope_MSlegend1").style.visibility="hidden";
+				document.getElementById("slope_SMgrid1").style.visibility="hidden";
+	
+				
+				document.getElementById("mangalore_classified_HillShade1").style.visibility="hidden";
+				document.getElementById("HillShade_MClegend1").style.visibility="hidden";
+				document.getElementById("HillShade_CMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_HillShade1").style.visibility="hidden";
+				document.getElementById("HillShade_MSlegend1").style.visibility="hidden";
+				document.getElementById("HillShade_SMgrid1").style.visibility="hidden";
+			
+	
+				document.getElementById("mangalore_classified_aspect1").style.visibility="hidden";
+				document.getElementById("aspect_MClegend1").style.visibility="hidden";
+				document.getElementById("aspect_CMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_aspect1").style.visibility="hidden";
+				document.getElementById("aspect_MSlegend1").style.visibility="hidden";
+				document.getElementById("aspect_SMgrid1").style.visibility="hidden";
+			
+	
+				document.getElementById("mangalore_classified_fill1").style.visibility="hidden";
+				document.getElementById("fill_MClegend1").style.visibility="hidden";
+				document.getElementById("aspect_CMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_fill1").style.visibility="hidden";
+				document.getElementById("fill_MSlegend1").style.visibility="hidden";
+				document.getElementById("fill_SMgrid1").style.visibility="hidden";
+				
+				
+				document.getElementById("mangalore_classified_flowDirection1").style.visibility="hidden";
+				document.getElementById("flowDirection_MClegend1").style.visibility="hidden";
+				document.getElementById("flowDirection_CMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_flowDirection1").style.visibility="hidden";
+				document.getElementById("flowDirection_MSlegend1").style.visibility="hidden";
+				document.getElementById("flowDirection_SMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_classified_flowAccumulation1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_CMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streamNetwork").style.visibility="hidden";
+				document.getElementById("streamNetwork_MClegend1").style.visibility="hidden";
+				document.getElementById("streamNetwork_CMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_watershed").style.visibility="hidden";
+				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
+				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+
+
+				document.getElementById("bangalore_classified_slope1").style.visibility="hidden";
+				document.getElementById("slope_BClegend1").style.visibility="hidden";
+				document.getElementById("slope_CBgrid1").style.visibility="hidden";
+	
+				document.getElementById("bangalore_streched_slope1").style.visibility="hidden";
+				document.getElementById("slope_BSlegend1").style.visibility="hidden";
+				document.getElementById("slope_SBgrid1").style.visibility="hidden";
+	
+				
+				document.getElementById("bangalore_classified_HillShade1").style.visibility="hidden";
+				document.getElementById("HillShade_BClegend1").style.visibility="hidden";
+				document.getElementById("HillShade_CBgrid1").style.visibility="hidden";
+	
+				document.getElementById("bangalore_streched_HillShade1").style.visibility="hidden";
+				document.getElementById("HillShade_BSlegend1").style.visibility="hidden";
+				document.getElementById("HillShade_SBgrid1").style.visibility="hidden";
+			
+	
+				document.getElementById("bangalore_classified_aspect1").style.visibility="hidden";
+				document.getElementById("aspect_BClegend1").style.visibility="hidden";
+				document.getElementById("aspect_CBgrid1").style.visibility="hidden";
+	
+				document.getElementById("bangalore_streched_aspect1").style.visibility="hidden";
+				document.getElementById("aspect_BSlegend1").style.visibility="hidden";
+				document.getElementById("aspect_SBgrid1").style.visibility="hidden";
+			
+	
+				document.getElementById("bangalore_classified_fill1").style.visibility="hidden";
+				document.getElementById("fill_BClegend1").style.visibility="hidden";
+				document.getElementById("aspect_CBgrid1").style.visibility="hidden";
+	
+				document.getElementById("bangalore_streched_fill1").style.visibility="hidden";
+				document.getElementById("fill_BSlegend1").style.visibility="hidden";
+				document.getElementById("fill_SBgrid1").style.visibility="hidden";
+				
+				
+				document.getElementById("bangalore_classified_flowDirection1").style.visibility="hidden";
+				document.getElementById("flowDirection_BClegend1").style.visibility="hidden";
+				document.getElementById("flowDirection_CBgrid1").style.visibility="hidden";
+	
+				document.getElementById("bangalore_streched_flowDirection1").style.visibility="hidden";
+				document.getElementById("flowDirection_BSlegend1").style.visibility="hidden";
+				document.getElementById("flowDirection_SBgrid1").style.visibility="hidden";
+	
+				document.getElementById("bangalore_classified_flowAccumulation1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_BClegend1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_CBgrid1").style.visibility="hidden";
+	
+				document.getElementById("bangalore_streched_flowAccumulation1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_BSlegend1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SBgrid1").style.visibility="hidden";
+	
+				document.getElementById("bangalore_streamNetwork").style.visibility="hidden";
+				document.getElementById("streamNetwork_BClegend1").style.visibility="hidden";
+				document.getElementById("streamNetwork_CBgrid1").style.visibility="hidden";
+	
+				document.getElementById("bangalore_watershed").style.visibility="hidden";
+				document.getElementById("watershed_Blegend1").style.visibility="hidden";
+				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";		
+
+				document.getElementById("mangalore_classified_slope2").style.visibility="hidden";
 			document.getElementById("slope_MClegend2").style.visibility="hidden";
 			document.getElementById("slope_CMgrid2").style.visibility="hidden";
 
@@ -1259,28 +1120,6 @@ function elevation_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hello bangalore elevation 2")
-				document.getElementById("elevation_BSlegend3").style.visibility="visible";
-				// document.getElementById("elevation_SBgrid2").style.visibility="visible";
-				document.getElementById("elevation_BClegend2").style.visibility="hidden";
-				document.getElementById("elevation_CBgrid2").style.visibility="hidden"
-				document.getElementById("bangalore_streched_elevation2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
-
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-			document.getElementById('bangalore_Classified2').style.visibility="hidden";
-			document.getElementById('bangalore_Classified3').style.visibility="hidden";
-
-			document.getElementById("bangalore_Streched1").style.visibility="hidden";
-			document.getElementById("bangalore_Streched2").style.visibility="hidden";
-			document.getElementById("bangalore_Streched3").style.visibility="hidden";
 
 			document.getElementById("bangalore_classified_slope2").style.visibility="hidden";
 			document.getElementById("slope_BClegend2").style.visibility="hidden";
@@ -1341,23 +1180,7 @@ function elevation_streched(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==2)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("helllo mangalore elevation 3")
-			document.getElementById("elevation_MSlegend3").style.visibility="visible";
-			// document.getElementById("elevation_SMgrid3").style.visibility="visible"
-			document.getElementById("elevation_MClegend3").style.visibility="hidden";
-			document.getElementById("elevation_CMgrid3").style.visibility="hidden"
-			document.getElementById("mangalore_streched_elevation3").style.visibility="visible";
-			document.getElementById("mangalore_Streched3").style.visibility="hidden";
-			document.getElementById('mangalore_Classified3').style.visibility="hidden";
-			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
+
 
 			document.getElementById("mangalore_classified_slope3").style.visibility="hidden";
 			document.getElementById("slope_MClegend3").style.visibility="hidden";
@@ -1419,29 +1242,6 @@ function elevation_streched(){
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
 
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hello bangalore elevation 3")
-				document.getElementById("elevation_BSlegend3").style.visibility="visible";
-				// document.getElementById("elevation_SBgrid3").style.visibility="visible";
-				document.getElementById("elevation_BClegend3").style.visibility="hidden";
-				document.getElementById("elevation_CBgrid3").style.visibility="hidden"
-				document.getElementById("bangalore_streched_elevation3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
-
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-			document.getElementById('bangalore_Classified2').style.visibility="hidden";
-			document.getElementById('bangalore_Classified3').style.visibility="hidden";
-
-			document.getElementById("bangalore_Streched1").style.visibility="hidden";
-			document.getElementById("bangalore_Streched2").style.visibility="hidden";
-			document.getElementById("bangalore_Streched3").style.visibility="hidden";
-
 			document.getElementById("bangalore_classified_slope3").style.visibility="hidden";
 			document.getElementById("slope_BClegend3").style.visibility="hidden";
 			document.getElementById("slope_CBgrid3").style.visibility="hidden";
@@ -1501,6 +1301,286 @@ function elevation_streched(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
+
+	if(colorRampSelected==0)
+	{
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_elevation1").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_elevation1").style.visibility="visible";
+		}
+	}
+else if(colorRampSelected==1)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_elevation2").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_elevation2").style.visibility="visible";
+		}
+	}
+else if(colorRampSelected==2)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_elevation3").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_elevation3").style.visibility="visible";
+		}
+	}
+}
+
+
+function elevation_classified(){
+	if(colorRampSelected==0)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore elevation 1")
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation1").style.visibility="visible";
+				document.getElementById("mangalore_Streched1").style.visibility="hidden";
+				document.getElementById('mangalore_Classified1').style.visibility="hidden";
+				document.getElementById("elevation_MClegend1").style.visibility="visible";
+				document.getElementById("elevation_MSlegend1").style.visibility="hidden";
+				document.getElementById("elevation_SMgrid1").style.visibility="hidden"
+				document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
+				
+				
+			
+			}
+		else if(mapChoosen==1)
+			{
+				
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore elevation 1")
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("elevation_BClegend1").style.visibility="visible";
+				// document.getElementById("elevation_CBgrid1").style.visibility="visible";
+				document.getElementById("elevation_BSlegend1").style.visibility="hidden";
+				document.getElementById("elevation_SBgrid1").style.visibility="hidden";
+				document.getElementById("bangalore_classified_elevation1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_streched_elevation1").style.visibility="hidden";
+
+			
+			}
+		}
+	else if(colorRampSelected==1)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore elevation 2")
+			document.getElementById("elevation_MClegend2").style.visibility="visible";
+			// document.getElementById("elevation_CMgrid2").style.visibility="visible";
+			document.getElementById("elevation_MSlegend2").style.visibility="hidden";
+			document.getElementById("elevation_SMgrid2").style.visibility="hidden";
+			document.getElementById("mangalore_classified_elevation2").style.visibility="visible";
+			document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			document.getElementById('mangalore_Classified2').style.visibility="hidden";
+			document.getElementById("mangalore_streched_elevation2").style.visibility="hidden";
+
+			
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore elevation 2")
+				document.getElementById("elevation_BClegend2").style.visibility="visible";
+				// document.getElementById("elevation_CBgrid2").style.visibility="visible";
+				document.getElementById("elevation_BSlegend3").style.visibility="hidden";
+				document.getElementById("elevation_SBgrid2").style.visibility="hidden";
+				document.getElementById("bangalore_classified_elevation2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_streched_elevation2").style.visibility="hidden";
+
+
+				
+			}
+		}
+	else if(colorRampSelected==2)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				document.getElementById("mangalore_Streched3").style.visibility="hidden";
+			console.log("hi mangalore elevation 3")
+			document.getElementById("elevation_MClegend3").style.visibility="visible";
+			// document.getElementById("elevation_CMgrid3").style.visibility="visible";
+			document.getElementById("elevation_MSlegend3").style.visibility="hidden";
+			document.getElementById("elevation_SMgrid3").style.visibility="hidden"
+			document.getElementById("mangalore_classified_elevation3").style.visibility="visible";
+			document.getElementById("mangalore_streched_elevation3").style.visibility="hidden";
+			document.getElementById("mangalore_Streched3").style.visibility="hidden";
+			document.getElementById('mangalore_Classified3').style.visibility="hidden";
+
+			
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore elevation 3")
+				document.getElementById("elevation_BClegend3").style.visibility="visible";
+				// document.getElementById("elevation_CBgrid3").style.visibility="visible";
+				document.getElementById("elevation_BSlegend3").style.visibility="hidden";
+				document.getElementById("elevation_SBgrid3").style.visibility="hidden";
+				document.getElementById("bangalore_classified_elevation3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_streched_elevation3").style.visibility="hidden";
+
+				
+		}
+}}
+
+
+function elevation_streched(){
+	if(colorRampSelected==0)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("helllo mangalore elevation 1")
+				// document.getElementById("mangalore_Streched1").style.visibility="hidden";
+				document.getElementById("elevation_MSlegend1").style.visibility="visible";
+				// document.getElementById("elevation_SMgrid1").style.visibility="visible";
+				document.getElementById("mangalore_streched_elevation1").style.visibility="visible";
+			
+				document.getElementById("mangalore_Streched1").style.visibility="hidden";
+				document.getElementById('mangalore_Classified1').style.visibility="hidden";
+				
+				document.getElementById("elevation_MClegend1").style.visibility="hidden";
+				document.getElementById("elevation_CMgrid1").style.visibility="hidden";
+	
+				
+				
+			
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hello bangalore elevation 1")
+			    document.getElementById("elevation_MSlegend1").style.visibility="hidden";
+				document.getElementById("elevation_BSlegend1").style.visibility="visible";
+				// document.getElementById("elevation_SBgrid1").style.visibility="visible";
+				document.getElementById("elevation_BClegend1").style.visibility="hidden";
+				document.getElementById("elevation_CBgrid1").style.visibility="hidden"
+				document.getElementById("bangalore_streched_elevation1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
+
+				
+			}
+		}
+	else if(colorRampSelected==1)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("helllo mangalore elevation 2")
+			document.getElementById("elevation_MSlegend2").style.visibility="visible";
+			// document.getElementById("elevation_SMgrid2").style.visibility="visible";
+			document.getElementById("elevation_MClegend2").style.visibility="hidden";
+			document.getElementById("elevation_CMgrid2").style.visibility="hidden"
+			document.getElementById("mangalore_streched_elevation2").style.visibility="visible";
+			document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			document.getElementById('mangalore_Classified2').style.visibility="hidden";
+			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+
+			
+			
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hello bangalore elevation 2")
+				document.getElementById("elevation_BSlegend3").style.visibility="visible";
+				// document.getElementById("elevation_SBgrid2").style.visibility="visible";
+				document.getElementById("elevation_BClegend2").style.visibility="hidden";
+				document.getElementById("elevation_CBgrid2").style.visibility="hidden"
+				document.getElementById("bangalore_streched_elevation2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
+
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+			document.getElementById('bangalore_Classified2').style.visibility="hidden";
+			document.getElementById('bangalore_Classified3').style.visibility="hidden";
+
+			document.getElementById("bangalore_Streched1").style.visibility="hidden";
+			document.getElementById("bangalore_Streched2").style.visibility="hidden";
+			document.getElementById("bangalore_Streched3").style.visibility="hidden";
+
+			
+			}
+		}
+	else if(colorRampSelected==2)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("helllo mangalore elevation 3")
+			document.getElementById("elevation_MSlegend3").style.visibility="visible";
+			// document.getElementById("elevation_SMgrid3").style.visibility="visible"
+			document.getElementById("elevation_MClegend3").style.visibility="hidden";
+			document.getElementById("elevation_CMgrid3").style.visibility="hidden"
+			document.getElementById("mangalore_streched_elevation3").style.visibility="visible";
+			document.getElementById("mangalore_Streched3").style.visibility="hidden";
+			document.getElementById('mangalore_Classified3').style.visibility="hidden";
+			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
+
+			
+
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hello bangalore elevation 3")
+				document.getElementById("elevation_BSlegend3").style.visibility="visible";
+				// document.getElementById("elevation_SBgrid3").style.visibility="visible";
+				document.getElementById("elevation_BClegend3").style.visibility="hidden";
+				document.getElementById("elevation_CBgrid3").style.visibility="hidden"
+				document.getElementById("bangalore_streched_elevation3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
+
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+			document.getElementById('bangalore_Classified2').style.visibility="hidden";
+			document.getElementById('bangalore_Classified3').style.visibility="hidden";
+
+			document.getElementById("bangalore_Streched1").style.visibility="hidden";
+			document.getElementById("bangalore_Streched2").style.visibility="hidden";
+			document.getElementById("bangalore_Streched3").style.visibility="hidden";
+
+			
 	
 		}
 }}
@@ -1614,8 +1694,8 @@ function selectData(){
 
 	
 function slope_Select(){
-	// document.getElementById("Elavation_button").style.backgroundColor="white";
 	document.getElementById('notification').style.visibility="visible";
+	document.getElementsByClassName("blinkText")[0].style.visibility="visible";
 	// document.getElementById("mangalore_streched_elevation1").style.visibility="visible";
 	// document.getElementById("mangalore_Classified1").style.visibility="hidden";
 	document.getElementById("elevation_MSlegend1").style.visibility="hidden";
@@ -1647,51 +1727,8 @@ function slope_Select(){
 	document.getElementById('flowaccumulation_classified').style.visibility="hidden";
 	document.getElementById('flowaccumulation_streched').style.visibility="hidden";
 
-	// document.getElementById("Elavation_button").style.backgroundColor="white";
-	// document.getElementsByClassName("mangalore_classified_slope1").style.visibility="visible";
-	// document.getElementById("slope_button").style.backgroundColor="grey";
-	// document.getElementById("aspect_button").style.backgroundColor="white";
-	// document.getElementById("hillshade_button").style.backgroundColor="white";
-	// document.getElementById("fill_button").style.backgroundColor="white";
-	// document.getElementById("flowaccumulation_button").style.backgroundColor="white";
-	// document.getElementById("flowdirection_button").style.backgroundColor="white";
-	// document.getElementById("stream_button").style.backgroundColor="white";
-	// document.getElementById("watershed_button").style.backgroundColor="white";
-}
-	
 
-
-function slope_classified(){
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	// document.getElementById('mangalore_streched1').style.visibility="hidden";
-	Symbolody=0;
-	// console.log(0)
-	// declare one variable equal to something
-	console.log(colorRampSelected);
-	document.getElementById('Mangmap1').style.visibility="hidden";
-	if(colorRampSelected==0)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore slope 1")
-				document.getElementById("mangalore_classified_slope1").style.visibility="visible";
-				document.getElementById("mangalore_Streched1").style.visibility="hidden";
-				document.getElementById('mangalore_Classified1').style.visibility="hidden";
-				document.getElementById("slope_MClegend1").style.visibility="visible";
-				// document.getElementById("slope_CMgrid1").style.visibility="visible";
-				document.getElementById("slope_MSlegend1").style.visibility="hidden";
-				document.getElementById("slope_SMgrid1").style.visibility="hidden"
-				document.getElementById("mangalore_streched_slope1").style.visibility="hidden";
-	
-	
-				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 				document.getElementById("elevation_MClegend1").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid1").style.visibility="hidden";
 	
@@ -1750,21 +1787,6 @@ function slope_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore slope 1");
-				// document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById("slope_MSlegend1").style.visibility="hidden";
-				document.getElementById("slope_SMgrid1").style.visibility="hidden";
-				document.getElementById("slope_BClegend1").style.visibility="visible";
-				// document.getElementById("slope_CBgrid1").style.visibility="visible";
-				document.getElementById("slope_BSlegend1").style.visibility="hidden";
-				document.getElementById("mangalore_streched_slope1").style.visibility="hidden";
-				document.getElementById("slope_SBgrid1").style.visibility="hidden";
-				document.getElementById("bangalore_classified_slope1").style.visibility="visible";
 
 				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 				document.getElementById("bangalore_Streched1").style.visibility="hidden";
@@ -1830,28 +1852,9 @@ function slope_classified(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==1)
-		{
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore slope 2")
-				// document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById("slope_MClegend2").style.visibility="visible";
-				// document.getElementById("slope_CMgrid2").style.visibility="visible";
-				document.getElementById("slope_MSlegend2").style.visibility="hidden";
-				document.getElementById("slope_SMgrid2").style.visibility="hidden";
-				document.getElementById("mangalore_classified_slope2").style.visibility="visible";
-				document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById('mangalore_Classified2').style.visibility="hidden";
-				document.getElementById("mangalore_streched_slope2").style.visibility="hidden";
-	
-				document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+
+				
+document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_MClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid2").style.visibility="hidden";
 	
@@ -1910,23 +1913,69 @@ function slope_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-				
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore slope 2")
-				document.getElementById("slope_BClegend2").style.visibility="visible";
-				// document.getElementById("slope_CBgrid2").style.visibility="visible";
-				document.getElementById("slope_BSlegend2").style.visibility="hidden";
-				document.getElementById("slope_SBgrid2").style.visibility="hidden";
-				document.getElementById("bangalore_classified_slope2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_streched_slope2").style.visibility="hidden";
 
+
+			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
+				document.getElementById("elevation_MClegend3").style.visibility="hidden";
+				document.getElementById("elevation_CMgrid3").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_elevation3").style.visibility="hidden";
+				document.getElementById("elevation_MSlegend3").style.visibility="hidden";
+				document.getElementById("elevation_SMgrid3").style.visibility="hidden";
+	
 				
+				document.getElementById("mangalore_classified_HillShade3").style.visibility="hidden";
+				document.getElementById("HillShade_MClegend3").style.visibility="hidden";
+				document.getElementById("HillShade_CMgrid3").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_HillShade3").style.visibility="hidden";
+				document.getElementById("HillShade_MSlegend3").style.visibility="hidden";
+				document.getElementById("HillShade_SMgrid3").style.visibility="hidden";
+			
+	
+				document.getElementById("mangalore_classified_aspect3").style.visibility="hidden";
+				document.getElementById("aspect_MClegend3").style.visibility="hidden";
+				document.getElementById("aspect_CMgrid3").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_aspect3").style.visibility="hidden";
+				document.getElementById("aspect_MSlegend3").style.visibility="hidden";
+				document.getElementById("aspect_SMgrid3").style.visibility="hidden";
+			
+	
+				document.getElementById("mangalore_classified_fill3").style.visibility="hidden";
+				document.getElementById("fill_MClegend3").style.visibility="hidden";
+				document.getElementById("aspect_CMgrid3").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_fill3").style.visibility="hidden";
+				document.getElementById("fill_MSlegend3").style.visibility="hidden";
+				document.getElementById("fill_SMgrid3").style.visibility="hidden";
+				
+				
+				document.getElementById("mangalore_classified_flowDirection3").style.visibility="hidden";
+				document.getElementById("flowDirection_MClegend3").style.visibility="hidden";
+				document.getElementById("flowDirection_CMgrid3").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_flowDirection3").style.visibility="hidden";
+				document.getElementById("flowDirection_MSlegend3").style.visibility="hidden";
+				document.getElementById("flowDirection_SMgrid3").style.visibility="hidden";
+	
+				document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="hidden";
+				document.getElementById("flowAccumulation_MClegend3").style.visibility="hidden";
+				document.getElementById("flowAccumulation_CMgrid3").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="hidden";
+				document.getElementById("flowAccumulation_MSlegend3").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SMgrid3").style.visibility="hidden";
+	
+				document.getElementById("mangalore_streamNetwork").style.visibility="hidden";
+				document.getElementById("streamNetwork_MClegend1").style.visibility="hidden";
+				document.getElementById("streamNetwork_CMgrid1").style.visibility="hidden";
+	
+				document.getElementById("mangalore_watershed").style.visibility="hidden";
+				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
+				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
+		
+
 				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_BClegend2").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid2").style.visibility="hidden";
@@ -1986,102 +2035,6 @@ function slope_classified(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==2)
-		{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore slope 3")
-				document.getElementById("slope_MClegend3").style.visibility="visible";
-				// document.getElementById("slope_CMgrid3").style.visibility="visible";
-				document.getElementById("slope_MSlegend3").style.visibility="hidden";
-				document.getElementById("slope_SMgrid3").style.visibility="hidden"
-				document.getElementById("mangalore_classified_slope3").style.visibility="visible";
-				document.getElementById("mangalore_Streched3").style.visibility="hidden";
-				document.getElementById('mangalore_Classified3').style.visibility="hidden";
-				document.getElementById("mangalore_streched_slope3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
-				document.getElementById("elevation_MClegend3").style.visibility="hidden";
-				document.getElementById("elevation_CMgrid3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_elevation3").style.visibility="hidden";
-				document.getElementById("elevation_MSlegend3").style.visibility="hidden";
-				document.getElementById("elevation_SMgrid3").style.visibility="hidden";
-	
-				
-				document.getElementById("mangalore_classified_HillShade3").style.visibility="hidden";
-				document.getElementById("HillShade_MClegend3").style.visibility="hidden";
-				document.getElementById("HillShade_CMgrid3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_HillShade3").style.visibility="hidden";
-				document.getElementById("HillShade_MSlegend3").style.visibility="hidden";
-				document.getElementById("HillShade_SMgrid3").style.visibility="hidden";
-			
-	
-				document.getElementById("mangalore_classified_aspect3").style.visibility="hidden";
-				document.getElementById("aspect_MClegend3").style.visibility="hidden";
-				document.getElementById("aspect_CMgrid3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_aspect3").style.visibility="hidden";
-				document.getElementById("aspect_MSlegend3").style.visibility="hidden";
-				document.getElementById("aspect_SMgrid3").style.visibility="hidden";
-			
-	
-				document.getElementById("mangalore_classified_fill3").style.visibility="hidden";
-				document.getElementById("fill_MClegend3").style.visibility="hidden";
-				document.getElementById("aspect_CMgrid3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_fill3").style.visibility="hidden";
-				document.getElementById("fill_MSlegend3").style.visibility="hidden";
-				document.getElementById("fill_SMgrid3").style.visibility="hidden";
-				
-				
-				document.getElementById("mangalore_classified_flowDirection3").style.visibility="hidden";
-				document.getElementById("flowDirection_MClegend3").style.visibility="hidden";
-				document.getElementById("flowDirection_CMgrid3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_flowDirection3").style.visibility="hidden";
-				document.getElementById("flowDirection_MSlegend3").style.visibility="hidden";
-				document.getElementById("flowDirection_SMgrid3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_MClegend3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_CMgrid3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_MSlegend3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_SMgrid3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_streamNetwork").style.visibility="hidden";
-				document.getElementById("streamNetwork_MClegend1").style.visibility="hidden";
-				document.getElementById("streamNetwork_CMgrid1").style.visibility="hidden";
-	
-				document.getElementById("mangalore_watershed").style.visibility="hidden";
-				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
-				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-	
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore slope 3")
-				document.getElementById("slope_BClegend3").style.visibility="visible";
-				// document.getElementById("slope_CBgrid3").style.visibility="visible";
-				document.getElementById("slope_BSlegend3").style.visibility="hidden";
-				document.getElementById("slope_SBgrid3").style.visibility="hidden";
-				document.getElementById("bangalore_classified_slope3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_streched_slope3").style.visibility="hidden";
-
 
 				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
@@ -2142,42 +2095,9 @@ function slope_classified(){
 					document.getElementById("bangalore_watershed").style.visibility="hidden";
 					document.getElementById("watershed_Blegend1").style.visibility="hidden";
 					document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-}
-// symbology=1 streched
-function slope_streched(){
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	Symbolody=1;
-	console.log(1)
-	document.getElementById("mangalore_Streched1").style.visibility="hidden";
-	if(colorRampSelected==0)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore slope 1");
-			document.getElementById("elevation_SMgrid1").style.visibility="hidden";
-			// document.getElementById("mangalore_Streched1").style.visibility="hidden";
-			document.getElementById("slope_MSlegend1").style.visibility="visible";
-			// document.getElementById("slope_SMgrid1").style.visibility="visible";
-			document.getElementById("slope_MClegend1").style.visibility="hidden";
-			document.getElementById("slope_CMgrid1").style.visibility="hidden";
-			document.getElementById("mangalore_streched_slope1").style.visibility="visible";
-			document.getElementById("mangalore_Streched1").style.visibility="hidden";
-			document.getElementById('mangalore_Classified1').style.visibility="hidden";
-			document.getElementById("mangalore_classified_slope1").style.visibility="hidden";
 
-			document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+
+					document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_MClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid1").style.visibility="hidden";
 
@@ -2237,25 +2157,7 @@ function slope_streched(){
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
 
-
-		}
-		   else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore slope 1")
-				// document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById("slope_BSlegend1").style.visibility="visible";
-				// document.getElementById("slope_SBgrid1").style.visibility="visible";
-				document.getElementById("slope_BClegend1").style.visibility="hidden";
-				document.getElementById("slope_CBgrid1").style.visibility="hidden"
-				document.getElementById("bangalore_streched_slope1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				// document.getElementById("bangalore_classified_slope1").style.visibility="hidden";
-
-
-				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_BClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid1").style.visibility="hidden";
 
@@ -2314,32 +2216,9 @@ function slope_streched(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==1)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore slope 2")
-			// document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			document.getElementById("slope_MSlegend2").style.visibility="visible";
-			// document.getElementById("slope_SMgrid2").style.visibility="visible";
-			document.getElementById("slope_MClegend2").style.visibility="hidden";
-			document.getElementById("slope_CMgrid2").style.visibility="hidden"
-			document.getElementById("mangalore_streched_slope2").style.visibility="visible";
-			document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			document.getElementById('mangalore_Classified2').style.visibility="hidden";
-			// document.getElementById('mangalore_Classified2').style.visibility="hidden";
-			// document.getElementById("mangalore_streched_elevation2").style.visibility="hidden";
-			document.getElementById("mangalore_classified_slope2").style.visibility="hidden";
 
 
-			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_MClegend2").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid2").style.visibility="hidden";
 
@@ -2399,22 +2278,7 @@ function slope_streched(){
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
 
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore slope 2")
-				document.getElementById("slope_BSlegend2").style.visibility="visible";
-				// document.getElementById("slope_SBgrid2").style.visibility="visible";
-				document.getElementById("slope_BClegend2").style.visibility="hidden";
-				document.getElementById("slope_CBgrid2").style.visibility="hidden"
-				document.getElementById("bangalore_streched_slope2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_classified_slope2").style.visibility="hidden";
-
-				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_BClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid2").style.visibility="hidden";
 	
@@ -2473,104 +2337,8 @@ function slope_streched(){
 					document.getElementById("bangalore_watershed").style.visibility="hidden";
 					document.getElementById("watershed_Blegend1").style.visibility="hidden";
 					document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==2)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore slope 3")
-			document.getElementById("slope_MSlegend3").style.visibility="visible";
-			// document.getElementById("slope_SMgrid3").style.visibility="visible"
-			document.getElementById("slope_MClegend3").style.visibility="hidden";
-			document.getElementById("slope_CMgrid3").style.visibility="hidden"
-			document.getElementById("mangalore_streched_slope3").style.visibility="visible";
-			document.getElementById("mangalore_Streched3").style.visibility="hidden";
-			document.getElementById('mangalore_Classified3').style.visibility="hidden";
-			document.getElementById("mangalore_classified_slope3").style.visibility="hidden";
 
-			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
-			document.getElementById("elevation_MClegend3").style.visibility="hidden";
-			document.getElementById("elevation_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_elevation3").style.visibility="hidden";
-			document.getElementById("elevation_MSlegend3").style.visibility="hidden";
-			document.getElementById("elevation_SMgrid3").style.visibility="hidden";
-
-			
-			document.getElementById("mangalore_classified_HillShade3").style.visibility="hidden";
-			document.getElementById("HillShade_MClegend3").style.visibility="hidden";
-			document.getElementById("HillShade_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_HillShade3").style.visibility="hidden";
-			document.getElementById("HillShade_MSlegend3").style.visibility="hidden";
-			document.getElementById("HillShade_SMgrid3").style.visibility="hidden";
-		
-
-			document.getElementById("mangalore_classified_aspect3").style.visibility="hidden";
-			document.getElementById("aspect_MClegend3").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_aspect3").style.visibility="hidden";
-			document.getElementById("aspect_MSlegend3").style.visibility="hidden";
-			document.getElementById("aspect_SMgrid3").style.visibility="hidden";
-		
-
-			document.getElementById("mangalore_classified_fill3").style.visibility="hidden";
-			document.getElementById("fill_MClegend3").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_fill3").style.visibility="hidden";
-			document.getElementById("fill_MSlegend3").style.visibility="hidden";
-			document.getElementById("fill_SMgrid3").style.visibility="hidden";
-			
-			
-			document.getElementById("mangalore_classified_flowDirection3").style.visibility="hidden";
-			document.getElementById("flowDirection_MClegend3").style.visibility="hidden";
-			document.getElementById("flowDirection_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_flowDirection3").style.visibility="hidden";
-			document.getElementById("flowDirection_MSlegend3").style.visibility="hidden";
-			document.getElementById("flowDirection_SMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_MClegend3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_MSlegend3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_SMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streamNetwork").style.visibility="hidden";
-			document.getElementById("streamNetwork_MClegend1").style.visibility="hidden";
-			document.getElementById("streamNetwork_CMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_watershed").style.visibility="hidden";
-			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
-			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore slope 3")
-				document.getElementById("slope_BSlegend3").style.visibility="visible";
-				// document.getElementById("slope_SBgrid3").style.visibility="visible";
-				document.getElementById("slope_BClegend3").style.visibility="hidden";
-				document.getElementById("slope_CBgrid3").style.visibility="hidden"
-				document.getElementById("bangalore_streched_slope3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_classified_slope3").style.visibility="hidden";
-
-				
-				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
+					document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid3").style.visibility="hidden";
 	
@@ -2629,6 +2397,313 @@ function slope_streched(){
 					document.getElementById("bangalore_watershed").style.visibility="hidden";
 					document.getElementById("watershed_Blegend1").style.visibility="hidden";
 					document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
+
+	if(colorRampSelected==0)
+	{
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_slope1").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_slope1").style.visibility="visible";
+		}
+	}
+else if(colorRampSelected==1)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_slope2").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_slope2").style.visibility="visible";
+		}
+	}
+else if(colorRampSelected==2)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_slope3").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_slope3").style.visibility="visible";
+		}
+	}
+}
+
+function slope_classified(){
+	document.getElementById('notification').style.visibility="visible";
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = false;
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	// document.getElementById('mangalore_streched1').style.visibility="hidden";
+	Symbolody=0;
+	// console.log(0)
+	// declare one variable equal to something
+	console.log(colorRampSelected);
+	document.getElementById('Mangmap1').style.visibility="hidden";
+	if(colorRampSelected==0)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore slope 1")
+				document.getElementById("mangalore_classified_slope1").style.visibility="visible";
+				document.getElementById("mangalore_streched_slope1").style.visibility="hidden";
+				document.getElementById("mangalore_Streched1").style.visibility="hidden";
+				document.getElementById('mangalore_Classified1').style.visibility="hidden";
+				document.getElementById("slope_MClegend1").style.visibility="visible";
+				// document.getElementById("slope_CMgrid1").style.visibility="visible";
+				document.getElementById("slope_MSlegend1").style.visibility="hidden";
+				document.getElementById("slope_SMgrid1").style.visibility="hidden"
+				
+	}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore slope 1");
+				// document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById("slope_MSlegend1").style.visibility="hidden";
+				document.getElementById("slope_SMgrid1").style.visibility="hidden";
+				document.getElementById("slope_BClegend1").style.visibility="visible";
+				// document.getElementById("slope_CBgrid1").style.visibility="visible";
+				document.getElementById("slope_BSlegend1").style.visibility="hidden";
+				document.getElementById("mangalore_streched_slope1").style.visibility="hidden";
+				document.getElementById("slope_SBgrid1").style.visibility="hidden";
+				document.getElementById("bangalore_classified_slope1").style.visibility="visible";
+				
+				document.getElementById("bangalore_streched_slope1").style.visibility="hidden";
+
+				
+			}
+		}
+	else if(colorRampSelected==1)
+		{
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore slope 2")
+				// document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById("slope_MClegend2").style.visibility="visible";
+				// document.getElementById("slope_CMgrid2").style.visibility="visible";
+				document.getElementById("slope_MSlegend2").style.visibility="hidden";
+				document.getElementById("slope_SMgrid2").style.visibility="hidden";
+				document.getElementById("mangalore_classified_slope2").style.visibility="visible";
+				document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById('mangalore_Classified2').style.visibility="hidden";
+				document.getElementById("mangalore_streched_slope2").style.visibility="hidden";
+	
+				
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore slope 2")
+				document.getElementById("slope_BClegend2").style.visibility="visible";
+				// document.getElementById("slope_CBgrid2").style.visibility="visible";
+				document.getElementById("slope_BSlegend2").style.visibility="hidden";
+				document.getElementById("slope_SBgrid2").style.visibility="hidden";
+				document.getElementById("bangalore_classified_slope2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_streched_slope2").style.visibility="hidden";
+
+				
+				
+			}
+		}
+	else if(colorRampSelected==2)
+		{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore slope 3")
+				document.getElementById("slope_MClegend3").style.visibility="visible";
+				// document.getElementById("slope_CMgrid3").style.visibility="visible";
+				document.getElementById("slope_MSlegend3").style.visibility="hidden";
+				document.getElementById("slope_SMgrid3").style.visibility="hidden"
+				document.getElementById("mangalore_classified_slope3").style.visibility="visible";
+				document.getElementById("mangalore_Streched3").style.visibility="hidden";
+				document.getElementById('mangalore_Classified3').style.visibility="hidden";
+				document.getElementById("mangalore_streched_slope3").style.visibility="hidden";
+	
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore slope 3")
+				document.getElementById("slope_BClegend3").style.visibility="visible";
+				// document.getElementById("slope_CBgrid3").style.visibility="visible";
+				document.getElementById("slope_BSlegend3").style.visibility="hidden";
+				document.getElementById("slope_SBgrid3").style.visibility="hidden";
+				document.getElementById("bangalore_classified_slope3").style.visibility="visible";
+				
+				document.getElementById("bangalore_streched_slope1").style.visibility="hidden";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_streched_slope3").style.visibility="hidden";
+
+
+				
+			}
+		}
+}
+// symbology=1 streched
+function slope_streched(){
+	document.getElementById('notification').style.visibility="visible";
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = false;
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	Symbolody=1;
+	console.log(1)
+	document.getElementById("mangalore_Streched1").style.visibility="hidden";
+	if(colorRampSelected==0)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore slope 1");
+			document.getElementById("elevation_SMgrid1").style.visibility="hidden";
+			// document.getElementById("mangalore_Streched1").style.visibility="hidden";
+			document.getElementById("slope_MSlegend1").style.visibility="visible";
+			// document.getElementById("slope_SMgrid1").style.visibility="visible";
+			document.getElementById("slope_MClegend1").style.visibility="hidden";
+			document.getElementById("slope_CMgrid1").style.visibility="hidden";
+			document.getElementById("mangalore_streched_slope1").style.visibility="visible";
+			document.getElementById("mangalore_Streched1").style.visibility="hidden";
+			document.getElementById('mangalore_Classified1').style.visibility="hidden";
+			document.getElementById("mangalore_classified_slope1").style.visibility="hidden";
+
+			
+
+		}
+		   else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore slope 1")
+				// document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById("slope_BSlegend1").style.visibility="visible";
+				// document.getElementById("slope_SBgrid1").style.visibility="visible";
+				document.getElementById("slope_BClegend1").style.visibility="hidden";
+				document.getElementById("slope_CBgrid1").style.visibility="hidden"
+				document.getElementById("bangalore_streched_slope1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				// document.getElementById("bangalore_classified_slope1").style.visibility="hidden";
+
+
+				
+		}
+	}
+	else if(colorRampSelected==1)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore slope 2")
+			// document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			document.getElementById("slope_MSlegend2").style.visibility="visible";
+			// document.getElementById("slope_SMgrid2").style.visibility="visible";
+			document.getElementById("slope_MClegend2").style.visibility="hidden";
+			document.getElementById("slope_CMgrid2").style.visibility="hidden"
+			document.getElementById("mangalore_streched_slope2").style.visibility="visible";
+			document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			document.getElementById('mangalore_Classified2').style.visibility="hidden";
+			// document.getElementById('mangalore_Classified2').style.visibility="hidden";
+			// document.getElementById("mangalore_streched_elevation2").style.visibility="hidden";
+			document.getElementById("mangalore_classified_slope2").style.visibility="hidden";
+
+
+			
+
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore slope 2")
+				document.getElementById("slope_BSlegend2").style.visibility="visible";
+				// document.getElementById("slope_SBgrid2").style.visibility="visible";
+				document.getElementById("slope_BClegend2").style.visibility="hidden";
+				document.getElementById("slope_CBgrid2").style.visibility="hidden"
+				document.getElementById("bangalore_streched_slope2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_classified_slope2").style.visibility="hidden";
+
+				
+		}
+	}
+	else if(colorRampSelected==2)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore slope 3")
+			document.getElementById("slope_MSlegend3").style.visibility="visible";
+			// document.getElementById("slope_SMgrid3").style.visibility="visible"
+			document.getElementById("slope_MClegend3").style.visibility="hidden";
+			document.getElementById("slope_CMgrid3").style.visibility="hidden"
+			document.getElementById("mangalore_streched_slope3").style.visibility="visible";
+			document.getElementById("mangalore_Streched3").style.visibility="hidden";
+			document.getElementById('mangalore_Classified3').style.visibility="hidden";
+			document.getElementById("mangalore_classified_slope3").style.visibility="hidden";
+
+			
+
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore slope 3")
+				document.getElementById("slope_BSlegend3").style.visibility="visible";
+				// document.getElementById("slope_SBgrid3").style.visibility="visible";
+				document.getElementById("slope_BClegend3").style.visibility="hidden";
+				document.getElementById("slope_CBgrid3").style.visibility="hidden"
+				document.getElementById("bangalore_streched_slope3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_classified_slope3").style.visibility="hidden";
+
+				
+				
 		}
 	}
 }
@@ -2882,6 +2957,8 @@ function selectData1(){
 
 
 function HillShade_Select(){
+	document.getElementById('notification').style.visibility="visible";
+	document.getElementsByClassName("blinkText")[0].style.visibility="visible";
 	document.getElementById("slope_MSlegend1").style.visibility="hidden";
 	document.getElementById("myText1").style.visibility="hidden";
 	document.getElementById("enter1").style.visibility="hidden";
@@ -2911,116 +2988,7 @@ function HillShade_Select(){
 	document.getElementById('flowaccumulation_classified').style.visibility="hidden";
 	document.getElementById('flowaccumulation_streched').style.visibility="hidden";
 
-	// document.getElementById("Elavation_button").style.backgroundColor="white";
-	// document.getElementById("slope_button").style.backgroundColor="white";
-	// document.getElementById("aspect_button").style.backgroundColor="white";
-	// document.getElementById("hillshade_button").style.backgroundColor="grey";
-	// document.getElementById("fill_button").style.backgroundColor="white";
-	// document.getElementById("flowaccumulation_button").style.backgroundColor="white";
-	// document.getElementById("flowdirection_button").style.backgroundColor="white";
-	// document.getElementById("stream_button").style.backgroundColor="white";
-	// document.getElementById("watershed_button").style.backgroundColor="white";
-}
-
-function hillshade_classified(){
-	
-	Symbolody=0;
-	// console.log(0)
-	// declare one variable equal to something
-	console.log(colorRampSelected);
-	document.getElementById('Mangmap1').style.visibility="hidden";
-	if(colorRampSelected==0)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("hi mangalore HillShade 1")
-			document.getElementById("mangalore_classified_HillShade1").style.visibility="visible";
-			document.getElementById("mangalore_Streched1").style.visibility="hidden";
-			document.getElementById('mangalore_Classified1').style.visibility="hidden";
-			document.getElementById("HillShade_MClegend1").style.visibility="visible";
-			// document.getElementById("HillShade_CMgrid1").style.visibility="visible";
-			document.getElementById("HillShade_MSlegend1").style.visibility="hidden";
-			document.getElementById("HillShade_SMgrid1").style.visibility="hidden"
-			document.getElementById("mangalore_streched_HillShade1").style.visibility="hidden";
-
-			document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
-			document.getElementById("elevation_MClegend1").style.visibility="hidden";
-			document.getElementById("elevation_CMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_elevation1").style.visibility="hidden";
-			document.getElementById("elevation_MSlegend1").style.visibility="hidden";
-			document.getElementById("elevation_SMgrid1").style.visibility="hidden";
-
-			
-			document.getElementById("mangalore_classified_slope1").style.visibility="hidden";
-			document.getElementById("slope_MClegend3").style.visibility="hidden";
-			document.getElementById("slope_CMgrid3").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_slope1").style.visibility="hidden";
-			document.getElementById("slope_MSlegend3").style.visibility="hidden";
-			document.getElementById("slope_SMgrid3").style.visibility="hidden";
-
-		
-
-			document.getElementById("mangalore_classified_aspect1").style.visibility="hidden";
-			document.getElementById("aspect_MClegend1").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_aspect1").style.visibility="hidden";
-			document.getElementById("aspect_MSlegend1").style.visibility="hidden";
-			document.getElementById("aspect_SMgrid1").style.visibility="hidden";
-		
-
-			document.getElementById("mangalore_classified_fill1").style.visibility="hidden";
-			document.getElementById("fill_MClegend1").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_fill1").style.visibility="hidden";
-			document.getElementById("fill_MSlegend1").style.visibility="hidden";
-			document.getElementById("fill_SMgrid1").style.visibility="hidden";
-			
-			
-			document.getElementById("mangalore_classified_flowDirection1").style.visibility="hidden";
-			document.getElementById("flowDirection_MClegend1").style.visibility="hidden";
-			document.getElementById("flowDirection_CMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_flowDirection1").style.visibility="hidden";
-			document.getElementById("flowDirection_MSlegend1").style.visibility="hidden";
-			document.getElementById("flowDirection_SMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_classified_flowAccumulation1").style.visibility="hidden";
-			document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="hidden";
-			document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
-			document.getElementById("flowAccumulation_SMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_streamNetwork").style.visibility="hidden";
-			document.getElementById("streamNetwork_MClegend1").style.visibility="hidden";
-			document.getElementById("streamNetwork_CMgrid1").style.visibility="hidden";
-
-			document.getElementById("mangalore_watershed").style.visibility="hidden";
-			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
-			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore HillShade 1")
-				document.getElementById("HillShade_BClegend1").style.visibility="visible";
-				// document.getElementById("HillShade_CBgrid1").style.visibility="visible";
-				document.getElementById("HillShade_BSlegend1").style.visibility="hidden";
-				document.getElementById("HillShade_SBgrid1").style.visibility="hidden";
-				document.getElementById("bangalore_classified_HillShade1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_streched_HillShade1").style.visibility="hidden";
-
-			document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
+	document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_BClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid1").style.visibility="hidden";
 
@@ -3080,27 +3048,8 @@ function hillshade_classified(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==1)
-		{
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore HillShade 2")
-				document.getElementById("HillShade_MClegend2").style.visibility="visible";
-				// document.getElementById("HillShade_CMgrid2").style.visibility="visible";
-				document.getElementById("HillShade_MSlegend2").style.visibility="hidden";
-				document.getElementById("HillShade_SMgrid2").style.visibility="hidden";
-				document.getElementById("mangalore_classified_HillShade2").style.visibility="visible";
-				document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById('mangalore_Classified2').style.visibility="hidden";
-				document.getElementById("mangalore_streched_HillShade2").style.visibility="hidden";
-	
-				document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+
+			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_MClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid2").style.visibility="hidden";
 	
@@ -3160,23 +3109,9 @@ function hillshade_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore HillShade 2")
-				document.getElementById("HillShade_BClegend2").style.visibility="visible";
-				// document.getElementById("HillShade_CBgrid2").style.visibility="visible";
-				document.getElementById("HillShade_BSlegend2").style.visibility="hidden";
-				document.getElementById("HillShade_SBgrid2").style.visibility="hidden";
-				document.getElementById("bangalore_classified_HillShade2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_streched_HillShade2").style.visibility="hidden";
 
-				
-			document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
+
+				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_BClegend2").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid2").style.visibility="hidden";
 
@@ -3236,29 +3171,9 @@ function hillshade_classified(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==2)
-		{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore HillShade 3")
-				document.getElementById("HillShade_MClegend3").style.visibility="visible";
-				// document.getElementById("HillShade_CMgrid3").style.visibility="visible";
-				document.getElementById("HillShade_MSlegend3").style.visibility="hidden";
-				document.getElementById("HillShade_SMgrid3").style.visibility="hidden"
-				document.getElementById("mangalore_classified_HillShade3").style.visibility="visible";
-				document.getElementById("mangalore_Streched3").style.visibility="hidden";
-				document.getElementById('mangalore_Classified3').style.visibility="hidden";
-				document.getElementById("mangalore_streched_HillShade3").style.visibility="hidden";
-	
-	
-				document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
+
+
+			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_MClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid3").style.visibility="hidden";
 	
@@ -3318,20 +3233,6 @@ function hillshade_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore HillShade 3")
-				document.getElementById("HillShade_BClegend3").style.visibility="visible";
-				// document.getElementById("HillShade_CBgrid3").style.visibility="visible";
-				document.getElementById("HillShade_BSlegend3").style.visibility="hidden";
-				document.getElementById("HillShade_SBgrid3").style.visibility="hidden";
-				document.getElementById("bangalore_classified_HillShade3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_streched_HillShade3").style.visibility="hidden";
 
 				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
@@ -3393,42 +3294,8 @@ function hillshade_classified(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-}
-// symbology=1 streched
-function hillshade_streched(){
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	Symbolody=1;
-	console.log(1)
-	document.getElementById("mangalore_Streched1").style.visibility="hidden";
-	if(colorRampSelected==0)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore HillShade 1");
-			document.getElementById("mangalore_streched_slope1").style.visibility="hidden";
-			// document.getElementById("demo1").style.visibility="visible";
-			document.getElementById("HillShade_MSlegend1").style.visibility="visible";
-			// document.getElementById("HillShade_SMgrid1").style.visibility="visible";
-			document.getElementById("HillShade_MClegend1").style.visibility="hidden";
-			document.getElementById("HillShade_CMgrid1").style.visibility="hidden";
-			document.getElementById("mangalore_streched_HillShade1").style.visibility="visible";
-			document.getElementById("mangalore_Streched1").style.visibility="hidden";
-			document.getElementById('mangalore_Classified1').style.visibility="hidden";
-			document.getElementById("mangalore_classified_HillShade1").style.visibility="hidden";
 
-			document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_MClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid1").style.visibility="hidden";
 
@@ -3488,23 +3355,7 @@ function hillshade_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			
-		}
-		   else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore HillShade 1")
-				document.getElementById("HillShade_BSlegend1").style.visibility="visible";
-				// document.getElementById("HillShade_SBgrid1").style.visibility="visible";
-				document.getElementById("HillShade_BClegend1").style.visibility="hidden";
-				document.getElementById("HillShade_CBgrid1").style.visibility="hidden"
-				document.getElementById("bangalore_streched_HillShade1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_classified_HillShade1").style.visibility="hidden";
 
-				
 			document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_BClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid1").style.visibility="hidden";
@@ -3565,26 +3416,6 @@ function hillshade_streched(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==1)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore HillShade 2")
-			document.getElementById("HillShade_MSlegend2").style.visibility="visible";
-			// document.getElementById("HillShade_SMgrid2").style.visibility="visible";
-			document.getElementById("HillShade_MClegend2").style.visibility="hidden";
-			document.getElementById("HillShade_CMgrid2").style.visibility="hidden"
-			document.getElementById("mangalore_streched_HillShade2").style.visibility="visible";
-			document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			document.getElementById('mangalore_Classified2').style.visibility="hidden";
-			document.getElementById("mangalore_classified_HillShade2").style.visibility="hidden";
 
 			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_MClegend2").style.visibility="hidden";
@@ -3647,23 +3478,7 @@ function hillshade_streched(){
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
 
-
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore HillShade 2")
-				document.getElementById("HillShade_BSlegend2").style.visibility="visible";
-				// document.getElementById("HillShade_SBgrid2").style.visibility="visible";
-				document.getElementById("HillShade_BClegend2").style.visibility="hidden";
-				document.getElementById("HillShade_CBgrid2").style.visibility="hidden"
-				document.getElementById("bangalore_streched_HillShade2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_classified_HillShade2").style.visibility="hidden";
-
-				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_BClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid2").style.visibility="hidden";
 	
@@ -3723,30 +3538,8 @@ function hillshade_streched(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==2)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore HillShade 3")
-			document.getElementById("HillShade_MSlegend3").style.visibility="visible";
-			// document.getElementById("HillShade_SMgrid3").style.visibility="visible"
-			document.getElementById("HillShade_MClegend3").style.visibility="hidden";
-			document.getElementById("HillShade_CMgrid3").style.visibility="hidden"
-			document.getElementById("mangalore_streched_HillShade3").style.visibility="visible";
-			document.getElementById("mangalore_Streched3").style.visibility="hidden";
-			document.getElementById('mangalore_Classified3').style.visibility="hidden";
-			document.getElementById("mangalore_classified_HillShade3").style.visibility="hidden";
 
-
-			
-			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 			document.getElementById("elevation_MClegend3").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid3").style.visibility="hidden";
 
@@ -3806,22 +3599,8 @@ function hillshade_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore HillShade 3")
-				document.getElementById("HillShade_BSlegend3").style.visibility="visible";
-				// document.getElementById("HillShade_SBgrid3").style.visibility="visible";
-				document.getElementById("HillShade_BClegend3").style.visibility="hidden";
-				document.getElementById("HillShade_CBgrid3").style.visibility="hidden"
-				document.getElementById("bangalore_streched_HillShade3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_classified_HillShade3").style.visibility="hidden";
 
-				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid3").style.visibility="hidden";
 	
@@ -3881,6 +3660,294 @@ function hillshade_streched(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
+
+	if(colorRampSelected==0)
+	{
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_HillShade1").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_HillShade1").style.visibility="visible";
+		}
+	}
+else if(colorRampSelected==1)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_HillShade2").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_HillShade2").style.visibility="visible";
+		}
+	}
+else if(colorRampSelected==2)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_HillShade3").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_HillShade3").style.visibility="visible";
+		}
+	}
+}
+
+function hillshade_classified(){
+	
+	Symbolody=0;
+	// console.log(0)
+	// declare one variable equal to something
+	console.log(colorRampSelected);
+	document.getElementById('Mangmap1').style.visibility="hidden";
+	if(colorRampSelected==0)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("hi mangalore HillShade 1")
+			document.getElementById("mangalore_classified_HillShade1").style.visibility="visible";
+			document.getElementById("mangalore_Streched1").style.visibility="hidden";
+			document.getElementById('mangalore_Classified1').style.visibility="hidden";
+			document.getElementById("HillShade_MClegend1").style.visibility="visible";
+			// document.getElementById("HillShade_CMgrid1").style.visibility="visible";
+			document.getElementById("HillShade_MSlegend1").style.visibility="hidden";
+			document.getElementById("HillShade_SMgrid1").style.visibility="hidden"
+			document.getElementById("mangalore_streched_HillShade1").style.visibility="hidden";
+
+			
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore HillShade 1")
+				document.getElementById("HillShade_BClegend1").style.visibility="visible";
+				// document.getElementById("HillShade_CBgrid1").style.visibility="visible";
+				document.getElementById("HillShade_BSlegend1").style.visibility="hidden";
+				document.getElementById("HillShade_SBgrid1").style.visibility="hidden";
+				document.getElementById("bangalore_classified_HillShade1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_streched_HillShade1").style.visibility="hidden";
+
+			
+			}
+		}
+	else if(colorRampSelected==1)
+		{
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore HillShade 2")
+				document.getElementById("HillShade_MClegend2").style.visibility="visible";
+				// document.getElementById("HillShade_CMgrid2").style.visibility="visible";
+				document.getElementById("HillShade_MSlegend2").style.visibility="hidden";
+				document.getElementById("HillShade_SMgrid2").style.visibility="hidden";
+				document.getElementById("mangalore_classified_HillShade2").style.visibility="visible";
+				document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById('mangalore_Classified2').style.visibility="hidden";
+				document.getElementById("mangalore_streched_HillShade2").style.visibility="hidden";
+	
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore HillShade 2")
+				document.getElementById("HillShade_BClegend2").style.visibility="visible";
+				// document.getElementById("HillShade_CBgrid2").style.visibility="visible";
+				document.getElementById("HillShade_BSlegend2").style.visibility="hidden";
+				document.getElementById("HillShade_SBgrid2").style.visibility="hidden";
+				document.getElementById("bangalore_classified_HillShade2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_streched_HillShade2").style.visibility="hidden";
+
+				
+			
+			}
+		}
+	else if(colorRampSelected==2)
+		{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore HillShade 3")
+				document.getElementById("HillShade_MClegend3").style.visibility="visible";
+				// document.getElementById("HillShade_CMgrid3").style.visibility="visible";
+				document.getElementById("HillShade_MSlegend3").style.visibility="hidden";
+				document.getElementById("HillShade_SMgrid3").style.visibility="hidden"
+				document.getElementById("mangalore_classified_HillShade3").style.visibility="visible";
+				document.getElementById("mangalore_Streched3").style.visibility="hidden";
+				document.getElementById('mangalore_Classified3').style.visibility="hidden";
+				document.getElementById("mangalore_streched_HillShade3").style.visibility="hidden";
+	
+	
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore HillShade 3")
+				document.getElementById("HillShade_BClegend3").style.visibility="visible";
+				// document.getElementById("HillShade_CBgrid3").style.visibility="visible";
+				document.getElementById("HillShade_BSlegend3").style.visibility="hidden";
+				document.getElementById("HillShade_SBgrid3").style.visibility="hidden";
+				document.getElementById("bangalore_classified_HillShade3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_streched_HillShade3").style.visibility="hidden";
+
+				
+			}
+		}
+}
+// symbology=1 streched
+function hillshade_streched(){
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = false;
+	
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	Symbolody=1;
+	console.log(1)
+	document.getElementById("mangalore_Streched1").style.visibility="hidden";
+	if(colorRampSelected==0)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore HillShade 1");
+			document.getElementById("mangalore_streched_slope1").style.visibility="hidden";
+			// document.getElementById("demo1").style.visibility="visible";
+			document.getElementById("HillShade_MSlegend1").style.visibility="visible";
+			// document.getElementById("HillShade_SMgrid1").style.visibility="visible";
+			document.getElementById("HillShade_MClegend1").style.visibility="hidden";
+			document.getElementById("HillShade_CMgrid1").style.visibility="hidden";
+			document.getElementById("mangalore_streched_HillShade1").style.visibility="visible";
+			document.getElementById("mangalore_Streched1").style.visibility="hidden";
+			document.getElementById('mangalore_Classified1').style.visibility="hidden";
+			document.getElementById("mangalore_classified_HillShade1").style.visibility="hidden";
+
+			
+			
+		}
+		   else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore HillShade 1")
+				document.getElementById("HillShade_BSlegend1").style.visibility="visible";
+				// document.getElementById("HillShade_SBgrid1").style.visibility="visible";
+				document.getElementById("HillShade_BClegend1").style.visibility="hidden";
+				document.getElementById("HillShade_CBgrid1").style.visibility="hidden"
+				document.getElementById("bangalore_streched_HillShade1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_classified_HillShade1").style.visibility="hidden";
+
+				
+			
+		}
+	}
+	else if(colorRampSelected==1)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore HillShade 2")
+			document.getElementById("HillShade_MSlegend2").style.visibility="visible";
+			// document.getElementById("HillShade_SMgrid2").style.visibility="visible";
+			document.getElementById("HillShade_MClegend2").style.visibility="hidden";
+			document.getElementById("HillShade_CMgrid2").style.visibility="hidden"
+			document.getElementById("mangalore_streched_HillShade2").style.visibility="visible";
+			document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			document.getElementById('mangalore_Classified2').style.visibility="hidden";
+			document.getElementById("mangalore_classified_HillShade2").style.visibility="hidden";
+
+			
+
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore HillShade 2")
+				document.getElementById("HillShade_BSlegend2").style.visibility="visible";
+				// document.getElementById("HillShade_SBgrid2").style.visibility="visible";
+				document.getElementById("HillShade_BClegend2").style.visibility="hidden";
+				document.getElementById("HillShade_CBgrid2").style.visibility="hidden"
+				document.getElementById("bangalore_streched_HillShade2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_classified_HillShade2").style.visibility="hidden";
+
+				
+		}
+	}
+	else if(colorRampSelected==2)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore HillShade 3")
+			document.getElementById("HillShade_MSlegend3").style.visibility="visible";
+			// document.getElementById("HillShade_SMgrid3").style.visibility="visible"
+			document.getElementById("HillShade_MClegend3").style.visibility="hidden";
+			document.getElementById("HillShade_CMgrid3").style.visibility="hidden"
+			document.getElementById("mangalore_streched_HillShade3").style.visibility="visible";
+			document.getElementById("mangalore_Streched3").style.visibility="hidden";
+			document.getElementById('mangalore_Classified3').style.visibility="hidden";
+			document.getElementById("mangalore_classified_HillShade3").style.visibility="hidden";
+
+
+			
+			
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore HillShade 3")
+				document.getElementById("HillShade_BSlegend3").style.visibility="visible";
+				// document.getElementById("HillShade_SBgrid3").style.visibility="visible";
+				document.getElementById("HillShade_BClegend3").style.visibility="hidden";
+				document.getElementById("HillShade_CBgrid3").style.visibility="hidden"
+				document.getElementById("bangalore_streched_HillShade3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_classified_HillShade3").style.visibility="hidden";
+
+				
 		}
 	}
 }
@@ -3987,11 +4054,12 @@ function selectData2(){
 
 
 function aspect_Select(){
-	
-	// document.getElementById("mangalore_Streched1").style.visibility="hidden";
+	document.getElementById('notification').style.visibility="visible";
+	document.getElementsByClassName("blinkText")[0].style.visibility="visible";
 	document.getElementById("myText2").style.visibility="hidden";
 	document.getElementById("enter2").style.visibility="hidden"
 	document.getElementsByClassName("blink1")[0].style.visibility="hidden";
+	
 	// document.getElementById("demo2").style.visibility="visible";
 	
 	document.getElementById("demo1").style.visibility="hidden";
@@ -4025,42 +4093,10 @@ function aspect_Select(){
 	document.getElementById("flowdirection_button").style.backgroundColor="white";
 	document.getElementById("stream_button").style.backgroundColor="white";
 	document.getElementById("watershed_button").style.backgroundColor="white";
-}
 
 
-function aspect_classified(){
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	// document.getElementById('mangalore_streched1').style.visibility="hidden";
-	Symbolody=0;
-	// console.log(0)
-	// declare one variable equal to something
-	console.log(colorRampSelected);
-	document.getElementById('Mangmap1').style.visibility="hidden";
-	if(colorRampSelected==0)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore aspect 2")
-				document.getElementById("aspect_MClegend1").style.visibility="visible";
-				// document.getElementById("aspect_CMgrid2").style.visibility="visible";
-				document.getElementById("aspect_MSlegend1").style.visibility="hidden";
-				document.getElementById("aspect_SMgrid1").style.visibility="hidden";
-				document.getElementById("mangalore_classified_aspect1").style.visibility="visible";
-				document.getElementById("mangalore_streched_aspect1").style.visibility="hidden";
-				document.getElementById("mangalore_Streched1").style.visibility="hidden";
-				document.getElementById("mangalore_Classified1").style.visibility="hidden";
-				
-			
-				
-				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+
+	document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 				document.getElementById("elevation_MClegend1").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid1").style.visibility="hidden";
 	
@@ -4119,21 +4155,6 @@ function aspect_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore aspect 1")
-				// document.getElementById("mangalore_Streched1").style.visibility="hidden";
-				document.getElementById("aspect_BClegend1").style.visibility="visible";
-				// document.getElementById("aspect_CBgrid1").style.visibility="visible";
-				document.getElementById("aspect_BSlegend1").style.visibility="hidden";
-				document.getElementById("aspect_SBgrid1").style.visibility="hidden";
-				document.getElementById("bangalore_classified_aspect1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_streched_aspect1").style.visibility="hidden";
 
 				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_BClegend1").style.visibility="hidden";
@@ -4194,29 +4215,8 @@ function aspect_classified(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==1)
-		{
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore aspect 2")
-				document.getElementById("aspect_MClegend2").style.visibility="visible";
-				// document.getElementById("aspect_CMgrid2").style.visibility="visible";
-				document.getElementById("aspect_MSlegend2").style.visibility="hidden";
-				document.getElementById("aspect_SMgrid2").style.visibility="hidden";
-				document.getElementById("mangalore_classified_aspect2").style.visibility="visible";
-				document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById("mangalore_Classified2").style.visibility="hidden";
-				// document.getElementById("mangalore_classified_HillShade2").style.visibility="hidden";
-				// document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById("mangalore_streched_aspect2").style.visibility="hidden";
-	
-				document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+
+			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_MClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid2").style.visibility="hidden";
 	
@@ -4275,23 +4275,7 @@ function aspect_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-				
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore aspect 2")
-				document.getElementById("aspect_BClegend2").style.visibility="visible";
-				// document.getElementById("aspect_CBgrid2").style.visibility="visible";
-				document.getElementById("aspect_BSlegend2").style.visibility="hidden";
-				document.getElementById("aspect_SBgrid2").style.visibility="hidden";
-				document.getElementById("bangalore_classified_aspect2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_streched_aspect2").style.visibility="hidden";
 
-				
 				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_BClegend2").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid2").style.visibility="hidden";
@@ -4351,29 +4335,8 @@ function aspect_classified(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==2)
-		{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore aspect 3")
-				document.getElementById("aspect_MClegend3").style.visibility="visible";
-				// document.getElementById("aspect_CMgrid3").style.visibility="visible";
-				document.getElementById("aspect_MSlegend3").style.visibility="hidden";
-				document.getElementById("aspect_SMgrid3").style.visibility="hidden"
-				document.getElementById("mangalore_classified_aspect3").style.visibility="visible";
-				document.getElementById("mangalore_Streched3").style.visibility="hidden";
-				document.getElementById("mangalore_Classified3").style.visibility="hidden";
-				document.getElementById("mangalore_streched_aspect3").style.visibility="hidden";
-				// document.getElementById("mangalore_streched_HillShade2").style.visibility="hidden";
-	
-				document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
+
+			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_MClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid3").style.visibility="hidden";
 	
@@ -4432,22 +4395,7 @@ function aspect_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore aspect 3")
-				document.getElementById("aspect_BClegend3").style.visibility="visible";
-				// document.getElementById("aspect_CBgrid3").style.visibility="visible";
-				document.getElementById("aspect_BSlegend3").style.visibility="hidden";
-				document.getElementById("aspect_SBgrid3").style.visibility="hidden";
-				document.getElementById("bangalore_classified_aspect3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_streched_aspect3").style.visibility="hidden";
 
-					
 				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 			document.getElementById("elevation_BClegend3").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid3").style.visibility="hidden";
@@ -4507,40 +4455,6 @@ function aspect_classified(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-}
-// symbology=1 streched
-function aspect_streched(){
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	Symbolody=1;
-	console.log(1)
-	// document.getElementById("mangalore_Streched1").style.visibility="hidden";
-	if(colorRampSelected==0)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore aspect 1")
-			document.getElementById("aspect_MSlegend1").style.visibility="visible";
-			// document.getElementById("aspect_SMgrid2").style.visibility="visible";
-			document.getElementById("aspect_MClegend1").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid1").style.visibility="hidden"
-			document.getElementById("mangalore_streched_aspect1").style.visibility="visible";
-			document.getElementById("mangalore_classified_aspect1").style.visibility="hidden";
-			
-			document.getElementById("mangalore_Streched1").style.visibility="hidden";
-			document.getElementById("mangalore_Classified1").style.visibility="hidden";
 
 			document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_MClegend1").style.visibility="hidden";
@@ -4601,24 +4515,8 @@ function aspect_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		   else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore aspect 1")
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById("aspect_BSlegend1").style.visibility="visible";
-				// document.getElementById("aspect_SBgrid1").style.visibility="visible";
-				document.getElementById("aspect_BClegend1").style.visibility="hidden";
-				document.getElementById("aspect_CBgrid1").style.visibility="hidden"
-				document.getElementById("bangalore_streched_aspect1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_classified_aspect1").style.visibility="hidden";
 
-				
-				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_BClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid1").style.visibility="hidden";
 
@@ -4677,30 +4575,6 @@ function aspect_streched(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==1)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore aspect 2")
-			document.getElementById("aspect_MSlegend2").style.visibility="visible";
-			// document.getElementById("aspect_SMgrid2").style.visibility="visible";
-			document.getElementById("aspect_MClegend2").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid2").style.visibility="hidden"
-			document.getElementById("mangalore_streched_aspect2").style.visibility="visible";
-			// document.getElementById("mangalore_streched_HillShade2").style.visibility="hidden";
-			document.getElementById("HillShade_MSlegend2").style.visibility="hidden";
-			document.getElementById("HillShade_SMgrid2").style.visibility="hidden";
-
-			document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			document.getElementById("mangalore_Classified2").style.visibility="hidden";
-			document.getElementById("mangalore_classified_aspect2").style.visibility="hidden";
 
 			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_MClegend2").style.visibility="hidden";
@@ -4761,23 +4635,8 @@ function aspect_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore aspect 2")
-				document.getElementById("aspect_BSlegend2").style.visibility="visible";
-				document.getElementById("aspect_SBgrid2").style.visibility="visible";
-				document.getElementById("aspect_BClegend2").style.visibility="hidden";
-				document.getElementById("aspect_CBgrid2").style.visibility="hidden"
-				document.getElementById("bangalore_streched_aspect2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_classified_aspect2").style.visibility="hidden";
 
-					
-				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_BClegend2").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid2").style.visibility="hidden";
 
@@ -4836,30 +4695,7 @@ function aspect_streched(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==2)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore aspect 3")
-			document.getElementById("aspect_MSlegend3").style.visibility="visible";
-			// document.getElementById("aspect_SMgrid3").style.visibility="visible"
-			document.getElementById("aspect_MClegend3").style.visibility="hidden";
-			document.getElementById("aspect_CMgrid3").style.visibility="hidden"
-			document.getElementById("mangalore_streched_aspect3").style.visibility="visible";
-			// document.getElementById("mangalore_streched_HillShade3").style.visibility="hidden";
-			document.getElementById("mangalore_Streched3").style.visibility="hidden";
-			document.getElementById("mangalore_Classified3").style.visibility="hidden";
-			document.getElementById("mangalore_classified_aspect3").style.visibility="hidden";
 
-
-			
 			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 			document.getElementById("elevation_MClegend3").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid3").style.visibility="hidden";
@@ -4919,22 +4755,8 @@ function aspect_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore aspect 3")
-				document.getElementById("aspect_BSlegend3").style.visibility="visible";
-				// document.getElementById("aspect_SBgrid3").style.visibility="visible";
-				// document.getElementById("aspect_BClegend3").style.visibility="hidden";
-				document.getElementById("aspect_CBgrid3").style.visibility="hidden"
-				document.getElementById("bangalore_streched_aspect3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_classified_aspect3").style.visibility="hidden";
 
-				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid3").style.visibility="hidden";
 	
@@ -4993,6 +4815,317 @@ function aspect_streched(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
+
+	if(colorRampSelected==0)
+	{
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_aspect1").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_aspect1").style.visibility="visible";
+		}
+	}
+else if(colorRampSelected==1)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_aspect2").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_aspect2").style.visibility="visible";
+		}
+	}
+else if(colorRampSelected==2)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_aspect3").style.visibility="visible";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_aspect3").style.visibility="visible";
+		}
+	}
+}
+
+
+
+
+
+function aspect_classified(){
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = false;
+	document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	// document.getElementById('mangalore_streched1').style.visibility="hidden";
+	Symbolody=0;
+	// console.log(0)
+	// declare one variable equal to something
+	console.log(colorRampSelected);
+	document.getElementById('Mangmap1').style.visibility="hidden";
+	if(colorRampSelected==0)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore aspect 2")
+				document.getElementById("aspect_MClegend1").style.visibility="visible";
+				// document.getElementById("aspect_CMgrid2").style.visibility="visible";
+				document.getElementById("aspect_MSlegend1").style.visibility="hidden";
+				document.getElementById("aspect_SMgrid1").style.visibility="hidden";
+				document.getElementById("mangalore_classified_aspect1").style.visibility="visible";
+				document.getElementById("mangalore_streched_aspect1").style.visibility="hidden";
+				document.getElementById("mangalore_Streched1").style.visibility="hidden";
+				document.getElementById("mangalore_Classified1").style.visibility="hidden";
+				
+			
+				
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore aspect 1")
+				// document.getElementById("mangalore_Streched1").style.visibility="hidden";
+				document.getElementById("aspect_BClegend1").style.visibility="visible";
+				// document.getElementById("aspect_CBgrid1").style.visibility="visible";
+				document.getElementById("aspect_BSlegend1").style.visibility="hidden";
+				document.getElementById("aspect_SBgrid1").style.visibility="hidden";
+				document.getElementById("bangalore_classified_aspect1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_streched_aspect1").style.visibility="hidden";
+
+				
+			}
+		}
+	else if(colorRampSelected==1)
+		{
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore aspect 2")
+				document.getElementById("aspect_MClegend2").style.visibility="visible";
+				// document.getElementById("aspect_CMgrid2").style.visibility="visible";
+				document.getElementById("aspect_MSlegend2").style.visibility="hidden";
+				document.getElementById("aspect_SMgrid2").style.visibility="hidden";
+				document.getElementById("mangalore_classified_aspect2").style.visibility="visible";
+				document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById("mangalore_Classified2").style.visibility="hidden";
+				// document.getElementById("mangalore_classified_HillShade2").style.visibility="hidden";
+				// document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById("mangalore_streched_aspect2").style.visibility="hidden";
+	
+				
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore aspect 2")
+				document.getElementById("aspect_BClegend2").style.visibility="visible";
+				// document.getElementById("aspect_CBgrid2").style.visibility="visible";
+				document.getElementById("aspect_BSlegend2").style.visibility="hidden";
+				document.getElementById("aspect_SBgrid2").style.visibility="hidden";
+				document.getElementById("bangalore_classified_aspect2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_streched_aspect2").style.visibility="hidden";
+
+				
+				
+			}
+		}
+	else if(colorRampSelected==2)
+		{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore aspect 3")
+				document.getElementById("aspect_MClegend3").style.visibility="visible";
+				// document.getElementById("aspect_CMgrid3").style.visibility="visible";
+				document.getElementById("aspect_MSlegend3").style.visibility="hidden";
+				document.getElementById("aspect_SMgrid3").style.visibility="hidden"
+				document.getElementById("mangalore_classified_aspect3").style.visibility="visible";
+				document.getElementById("mangalore_Streched3").style.visibility="hidden";
+				document.getElementById("mangalore_Classified3").style.visibility="hidden";
+				document.getElementById("mangalore_streched_aspect3").style.visibility="hidden";
+				// document.getElementById("mangalore_streched_HillShade2").style.visibility="hidden";
+	
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore aspect 3")
+				document.getElementById("aspect_BClegend3").style.visibility="visible";
+				// document.getElementById("aspect_CBgrid3").style.visibility="visible";
+				document.getElementById("aspect_BSlegend3").style.visibility="hidden";
+				document.getElementById("aspect_SBgrid3").style.visibility="hidden";
+				document.getElementById("bangalore_classified_aspect3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_streched_aspect3").style.visibility="hidden";
+
+					
+				
+			}
+		}
+}
+// symbology=1 streched
+function aspect_streched(){
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = false;
+	document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	Symbolody=1;
+	console.log(1)
+	// document.getElementById("mangalore_Streched1").style.visibility="hidden";
+	if(colorRampSelected==0)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore aspect 1")
+			document.getElementById("aspect_MSlegend1").style.visibility="visible";
+			// document.getElementById("aspect_SMgrid2").style.visibility="visible";
+			document.getElementById("aspect_MClegend1").style.visibility="hidden";
+			document.getElementById("aspect_CMgrid1").style.visibility="hidden"
+			document.getElementById("mangalore_streched_aspect1").style.visibility="visible";
+			document.getElementById("mangalore_classified_aspect1").style.visibility="hidden";
+			
+			document.getElementById("mangalore_Streched1").style.visibility="hidden";
+			document.getElementById("mangalore_Classified1").style.visibility="hidden";
+
+			
+		}
+		   else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore aspect 1")
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById("aspect_BSlegend1").style.visibility="visible";
+				// document.getElementById("aspect_SBgrid1").style.visibility="visible";
+				document.getElementById("aspect_BClegend1").style.visibility="hidden";
+				document.getElementById("aspect_CBgrid1").style.visibility="hidden"
+				document.getElementById("bangalore_streched_aspect1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_classified_aspect1").style.visibility="hidden";
+
+				
+				
+		}
+	}
+	else if(colorRampSelected==1)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore aspect 2")
+			document.getElementById("aspect_MSlegend2").style.visibility="visible";
+			// document.getElementById("aspect_SMgrid2").style.visibility="visible";
+			document.getElementById("aspect_MClegend2").style.visibility="hidden";
+			document.getElementById("aspect_CMgrid2").style.visibility="hidden"
+			document.getElementById("mangalore_streched_aspect2").style.visibility="visible";
+			// document.getElementById("mangalore_streched_HillShade2").style.visibility="hidden";
+			document.getElementById("HillShade_MSlegend2").style.visibility="hidden";
+			document.getElementById("HillShade_SMgrid2").style.visibility="hidden";
+
+			document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			document.getElementById("mangalore_Classified2").style.visibility="hidden";
+			document.getElementById("mangalore_classified_aspect2").style.visibility="hidden";
+
+			
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore aspect 2")
+				document.getElementById("aspect_BSlegend2").style.visibility="visible";
+				// document.getElementById("aspect_SBgrid2").style.visibility="visible";
+				document.getElementById("aspect_BClegend2").style.visibility="hidden";
+				document.getElementById("aspect_CBgrid2").style.visibility="hidden"
+				document.getElementById("bangalore_streched_aspect2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_classified_aspect2").style.visibility="hidden";
+
+					
+				
+		}
+	}
+	else if(colorRampSelected==2)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore aspect 3")
+			document.getElementById("aspect_MSlegend3").style.visibility="visible";
+			// document.getElementById("aspect_SMgrid3").style.visibility="visible"
+			document.getElementById("aspect_MClegend3").style.visibility="hidden";
+			document.getElementById("aspect_CMgrid3").style.visibility="hidden"
+			document.getElementById("mangalore_streched_aspect3").style.visibility="visible";
+			// document.getElementById("mangalore_streched_HillShade3").style.visibility="hidden";
+			document.getElementById("mangalore_Streched3").style.visibility="hidden";
+			document.getElementById("mangalore_Classified3").style.visibility="hidden";
+			document.getElementById("mangalore_classified_aspect3").style.visibility="hidden";
+
+
+			
+			
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore aspect 3")
+				document.getElementById("aspect_BSlegend3").style.visibility="visible";
+				// document.getElementById("aspect_SBgrid3").style.visibility="visible";
+				// document.getElementById("aspect_BClegend3").style.visibility="hidden";
+				document.getElementById("aspect_CBgrid3").style.visibility="hidden"
+				document.getElementById("bangalore_streched_aspect3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_classified_aspect3").style.visibility="hidden";
+
+				
 		}
 	}
 }
@@ -5105,7 +5238,9 @@ function selectText(){
 
 
 function fill_Select(){
-
+	document.getElementById("DEM Derivatives").disabled = true;
+	document.getElementById('notification').style.visibility="visible";
+	document.getElementsByClassName("blinkText")[0].style.visibility="visible";
 	document.getElementById("mangalore_streched_elevation1").style.visibility="visible";
 	document.getElementById("mangalore_Streched1").style.visibility="hidden";
 	document.getElementById('mangalore_Classified1').style.visibility="hidden";
@@ -5154,44 +5289,8 @@ function fill_Select(){
 	document.getElementById("stream_button").style.backgroundColor="white";
 	document.getElementById("watershed_button").style.backgroundColor="white";
 
-}
 
-function fill_classified(){
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	
-	// document.getElementById('mangalore_streched1').style.visibility="hidden";
-	Symbolody=0;
-	// console.log(0)
-	// declare one variable equal to something
-	console.log(colorRampSelected);
-	document.getElementById('Mangmap1').style.visibility="hidden";
-	if(colorRampSelected==0)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore fill 1")
-				document.getElementById("mangalore_classified_fill1").style.visibility="visible";
-				document.getElementById("mangalore_Streched1").style.visibility="hidden";
-				document.getElementById('mangalore_Classified1').style.visibility="hidden";
-				document.getElementById("mangalore_streched_fill1").style.visibility="hidden";
-	
-				document.getElementById("fill_MClegend1").style.visibility="visible";
-				// document.getElementById("fill_CMgrid1").style.visibility="visible";
-				document.getElementById("fill_MSlegend1").style.visibility="hidden";
-				document.getElementById("fill_SMgrid1").style.visibility="hidden"
-				
-	
-				
-				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+	document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 				document.getElementById("elevation_MClegend1").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid1").style.visibility="hidden";
 	
@@ -5250,22 +5349,6 @@ function fill_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-				document.getElementById('border').style.visibility="hidden";
-				document.getElementById('border1').style.visibility="visible";
-				console.log("hi bangalore fill 1")
-				document.getElementById("fill_BClegend1").style.visibility="visible";
-				// document.getElementById("fill_CBgrid1").style.visibility="visible";
-				document.getElementById("fill_BSlegend1").style.visibility="hidden";
-				document.getElementById("fill_SBgrid1").style.visibility="hidden";
-				document.getElementById("bangalore_classified_fill1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_streched_fill1").style.visibility="hidden";
 
 				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_BClegend1").style.visibility="hidden";
@@ -5327,32 +5410,7 @@ function fill_classified(){
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
 
-			}
-		}
-	else if(colorRampSelected==1)
-		{
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore fill 2")
-				document.getElementById("fill_MClegend2").style.visibility="visible";
-				// document.getElementById("fill_CMgrid2").style.visibility="visible";
-				document.getElementById("fill_MSlegend2").style.visibility="hidden";
-				document.getElementById("fill_SMgrid2").style.visibility="hidden";
-				document.getElementById("mangalore_classified_fill2").style.visibility="visible";
-				document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById('mangalore_Classified2').style.visibility="hidden";
-				// document.getElementById('mangalore_Classified2').style.visibility="hidden"
-				document.getElementById("mangalore_streched_fill2").style.visibility="hidden";
-				
-				
-	
-				document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_MClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid2").style.visibility="hidden";
 	
@@ -5411,23 +5469,6 @@ function fill_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-				
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore fill 2")
-				document.getElementById("fill_BClegend2").style.visibility="visible";
-				// document.getElementById("fill_CBgrid2").style.visibility="visible";
-				document.getElementById("fill_BSlegend2").style.visibility="hidden";
-				document.getElementById("fill_SBgrid2").style.visibility="hidden";
-				document.getElementById("bangalore_classified_fill2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_streched_fill2").style.visibility="hidden";
 
 				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_BClegend2").style.visibility="hidden";
@@ -5488,30 +5529,7 @@ function fill_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==2)
-		{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore fill 3")
-				document.getElementById("fill_MClegend3").style.visibility="visible";
-				// document.getElementById("fill_CMgrid3").style.visibility="visible";
-				document.getElementById("fill_MSlegend3").style.visibility="hidden";
-				document.getElementById("fill_SMgrid3").style.visibility="hidden"
-				document.getElementById("mangalore_classified_fill3").style.visibility="visible";
-				document.getElementById("mangalore_Streched3").style.visibility="hidden";
-				document.getElementById('mangalore_Classified3').style.visibility="hidden";
-				document.getElementById("mangalore_streched_fill3").style.visibility="hidden";
-	
-				
+
 				document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_MClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid3").style.visibility="hidden";
@@ -5571,22 +5589,6 @@ function fill_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore fill 3")
-				document.getElementById("fill_BClegend3").style.visibility="visible";
-				// document.getElementById("fill_CBgrid3").style.visibility="visible";
-				document.getElementById("fill_BSlegend3").style.visibility="hidden";
-				document.getElementById("fill_SBgrid3").style.visibility="hidden";
-				document.getElementById("bangalore_classified_fill3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_streched_fill3").style.visibility="hidden";
 
 				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
@@ -5647,40 +5649,8 @@ function fill_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-}
-// symbology=1 streched
-function fill_streched(){
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	Symbolody=1;
-	console.log(1)
-	document.getElementById("mangalore_Streched1").style.visibility="hidden";
-	if(colorRampSelected==0)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore fill 1")
-			document.getElementById("fill_MSlegend1").style.visibility="visible";
-			// document.getElementById("fill_SMgrid1").style.visibility="visible";
-			document.getElementById("mangalore_streched_fill1").style.visibility="visible";
-			document.getElementById("mangalore_Streched1").style.visibility="hidden";
-			document.getElementById('mangalore_Classified1').style.visibility="hidden";
-			document.getElementById("fill_MClegend1").style.visibility="hidden";
-			document.getElementById("fill_CMgrid1").style.visibility="hidden";
-			document.getElementById("mangalore_classified_fill1").style.visibility="hidden";
 
-			document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_MClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid1").style.visibility="hidden";
 
@@ -5739,23 +5709,8 @@ function fill_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		   else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore fill 1")
-				document.getElementById("fill_BSlegend1").style.visibility="visible";
-				// document.getElementById("fill_SBgrid1").style.visibility="visible";
-				document.getElementById("fill_BClegend1").style.visibility="hidden";
-				document.getElementById("fill_CBgrid1").style.visibility="hidden"
-				document.getElementById("bangalore_streched_fill1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_classified_fill1").style.visibility="hidden";
 
-
-				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 				document.getElementById("elevation_BClegend1").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid1").style.visibility="hidden";
 	
@@ -5814,29 +5769,8 @@ function fill_streched(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==1)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore fill 2")
-			document.getElementById("fill_MSlegend2").style.visibility="visible";
-			// document.getElementById("fill_SMgrid2").style.visibility="visible";
-			document.getElementById("fill_MClegend2").style.visibility="hidden";
-			document.getElementById("fill_CMgrid2").style.visibility="hidden"
-			document.getElementById("mangalore_streched_fill2").style.visibility="visible";
-			document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			document.getElementById('mangalore_Classified2').style.visibility="hidden";
-			document.getElementById("mangalore_classified_fill2").style.visibility="hidden";
 
-			
-			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_MClegend2").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid2").style.visibility="hidden";
 
@@ -5895,22 +5829,8 @@ function fill_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore fill 2")
-				document.getElementById("fill_BSlegend2").style.visibility="visible";
-				// document.getElementById("fill_SBgrid2").style.visibility="visible";
-				document.getElementById("fill_BClegend2").style.visibility="hidden";
-				document.getElementById("fill_CBgrid2").style.visibility="hidden"
-				document.getElementById("bangalore_streched_fill2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_classified_fill2").style.visibility="hidden";
 
-				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_BClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid2").style.visibility="hidden";
 	
@@ -5969,29 +5889,8 @@ function fill_streched(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==2)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-		document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore fill 3")
-			document.getElementById("fill_MSlegend3").style.visibility="visible";
-			// document.getElementById("fill_SMgrid3").style.visibility="visible"
-			document.getElementById("fill_MClegend3").style.visibility="hidden";
-			document.getElementById("fill_CMgrid3").style.visibility="hidden"
-			document.getElementById("mangalore_streched_fill3").style.visibility="visible";
-			document.getElementById("mangalore_Streched3").style.visibility="hidden";
-			document.getElementById('mangalore_Classified3').style.visibility="hidden";
-			document.getElementById("mangalore_classified_fill3").style.visibility="hidden";
 
-
-			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 			document.getElementById("elevation_MClegend3").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid3").style.visibility="hidden";
 
@@ -6050,22 +5949,8 @@ function fill_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-		document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore fill 3")
-				document.getElementById("fill_BSlegend3").style.visibility="visible";
-				// document.getElementById("fill_SBgrid3").style.visibility="visible";
-				document.getElementById("fill_BClegend3").style.visibility="hidden";
-				document.getElementById("fill_CBgrid3").style.visibility="hidden"
-				document.getElementById("bangalore_streched_fill3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_classified_fill3").style.visibility="hidden";
 
-				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid3").style.visibility="hidden";
 	
@@ -6124,6 +6009,330 @@ function fill_streched(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
+
+	if(colorRampSelected==0)
+	{
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_fill1").style.visibility="visible";
+			document.getElementById('border').style.visibility="visible";
+			document.getElementById('border1').style.visibility="hidden";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_fill1").style.visibility="visible";
+			document.getElementById('border1').style.visibility="visible";
+			document.getElementById('border').style.visibility="hidden";
+		}
+	}
+else if(colorRampSelected==1)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_fill2").style.visibility="visible";
+			document.getElementById('border').style.visibility="visible";
+			document.getElementById('border1').style.visibility="hidden";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_fill2").style.visibility="visible";
+			document.getElementById('border1').style.visibility="visible";
+			document.getElementById('border').style.visibility="hidden";
+		}
+	}
+else if(colorRampSelected==2)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_fill3").style.visibility="visible";
+			document.getElementById('border').style.visibility="visible";
+			document.getElementById('border1').style.visibility="hidden";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_fill3").style.visibility="visible";
+			document.getElementById('border1').style.visibility="visible";
+			document.getElementById('border').style.visibility="hidden";
+		}
+	}
+}
+
+
+
+
+function fill_classified(){
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = true;
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	
+	// document.getElementById('mangalore_streched1').style.visibility="hidden";
+	Symbolody=0;
+	// console.log(0)
+	// declare one variable equal to something
+	console.log(colorRampSelected);
+	document.getElementById('Mangmap1').style.visibility="hidden";
+	if(colorRampSelected==0)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore fill 1")
+				document.getElementById("mangalore_classified_fill1").style.visibility="visible";
+				document.getElementById("mangalore_Streched1").style.visibility="hidden";
+				document.getElementById('mangalore_Classified1').style.visibility="hidden";
+				document.getElementById("mangalore_streched_fill1").style.visibility="hidden";
+	
+				document.getElementById("fill_MClegend1").style.visibility="visible";
+				// document.getElementById("fill_CMgrid1").style.visibility="visible";
+				document.getElementById("fill_MSlegend1").style.visibility="hidden";
+				document.getElementById("fill_SMgrid1").style.visibility="hidden"
+				
+	
+				
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+				document.getElementById('border').style.visibility="hidden";
+				document.getElementById('border1').style.visibility="visible";
+				console.log("hi bangalore fill 1")
+				document.getElementById("fill_BClegend1").style.visibility="visible";
+				// document.getElementById("fill_CBgrid1").style.visibility="visible";
+				document.getElementById("fill_BSlegend1").style.visibility="hidden";
+				document.getElementById("fill_SBgrid1").style.visibility="hidden";
+				document.getElementById("bangalore_classified_fill1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_streched_fill1").style.visibility="hidden";
+
+				
+			}
+		}
+	else if(colorRampSelected==1)
+		{
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore fill 2")
+				document.getElementById("fill_MClegend2").style.visibility="visible";
+				// document.getElementById("fill_CMgrid2").style.visibility="visible";
+				document.getElementById("fill_MSlegend2").style.visibility="hidden";
+				document.getElementById("fill_SMgrid2").style.visibility="hidden";
+				document.getElementById("mangalore_classified_fill2").style.visibility="visible";
+				document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById('mangalore_Classified2').style.visibility="hidden";
+				// document.getElementById('mangalore_Classified2').style.visibility="hidden"
+				document.getElementById("mangalore_streched_fill2").style.visibility="hidden";
+				
+				
+	
+				
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore fill 2")
+				document.getElementById("fill_BClegend2").style.visibility="visible";
+				// document.getElementById("fill_CBgrid2").style.visibility="visible";
+				document.getElementById("fill_BSlegend2").style.visibility="hidden";
+				document.getElementById("fill_SBgrid2").style.visibility="hidden";
+				document.getElementById("bangalore_classified_fill2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_streched_fill2").style.visibility="hidden";
+
+				
+			}
+		}
+	else if(colorRampSelected==2)
+		{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore fill 3")
+				document.getElementById("fill_MClegend3").style.visibility="visible";
+				// document.getElementById("fill_CMgrid3").style.visibility="visible";
+				document.getElementById("fill_MSlegend3").style.visibility="hidden";
+				document.getElementById("fill_SMgrid3").style.visibility="hidden"
+				document.getElementById("mangalore_classified_fill3").style.visibility="visible";
+				document.getElementById("mangalore_Streched3").style.visibility="hidden";
+				document.getElementById('mangalore_Classified3').style.visibility="hidden";
+				document.getElementById("mangalore_streched_fill3").style.visibility="hidden";
+	
+				
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore fill 3")
+				document.getElementById("fill_BClegend3").style.visibility="visible";
+				// document.getElementById("fill_CBgrid3").style.visibility="visible";
+				document.getElementById("fill_BSlegend3").style.visibility="hidden";
+				document.getElementById("fill_SBgrid3").style.visibility="hidden";
+				document.getElementById("bangalore_classified_fill3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_streched_fill3").style.visibility="hidden";
+
+				
+			}
+		}
+}
+// symbology=1 streched
+function fill_streched(){
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = true;
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	Symbolody=1;
+	console.log(1)
+	document.getElementById("mangalore_Streched1").style.visibility="hidden";
+	if(colorRampSelected==0)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore fill 1")
+			document.getElementById("fill_MSlegend1").style.visibility="visible";
+			// document.getElementById("fill_SMgrid1").style.visibility="visible";
+			document.getElementById("mangalore_streched_fill1").style.visibility="visible";
+			document.getElementById("mangalore_Streched1").style.visibility="hidden";
+			document.getElementById('mangalore_Classified1').style.visibility="hidden";
+			document.getElementById("fill_MClegend1").style.visibility="hidden";
+			document.getElementById("fill_CMgrid1").style.visibility="hidden";
+			document.getElementById("mangalore_classified_fill1").style.visibility="hidden";
+
+			
+		}
+		   else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore fill 1")
+				document.getElementById("fill_BSlegend1").style.visibility="visible";
+				// document.getElementById("fill_SBgrid1").style.visibility="visible";
+				document.getElementById("fill_BClegend1").style.visibility="hidden";
+				document.getElementById("fill_CBgrid1").style.visibility="hidden"
+				document.getElementById("bangalore_streched_fill1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_classified_fill1").style.visibility="hidden";
+
+
+				
+		}
+	}
+	else if(colorRampSelected==1)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore fill 2")
+			document.getElementById("fill_MSlegend2").style.visibility="visible";
+			// document.getElementById("fill_SMgrid2").style.visibility="visible";
+			document.getElementById("fill_MClegend2").style.visibility="hidden";
+			document.getElementById("fill_CMgrid2").style.visibility="hidden"
+			document.getElementById("mangalore_streched_fill2").style.visibility="visible";
+			document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			document.getElementById('mangalore_Classified2').style.visibility="hidden";
+			document.getElementById("mangalore_classified_fill2").style.visibility="hidden";
+
+			
+			
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore fill 2")
+				document.getElementById("fill_BSlegend2").style.visibility="visible";
+				// document.getElementById("fill_SBgrid2").style.visibility="visible";
+				document.getElementById("fill_BClegend2").style.visibility="hidden";
+				document.getElementById("fill_CBgrid2").style.visibility="hidden"
+				document.getElementById("bangalore_streched_fill2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_classified_fill2").style.visibility="hidden";
+
+				
+		}
+	}
+	else if(colorRampSelected==2)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+		document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore fill 3")
+			document.getElementById("fill_MSlegend3").style.visibility="visible";
+			// document.getElementById("fill_SMgrid3").style.visibility="visible"
+			document.getElementById("fill_MClegend3").style.visibility="hidden";
+			document.getElementById("fill_CMgrid3").style.visibility="hidden"
+			document.getElementById("mangalore_streched_fill3").style.visibility="visible";
+			document.getElementById("mangalore_Streched3").style.visibility="hidden";
+			document.getElementById('mangalore_Classified3').style.visibility="hidden";
+			document.getElementById("mangalore_classified_fill3").style.visibility="hidden";
+
+
+			
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+		document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore fill 3")
+				document.getElementById("fill_BSlegend3").style.visibility="visible";
+				// document.getElementById("fill_SBgrid3").style.visibility="visible";
+				document.getElementById("fill_BClegend3").style.visibility="hidden";
+				document.getElementById("fill_CBgrid3").style.visibility="hidden"
+				document.getElementById("bangalore_streched_fill3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_classified_fill3").style.visibility="hidden";
+
+				
 		}
 	}
 }	
@@ -6223,10 +6432,14 @@ function selectFlowDirectionData(){
 	document.getElementById("WText1").style.visibility="visible";
 	document.getElementById("Wenter1").style.visibility="visible";
 	document.getElementById("Wdemo1").style.visibility="hidden";
+	document.getElementById("WText2").style.visibility="hidden";
 	// document.getElementById("enter").style.visibility="visible";
 }
 
 function flowDirection_Select(){
+	document.getElementById("DEM Derivatives").disabled = true;
+	document.getElementById('notification').style.visibility="visible";
+	document.getElementsByClassName("blinkText")[0].style.visibility="visible";
 	document.getElementById("WText1").style.visibility="hidden";
 	document.getElementById("Wenter1").style.visibility="hidden"
 	document.getElementById("Wdemo").style.visibility="hidden";
@@ -6261,39 +6474,9 @@ function flowDirection_Select(){
 	document.getElementById("flowdirection_button").style.backgroundColor="grey";
 	document.getElementById("stream_button").style.backgroundColor="white";
 	document.getElementById("watershed_button").style.backgroundColor="white";
-}
 
 
-function flowdirection_classified(){
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	// document.getElementById('mangalore_streched1').style.visibility="hidden";
-	Symbolody=0;
-	// console.log(0)
-	// declare one variable equal to something
-	console.log(colorRampSelected);
-	document.getElementById('Mangmap1').style.visibility="hidden";
-	if(colorRampSelected==0)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore flowDirection 1")
-				document.getElementById("mangalore_classified_flowDirection1").style.visibility="visible";
-				document.getElementById("mangalore_Streched1").style.visibility="hidden";
-				document.getElementById('mangalore_Classified1').style.visibility="hidden";
-				document.getElementById("flowDirection_MClegend1").style.visibility="visible";
-				// document.getElementById("flowDirection_CMgrid1").style.visibility="visible";
-				document.getElementById("flowDirection_MSlegend1").style.visibility="hidden";
-				document.getElementById("flowDirection_SMgrid1").style.visibility="hidden"
-				document.getElementById("mangalore_streched_flowDirection1").style.visibility="hidden";
-	
-				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+	document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 				document.getElementById("elevation_MClegend1").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid1").style.visibility="hidden";
 	
@@ -6353,25 +6536,6 @@ function flowdirection_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore flowDirection 1")
-				document.getElementById("flowDirection_BClegend1").style.visibility="visible";
-				// document.getElementById("flowDirection_CBgrid1").style.visibility="visible";
-				document.getElementById("flowDirection_BSlegend1").style.visibility="hidden";
-				document.getElementById("flowDirection_SBgrid1").style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowDirection1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="hidden";
-
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_streched_flowDirection1").style.visibility="hidden";
-
 
 				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_BClegend1").style.visibility="hidden";
@@ -6433,28 +6597,8 @@ function flowdirection_classified(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==1)
-		{
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore flowDirection 2")
-				document.getElementById("flowDirection_MClegend2").style.visibility="visible";
-				// document.getElementById("flowDirection_CMgrid2").style.visibility="visible";
-				document.getElementById("flowDirection_MSlegend2").style.visibility="hidden";
-				document.getElementById("flowDirection_SMgrid2").style.visibility="hidden";
-				document.getElementById("mangalore_classified_flowDirection2").style.visibility="visible";
-				document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById('mangalore_Classified2').style.visibility="hidden";
-				document.getElementById("mangalore_streched_flowDirection2").style.visibility="hidden";
-	
-				
-				document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+
+			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_MClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid2").style.visibility="hidden";
 	
@@ -6515,20 +6659,6 @@ function flowdirection_classified(){
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
 				
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore flowDirection 2")
-				document.getElementById("flowDirection_BClegend2").style.visibility="visible";
-				// document.getElementById("flowDirection_CBgrid2").style.visibility="visible";
-				document.getElementById("flowDirection_BSlegend2").style.visibility="hidden";
-				document.getElementById("flowDirection_SBgrid2").style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowDirection2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_streched_flowDirection2").style.visibility="hidden";
 
 				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_BClegend2").style.visibility="hidden";
@@ -6590,27 +6720,7 @@ function flowdirection_classified(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==2)
-		{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore flowDirection 3")
-				document.getElementById("flowDirection_MClegend3").style.visibility="visible";
-				// document.getElementById("flowDirection_CMgrid3").style.visibility="visible";
-				document.getElementById("flowDirection_MSlegend3").style.visibility="hidden";
-				document.getElementById("flowDirection_SMgrid3").style.visibility="hidden"
-				document.getElementById("mangalore_classified_flowDirection3").style.visibility="visible";
-				document.getElementById("mangalore_Streched3").style.visibility="hidden";
-				document.getElementById('mangalore_Classified3').style.visibility="hidden";
-				document.getElementById("mangalore_streched_flowDirection3").style.visibility="hidden";
-	
+
 				document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_MClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid3").style.visibility="hidden";
@@ -6671,22 +6781,7 @@ function flowdirection_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore flowDirection 3")
-				document.getElementById("flowDirection_BClegend3").style.visibility="visible";
-				// document.getElementById("flowDirection_CBgrid3").style.visibility="visible";
-				document.getElementById("flowDirection_BSlegend3").style.visibility="hidden";
-				document.getElementById("flowDirection_SBgrid3").style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowDirection3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_streched_flowDirection3").style.visibility="hidden";
 
-				
 				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid3").style.visibility="hidden";
@@ -6747,42 +6842,8 @@ function flowdirection_classified(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-}
-// symbology=1 streched
-function flowdirection_streched(){
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	Symbolody=1;
-	console.log(1)
-	document.getElementById("mangalore_Streched1").style.visibility="hidden";
-	if(colorRampSelected==0)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore flowDirection 1")
-			document.getElementById("flowDirection_MSlegend1").style.visibility="visible";
-			// document.getElementById("flowDirection_SMgrid1").style.visibility="visible";
-			document.getElementById("mangalore_streched_flowDirection1").style.visibility="visible";
-			document.getElementById("mangalore_Streched1").style.visibility="hidden";
-			document.getElementById('mangalore_Classified1').style.visibility="hidden";
-			// document.getElementById("flowDirection_MClegend1").style.visibility="hidden";
-			document.getElementById("flowDirection_CMgrid1").style.visibility="hidden";
-			document.getElementById("mangalore_classified_flowDirection1").style.visibility="hidden";
 
-
-
-			document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_MClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid1").style.visibility="hidden";
 
@@ -6842,22 +6903,8 @@ function flowdirection_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		   else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore flowDirection 1")
-				document.getElementById("flowDirection_BSlegend1").style.visibility="visible";
-				// document.getElementById("flowDirection_SBgrid1").style.visibility="visible";
-				document.getElementById("flowDirection_BClegend1").style.visibility="hidden";
-				document.getElementById("flowDirection_CBgrid1").style.visibility="hidden"
-				document.getElementById("bangalore_streched_flowDirection1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowDirection1").style.visibility="hidden";
 
-				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 				document.getElementById("elevation_BClegend1").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid1").style.visibility="hidden";
 	
@@ -6917,32 +6964,8 @@ function flowdirection_streched(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==1)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore flowDirection 2")
-			document.getElementById("flowDirection_MSlegend2").style.visibility="visible";
-			// document.getElementById("flowDirection_SMgrid2").style.visibility="visible";
-			document.getElementById("flowDirection_MClegend2").style.visibility="hidden";
-			document.getElementById("flowDirection_CMgrid2").style.visibility="hidden"
-			document.getElementById("mangalore_streched_flowDirection2").style.visibility="visible";
-			document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			document.getElementById('mangalore_Classified2').style.visibility="hidden";
-			document.getElementById("mangalore_classified_fill2").style.visibility="hidden";
-			// document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			
-			document.getElementById("mangalore_classified_flowDirection2").style.visibility="hidden";
 
-
-			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_MClegend2").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid2").style.visibility="hidden";
 
@@ -7002,23 +7025,8 @@ function flowdirection_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore flowDirection 2")
-				document.getElementById("flowDirection_BSlegend2").style.visibility="visible";
-				// document.getElementById("flowDirection_SBgrid2").style.visibility="visible";
-				document.getElementById("flowDirection_BClegend2").style.visibility="hidden";
-				document.getElementById("flowDirection_CBgrid2").style.visibility="hidden"
-				document.getElementById("bangalore_streched_flowDirection2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowDirection2").style.visibility="hidden";
 
-				
-				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_BClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid2").style.visibility="hidden";
 	
@@ -7078,29 +7086,8 @@ function flowdirection_streched(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==2)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore flowDirection 3")
-			document.getElementById("flowDirection_MSlegend3").style.visibility="visible";
-			// document.getElementById("flowDirection_SMgrid3").style.visibility="visible"
-			document.getElementById("flowDirection_MClegend3").style.visibility="hidden";
-			document.getElementById("flowDirection_CMgrid3").style.visibility="hidden"
-			document.getElementById("mangalore_streched_flowDirection3").style.visibility="visible";
-			document.getElementById("mangalore_Streched3").style.visibility="hidden";
-			document.getElementById('mangalore_Classified3').style.visibility="hidden";
-			document.getElementById("mangalore_classified_flowDirection3").style.visibility="hidden";
 
-			
-			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
+				document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 			document.getElementById("elevation_MClegend3").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid3").style.visibility="hidden";
 
@@ -7160,23 +7147,8 @@ function flowdirection_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore flowDirection 3")
-				document.getElementById("flowDirection_BSlegend3").style.visibility="visible";
-				// document.getElementById("flowDirection_SBgrid3").style.visibility="visible";
-				document.getElementById("flowDirection_BClegend3").style.visibility="hidden";
-				document.getElementById("flowDirection_CBgrid3").style.visibility="hidden"
-				document.getElementById("bangalore_streched_flowDirection3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById('bangalore_Classified3').style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowDirection3").style.visibility="hidden";
 
-				
-				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid3").style.visibility="hidden";
 	
@@ -7236,6 +7208,322 @@ function flowdirection_streched(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
+
+	if(colorRampSelected==0)
+	{
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_flowDirection1").style.visibility="visible";
+			document.getElementById('border').style.visibility="visible";
+			document.getElementById('border1').style.visibility="hidden";
+
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_flowDirection1").style.visibility="visible";
+			document.getElementById('border1').style.visibility="visible";
+			document.getElementById('border').style.visibility="hidden";
+		}
+	}
+else if(colorRampSelected==1)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_flowDirection2").style.visibility="visible";
+			document.getElementById('border').style.visibility="visible";
+			document.getElementById('border1').style.visibility="hidden";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_flowDirection2").style.visibility="visible";
+			document.getElementById('border1').style.visibility="visible";
+			document.getElementById('border').style.visibility="hidden";
+		}
+	}
+else if(colorRampSelected==2)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_flowDirection3").style.visibility="visible";
+			document.getElementById('border').style.visibility="visible";
+			document.getElementById('border1').style.visibility="hidden";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_flowDirection3").style.visibility="visible";
+			document.getElementById('border1').style.visibility="visible";
+			document.getElementById('border').style.visibility="hidden";
+		}
+	}
+}
+
+
+
+function flowdirection_classified(){
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = true;
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	// document.getElementById('mangalore_streched1').style.visibility="hidden";
+	Symbolody=0;
+	// console.log(0)
+	// declare one variable equal to something
+	console.log(colorRampSelected);
+	document.getElementById('Mangmap1').style.visibility="hidden";
+	if(colorRampSelected==0)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore flowDirection 1")
+				document.getElementById("mangalore_classified_flowDirection1").style.visibility="visible";
+				document.getElementById("mangalore_Streched1").style.visibility="hidden";
+				document.getElementById('mangalore_Classified1').style.visibility="hidden";
+				document.getElementById("flowDirection_MClegend1").style.visibility="visible";
+				// document.getElementById("flowDirection_CMgrid1").style.visibility="visible";
+				document.getElementById("flowDirection_MSlegend1").style.visibility="hidden";
+				document.getElementById("flowDirection_SMgrid1").style.visibility="hidden"
+				document.getElementById("mangalore_streched_flowDirection1").style.visibility="hidden";
+	
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore flowDirection 1")
+				document.getElementById("flowDirection_BClegend1").style.visibility="visible";
+				// document.getElementById("flowDirection_CBgrid1").style.visibility="visible";
+				document.getElementById("flowDirection_BSlegend1").style.visibility="hidden";
+				document.getElementById("flowDirection_SBgrid1").style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowDirection1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="hidden";
+
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_streched_flowDirection1").style.visibility="hidden";
+
+
+				
+			}
+		}
+	else if(colorRampSelected==1)
+		{
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore flowDirection 2")
+				document.getElementById("flowDirection_MClegend2").style.visibility="visible";
+				// document.getElementById("flowDirection_CMgrid2").style.visibility="visible";
+				document.getElementById("flowDirection_MSlegend2").style.visibility="hidden";
+				document.getElementById("flowDirection_SMgrid2").style.visibility="hidden";
+				document.getElementById("mangalore_classified_flowDirection2").style.visibility="visible";
+				document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById('mangalore_Classified2').style.visibility="hidden";
+				document.getElementById("mangalore_streched_flowDirection2").style.visibility="hidden";
+	
+				
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore flowDirection 2")
+				document.getElementById("flowDirection_BClegend2").style.visibility="visible";
+				// document.getElementById("flowDirection_CBgrid2").style.visibility="visible";
+				document.getElementById("flowDirection_BSlegend2").style.visibility="hidden";
+				document.getElementById("flowDirection_SBgrid2").style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowDirection2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_streched_flowDirection2").style.visibility="hidden";
+
+				
+			}
+		}
+	else if(colorRampSelected==2)
+		{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore flowDirection 3")
+				document.getElementById("flowDirection_MClegend3").style.visibility="visible";
+				// document.getElementById("flowDirection_CMgrid3").style.visibility="visible";
+				document.getElementById("flowDirection_MSlegend3").style.visibility="hidden";
+				document.getElementById("flowDirection_SMgrid3").style.visibility="hidden"
+				document.getElementById("mangalore_classified_flowDirection3").style.visibility="visible";
+				document.getElementById("mangalore_Streched3").style.visibility="hidden";
+				document.getElementById('mangalore_Classified3').style.visibility="hidden";
+				document.getElementById("mangalore_streched_flowDirection3").style.visibility="hidden";
+	
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore flowDirection 3")
+				document.getElementById("flowDirection_BClegend3").style.visibility="visible";
+				// document.getElementById("flowDirection_CBgrid3").style.visibility="visible";
+				document.getElementById("flowDirection_BSlegend3").style.visibility="hidden";
+				document.getElementById("flowDirection_SBgrid3").style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowDirection3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_streched_flowDirection3").style.visibility="hidden";
+
+				
+				
+			}
+		}
+}
+// symbology=1 streched
+function flowdirection_streched(){
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = true;
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	Symbolody=1;
+	console.log(1)
+	document.getElementById("mangalore_Streched1").style.visibility="hidden";
+	if(colorRampSelected==0)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore flowDirection 1")
+			document.getElementById("flowDirection_MSlegend1").style.visibility="visible";
+			// document.getElementById("flowDirection_SMgrid1").style.visibility="visible";
+			document.getElementById("mangalore_streched_flowDirection1").style.visibility="visible";
+			document.getElementById("mangalore_Streched1").style.visibility="hidden";
+			document.getElementById('mangalore_Classified1').style.visibility="hidden";
+			// document.getElementById("flowDirection_MClegend1").style.visibility="hidden";
+			document.getElementById("flowDirection_CMgrid1").style.visibility="hidden";
+			document.getElementById("mangalore_classified_flowDirection1").style.visibility="hidden";
+
+
+
+			
+		}
+		   else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore flowDirection 1")
+				document.getElementById("flowDirection_BSlegend1").style.visibility="visible";
+				// document.getElementById("flowDirection_SBgrid1").style.visibility="visible";
+				document.getElementById("flowDirection_BClegend1").style.visibility="hidden";
+				document.getElementById("flowDirection_CBgrid1").style.visibility="hidden"
+				document.getElementById("bangalore_streched_flowDirection1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowDirection1").style.visibility="hidden";
+
+				
+		}
+	}
+	else if(colorRampSelected==1)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore flowDirection 2")
+			document.getElementById("flowDirection_MSlegend2").style.visibility="visible";
+			// document.getElementById("flowDirection_SMgrid2").style.visibility="visible";
+			document.getElementById("flowDirection_MClegend2").style.visibility="hidden";
+			document.getElementById("flowDirection_CMgrid2").style.visibility="hidden"
+			document.getElementById("mangalore_streched_flowDirection2").style.visibility="visible";
+			document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			document.getElementById('mangalore_Classified2').style.visibility="hidden";
+			document.getElementById("mangalore_classified_fill2").style.visibility="hidden";
+			// document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			
+			document.getElementById("mangalore_classified_flowDirection2").style.visibility="hidden";
+
+
+			
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore flowDirection 2")
+				document.getElementById("flowDirection_BSlegend2").style.visibility="visible";
+				// document.getElementById("flowDirection_SBgrid2").style.visibility="visible";
+				document.getElementById("flowDirection_BClegend2").style.visibility="hidden";
+				document.getElementById("flowDirection_CBgrid2").style.visibility="hidden"
+				document.getElementById("bangalore_streched_flowDirection2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowDirection2").style.visibility="hidden";
+
+				
+				
+		}
+	}
+	else if(colorRampSelected==2)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore flowDirection 3")
+			document.getElementById("flowDirection_MSlegend3").style.visibility="visible";
+			// document.getElementById("flowDirection_SMgrid3").style.visibility="visible"
+			document.getElementById("flowDirection_MClegend3").style.visibility="hidden";
+			document.getElementById("flowDirection_CMgrid3").style.visibility="hidden"
+			document.getElementById("mangalore_streched_flowDirection3").style.visibility="visible";
+			document.getElementById("mangalore_Streched3").style.visibility="hidden";
+			document.getElementById('mangalore_Classified3').style.visibility="hidden";
+			document.getElementById("mangalore_classified_flowDirection3").style.visibility="hidden";
+
+			
+			
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore flowDirection 3")
+				document.getElementById("flowDirection_BSlegend3").style.visibility="visible";
+				// document.getElementById("flowDirection_SBgrid3").style.visibility="visible";
+				document.getElementById("flowDirection_BClegend3").style.visibility="hidden";
+				document.getElementById("flowDirection_CBgrid3").style.visibility="hidden"
+				document.getElementById("bangalore_streched_flowDirection3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById('bangalore_Classified3').style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowDirection3").style.visibility="hidden";
+
+				
+				
 		}
 	}
 }
@@ -7338,46 +7626,21 @@ function selectFlowAccumulationData(){
 	document.getElementById("Wdemo").style.visibility="hidden";
 	document.getElementById("Wdemo1").style.visibility="hidden";
 	document.getElementById("Wdemo2").style.visibility="hidden";
+	document.getElementById("WText1").style.visibility="hidden";
+	
 	// document.getElementById("enter").style.visibility="visible";
 }
 
 function flowAccumulation_Select(){
-	
-	// document.getElementById("mangalore_classified_flowDirection1").style.visibility="hidden";
-	
-	// document.getElementById("mangalore_classified_flowDirection2").style.visibility="hidden";
-	// document.getElementById("mangalore_classified_flowDirection3").style.visibility="hidden";
-	// document.getElementById("bangalore_classified_flowDirection1").style.visibility="hidden";
-	// document.getElementById("bangalore_classified_flowDirection2").style.visibility="hidden";
-	// document.getElementById("bangalore_classified_flowDirection3").style.visibility="hidden";
-	
-
-	// document.getElementById("flowDirection_BSlegend1").style.visibility="hidden";
-	// document.getElementById("flowDirection_BSlegend2").style.visibility="hidden";
-	// document.getElementById("flowDirection_BSlegend3").style.visibility="hidden";
-	// document.getElementById("flowDirection_SBgrid1").style.visibility="hidden";
-	// document.getElementById("flowDirection_SBgrid2").style.visibility="hidden";
-	// document.getElementById("flowDirection_SBgrid3").style.visibility="hidden";
-	
+	document.getElementById("DEM Derivatives").disabled = true;
+	document.getElementById('notification').style.visibility="visible";
+	document.getElementsByClassName("blinkText")[0].style.visibility="visible";
 	document.getElementById("WText1").style.visibility="hidden";
 	document.getElementById("WText").style.visibility="hidden";
+	document.getElementById('text').style.visibility="hidden"
 	document.getElementById("Wenter1").style.visibility="hidden";
 	document.getElementById("Wenter").style.visibility="hidden";
 	
-	document.getElementById("mangalore_streched_flowDirection1").style.visibility="hidden";
-	document.getElementById("flowDirection_BClegend1").style.visibility="hidden";
-	document.getElementById("flowDirection_CBgrid1").style.visibility="hidden";
-	document.getElementById("mangalore_streched_flowDirection2").style.visibility="hidden";
-	document.getElementById("flowDirection_BClegend2").style.visibility="hidden";
-	document.getElementById("flowDirection_CBgrid2").style.visibility="hidden";
-	document.getElementById("mangalore_streched_flowDirection3").style.visibility="hidden";
-	document.getElementById("flowDirection_BClegend3").style.visibility="hidden";
-	document.getElementById("flowDirection_CBgrid3").style.visibility="hidden";
-
-	document.getElementById("bangalore_streched_flowDirection1").style.visibility="hidden";
-	document.getElementById("bangalore_streched_flowDirection2").style.visibility="hidden";
-	document.getElementById("bangalore_streched_flowDirection3").style.visibility="hidden";
-
 	document.getElementById("watershed_ButtonBasin1_mangalore").style.visibility="hidden";
 	document.getElementById("watershed_ButtonBasin2_mangalore").style.visibility="hidden";
 
@@ -7387,6 +7650,7 @@ function flowAccumulation_Select(){
 
 	document.getElementById("WText2").style.visibility="hidden";
 	document.getElementById("Wenter2").style.visibility="hidden";
+	document.getElementById("text").style.visibility="hidden";
 	document.getElementsByClassName("blink1")[0].style.visibility="hidden";
 
 	document.getElementById('slope_classified').style.visibility="hidden";
@@ -7403,11 +7667,12 @@ function flowAccumulation_Select(){
 	document.getElementById('fill_classified').style.visibility="hidden";
 	document.getElementById('fill_streched').style.visibility="hidden";
 
-	document.getElementById('flowdirection_classified').style.visibility="hidden";
-	document.getElementById('flowdirection_streched').style.visibility="hidden";
+	// document.getElementById('flowdirection_classified').style.visibility="hidden";
+	// document.getElementById('flowdirection_streched').style.visibility="hidden";
 
 	document.getElementById('flowaccumulation_classified').style.visibility="visible";
 	document.getElementById('flowaccumulation_streched').style.visibility="visible";
+	document.getElementById('text').style.visibility="visible";
 
 	document.getElementById("Elavation_button").style.backgroundColor="white";
 	document.getElementById("slope_button").style.backgroundColor="white";
@@ -7420,44 +7685,7 @@ function flowAccumulation_Select(){
 	document.getElementById("watershed_button").style.backgroundColor="white";
 
 
-}
-
-function flowaccumulation_classified(){
-	document.getElementById("stream_button").disabled = false;
-	document.getElementById("flowdirection_button").disabled = true;
-	document.getElementById("fill_button").disabled = true;
-	
-	document.getElementById("watershed_button").disabled = false;
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	// document.getElementById('mangalore_streched1').style.visibility="hidden";
-	Symbolody=0;
-	// console.log(0)
-	// declare one variable equal to something
-	console.log(colorRampSelected);
-	document.getElementById('Mangmap1').style.visibility="hidden";
-	if(colorRampSelected==0)
-		{
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore flowAccumulation 1")
-				document.getElementById("mangalore_classified_flowAccumulation1").style.visibility="visible";
-				document.getElementById("mangalore_Streched1").style.visibility="hidden";
-				document.getElementById('mangalore_Classified1').style.visibility="hidden";
-				document.getElementById("flowAccumulation_MClegend1").style.visibility="visible";
-				// document.getElementById("flowAccumulation_CMgrid1").style.visibility="visible";
-				document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
-				document.getElementById("flowAccumulation_SMgrid1").style.visibility="hidden"
-				document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="hidden";
-	
-				
-				document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
+	document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 				document.getElementById("elevation_MClegend1").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid1").style.visibility="hidden";
 	
@@ -7518,23 +7746,8 @@ function flowaccumulation_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore flowAccumulation 1")
-				document.getElementById("flowAccumulation_BClegend1").style.visibility="visible";
-				// document.getElementById("flowAccumulation_CBgrid1").style.visibility="visible";
-				document.getElementById("flowAccumulation_BSlegend1").style.visibility="hidden";
-				document.getElementById("flowAccumulation_SBgrid1").style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowAccumulation1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_streched_flowAccumulation1").style.visibility="hidden";
 
-				
-			document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
+				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_BClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid1").style.visibility="hidden";
 
@@ -7595,29 +7808,8 @@ function flowaccumulation_classified(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			
-			}
-		}
-	else if(colorRampSelected==1)
-		{
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore flowAccumulation 2")
-				document.getElementById("flowAccumulation_MClegend2").style.visibility="visible";
-				// document.getElementById("flowAccumulation_CMgrid2").style.visibility="visible";
-				document.getElementById("flowAccumulation_MSlegend2").style.visibility="hidden";
-				document.getElementById("flowAccumulation_SMgrid2").style.visibility="hidden";
-				document.getElementById("mangalore_classified_flowAccumulation2").style.visibility="visible";
-				document.getElementById("mangalore_Streched2").style.visibility="hidden";
-				document.getElementById('mangalore_Classified2').style.visibility="hidden";
-				document.getElementById("mangalore_streched_flowAccumulation2").style.visibility="hidden";
-	
-				
-				document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
+
+			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 				document.getElementById("elevation_MClegend2").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid2").style.visibility="hidden";
 	
@@ -7678,19 +7870,16 @@ function flowaccumulation_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-				
-			}
-		else if(mapChoosen==1)
-			{
+			
 				document.getElementById('border1').style.visibility="visible";
 				document.getElementById('border').style.visibility="hidden";
 			// document.getElementById("bangalore_Classified1").style.visibility="hidden";
 			console.log("hi bangalore flowAccumulation 2")
-				document.getElementById("flowAccumulation_BClegend2").style.visibility="visible";
+				// document.getElementById("flowAccumulation_BClegend2").style.visibility="visible";
 				// document.getElementById("flowAccumulation_CBgrid2").style.visibility="visible";
 				document.getElementById("flowAccumulation_BSlegend2").style.visibility="hidden";
 				document.getElementById("flowAccumulation_SBgrid2").style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="visible";
+				// document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="visible";
 				document.getElementById("bangalore_Streched2").style.visibility="hidden";
 				document.getElementById('bangalore_Classified2').style.visibility="hidden";
 				document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="hidden";
@@ -7756,28 +7945,8 @@ function flowaccumulation_classified(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-	else if(colorRampSelected==2)
-		{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-			{
-				document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-				console.log("hi mangalore flowAccumulation 3")
-				document.getElementById("flowAccumulation_MClegend3").style.visibility="visible";
-				// document.getElementById("flowAccumulation_CMgrid3").style.visibility="visible";
-				document.getElementById("flowAccumulation_MSlegend3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_SMgrid3").style.visibility="hidden"
-				document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="visible";
-				document.getElementById("mangalore_Streched3").style.visibility="hidden";
-				document.getElementById('mangalore_Classified3').style.visibility="hidden";
-				document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="hidden";
-	
-				document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
+
+			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_MClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CMgrid3").style.visibility="hidden";
 	
@@ -7838,21 +8007,6 @@ function flowaccumulation_classified(){
 				document.getElementById("mangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 				document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-				
-			}
-		else if(mapChoosen==1)
-			{
-				document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-				console.log("hi bangalore flowAccumulation 3")
-				document.getElementById("flowAccumulation_BClegend3").style.visibility="visible";
-				// document.getElementById("flowAccumulation_CBgrid3").style.visibility="visible";
-				document.getElementById("flowAccumulation_BSlegend3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_SBgrid3").style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowAccumulation3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById("bangalore_Classified3").style.visibility="hidden";
-				document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="hidden";
 
 				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 			document.getElementById("elevation_BClegend3").style.visibility="hidden";
@@ -7915,45 +8069,7 @@ function flowaccumulation_classified(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-			}
-		}
-}
-// symbology=1 streched
-function flowaccumulation_streched(){
-	document.getElementById("stream_button").disabled = false;
-	// document.getElementById("stream_button").disabled = false;
-	document.getElementById("flowdirection_button").disabled = true;
-	document.getElementById("fill_button").disabled = true;
-	document.getElementById("watershed_button").disabled = false;
-	document.getElementById("select1").style.visibility="hidden";
-	document.getElementById('note3').style.visibility="hidden";
-	document.getElementById("DEM Derivatives").disabled = false;
-	document.getElementById("watershed Delination").disabled = false;
-	document.getElementById("colorSelection").disabled = true;
-	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-	Symbolody=1;
-	console.log(1)
-	document.getElementById("mangalore_Streched1").style.visibility="hidden";
-	if(colorRampSelected==0)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore flowAccumulation 1")
-			document.getElementById("flowAccumulation_MSlegend1").style.visibility="visible";
-			// document.getElementById("flowAccumulation_SMgrid1").style.visibility="visible";
-			document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="visible";
-			document.getElementById("mangalore_Streched1").style.visibility="hidden";
-			document.getElementById('mangalore_Classified1').style.visibility="hidden";
-			document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CMgrid1").style.visibility="hidden";
-			document.getElementById("mangalore_classified_flowAccumulation1").style.visibility="hidden";
 
-			
 			document.getElementById("mangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_MClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid1").style.visibility="hidden";
@@ -8015,22 +8131,8 @@ function flowaccumulation_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		   else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore flowAccumulation 1")
-				document.getElementById("flowAccumulation_BSlegend1").style.visibility="visible";
-				// document.getElementById("flowAccumulation_SBgrid1").style.visibility="visible";
-				document.getElementById("flowAccumulation_BClegend1").style.visibility="hidden";
-				document.getElementById("flowAccumulation_CBgrid1").style.visibility="hidden"
-				document.getElementById("bangalore_streched_flowAccumulation1").style.visibility="visible";
-				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowAccumulation1").style.visibility="hidden";
 
-				document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation1").style.visibility="hidden";
 			document.getElementById("elevation_BClegend1").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid1").style.visibility="hidden";
 
@@ -8091,26 +8193,6 @@ function flowaccumulation_streched(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==1)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore flowAccumulation 2")
-			document.getElementById("flowAccumulation_MSlegend2").style.visibility="visible";
-			// document.getElementById("flowAccumulation_SMgrid2").style.visibility="visible";
-			document.getElementById("flowAccumulation_MClegend2").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CMgrid2").style.visibility="hidden"
-			document.getElementById("mangalore_streched_flowAccumulation2").style.visibility="visible";
-			document.getElementById("mangalore_Streched2").style.visibility="hidden";
-			document.getElementById('mangalore_Classified2').style.visibility="hidden";
-			document.getElementById("mangalore_classified_flowAccumulation2").style.visibility="hidden";
 
 			document.getElementById("mangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_MClegend2").style.visibility="hidden";
@@ -8173,22 +8255,9 @@ function flowaccumulation_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore flowAccumulation 2")
-				document.getElementById("flowAccumulation_BSlegend2").style.visibility="visible";
-				// document.getElementById("flowAccumulation_SBgrid2").style.visibility="visible";
-				document.getElementById("flowAccumulation_BClegend2").style.visibility="hidden";
-				document.getElementById("flowAccumulation_CBgrid2").style.visibility="hidden"
-				document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="visible";
-				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="hidden";
+			
 
-				document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation2").style.visibility="hidden";
 			document.getElementById("elevation_BClegend2").style.visibility="hidden";
 			document.getElementById("elevation_CBgrid2").style.visibility="hidden";
 
@@ -8249,27 +8318,8 @@ function flowaccumulation_streched(){
 			document.getElementById("bangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Blegend1").style.visibility="hidden";
 			document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
-		}
-	}
-	else if(colorRampSelected==2)
-	{
-		document.getElementById('Mangmap3').style.visibility="hidden";
-		document.getElementById('Mangmap2').style.visibility="hidden";
-		document.getElementById('Mangmap1').style.visibility="hidden";
-		if(mapChoosen==0)
-		{
-			document.getElementById('border').style.visibility="visible";
-				document.getElementById('border1').style.visibility="hidden";
-			console.log("helllo mangalore flowAccumulation 3")
-			document.getElementById("flowAccumulation_MSlegend3").style.visibility="visible";
-			// document.getElementById("flowAccumulation_SMgrid3").style.visibility="visible"
-			document.getElementById("flowAccumulation_MClegend3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CMgrid3").style.visibility="hidden"
-			document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="visible";
-			document.getElementById("mangalore_Streched3").style.visibility="hidden";
-			document.getElementById('mangalore_Classified3').style.visibility="hidden";
-			document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="hidden";
 
+			
 			document.getElementById("mangalore_classified_elevation3").style.visibility="hidden";
 			document.getElementById("elevation_MClegend3").style.visibility="hidden";
 			document.getElementById("elevation_CMgrid3").style.visibility="hidden";
@@ -8331,22 +8381,8 @@ function flowaccumulation_streched(){
 			document.getElementById("mangalore_watershed").style.visibility="hidden";
 			document.getElementById("watershed_Mlegend1").style.visibility="hidden";
 			document.getElementById("watershed_Manglore_streamNetwork").style.visibility="hidden";
-		}
-		else if(mapChoosen==1)
-		{
-			document.getElementById('border1').style.visibility="visible";
-				document.getElementById('border').style.visibility="hidden";
-			console.log("hello bangalore flowAccumulation 3")
-				document.getElementById("flowAccumulation_BSlegend3").style.visibility="visible";
-				// document.getElementById("flowAccumulation_SBgrid3").style.visibility="visible";
-				document.getElementById("flowAccumulation_BClegend3").style.visibility="hidden";
-				document.getElementById("flowAccumulation_CBgrid3").style.visibility="hidden"
-				document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="visible";
-				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-				document.getElementById("bangalore_Classified3").style.visibility="hidden";
-				document.getElementById("bangalore_classified_flowAccumulation3").style.visibility="hidden";
 
-				document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
+			document.getElementById("bangalore_classified_elevation3").style.visibility="hidden";
 				document.getElementById("elevation_BClegend3").style.visibility="hidden";
 				document.getElementById("elevation_CBgrid3").style.visibility="hidden";
 	
@@ -8407,6 +8443,319 @@ function flowaccumulation_streched(){
 				document.getElementById("bangalore_watershed").style.visibility="hidden";
 				document.getElementById("watershed_Blegend1").style.visibility="hidden";
 				document.getElementById("watershed_Bangalore_streamNetwork").style.visibility="hidden";
+	if(colorRampSelected==0)
+	{
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="visible";
+			document.getElementById('border').style.visibility="visible";
+			document.getElementById('border1').style.visibility="hidden";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_flowAccumulation1").style.visibility="visible";
+			document.getElementById('border1').style.visibility="visible";
+			document.getElementById('border').style.visibility="hidden";
+		}
+	}
+else if(colorRampSelected==1)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_flowAccumulation2").style.visibility="visible";
+			document.getElementById('border').style.visibility="visible";
+			document.getElementById('border1').style.visibility="hidden";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="visible";
+			document.getElementById('border1').style.visibility="visible";
+			document.getElementById('border').style.visibility="hidden";
+		}
+	}
+else if(colorRampSelected==2)
+	{
+	
+	if(mapChoosen==0)
+		{
+			document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="visible";
+			document.getElementById('border').style.visibility="visible";
+			document.getElementById('border1').style.visibility="hidden";
+		}
+	else if(mapChoosen==1)
+		{
+			document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="visible";
+			document.getElementById('border1').style.visibility="visible";
+			document.getElementById('border').style.visibility="hidden";
+		}
+	}
+}
+
+
+
+
+
+
+function flowaccumulation_classified(){
+	document.getElementById("stream_button").disabled = false;
+	document.getElementById("flowdirection_button").disabled = true;
+	document.getElementById("fill_button").disabled = true;
+	
+	document.getElementById("watershed_button").disabled = false;
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = true;
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	// document.getElementById('mangalore_streched1').style.visibility="hidden";
+	Symbolody=0;
+	// console.log(0)
+	// declare one variable equal to something
+	console.log(colorRampSelected);
+	document.getElementById('Mangmap1').style.visibility="hidden";
+	if(colorRampSelected==0)
+		{
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore flowAccumulation 1")
+				document.getElementById("mangalore_classified_flowAccumulation1").style.visibility="visible";
+				document.getElementById("mangalore_Streched1").style.visibility="hidden";
+				document.getElementById('mangalore_Classified1').style.visibility="hidden";
+				document.getElementById("flowAccumulation_MClegend1").style.visibility="visible";
+				// document.getElementById("flowAccumulation_CMgrid1").style.visibility="visible";
+				document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SMgrid1").style.visibility="hidden"
+				document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="hidden";
+	
+				
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore flowAccumulation 1")
+				document.getElementById("flowAccumulation_BClegend1").style.visibility="visible";
+				// document.getElementById("flowAccumulation_CBgrid1").style.visibility="visible";
+				document.getElementById("flowAccumulation_BSlegend1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SBgrid1").style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowAccumulation1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_streched_flowAccumulation1").style.visibility="hidden";
+
+				
+			
+			}
+		}
+	else if(colorRampSelected==1)
+		{
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore flowAccumulation 2")
+				document.getElementById("flowAccumulation_MClegend2").style.visibility="visible";
+				// document.getElementById("flowAccumulation_CMgrid2").style.visibility="visible";
+				document.getElementById("flowAccumulation_MSlegend2").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SMgrid2").style.visibility="hidden";
+				document.getElementById("mangalore_classified_flowAccumulation2").style.visibility="visible";
+				document.getElementById("mangalore_Streched2").style.visibility="hidden";
+				document.getElementById('mangalore_Classified2').style.visibility="hidden";
+				document.getElementById("mangalore_streched_flowAccumulation2").style.visibility="hidden";
+	}
+	else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore flowAccumulation 1")
+				document.getElementById("flowAccumulation_BClegend2").style.visibility="visible";
+				// document.getElementById("flowAccumulation_CBgrid1").style.visibility="visible";
+				document.getElementById("flowAccumulation_BSlegend2").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SBgrid2").style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_streched_flowAccumulation").style.visibility="hidden";
+
+				
+			
+			}
+		}
+	else if(colorRampSelected==2)
+		{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+			{
+				document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+				console.log("hi mangalore flowAccumulation 3")
+				document.getElementById("flowAccumulation_MClegend3").style.visibility="visible";
+				// document.getElementById("flowAccumulation_CMgrid3").style.visibility="visible";
+				document.getElementById("flowAccumulation_MSlegend3").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SMgrid3").style.visibility="hidden"
+				document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="visible";
+				document.getElementById("mangalore_Streched3").style.visibility="hidden";
+				document.getElementById('mangalore_Classified3').style.visibility="hidden";
+				document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="hidden";
+	
+				
+				
+			}
+		else if(mapChoosen==1)
+			{
+				document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+				console.log("hi bangalore flowAccumulation 3")
+				document.getElementById("flowAccumulation_BClegend3").style.visibility="visible";
+				// document.getElementById("flowAccumulation_CBgrid3").style.visibility="visible";
+				document.getElementById("flowAccumulation_BSlegend3").style.visibility="hidden";
+				document.getElementById("flowAccumulation_SBgrid3").style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowAccumulation3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById("bangalore_Classified3").style.visibility="hidden";
+				document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="hidden";
+
+				
+			}
+		}
+}
+// symbology=1 streched
+function flowaccumulation_streched(){
+	document.getElementById("stream_button").disabled = false;
+	// document.getElementById("stream_button").disabled = false;
+	document.getElementById("flowdirection_button").disabled = true;
+	document.getElementById("fill_button").disabled = true;
+	document.getElementById("watershed_button").disabled = false;
+	document.getElementById("select1").style.visibility="hidden";
+	document.getElementById('note3').style.visibility="hidden";
+	document.getElementById("DEM Derivatives").disabled = true;
+	// document.getElementById("watershed Delination").disabled = false;
+	document.getElementById("colorSelection").disabled = true;
+	document.getElementsByClassName("blink")[0].style.visibility="hidden";
+	Symbolody=1;
+	console.log(1)
+	document.getElementById("mangalore_Streched1").style.visibility="hidden";
+	if(colorRampSelected==0)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore flowAccumulation 1")
+			document.getElementById("flowAccumulation_MSlegend1").style.visibility="visible";
+			// document.getElementById("flowAccumulation_SMgrid1").style.visibility="visible";
+			document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="visible";
+			document.getElementById("mangalore_Streched1").style.visibility="hidden";
+			document.getElementById('mangalore_Classified1').style.visibility="hidden";
+			document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
+			document.getElementById("flowAccumulation_CMgrid1").style.visibility="hidden";
+			document.getElementById("mangalore_classified_flowAccumulation1").style.visibility="hidden";
+
+			
+			
+		}
+		   else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore flowAccumulation 1")
+				document.getElementById("flowAccumulation_BSlegend1").style.visibility="visible";
+				// document.getElementById("flowAccumulation_SBgrid1").style.visibility="visible";
+				document.getElementById("flowAccumulation_BClegend1").style.visibility="hidden";
+				document.getElementById("flowAccumulation_CBgrid1").style.visibility="hidden"
+				document.getElementById("bangalore_streched_flowAccumulation1").style.visibility="visible";
+				document.getElementById("bangalore_Streched1").style.visibility="hidden";
+				document.getElementById('bangalore_Classified1').style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowAccumulation1").style.visibility="hidden";
+
+				
+		}
+	}
+	else if(colorRampSelected==1)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore flowAccumulation 2")
+			document.getElementById("flowAccumulation_MSlegend2").style.visibility="visible";
+			// document.getElementById("flowAccumulation_SMgrid2").style.visibility="visible";
+			document.getElementById("flowAccumulation_MClegend2").style.visibility="hidden";
+			document.getElementById("flowAccumulation_CMgrid2").style.visibility="hidden"
+			document.getElementById("mangalore_streched_flowAccumulation2").style.visibility="visible";
+			document.getElementById("mangalore_Streched2").style.visibility="hidden";
+			document.getElementById('mangalore_Classified2').style.visibility="hidden";
+			document.getElementById("mangalore_classified_flowAccumulation2").style.visibility="hidden";
+
+			
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore flowAccumulation 2")
+				document.getElementById("flowAccumulation_BSlegend2").style.visibility="visible";
+				// document.getElementById("flowAccumulation_SBgrid2").style.visibility="visible";
+				document.getElementById("flowAccumulation_BClegend2").style.visibility="hidden";
+				document.getElementById("flowAccumulation_CBgrid2").style.visibility="hidden"
+				document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="visible";
+				document.getElementById("bangalore_Streched2").style.visibility="hidden";
+				document.getElementById('bangalore_Classified2').style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="hidden";
+
+				
+		}
+	}
+	else if(colorRampSelected==2)
+	{
+		document.getElementById('Mangmap3').style.visibility="hidden";
+		document.getElementById('Mangmap2').style.visibility="hidden";
+		document.getElementById('Mangmap1').style.visibility="hidden";
+		if(mapChoosen==0)
+		{
+			document.getElementById('border').style.visibility="visible";
+				document.getElementById('border1').style.visibility="hidden";
+			console.log("helllo mangalore flowAccumulation 3")
+			document.getElementById("flowAccumulation_MSlegend3").style.visibility="visible";
+			// document.getElementById("flowAccumulation_SMgrid3").style.visibility="visible"
+			document.getElementById("flowAccumulation_MClegend3").style.visibility="hidden";
+			document.getElementById("flowAccumulation_CMgrid3").style.visibility="hidden"
+			document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="visible";
+			document.getElementById("mangalore_Streched3").style.visibility="hidden";
+			document.getElementById('mangalore_Classified3').style.visibility="hidden";
+			document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="hidden";
+
+		}
+		else if(mapChoosen==1)
+		{
+			document.getElementById('border1').style.visibility="visible";
+				document.getElementById('border').style.visibility="hidden";
+			console.log("hello bangalore flowAccumulation 3")
+				document.getElementById("flowAccumulation_BSlegend3").style.visibility="visible";
+				// document.getElementById("flowAccumulation_SBgrid3").style.visibility="visible";
+				document.getElementById("flowAccumulation_BClegend3").style.visibility="hidden";
+				document.getElementById("flowAccumulation_CBgrid3").style.visibility="hidden"
+				document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="visible";
+				document.getElementById("bangalore_Streched3").style.visibility="hidden";
+				document.getElementById("bangalore_Classified3").style.visibility="hidden";
+				document.getElementById("bangalore_classified_flowAccumulation3").style.visibility="hidden";
+
+				
 		}
 	}
 }
@@ -8500,6 +8849,10 @@ function flowAccumulationBS3a(){
 
 function streamNetwork_Select()
 {
+	document.getElementById("DEM Derivatives").disabled = true;
+	document.getElementById('notification').style.visibility="hidden";
+	document.getElementById('flowdirection_streched').style.visibility="hidden";
+	document.getElementById('flowdirection_classified').style.visibility="hidden";
 	if(colorRampSelected==0)
 	{
 		
@@ -8958,6 +9311,12 @@ function streamNetworkMC1(){
 	document.getElementById('mangalore_streamNetwork').style.visibility="visible";
 	document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
 	document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
+	document.getElementById("text").style.visibility="hidden";
+	document.getElementById("flowaccumulation_classified").style.visibility="hidden";
+	document.getElementById("flowaccumulation_streched").style.visibility="hidden";
+	document.getElementsByClassName("blinkText")[0].style.visibility="hidden";
+	
+	
 	
 }
 function streamNetworkMC1a(){
@@ -8965,6 +9324,11 @@ function streamNetworkMC1a(){
 	document.getElementById('mangalore_streamNetwork').style.visibility="hidden";
 	document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
 	document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
+	document.getElementById("text").style.visibility="hidden";
+	document.getElementById("flowaccumulation_classified").style.visibility="hidden";
+	document.getElementById("flowaccumulation_streched").style.visibility="hidden";
+	document.getElementsByClassName("blinkText")[0].style.visibility="hidden";
+	
 }
 
 function streamNetworkBC2(){
@@ -8972,23 +9336,46 @@ function streamNetworkBC2(){
 	document.getElementById('bangalore_streamNetwork').style.visibility="visible";
 	document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
 	document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
+	document.getElementById("text").style.visibility="hidden";
+	document.getElementById("flowaccumulation_classified").style.visibility="hidden";
+	document.getElementById("flowaccumulation_streched").style.visibility="hidden";
+	document.getElementsByClassName("blinkText")[0].style.visibility="hidden";
 }
 function streamNetworkBC2a(){
 	document.getElementById('streamNetwork_CBgrid1').style.visibility="hidden";
 	document.getElementById('bangalore_streamNetwork').style.visibility="hidden";
 	document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
 	document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
+	document.getElementById("text").style.visibility="hidden";
+	document.getElementById("flowaccumulation_classified").style.visibility="hidden";
+	document.getElementById("flowaccumulation_streched").style.visibility="hidden";
+	document.getElementsByClassName("blinkText")[0].style.visibility="hidden";
 }
 
 
 
 function watershed_Select()
 {
+	document.getElementById("DEM Derivatives").disabled = true;
+	document.getElementById('watershed_Bsubbasin1').style.visibility="hidden";
+	document.getElementById('watershed_Bsubbasinlegend1').style.visibility="hidden";
+	document.getElementById('watershed_Bsubbasin1_withriver').style.visibility="hidden";
+
+	document.getElementById('watershed_Bsubbasin2').style.visibility="hidden";
+	document.getElementById('watershed_Bsubbasinlegend2').style.visibility="hidden";
+	document.getElementById('watershed_Bsubbasin2_withriver').style.visibility="hidden";
+
+	document.getElementById('watershed_Bsubbasin3').style.visibility="hidden";
+	document.getElementById('watershed_Bsubbasinlegend3').style.visibility="hidden";
+	document.getElementById('watershed_Bsubbasin3_withriver').style.visibility="hidden";
+
+	document.getElementById('notification').style.visibility="hidden";
 	document.getElementById("fill_button").disabled = true;
 	document.getElementById("flowdirection_button").disabled = true;
 	document.getElementById("flowaccumulation_button").disabled = true;
 	document.getElementById("stream_button").disabled = true;
 	document.getElementById("DEM Derivatives").disabled = true;
+	// document.getElementById("watershed_button").disabled = true;
 	document.getElementById('suggestions').style.visibility="visible";
 
 	document.getElementById('watershed_Mbasin1').style.visibility="hidden";
@@ -9008,6 +9395,15 @@ function watershed_Select()
 	document.getElementById('watershed_Bbasin1').style.visibility="hidden";
 	document.getElementById('watershed_Bsubbasin3').style.visibility="hidden";
 	
+	document.getElementById('SubbasinInstruction1').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction3').style.visibility="hidden";
+
+	document.getElementById('Instruction1').style.visibility="hidden";
+	document.getElementById('Instruction2').style.visibility="hidden";
+	document.getElementById('Instruction3').style.visibility="hidden";
+	
+
 	document.getElementById('watershed_Bbasin2').style.visibility="hidden";
 	document.getElementById('watershed_Bbasin3').style.visibility="hidden";
 	
@@ -9032,6 +9428,7 @@ function watershed_Select()
 
 	document.getElementById('flowaccumulation_classified').style.visibility="hidden";
 	document.getElementById('flowaccumulation_streched').style.visibility="hidden";
+	
 	
 	// document.getElementById('blink1').style.visibility="hidden";
 	
@@ -9081,6 +9478,7 @@ function watershed_Select()
 			document.getElementById('watershed_ButtonBasin1_mangalore').style.visibility="visible";
 			document.getElementById('watershed_Button1_mangalore').style.visibility="visible";
 			document.getElementById('watershed_Basin1_mangalore').style.visibility="visible";
+			
 			
 			document.getElementById('watershed_ButtonBasin2_mangalore').style.visibility="visible";
 			document.getElementById('watershed_Button2_mangalore').style.visibility="visible";
@@ -9736,6 +10134,8 @@ function watershedB1a(){
 
 
 function basin1(){
+	document.getElementById('watershed_Bsubbasinlegend1').style.visibility="hidden";
+	
 	document.getElementById('suggestions').style.visibility="hidden";
 	// document.getElementById('mangalore_streched1').style.visibility="hidden";
 	document.getElementById('mangalore_watershed').style.visibility="hidden";
@@ -9744,6 +10144,8 @@ function basin1(){
 	document.getElementById('watershed_Blegend1').style.visibility="hidden";
 	document.getElementById('SubbasinInstruction3').style.visibility="hidden";
 	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction1').style.visibility="hidden";
+	
 	
 	document.getElementById('Instruction2').style.visibility="hidden";
 	document.getElementById('Instruction3').style.visibility="hidden";
@@ -9779,6 +10181,12 @@ function basin1(){
 			document.getElementById('watershed_Mbasin2').style.visibility="hidden";
 			document.getElementById('watershed_Msubbasin2_withriver').style.visibility="hidden";
 			document.getElementById('watershed_Msubbasin2').style.visibility="hidden";
+			document.getElementById('watershed_Msubbasin1').style.visibility="hidden";
+
+			document.getElementById('SubbasinInstruction3').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction1').style.visibility="hidden";
+			
 
 		}
 		else if(mapChoosen==1)
@@ -9796,7 +10204,8 @@ function basin1(){
 			document.getElementById('watershed_ButtonBasin1_mangalore').style.visibility="hidden";
 			document.getElementById('watershed_ButtonBasin2_mangalore').style.visibility="hidden";
 			document.getElementById('watershed_ButtonBasin3_mangalore').style.visibility="hidden";
-
+		
+			document.getElementById('SubbasinInstruction1_Bangalore').style.visibility="hidden";
 			document.getElementsByClassName("blink2")[0].style.visibility="visible";
 			document.getElementById('Instruction1').style.visibility="visible";
 
@@ -9820,6 +10229,11 @@ function basin1(){
 			document.getElementById('watershed_Mbasin2').style.visibility="hidden";
 			document.getElementById('watershed_Msubbasin2_withriver').style.visibility="hidden";
 			document.getElementById('watershed_Msubbasin2').style.visibility="hidden";
+			document.getElementById('watershed_Msubbasin1').style.visibility="hidden";
+
+			document.getElementById('SubbasinInstruction3').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction1').style.visibility="hidden";
 		}
 		else if(mapChoosen==1)
 		{
@@ -9837,6 +10251,7 @@ function basin1(){
 			document.getElementById('watershed_ButtonBasin2_mangalore').style.visibility="hidden";
 			document.getElementById('watershed_ButtonBasin3_mangalore').style.visibility="hidden";
 
+			document.getElementById('SubbasinInstruction1_Bangalore').style.visibility="hidden";
 			document.getElementsByClassName("blink2")[0].style.visibility="visible";
 			document.getElementById('Instruction1').style.visibility="visible";
 
@@ -9857,6 +10272,11 @@ function basin1(){
 			document.getElementById('watershed_Mbasin2').style.visibility="hidden";
 			document.getElementById('watershed_Msubbasin2_withriver').style.visibility="hidden";
 			document.getElementById('watershed_Msubbasin2').style.visibility="hidden";
+			document.getElementById('watershed_Msubbasin1').style.visibility="hidden";
+
+			document.getElementById('SubbasinInstruction3').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction1').style.visibility="hidden";
 		}
 		else if(mapChoosen==1)
 		{
@@ -9870,7 +10290,7 @@ function basin1(){
 		document.getElementById('watershed_Bsubbasin1').style.visibility="hidden";
 		document.getElementById('watershed_Bsubbasin3').style.visibility="hidden";
 
-
+		document.getElementById('SubbasinInstruction1_Bangalore').style.visibility="hidden";
 
 			document.getElementById('watershed_ButtonBasin1_mangalore').style.visibility="hidden";
 			document.getElementById('watershed_ButtonBasin2_mangalore').style.visibility="hidden";
@@ -9887,6 +10307,7 @@ function basin1(){
 
 
 function basin2(){
+	document.getElementById('watershed_Bsubbasinlegend1').style.visibility="hidden";
 	document.getElementById('suggestions').style.visibility="hidden";
 	document.getElementById('SubbasinInstruction1_Bangalore').style.visibility="hidden";
 	document.getElementById('watershed_Bsubbasin3_withriver').style.visibility="hidden";
@@ -9897,7 +10318,14 @@ function basin2(){
 	document.getElementById('bangalore_watershed').style.visibility="hidden";
 	document.getElementById('watershed_Blegend1').style.visibility="hidden";
 	document.getElementById('watershed_Msubbasin1').style.visibility="hidden";
+	document.getElementById('watershed_Msubbasin2').style.visibility="hidden";
+
+	document.getElementById('SubbasinInstruction3').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction1').style.visibility="hidden";
 	document.getElementById('watershed_Msubbasin1_withriver').style.visibility="hidden";
+	
+	document.getElementById('watershed_Bsubbasinlegend3').style.visibility="hidden";
 	
 	document.getElementById('watershed_Bsubbasin3_withriver').style.visibility="hidden";
 	document.getElementById('watershed_Msubbasinlegend1').style.visibility="hidden";
@@ -9926,6 +10354,12 @@ function basin2(){
 			document.getElementById('Instruction2').style.visibility="visible";
 			document.getElementById('watershed_ButtonBasin1_mangalore').style.visibility="hidden";
 			document.getElementById('watershed_Mbasin1').style.visibility="hidden";
+			document.getElementById('watershed_Msubbasin1').style.visibility="hidden";
+			document.getElementById('watershed_Msubbasin2').style.visibility="hidden";
+
+			document.getElementById('SubbasinInstruction3').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction1').style.visibility="hidden";
 		}
 		else if(mapChoosen==1)
 		{
@@ -9945,6 +10379,9 @@ function basin2(){
 
 			document.getElementsByClassName("blink2a")[0].style.visibility="visible";
 			document.getElementById('Instruction2').style.visibility="visible";
+			
+			document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+			document.getElementById('SubbasinInstruction3').style.visibility="hidden";
 
 			document.getElementById('watershed_Bbasin2').style.visibility="visible";
 			document.getElementById('watershed_Bbasin1').style.visibility="hidden";
@@ -9962,6 +10399,13 @@ function basin2(){
 			document.getElementById('Instruction2').style.visibility="visible";
 			document.getElementById('watershed_ButtonBasin1_mangalore').style.visibility="hidden";
 			document.getElementById('watershed_Mbasin1').style.visibility="hidden";
+
+			document.getElementById('watershed_Msubbasin1').style.visibility="hidden";
+			document.getElementById('watershed_Msubbasin2').style.visibility="hidden";
+
+			document.getElementById('SubbasinInstruction3').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction1').style.visibility="hidden";
 		}
 		else if(mapChoosen==1)
 		{
@@ -9997,6 +10441,13 @@ function basin2(){
 			document.getElementById('Instruction2').style.visibility="visible";
 			document.getElementById('watershed_ButtonBasin1_mangalore').style.visibility="hidden";
 			document.getElementById('watershed_Mbasin1').style.visibility="hidden";
+
+			document.getElementById('watershed_Msubbasin1').style.visibility="hidden";
+			document.getElementById('watershed_Msubbasin2').style.visibility="hidden";
+
+			document.getElementById('SubbasinInstruction3').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
+	document.getElementById('SubbasinInstruction1').style.visibility="hidden";
 		}
 		else if(mapChoosen==1)
 		{
@@ -10025,6 +10476,9 @@ function basin2(){
 }}
 
 function basin3(){
+	document.getElementById('watershed_Bsubbasinlegend1').style.visibility="hidden";
+	document.getElementById('watershed_Bsubbasinlegend2').style.visibility="hidden";
+
 	document.getElementById('suggestions').style.visibility="hidden";
 	document.getElementById('watershed_Mlegend1').style.visibility="hidden";
 	document.getElementById('watershed_Blegend1').style.visibility="hidden";
