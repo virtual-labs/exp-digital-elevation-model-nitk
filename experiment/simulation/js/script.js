@@ -547,6 +547,15 @@ function symbology_streched(){
 // symbology=1 streched
 
 function elevation_Select(){
+	document.getElementById("myText").style.visibility="hidden";
+	document.getElementsByClassName("blink1")[0].style.visibility="hidden";
+	document.getElementById("enter").style.visibility="hidden";
+	
+	document.getElementById("myText1").style.visibility="hidden";
+	document.getElementById("enter1").style.visibility="hidden";
+	document.getElementById("myText2").style.visibility="hidden";
+	document.getElementById("enter2").style.visibility="hidden";
+	
 	
 	document.getElementById('elevation_classified').style.visibility="visible";
 	document.getElementById('elevation_streched').style.visibility="visible";
@@ -1685,6 +1694,12 @@ function selectData(){
 	document.getElementById("myText").style.visibility="visible";
 	document.getElementById("enter").style.visibility="visible";
 	document.getElementById("demo").style.visibility="hidden";
+
+	document.getElementById("myText1").style.visibility="hidden";
+	document.getElementById("enter1").style.visibility="hidden";
+	document.getElementById("myText2").style.visibility="hidden";
+	document.getElementById("enter2").style.visibility="hidden";
+	
 	// document.getElementById("Elavation_button").style.backgroundColor="white";
 	console.log('hi')
 	// document.getElementById("slope_button").style.backgroundColor="rgb(248, 244, 244);";
@@ -1703,7 +1718,12 @@ function slope_Select(){
 	document.getElementById("enter").style.visibility="hidden";
 	document.getElementsByClassName("blink1")[0].style.visibility="hidden";
 
-
+	document.getElementById("myText1").style.visibility="hidden";
+	document.getElementById("enter1").style.visibility="hidden";
+	document.getElementById("myText2").style.visibility="hidden";
+	document.getElementById("enter2").style.visibility="hidden";
+	
+	
 	document.getElementById('slope_classified').style.visibility="visible";
 	document.getElementById('slope_streched').style.visibility="visible";
 
@@ -2953,6 +2973,11 @@ function selectData1(){
 	document.getElementById("demo").style.visibility="hidden";
 	document.getElementById("enter1").style.visibility="visible";
 	document.getElementById("demo1").style.visibility="hidden";
+	// document.getElementById("myText1").style.visibility="hidden";
+	// document.getElementById("enter1").style.visibility="hidden";
+	document.getElementById("myText2").style.visibility="hidden";
+	document.getElementById("enter2").style.visibility="hidden";
+	
 }
 
 
@@ -2965,6 +2990,12 @@ function HillShade_Select(){
 	document.getElementsByClassName("blink1")[0].style.visibility="hidden";
 	// document.getElementById("demo1").style.visibility="visible";
 	document.getElementById("demo").style.visibility="hidden";
+
+	document.getElementById("myText").style.visibility="hidden";
+	document.getElementById("enter").style.visibility="hidden";
+	document.getElementById("myText2").style.visibility="hidden";
+	document.getElementById("enter2").style.visibility="hidden";
+	
 
 	document.getElementById('slope_classified').style.visibility="hidden";
 	document.getElementById('slope_streched').style.visibility="hidden";
@@ -4048,6 +4079,12 @@ function selectData2(){
 	document.getElementById("myText2").style.visibility="visible";
 	document.getElementById("enter2").style.visibility="visible";
 	
+
+	document.getElementById("myText1").style.visibility="hidden";
+	document.getElementById("enter1").style.visibility="hidden";
+	document.getElementById("myText").style.visibility="hidden";
+	document.getElementById("enter").style.visibility="hidden";
+	
 	document.getElementById("demo2").style.visibility="hidden";
 	// document.getElementById("enter").style.visibility="visible";
 }
@@ -4060,6 +4097,11 @@ function aspect_Select(){
 	document.getElementById("enter2").style.visibility="hidden"
 	document.getElementsByClassName("blink1")[0].style.visibility="hidden";
 	
+
+	document.getElementById("myText1").style.visibility="hidden";
+	document.getElementById("enter1").style.visibility="hidden";
+	document.getElementById("myText").style.visibility="hidden";
+	document.getElementById("enter").style.visibility="hidden";
 	// document.getElementById("demo2").style.visibility="visible";
 	
 	document.getElementById("demo1").style.visibility="hidden";
@@ -5230,6 +5272,10 @@ function selectText(){
 	document.getElementById("Wenter1").style.visibility="hidden";
 	document.getElementById("Wdemo1").style.visibility="hidden";
 
+	document.getElementById("WText2").style.visibility="hidden";
+	document.getElementById("Wenter2").style.visibility="hidden"
+	document.getElementById("Wdemo2").style.visibility="hidden";
+
 	document.getElementById('fill_classified').style.visibility="visible";
 	document.getElementById('fill_streched').style.visibility="visible";
 	// document.getElementById("enter").style.visibility="visible";
@@ -5257,6 +5303,15 @@ function fill_Select(){
 
 	document.getElementById("WText").style.visibility="hidden";
 	document.getElementById("Wenter").style.visibility="hidden";
+
+	document.getElementById("WText1").style.visibility="hidden";
+	document.getElementById("Wenter1").style.visibility="hidden";
+	document.getElementById("Wdemo1").style.visibility="hidden";
+
+	document.getElementById("WText2").style.visibility="hidden";
+	document.getElementById("Wenter2").style.visibility="hidden"
+	document.getElementById("Wdemo2").style.visibility="hidden";
+
 	document.getElementsByClassName("blink1")[0].style.visibility="hidden";
 
 	document.getElementById('slope_classified').style.visibility="hidden";
@@ -6432,7 +6487,15 @@ function selectFlowDirectionData(){
 	document.getElementById("WText1").style.visibility="visible";
 	document.getElementById("Wenter1").style.visibility="visible";
 	document.getElementById("Wdemo1").style.visibility="hidden";
+
+	document.getElementById("WText").style.visibility="hidden";
+	document.getElementById("Wdemo").style.visibility="hidden";
+	document.getElementById("Wenter").style.visibility="hidden"
+
 	document.getElementById("WText2").style.visibility="hidden";
+	document.getElementById("Wenter2").style.visibility="hidden"
+	document.getElementById("Wdemo2").style.visibility="hidden";
+	
 	// document.getElementById("enter").style.visibility="visible";
 }
 
@@ -6440,9 +6503,16 @@ function flowDirection_Select(){
 	document.getElementById("DEM Derivatives").disabled = true;
 	document.getElementById('notification').style.visibility="visible";
 	document.getElementsByClassName("blinkText")[0].style.visibility="visible";
+	document.getElementById("WText").style.visibility="hidden";
+	document.getElementById("Wenter").style.visibility="hidden"
+
 	document.getElementById("WText1").style.visibility="hidden";
 	document.getElementById("Wenter1").style.visibility="hidden"
-	document.getElementById("Wdemo").style.visibility="hidden";
+	document.getElementById("Wdemo1").style.visibility="hidden";
+
+	document.getElementById("WText2").style.visibility="hidden";
+	document.getElementById("Wenter2").style.visibility="hidden"
+	document.getElementById("Wdemo2").style.visibility="hidden";
 	document.getElementsByClassName("blink1")[0].style.visibility="hidden";
 
 	document.getElementById('slope_classified').style.visibility="hidden";
@@ -7627,6 +7697,10 @@ function selectFlowAccumulationData(){
 	document.getElementById("Wdemo1").style.visibility="hidden";
 	document.getElementById("Wdemo2").style.visibility="hidden";
 	document.getElementById("WText1").style.visibility="hidden";
+	document.getElementById("WText").style.visibility="hidden";
+
+	document.getElementById("Wenter").style.visibility="hidden";
+	document.getElementById("Wenter1").style.visibility="hidden";
 	
 	// document.getElementById("enter").style.visibility="visible";
 }
@@ -7636,9 +7710,11 @@ function flowAccumulation_Select(){
 	document.getElementById('notification').style.visibility="visible";
 	document.getElementsByClassName("blinkText")[0].style.visibility="visible";
 	document.getElementById("WText1").style.visibility="hidden";
+	document.getElementById("WText2").style.visibility="hidden";
 	document.getElementById("WText").style.visibility="hidden";
 	document.getElementById('text').style.visibility="hidden"
 	document.getElementById("Wenter1").style.visibility="hidden";
+	document.getElementById("Wenter2").style.visibility="hidden";
 	document.getElementById("Wenter").style.visibility="hidden";
 	
 	document.getElementById("watershed_ButtonBasin1_mangalore").style.visibility="hidden";
@@ -8582,7 +8658,7 @@ function flowaccumulation_classified(){
 				document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="visible";
 				document.getElementById("bangalore_Streched2").style.visibility="hidden";
 				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-				document.getElementById("bangalore_streched_flowAccumulation").style.visibility="hidden";
+				document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="hidden";
 
 				
 			
@@ -10329,6 +10405,8 @@ function basin2(){
 	
 	document.getElementById('watershed_Bsubbasin3_withriver').style.visibility="hidden";
 	document.getElementById('watershed_Msubbasinlegend1').style.visibility="hidden";
+	document.getElementById('watershed_Bsubbasinlegend2').style.visibility="hidden";
+	
 	// document.getElementById('suggestions').style.visibility="hidden";
 	
 	document.getElementsByClassName("blink3")[0].style.visibility="hidden";
@@ -10356,6 +10434,8 @@ function basin2(){
 			document.getElementById('watershed_Mbasin1').style.visibility="hidden";
 			document.getElementById('watershed_Msubbasin1').style.visibility="hidden";
 			document.getElementById('watershed_Msubbasin2').style.visibility="hidden";
+			document.getElementById('watershed_Msubbasinlegend2').style.visibility="hidden";
+			
 
 			document.getElementById('SubbasinInstruction3').style.visibility="hidden";
 	document.getElementById('SubbasinInstruction2').style.visibility="hidden";
@@ -10366,6 +10446,7 @@ function basin2(){
 			document.getElementById('border1').style.visibility="visible";
 		document.getElementById('border').style.visibility="hidden";
 		document.getElementById('watershed_Bbasin2').style.visibility="visible";
+		
 		document.getElementById('watershed_Bbasin1').style.visibility="hidden";
 		document.getElementById('watershed_Bbasin3').style.visibility="hidden";
 
