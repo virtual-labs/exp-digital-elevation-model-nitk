@@ -6008,6 +6008,7 @@ function selectFlowDirectionData(){
 
 function flowDirection_Select(){
 	document.getElementById("DEM Derivatives").disabled = true;
+	document.getElementsByClassName("blink1")[0].style.visibility="hidden";
 	document.getElementById("text").style.visibility="hidden";
 	document.getElementById("WText").style.visibility="hidden";
 	document.getElementById("Wenter").style.visibility="hidden"
@@ -6841,26 +6842,7 @@ function flowDirectionMC3a(){
 }
 
 // mangalore streched
-function flowDirectionMS1(){
-	document.getElementById('flowDirection_SMgrid1').style.visibility="visible";
-}
-function flowDirectionMS1a(){
-	document.getElementById('flowDirection_SMgrid1').style.visibility="hidden";
-}
-
-function flowDirectionMS2(){
-	document.getElementById('flowDirection_SMgrid2').style.visibility="visible";
-}
-function flowDirectionMS2a(){
-	document.getElementById('flowDirection_SMgrid2').style.visibility="hidden";
-}
-
-function flowDirectionMS3(){
-	document.getElementById('flowDirection_SMgrid3').style.visibility="visible";
-}
-function flowDirectionMS3a(){
-	document.getElementById('flowDirection_SMgrid3').style.visibility="hidden";
-}
+// 
 
 // bangalore classified
 function flowDirectionBC1(){
@@ -6882,25 +6864,6 @@ function flowDirectionBC3(){
 }
 function flowDirectionBC3a(){
 	document.getElementById('flowDirection_CBgrid3').style.visibility="hidden";
-}
-function flowDirectionBS1(){
-	document.getElementById('flowDirection_SBgrid1').style.visibility="visible";
-}
-function flowDirectionBS1a(){
-	document.getElementById('flowDirection_SBgrid1').style.visibility="hidden";
-}
-function flowDirectionBS2(){
-	document.getElementById('flowDirection_SBgrid2').style.visibility="visible";
-}
-function flowDirectionBS2a(){
-	document.getElementById('flowDirection_SBgrid2').style.visibility="hidden";
-}
-
-function flowDirectionBS3(){
-	document.getElementById('flowDirection_SBgrid3').style.visibility="visible";
-}
-function flowDirectionBS3a(){
-	document.getElementById('flowDirection_SBgrid3').style.visibility="hidden";
 }
 
 
@@ -7686,294 +7649,28 @@ else if(colorRampSelected==2)
 
 
 
-
-
-
-// function flowaccumulation_classified(){
-// 	document.getElementById("stream_button").disabled = false;
-// 	document.getElementById("flowdirection_button").disabled = true;
-// 	document.getElementById("fill_button").disabled = true;
-	
-// 	document.getElementById("watershed_button").disabled = false;
-// 	document.getElementById("select1").style.visibility="hidden";
-// 	document.getElementById('note3').style.visibility="hidden";
-// 	document.getElementById("DEM Derivatives").disabled = true;
-// 	// document.getElementById("watershed Delination").disabled = false;
-// 	document.getElementById("colorSelection").disabled = true;
-// 	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-// 	// document.getElementById('mangalore_streched1').style.visibility="hidden";
-// 	Symbolody=0;
-// 	// console.log(0)
-// 	// declare one variable equal to something
-// 	console.log(colorRampSelected);
-// 	document.getElementById('Mangmap1').style.visibility="hidden";
-// 	if(colorRampSelected==0)
-// 		{
-// 		if(mapChoosen==0)
-// 			{
-// 				document.getElementById('border').style.visibility="visible";
-// 				document.getElementById('border1').style.visibility="hidden";
-// 				console.log("hi mangalore flowAccumulation 1")
-// 				document.getElementById("mangalore_classified_flowAccumulation1").style.visibility="visible";
-// 				document.getElementById("mangalore_Streched1").style.visibility="hidden";
-// 				document.getElementById('mangalore_Classified1').style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_MClegend1").style.visibility="visible";
-// 				// document.getElementById("flowAccumulation_CMgrid1").style.visibility="visible";
-// 				document.getElementById("flowAccumulation_MSlegend1").style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_SMgrid1").style.visibility="hidden"
-// 				document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="hidden";
-	
-				
-				
-// 			}
-// 		else if(mapChoosen==1)
-// 			{
-// 				document.getElementById('border1').style.visibility="visible";
-// 				document.getElementById('border').style.visibility="hidden";
-// 				console.log("hi bangalore flowAccumulation 1")
-// 				document.getElementById("flowAccumulation_BClegend1").style.visibility="visible";
-// 				// document.getElementById("flowAccumulation_CBgrid1").style.visibility="visible";
-// 				document.getElementById("flowAccumulation_BSlegend1").style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_SBgrid1").style.visibility="hidden";
-// 				document.getElementById("bangalore_classified_flowAccumulation1").style.visibility="visible";
-// 				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-// 				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-// 				document.getElementById("bangalore_streched_flowAccumulation1").style.visibility="hidden";
-
-				
-			
-// 			}
-// 		}
-// 	else if(colorRampSelected==1)
-// 		{
-// 		document.getElementById('Mangmap2').style.visibility="hidden";
-// 		document.getElementById('Mangmap1').style.visibility="hidden";
-// 		if(mapChoosen==0)
-// 			{
-// 				document.getElementById('border').style.visibility="visible";
-// 				document.getElementById('border1').style.visibility="hidden";
-// 				console.log("hi mangalore flowAccumulation 2")
-// 				document.getElementById("flowAccumulation_MClegend2").style.visibility="visible";
-// 				// document.getElementById("flowAccumulation_CMgrid2").style.visibility="visible";
-// 				document.getElementById("flowAccumulation_MSlegend2").style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_SMgrid2").style.visibility="hidden";
-// 				document.getElementById("mangalore_classified_flowAccumulation2").style.visibility="visible";
-// 				document.getElementById("mangalore_Streched2").style.visibility="hidden";
-// 				document.getElementById('mangalore_Classified2').style.visibility="hidden";
-// 				document.getElementById("mangalore_streched_flowAccumulation2").style.visibility="hidden";
-// 	}
-// 	else if(mapChoosen==1)
-// 			{
-// 				document.getElementById('border1').style.visibility="visible";
-// 				document.getElementById('border').style.visibility="hidden";
-// 				console.log("hi bangalore flowAccumulation 1")
-// 				document.getElementById("flowAccumulation_BClegend2").style.visibility="visible";
-// 				// document.getElementById("flowAccumulation_CBgrid1").style.visibility="visible";
-// 				document.getElementById("flowAccumulation_BSlegend2").style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_SBgrid2").style.visibility="hidden";
-// 				document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="visible";
-// 				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-// 				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-// 				document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="hidden";
-
-				
-			
-// 			}
-// 		}
-// 	else if(colorRampSelected==2)
-// 		{
-// 		document.getElementById('Mangmap3').style.visibility="hidden";
-// 		document.getElementById('Mangmap2').style.visibility="hidden";
-// 		document.getElementById('Mangmap1').style.visibility="hidden";
-// 		if(mapChoosen==0)
-// 			{
-// 				document.getElementById('border').style.visibility="visible";
-// 				document.getElementById('border1').style.visibility="hidden";
-// 				console.log("hi mangalore flowAccumulation 3")
-// 				document.getElementById("flowAccumulation_MClegend3").style.visibility="visible";
-// 				// document.getElementById("flowAccumulation_CMgrid3").style.visibility="visible";
-// 				document.getElementById("flowAccumulation_MSlegend3").style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_SMgrid3").style.visibility="hidden"
-// 				document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="visible";
-// 				document.getElementById("mangalore_Streched3").style.visibility="hidden";
-// 				document.getElementById('mangalore_Classified3').style.visibility="hidden";
-// 				document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="hidden";
-	
-				
-				
-// 			}
-// 		else if(mapChoosen==1)
-// 			{
-// 				document.getElementById('border1').style.visibility="visible";
-// 				document.getElementById('border').style.visibility="hidden";
-// 				console.log("hi bangalore flowAccumulation 3")
-// 				document.getElementById("flowAccumulation_BClegend3").style.visibility="visible";
-// 				// document.getElementById("flowAccumulation_CBgrid3").style.visibility="visible";
-// 				document.getElementById("flowAccumulation_BSlegend3").style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_SBgrid3").style.visibility="hidden";
-// 				document.getElementById("bangalore_classified_flowAccumulation3").style.visibility="visible";
-// 				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-// 				document.getElementById("bangalore_Classified3").style.visibility="hidden";
-// 				document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="hidden";
-
-				
-// 			}
-// 		}
-// }
-// // symbology=1 streched
-// function flowaccumulation_streched(){
-// 	document.getElementById("stream_button").disabled = false;
-// 	// document.getElementById("stream_button").disabled = false;
-// 	document.getElementById("flowdirection_button").disabled = true;
-// 	document.getElementById("fill_button").disabled = true;
-// 	document.getElementById("watershed_button").disabled = false;
-// 	document.getElementById("select1").style.visibility="hidden";
-// 	document.getElementById('note3').style.visibility="hidden";
-// 	document.getElementById("DEM Derivatives").disabled = true;
-// 	// document.getElementById("watershed Delination").disabled = false;
-// 	document.getElementById("colorSelection").disabled = true;
-// 	document.getElementsByClassName("blink")[0].style.visibility="hidden";
-// 	Symbolody=1;
-// 	console.log(1)
-// 	document.getElementById("mangalore_Streched1").style.visibility="hidden";
-// 	if(colorRampSelected==0)
-// 	{
-// 		document.getElementById('Mangmap3').style.visibility="hidden";
-// 		document.getElementById('Mangmap2').style.visibility="hidden";
-// 		document.getElementById('Mangmap1').style.visibility="hidden";
-// 		if(mapChoosen==0)
-// 		{
-// 			document.getElementById('border').style.visibility="visible";
-// 				document.getElementById('border1').style.visibility="hidden";
-// 			console.log("helllo mangalore flowAccumulation 1")
-// 			document.getElementById("flowAccumulation_MSlegend1").style.visibility="visible";
-// 			// document.getElementById("flowAccumulation_SMgrid1").style.visibility="visible";
-// 			document.getElementById("mangalore_streched_flowAccumulation1").style.visibility="visible";
-// 			document.getElementById("mangalore_Streched1").style.visibility="hidden";
-// 			document.getElementById('mangalore_Classified1').style.visibility="hidden";
-// 			document.getElementById("flowAccumulation_MClegend1").style.visibility="hidden";
-// 			document.getElementById("flowAccumulation_CMgrid1").style.visibility="hidden";
-// 			document.getElementById("mangalore_classified_flowAccumulation1").style.visibility="hidden";
-
-			
-			
-// 		}
-// 		   else if(mapChoosen==1)
-// 		{
-// 			document.getElementById('border1').style.visibility="visible";
-// 				document.getElementById('border').style.visibility="hidden";
-// 			console.log("hello bangalore flowAccumulation 1")
-// 				document.getElementById("flowAccumulation_BSlegend1").style.visibility="visible";
-// 				// document.getElementById("flowAccumulation_SBgrid1").style.visibility="visible";
-// 				document.getElementById("flowAccumulation_BClegend1").style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_CBgrid1").style.visibility="hidden"
-// 				document.getElementById("bangalore_streched_flowAccumulation1").style.visibility="visible";
-// 				document.getElementById("bangalore_Streched1").style.visibility="hidden";
-// 				document.getElementById('bangalore_Classified1').style.visibility="hidden";
-// 				document.getElementById("bangalore_classified_flowAccumulation1").style.visibility="hidden";
-
-				
-// 		}
-// 	}
-// 	else if(colorRampSelected==1)
-// 	{
-// 		document.getElementById('Mangmap3').style.visibility="hidden";
-// 		document.getElementById('Mangmap2').style.visibility="hidden";
-// 		document.getElementById('Mangmap1').style.visibility="hidden";
-// 		if(mapChoosen==0)
-// 		{
-// 			document.getElementById('border').style.visibility="visible";
-// 				document.getElementById('border1').style.visibility="hidden";
-// 			console.log("helllo mangalore flowAccumulation 2")
-// 			document.getElementById("flowAccumulation_MSlegend2").style.visibility="visible";
-// 			// document.getElementById("flowAccumulation_SMgrid2").style.visibility="visible";
-// 			document.getElementById("flowAccumulation_MClegend2").style.visibility="hidden";
-// 			document.getElementById("flowAccumulation_CMgrid2").style.visibility="hidden"
-// 			document.getElementById("mangalore_streched_flowAccumulation2").style.visibility="visible";
-// 			document.getElementById("mangalore_Streched2").style.visibility="hidden";
-// 			document.getElementById('mangalore_Classified2').style.visibility="hidden";
-// 			document.getElementById("mangalore_classified_flowAccumulation2").style.visibility="hidden";
-
-			
-// 		}
-// 		else if(mapChoosen==1)
-// 		{
-// 			document.getElementById('border1').style.visibility="visible";
-// 				document.getElementById('border').style.visibility="hidden";
-// 			console.log("hello bangalore flowAccumulation 2")
-// 				document.getElementById("flowAccumulation_BSlegend2").style.visibility="visible";
-// 				// document.getElementById("flowAccumulation_SBgrid2").style.visibility="visible";
-// 				document.getElementById("flowAccumulation_BClegend2").style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_CBgrid2").style.visibility="hidden"
-// 				document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="visible";
-// 				document.getElementById("bangalore_Streched2").style.visibility="hidden";
-// 				document.getElementById('bangalore_Classified2').style.visibility="hidden";
-// 				document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="hidden";
-
-				
-// 		}
-// 	}
-// 	else if(colorRampSelected==2)
-// 	{
-// 		document.getElementById('Mangmap3').style.visibility="hidden";
-// 		document.getElementById('Mangmap2').style.visibility="hidden";
-// 		document.getElementById('Mangmap1').style.visibility="hidden";
-// 		if(mapChoosen==0)
-// 		{
-// 			document.getElementById('border').style.visibility="visible";
-// 				document.getElementById('border1').style.visibility="hidden";
-// 			console.log("helllo mangalore flowAccumulation 3")
-// 			document.getElementById("flowAccumulation_MSlegend3").style.visibility="visible";
-// 			// document.getElementById("flowAccumulation_SMgrid3").style.visibility="visible"
-// 			document.getElementById("flowAccumulation_MClegend3").style.visibility="hidden";
-// 			document.getElementById("flowAccumulation_CMgrid3").style.visibility="hidden"
-// 			document.getElementById("mangalore_streched_flowAccumulation3").style.visibility="visible";
-// 			document.getElementById("mangalore_Streched3").style.visibility="hidden";
-// 			document.getElementById('mangalore_Classified3').style.visibility="hidden";
-// 			document.getElementById("mangalore_classified_flowAccumulation3").style.visibility="hidden";
-
-// 		}
-// 		else if(mapChoosen==1)
-// 		{
-// 			document.getElementById('border1').style.visibility="visible";
-// 				document.getElementById('border').style.visibility="hidden";
-// 			console.log("hello bangalore flowAccumulation 3")
-// 				document.getElementById("flowAccumulation_BSlegend3").style.visibility="visible";
-// 				// document.getElementById("flowAccumulation_SBgrid3").style.visibility="visible";
-// 				document.getElementById("flowAccumulation_BClegend3").style.visibility="hidden";
-// 				document.getElementById("flowAccumulation_CBgrid3").style.visibility="hidden"
-// 				document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="visible";
-// 				document.getElementById("bangalore_Streched3").style.visibility="hidden";
-// 				document.getElementById("bangalore_Classified3").style.visibility="hidden";
-// 				document.getElementById("bangalore_classified_flowAccumulation3").style.visibility="hidden";
-
-				
-// 		}
-// 	}
-// }
-
 // mangalore classified
-function flowAccumulationMC1(){
-	document.getElementById('flowAccumulation_CMgrid1').style.visibility="visible";
-}
-function flowAccumulationMC1a(){
-	document.getElementById('flowAccumulation_CMgrid1').style.visibility="hidden";
-}
+// function flowAccumulationMC1(){
+// 	document.getElementById('flowAccumulation_CMgrid1').style.visibility="visible";
+// }
+// function flowAccumulationMC1a(){
+// 	document.getElementById('flowAccumulation_CMgrid1').style.visibility="hidden";
+// }
 
-function flowAccumulationMC2(){
-	document.getElementById('flowAccumulation_CMgrid2').style.visibility="visible";
-}
-function flowAccumulationMC2a(){
-	document.getElementById('flowAccumulation_CMgrid2').style.visibility="hidden";
-}
+// function flowAccumulationMC2(){
+// 	document.getElementById('flowAccumulation_CMgrid2').style.visibility="visible";
+// }
+// function flowAccumulationMC2a(){
+// 	document.getElementById('flowAccumulation_CMgrid2').style.visibility="hidden";
+// }
 
 
-function flowAccumulationMC3(){
-	document.getElementById('flowAccumulation_CMgrid3').style.visibility="visible";
-}
-function flowAccumulationMC3a(){
-	document.getElementById('flowAccumulation_CMgrid3').style.visibility="hidden";
-}
+// function flowAccumulationMC3(){
+// 	document.getElementById('flowAccumulation_CMgrid3').style.visibility="visible";
+// }
+// function flowAccumulationMC3a(){
+// 	document.getElementById('flowAccumulation_CMgrid3').style.visibility="hidden";
+// }
 
 // mangalore streched
 function flowAccumulationMS1(){
@@ -7998,26 +7695,26 @@ function flowAccumulationMS3a(){
 }
 
 // bangalore classified
-function flowAccumulationBC1(){
-	document.getElementById('flowAccumulation_CBgrid1').style.visibility="visible";
-}
-function flowAccumulationBC1a(){
-	document.getElementById('flowAccumulation_CBgrid1').style.visibility="hidden";
-}
+// function flowAccumulationBC1(){
+// 	document.getElementById('flowAccumulation_CBgrid1').style.visibility="visible";
+// }
+// function flowAccumulationBC1a(){
+// 	document.getElementById('flowAccumulation_CBgrid1').style.visibility="hidden";
+// }
 
-function flowAccumulationBC2(){
-	document.getElementById('flowAccumulation_CBgrid2').style.visibility="visible";
-}
-function flowAccumulationBC2a(){
-	document.getElementById('flowAccumulation_CBgrid2').style.visibility="hidden";
-}
+// function flowAccumulationBC2(){
+// 	document.getElementById('flowAccumulation_CBgrid2').style.visibility="visible";
+// }
+// function flowAccumulationBC2a(){
+// 	document.getElementById('flowAccumulation_CBgrid2').style.visibility="hidden";
+// }
 
-function flowAccumulationBC3(){
-	document.getElementById('flowAccumulation_CBgrid3').style.visibility="visible";
-}
-function flowAccumulationBC3a(){
-	document.getElementById('flowAccumulation_CBgrid3').style.visibility="hidden";
-}
+// function flowAccumulationBC3(){
+// 	document.getElementById('flowAccumulation_CBgrid3').style.visibility="visible";
+// }
+// function flowAccumulationBC3a(){
+// 	document.getElementById('flowAccumulation_CBgrid3').style.visibility="hidden";
+// }
 function flowAccumulationBS1(){
 	document.getElementById('flowAccumulation_SBgrid1').style.visibility="visible";
 }
@@ -8913,11 +8610,6 @@ function watershed_Select()
 		document.getElementById('border').style.visibility="hidden";
 			document.getElementById('bangalore_Classified2').style.visibility="hidden";
 			document.getElementById('bangalore_Streched2').style.visibility="hidden";
-			// document.getElementById("bangalore_streched_flowAccumulation2").style.visibility="hidden";
-			// document.getElementById("bangalore_classified_flowAccumulation2").style.visibility="hidden";
-			// document.getElementById("flowAccumulation_BClegend2").style.visibility="hidden";
-			// document.getElementById("flowAccumulation_CBgrid2").style.visibility="hidden";
-			
 			document.getElementById('bangalore_watershed').style.visibility="visible";
 			document.getElementById('watershed_Button1_mangalore').style.visibility="visible";
 			document.getElementById('watershed_Basin1_mangalore').style.visibility="visible";
@@ -9128,8 +8820,8 @@ function watershed_Select()
 			document.getElementById('bangalore_Streched3').style.visibility="hidden";
 			document.getElementById("bangalore_streched_flowAccumulation3").style.visibility="hidden";
 			// document.getElementById("bangalore_classified_flowAccumulation3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_BClegend3").style.visibility="hidden";
-			document.getElementById("flowAccumulation_CBgrid3").style.visibility="hidden";
+			// document.getElementById("flowAccumulation_BClegend3").style.visibility="hidden";
+			// document.getElementById("flowAccumulation_CBgrid3").style.visibility="hidden";
 			
 			document.getElementById('bangalore_watershed').style.visibility="visible";
 			document.getElementById('watershed_Button1_mangalore').style.visibility="visible";
