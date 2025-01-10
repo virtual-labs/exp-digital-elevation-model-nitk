@@ -23,7 +23,7 @@
       "answers": {
         "a": "True",
         "b": "False"
-       },
+      },
       "explanations": {
         "a": "",
         "b": "",
@@ -51,7 +51,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The full form of “SRTM” is _______",
+      "question": "The full form of “SRTM” is ________",
       "answers": {
         "a": "Shuttle Radar Topography Mission",
         "b": "Shuttle Radar Terrain Mission",
@@ -68,7 +68,7 @@
       "difficulty": "advanced"
     },
     {
-      "question": "___________ is the Indian National DEM.",
+      "question": "________ is the Indian National DEM.",
       "answers": {
         "a": "SRTM",
         "b": "ASTER",

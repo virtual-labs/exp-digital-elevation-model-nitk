@@ -40,7 +40,6 @@
       "answers": {
         "a": "True",
         "b": "False"
-        
       },
       "explanations": {
         "a": "",
@@ -52,7 +51,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Aspect is measured in ______.",
+      "question": "Aspect is measured in ________.",
       "answers": {
         "a": "Meters",
         "b": "Feet",
@@ -69,7 +68,7 @@
       "difficulty": "advanced"
     },
     {
-      "question": "_____ should be the input file used in the tool to calculate the Flow Direction.",
+      "question": "________ should be the input file used in the tool to calculate the Flow Direction.",
       "answers": {
         "a": "Flow accumulation raster",
         "b": "Filled DEM",
