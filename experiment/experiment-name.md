@@ -1,1 +1,1 @@
-## Extraction of Topographical features using Digital Elevation Model
+## Extraction of Topographical features using DEM data
