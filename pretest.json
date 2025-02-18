@@ -1,0 +1,88 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "The spatial representation of the elevation variation can be shown from ",
+      "answers": {
+        "a": "Point elevation data",
+        "b": "Raster elevation data",
+        "c": "Polygone data",
+        "d": "All the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The Digital Terrain Model includes the elevation of the earth surface features.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "The pixel surrounded by pixels with lower elevation values in a DEM is known as",
+      "answers": {
+        "a": "Spike",
+        "b": "Spline",
+        "c": "TIN",
+        "d": "Sink"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The full form of “SRTM” is ________",
+      "answers": {
+        "a": "Shuttle Radar Topography Mission",
+        "b": "Shuttle Radar Terrain Mission",
+        "c": "Space Radar Terrain Mission",
+        "d": "Space Radar Topography Mission"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Indian National DEM is the ________.",
+      "answers": {
+        "a": "SRTM",
+        "b": "ASTER",
+        "c": "TanDEM-X",
+        "d": "CARTOSAT"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    }
+  ]
+}

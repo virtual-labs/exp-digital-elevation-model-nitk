@@ -1,0 +1,272 @@
+
+/home/runner/work/exp-digital-elevation-model-nitk/exp-digital-elevation-model-nitk/experiment/simulation/js/script.js
+     2:5   warning  'e' is defined but never used                              no-unused-vars
+     6:10  warning  'navNext' is defined but never used                        no-unused-vars
+     8:6   warning  'temp' is not defined                                      no-undef
+     8:13  warning  'temp' is not defined                                      no-undef
+     8:21  warning  'temp' is not defined                                      no-undef
+    10:36  warning  'temp' is not defined                                      no-undef
+    12:2   warning  'simsubscreennum' is not defined                           no-undef
+    13:35  warning  'simsubscreennum' is not defined                           no-undef
+    18:8   warning  'simsubscreennum' is not defined                           no-undef
+    29:1   warning  Mixed spaces and tabs                                      no-mixed-spaces-and-tabs
+    38:5   warning  'modal' is assigned a value but never used                 no-unused-vars
+    39:5   warning  'btn' is assigned a value but never used                   no-unused-vars
+    40:5   warning  'span' is assigned a value but never used                  no-unused-vars
+    42:10  warning  'map1' is defined but never used                           no-unused-vars
+    47:10  warning  'mclose' is defined but never used                         no-unused-vars
+    51:10  warning  'chooseMap1' is defined but never used                     no-unused-vars
+    65:10  warning  'chooseMap2' is defined but never used                     no-unused-vars
+    77:10  warning  'selection' is defined but never used                      no-unused-vars
+    94:10  warning  'demselect' is defined but never used                      no-unused-vars
+   107:11  warning  'waterselect' is defined but never used                    no-unused-vars
+   146:10  warning  'elevationinformation1' is defined but never used          no-unused-vars
+   149:11  warning  'elevationinformation1a' is defined but never used         no-unused-vars
+   153:10  warning  'slopeinformation1' is defined but never used              no-unused-vars
+   156:11  warning  'slopeinformation1a' is defined but never used             no-unused-vars
+   160:10  warning  'hillshadeinformation1' is defined but never used          no-unused-vars
+   163:11  warning  'hillshadeinformation1a' is defined but never used         no-unused-vars
+   167:10  warning  'aspectinformation1' is defined but never used             no-unused-vars
+   170:11  warning  'aspectinformation1a' is defined but never used            no-unused-vars
+   174:10  warning  'fillinformation1' is defined but never used               no-unused-vars
+   177:11  warning  'fillinformation1a' is defined but never used              no-unused-vars
+   181:10  warning  'flowDirectioninformation1' is defined but never used      no-unused-vars
+   184:11  warning  'flowDirectioninformation1a' is defined but never used     no-unused-vars
+   188:10  warning  'flowAccumulationinformation1' is defined but never used   no-unused-vars
+   191:11  warning  'flowAccumulationinformation1a' is defined but never used  no-unused-vars
+   195:10  warning  'Streamnetworkinformation1' is defined but never used      no-unused-vars
+   198:11  warning  'Streamnetworkinformation1a' is defined but never used     no-unused-vars
+   202:10  warning  'Watershedinformation1' is defined but never used          no-unused-vars
+   205:11  warning  'Watershedinformation1a' is defined but never used         no-unused-vars
+   209:10  warning  'mangaloreMap1' is defined but never used                  no-unused-vars
+   239:10  warning  'mangaloreMap2' is defined but never used                  no-unused-vars
+   267:10  warning  'mangaloreMap3' is defined but never used                  no-unused-vars
+   292:10  warning  'grid1_map' is defined but never used                      no-unused-vars
+   311:10  warning  'grid2_map' is defined but never used                      no-unused-vars
+   326:10  warning  'grid3_map' is defined but never used                      no-unused-vars
+   350:10  warning  'symbology_classified' is defined but never used           no-unused-vars
+   358:2   warning  'Symbolody' is not defined                                 no-undef
+   448:10  warning  'symbology_streched' is defined but never used             no-unused-vars
+   456:2   warning  'Symbolody' is not defined                                 no-undef
+   475:2   warning  Mixed spaces and tabs                                      no-mixed-spaces-and-tabs
+   549:10  warning  'elevation_Select' is defined but never used               no-unused-vars
+  1262:10  warning  'elevation_classified' is defined but never used           no-unused-vars
+  1377:10  warning  'elevation_streched' is defined but never used             no-unused-vars
+  1406:3   warning  Mixed spaces and tabs                                      no-mixed-spaces-and-tabs
+  1511:10  warning  'elevationMC1' is defined but never used                   no-unused-vars
+  1514:10  warning  'elevationMC1a' is defined but never used                  no-unused-vars
+  1518:10  warning  'elevationMC2' is defined but never used                   no-unused-vars
+  1521:10  warning  'elevationMC2a' is defined but never used                  no-unused-vars
+  1526:10  warning  'elevationMC3' is defined but never used                   no-unused-vars
+  1529:10  warning  'elevationMC3a' is defined but never used                  no-unused-vars
+  1534:10  warning  'elevationMS1' is defined but never used                   no-unused-vars
+  1537:10  warning  'elevationMS1a' is defined but never used                  no-unused-vars
+  1541:10  warning  'elevationMS2' is defined but never used                   no-unused-vars
+  1544:10  warning  'elevationMS2a' is defined but never used                  no-unused-vars
+  1548:10  warning  'elevationMS3' is defined but never used                   no-unused-vars
+  1551:10  warning  'elevationMS3a' is defined but never used                  no-unused-vars
+  1556:10  warning  'elevationBC1' is defined but never used                   no-unused-vars
+  1559:10  warning  'elevationBC1a' is defined but never used                  no-unused-vars
+  1563:10  warning  'elevationBC2' is defined but never used                   no-unused-vars
+  1566:10  warning  'elevationBC2a' is defined but never used                  no-unused-vars
+  1570:10  warning  'elevationBC3' is defined but never used                   no-unused-vars
+  1573:10  warning  'elevationBC3a' is defined but never used                  no-unused-vars
+  1576:10  warning  'elevationBS1' is defined but never used                   no-unused-vars
+  1579:10  warning  'elevationBS1a' is defined but never used                  no-unused-vars
+  1582:10  warning  'elevationBS2' is defined but never used                   no-unused-vars
+  1585:10  warning  'elevationBS2a' is defined but never used                  no-unused-vars
+  1589:10  warning  'elevationBS3' is defined but never used                   no-unused-vars
+  1592:10  warning  'elevationBS3a' is defined but never used                  no-unused-vars
+  1599:10  warning  'selectData' is defined but never used                     no-unused-vars
+  1623:10  warning  'slope_Select' is defined but never used                   no-unused-vars
+  2278:10  warning  'slope_classified' is defined but never used               no-unused-vars
+  2287:2   warning  'Symbolody' is not defined                                 no-undef
+  2412:10  warning  'slope_streched' is defined but never used                 no-unused-vars
+  2420:2   warning  'Symbolody' is not defined                                 no-undef
+  2447:2   warning  Mixed spaces and tabs                                      no-mixed-spaces-and-tabs
+  2551:10  warning  'slopeMC1' is defined but never used                       no-unused-vars
+  2554:10  warning  'slopeMC1a' is defined but never used                      no-unused-vars
+  2558:10  warning  'slopeMC2' is defined but never used                       no-unused-vars
+  2561:10  warning  'slopeMC2a' is defined but never used                      no-unused-vars
+  2566:10  warning  'slopeMC3' is defined but never used                       no-unused-vars
+  2569:10  warning  'slopeMC3a' is defined but never used                      no-unused-vars
+  2574:10  warning  'slopeMS1' is defined but never used                       no-unused-vars
+  2577:10  warning  'slopeMS1a' is defined but never used                      no-unused-vars
+  2581:10  warning  'slopeMS2' is defined but never used                       no-unused-vars
+  2584:10  warning  'slopeMS2a' is defined but never used                      no-unused-vars
+  2588:10  warning  'slopeMS3' is defined but never used                       no-unused-vars
+  2591:10  warning  'slopeMS3a' is defined but never used                      no-unused-vars
+  2596:10  warning  'slopeBC1' is defined but never used                       no-unused-vars
+  2599:10  warning  'slopeBC1a' is defined but never used                      no-unused-vars
+  2603:10  warning  'slopeBC2' is defined but never used                       no-unused-vars
+  2606:10  warning  'slopeBC2a' is defined but never used                      no-unused-vars
+  2610:10  warning  'slopeBC3' is defined but never used                       no-unused-vars
+  2613:10  warning  'slopeBC3a' is defined but never used                      no-unused-vars
+  2619:10  warning  'slopeBS1' is defined but never used                       no-unused-vars
+  2622:10  warning  'slopeBS1a' is defined but never used                      no-unused-vars
+  2626:10  warning  'slopeBS2' is defined but never used                       no-unused-vars
+  2629:10  warning  'slopeBS2a' is defined but never used                      no-unused-vars
+  2633:10  warning  'slopeBS3' is defined but never used                       no-unused-vars
+  2636:10  warning  'slopeBS3a' is defined but never used                      no-unused-vars
+  2641:10  warning  'elevation_color' is defined but never used                no-unused-vars
+  2656:10  warning  'slope_color' is defined but never used                    no-unused-vars
+  2671:10  warning  'hillshade_color' is defined but never used                no-unused-vars
+  2687:10  warning  'aspect_color' is defined but never used                   no-unused-vars
+  2702:10  warning  'fill_color' is defined but never used                     no-unused-vars
+  2718:10  warning  'flowdirection_color' is defined but never used            no-unused-vars
+  2734:10  warning  'flowaccumulation_color' is defined but never used         no-unused-vars
+  2750:10  warning  'stream_color' is defined but never used                   no-unused-vars
+  2766:10  warning  'watershed_color' is defined but never used                no-unused-vars
+  2786:10  warning  'selectData1' is defined but never used                    no-unused-vars
+  2804:10  warning  'HillShade_Select' is defined but never used               no-unused-vars
+  3444:10  warning  'hillshade_classified' is defined but never used           no-unused-vars
+  3446:2   warning  'Symbolody' is not defined                                 no-undef
+  3564:10  warning  'hillshade_streched' is defined but never used             no-unused-vars
+  3572:2   warning  'Symbolody' is not defined                                 no-undef
+  3599:2   warning  Mixed spaces and tabs                                      no-mixed-spaces-and-tabs
+  3701:10  warning  'HillShadeMC1' is defined but never used                   no-unused-vars
+  3704:10  warning  'HillShadeMC1a' is defined but never used                  no-unused-vars
+  3708:10  warning  'HillShadeMC2' is defined but never used                   no-unused-vars
+  3711:10  warning  'HillShadeMC2a' is defined but never used                  no-unused-vars
+  3716:10  warning  'HillShadeMC3' is defined but never used                   no-unused-vars
+  3719:10  warning  'HillShadeMC3a' is defined but never used                  no-unused-vars
+  3724:10  warning  'HillShadeMS1' is defined but never used                   no-unused-vars
+  3727:10  warning  'HillShadeMS1a' is defined but never used                  no-unused-vars
+  3731:10  warning  'HillShadeMS2' is defined but never used                   no-unused-vars
+  3734:10  warning  'HillShadeMS2a' is defined but never used                  no-unused-vars
+  3738:10  warning  'HillShadeMS3' is defined but never used                   no-unused-vars
+  3741:10  warning  'HillShadeMS3a' is defined but never used                  no-unused-vars
+  3746:10  warning  'HillShadeBC1' is defined but never used                   no-unused-vars
+  3749:10  warning  'HillShadeBC1a' is defined but never used                  no-unused-vars
+  3753:10  warning  'HillShadeBC2' is defined but never used                   no-unused-vars
+  3756:10  warning  'HillShadeBC2a' is defined but never used                  no-unused-vars
+  3760:10  warning  'HillShadeBC3' is defined but never used                   no-unused-vars
+  3763:10  warning  'HillShadeBC3a' is defined but never used                  no-unused-vars
+  3766:10  warning  'HillShadeBS1' is defined but never used                   no-unused-vars
+  3769:10  warning  'HillShadeBS1a' is defined but never used                  no-unused-vars
+  3772:10  warning  'HillShadeBS2' is defined but never used                   no-unused-vars
+  3775:10  warning  'HillShadeBS2a' is defined but never used                  no-unused-vars
+  3779:10  warning  'HillShadeBS3' is defined but never used                   no-unused-vars
+  3782:10  warning  'HillShadeBS3a' is defined but never used                  no-unused-vars
+  3787:10  warning  'selectData2' is defined but never used                    no-unused-vars
+  3805:10  warning  'aspect_Select' is defined but never used                  no-unused-vars
+  4501:10  warning  'aspect_classified' is defined but never used              no-unused-vars
+  4510:2   warning  'Symbolody' is not defined                                 no-undef
+  4636:10  warning  'aspect_streched' is defined but never used                no-unused-vars
+  4644:2   warning  'Symbolody' is not defined                                 no-undef
+  4669:2   warning  Mixed spaces and tabs                                      no-mixed-spaces-and-tabs
+  4775:10  warning  'aspectMC1' is defined but never used                      no-unused-vars
+  4778:10  warning  'aspectMC1a' is defined but never used                     no-unused-vars
+  4782:10  warning  'aspectMC2' is defined but never used                      no-unused-vars
+  4785:10  warning  'aspectMC2a' is defined but never used                     no-unused-vars
+  4790:10  warning  'aspectMC3' is defined but never used                      no-unused-vars
+  4793:10  warning  'aspectMC3a' is defined but never used                     no-unused-vars
+  4798:10  warning  'aspectMS1' is defined but never used                      no-unused-vars
+  4801:10  warning  'aspectMS1a' is defined but never used                     no-unused-vars
+  4805:10  warning  'aspectMS2' is defined but never used                      no-unused-vars
+  4808:10  warning  'aspectMS2a' is defined but never used                     no-unused-vars
+  4812:10  warning  'aspectMS3' is defined but never used                      no-unused-vars
+  4815:10  warning  'aspectMS3a' is defined but never used                     no-unused-vars
+  4820:10  warning  'aspectBC1' is defined but never used                      no-unused-vars
+  4823:10  warning  'aspectBC1a' is defined but never used                     no-unused-vars
+  4827:10  warning  'aspectBC2' is defined but never used                      no-unused-vars
+  4830:10  warning  'aspectBC2a' is defined but never used                     no-unused-vars
+  4834:10  warning  'aspectBC3' is defined but never used                      no-unused-vars
+  4837:10  warning  'aspectBC3a' is defined but never used                     no-unused-vars
+  4840:10  warning  'aspectBS1' is defined but never used                      no-unused-vars
+  4843:10  warning  'aspectBS1a' is defined but never used                     no-unused-vars
+  4846:10  warning  'aspectBS2' is defined but never used                      no-unused-vars
+  4849:10  warning  'aspectBS2a' is defined but never used                     no-unused-vars
+  4853:10  warning  'aspectBS3' is defined but never used                      no-unused-vars
+  4856:10  warning  'aspectBS3a' is defined but never used                     no-unused-vars
+  4861:10  warning  'selectText' is defined but never used                     no-unused-vars
+  4885:10  warning  'fill_Select' is defined but never used                    no-unused-vars
+  5623:10  warning  'fill_classified' is defined but never used                no-unused-vars
+  5633:2   warning  'Symbolody' is not defined                                 no-undef
+  5770:10  warning  'fill_streched' is defined but never used                  no-unused-vars
+  5778:2   warning  'Symbolody' is not defined                                 no-undef
+  5802:2   warning  Mixed spaces and tabs                                      no-mixed-spaces-and-tabs
+  5900:10  warning  'fillMC1' is defined but never used                        no-unused-vars
+  5903:10  warning  'fillMC1a' is defined but never used                       no-unused-vars
+  5907:10  warning  'fillMC2' is defined but never used                        no-unused-vars
+  5910:10  warning  'fillMC2a' is defined but never used                       no-unused-vars
+  5915:10  warning  'fillMC3' is defined but never used                        no-unused-vars
+  5918:10  warning  'fillMC3a' is defined but never used                       no-unused-vars
+  5923:10  warning  'fillMS1' is defined but never used                        no-unused-vars
+  5926:10  warning  'fillMS1a' is defined but never used                       no-unused-vars
+  5930:10  warning  'fillMS2' is defined but never used                        no-unused-vars
+  5933:10  warning  'fillMS2a' is defined but never used                       no-unused-vars
+  5937:10  warning  'fillMS3' is defined but never used                        no-unused-vars
+  5940:10  warning  'fillMS3a' is defined but never used                       no-unused-vars
+  5945:10  warning  'fillBC1' is defined but never used                        no-unused-vars
+  5948:10  warning  'fillBC1a' is defined but never used                       no-unused-vars
+  5952:10  warning  'fillBC2' is defined but never used                        no-unused-vars
+  5955:10  warning  'fillBC2a' is defined but never used                       no-unused-vars
+  5959:10  warning  'fillBC3' is defined but never used                        no-unused-vars
+  5962:10  warning  'fillBC3a' is defined but never used                       no-unused-vars
+  5965:10  warning  'fillBS1' is defined but never used                        no-unused-vars
+  5968:10  warning  'fillBS1a' is defined but never used                       no-unused-vars
+  5972:10  warning  'fillBS2' is defined but never used                        no-unused-vars
+  5975:10  warning  'fillBS2a' is defined but never used                       no-unused-vars
+  5979:10  warning  'fillBS3' is defined but never used                        no-unused-vars
+  5982:10  warning  'fillBS3a' is defined but never used                       no-unused-vars
+  5988:10  warning  'selectFlowDirectionData' is defined but never used        no-unused-vars
+  6009:10  warning  'flowDirection_Select' is defined but never used           no-unused-vars
+  6822:10  warning  'flowDirectionMC1' is defined but never used               no-unused-vars
+  6825:10  warning  'flowDirectionMC1a' is defined but never used              no-unused-vars
+  6829:10  warning  'flowDirectionMC2' is defined but never used               no-unused-vars
+  6832:10  warning  'flowDirectionMC2a' is defined but never used              no-unused-vars
+  6837:10  warning  'flowDirectionMC3' is defined but never used               no-unused-vars
+  6840:10  warning  'flowDirectionMC3a' is defined but never used              no-unused-vars
+  6848:10  warning  'flowDirectionBC1' is defined but never used               no-unused-vars
+  6851:10  warning  'flowDirectionBC1a' is defined but never used              no-unused-vars
+  6855:10  warning  'flowDirectionBC2' is defined but never used               no-unused-vars
+  6858:10  warning  'flowDirectionBC2a' is defined but never used              no-unused-vars
+  6862:10  warning  'flowDirectionBC3' is defined but never used               no-unused-vars
+  6865:10  warning  'flowDirectionBC3a' is defined but never used              no-unused-vars
+  6870:10  warning  'selectFlowAccumulationData' is defined but never used     no-unused-vars
+  6889:10  warning  'flowAccumulation_Select' is defined but never used        no-unused-vars
+  7676:10  warning  'flowAccumulationMS1' is defined but never used            no-unused-vars
+  7679:10  warning  'flowAccumulationMS1a' is defined but never used           no-unused-vars
+  7683:10  warning  'flowAccumulationMS2' is defined but never used            no-unused-vars
+  7686:10  warning  'flowAccumulationMS2a' is defined but never used           no-unused-vars
+  7690:10  warning  'flowAccumulationMS3' is defined but never used            no-unused-vars
+  7693:10  warning  'flowAccumulationMS3a' is defined but never used           no-unused-vars
+  7718:10  warning  'flowAccumulationBS1' is defined but never used            no-unused-vars
+  7721:10  warning  'flowAccumulationBS1a' is defined but never used           no-unused-vars
+  7724:10  warning  'flowAccumulationBS2' is defined but never used            no-unused-vars
+  7727:10  warning  'flowAccumulationBS2a' is defined but never used           no-unused-vars
+  7731:10  warning  'flowAccumulationBS3' is defined but never used            no-unused-vars
+  7734:10  warning  'flowAccumulationBS3a' is defined but never used           no-unused-vars
+  7739:10  warning  'streamNetwork_Select' is defined but never used           no-unused-vars
+  8162:10  warning  'streamNetworkMC1' is defined but never used               no-unused-vars
+  8175:10  warning  'streamNetworkMC1a' is defined but never used              no-unused-vars
+  8187:10  warning  'streamNetworkBC2' is defined but never used               no-unused-vars
+  8197:10  warning  'streamNetworkBC2a' is defined but never used              no-unused-vars
+  8210:10  warning  'watershed_Select' is defined but never used               no-unused-vars
+  8928:10  warning  'watershedM1' is defined but never used                    no-unused-vars
+  8931:10  warning  'watershedM1a' is defined but never used                   no-unused-vars
+  8935:10  warning  'watershedB1' is defined but never used                    no-unused-vars
+  8938:10  warning  'watershedB1a' is defined but never used                   no-unused-vars
+  8943:10  warning  'basin1' is defined but never used                         no-unused-vars
+  9116:10  warning  'basin2' is defined but never used                         no-unused-vars
+  9290:10  warning  'basin3' is defined but never used                         no-unused-vars
+  9421:10  warning  'subbasin1' is defined but never used                      no-unused-vars
+  9558:10  warning  'subbasinM1' is defined but never used                     no-unused-vars
+  9561:10  warning  'subbasinM1a' is defined but never used                    no-unused-vars
+  9567:10  warning  'subbasin2' is defined but never used                      no-unused-vars
+  9599:4   warning  'watershed_Bbasin1' is not defined                         no-undef
+  9636:4   warning  'watershed_Bbasin1' is not defined                         no-undef
+  9672:4   warning  'watershed_Bbasin1' is not defined                         no-undef
+  9682:10  warning  'subbasinM2' is defined but never used                     no-unused-vars
+  9685:10  warning  'subbasinM2a' is defined but never used                    no-unused-vars
+  9689:10  warning  'subbasinB1' is defined but never used                     no-unused-vars
+  9692:10  warning  'subbasinB1a' is defined but never used                    no-unused-vars
+  9696:10  warning  'subbasinB2' is defined but never used                     no-unused-vars
+  9699:10  warning  'subbasinB2a' is defined but never used                    no-unused-vars
+  9705:10  warning  'subbasin3' is defined but never used                      no-unused-vars
+  9818:10  warning  'subbasinB3' is defined but never used                     no-unused-vars
+  9821:10  warning  'subbasinB3a' is defined but never used                    no-unused-vars
+
+✖ 267 problems (0 errors, 267 warnings)
+
