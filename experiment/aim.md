@@ -1,1 +1,1 @@
-To extract the topographical features and delineate watershed from the Shuttile Radar Topographic Mission (SRTM) Digital Elevation Method.
+To extract the topographical features and delineate watershed from the Shuttle Radar Topographic Mission (SRTM) Digital Elevation Method.

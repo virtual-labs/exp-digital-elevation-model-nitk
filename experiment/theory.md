@@ -28,3 +28,9 @@ source: <a href="https://www.cdema.org/virtuallibrary/index.php/charim-hbook/dat
 
 </br>
 Shuttle Radar Topography Mission (SRTM) DEM of 30 m and 90 m <a href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a>, Advanced Space Borne Thermal Emission and Reflection Radiometer (ASTER)-Global DEM of 30 m <a href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a>, ALOS world-3D of 12.5m and 30 m <a href="https://global.jaxa.jp/">https://global.jaxa.jp/</a>, CARTOSAT-1 an Indian national DEM of 30 m resolution <a href="https://bhuvan.nrsc.gov.in/bhuvan_links.php">https://bhuvan.nrsc.gov.in/bhuvan_links.php</a>, TanDEM-X of 90 m resolution <a href="https://tandemx-science.dlr.de/">https://tandemx-science.dlr.de/</a> are freely available for the user community. From these the Elevation, Slope, Roughness, Aspect, Hillshade, Curvature, Contours can be derived. Also, the river basins can be extracted after carrying out the watershed delineation process. The detailed methodology to extract the below highlighted features are explained in the simulation.
+
+- **Elevation**: Represents the height from the Mean Sea level for each raster cell.
+- **Slope**: The degree of inclination of a terrain surface. It represents the rate of change of elevation.
+- **Hillshade**: A technique used to visulaize terrain as shaded relief.
+- **Aspect**: The downslope direction of the maximum rate of change in value from each pixel to
+  its neighbours, measured clockwise in degrees from 0 to 360.
