@@ -2,38 +2,87 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The purpose of using Fill tool is",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To fill the large sized voids in the raster",
+        "b": "To remove small imperfections in the raster",
+        "c": "To fill the medium sized voids in the raster",
+        "d": "To carryon radiometric correction to the raster"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Aspect is the ",
+      "answers": {
+        "a": "Maximum rate of change in pixel value from each pixel to its neighbours",
+        "b": "Rate of change of elevation for each pixel",
+        "c": "Minimum rate of change in pixel value from each pixel to its neighbours",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "The flow direction raster will be an input for the flow accumulation raster to generate the stream network.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Aspect is measured in ________.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Meters",
+        "b": "Feet",
+        "c": "Degree azimuth",
+        "d": "No unit"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "advanced"
+    },
+    {
+      "question": "________ should be the input file used in the tool to calculate the Flow Direction.",
+      "answers": {
+        "a": "Flow accumulation raster",
+        "b": "Filled DEM",
+        "c": "Shapefile of the region",
+        "d": "Slope raster"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     }
   ]
 }
